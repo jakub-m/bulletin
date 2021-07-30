@@ -1,6 +1,9 @@
 package feed
 
-import "time"
+import (
+	"encoding/json"
+	"time"
+)
 
 type WithArticles interface {
 	GetArticles() []Article
@@ -13,4 +16,14 @@ type Article struct {
 	Title   string
 	Updated time.Time
 	Url     string
+}
+
+func (a Article) Marshall() ([]byte, error) {
+	return json.MarshalIndent(a, "", " ")
+}
+
+func UnmarshallArticle(bytes []byte) (Article, error) {
+	var a Article
+	err := json.Unmarshal(bytes, &a)
+	return a, err
 }

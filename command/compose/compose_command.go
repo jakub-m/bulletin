@@ -2,9 +2,11 @@ package compose
 
 import (
 	"feedsummary/cache"
+	"feedsummary/feed"
+	"feedsummary/log"
 	"flag"
 	"fmt"
-	"log"
+	corelog "log"
 	"time"
 )
 
@@ -19,7 +21,7 @@ var referenceTime time.Time
 func init() {
 	t, err := time.Parse(time.RFC3339, "2000-01-03T00:00:00Z") // monday
 	if err != nil {
-		log.Fatal(err)
+		corelog.Fatal(err)
 	}
 	referenceTime = t
 }
@@ -33,7 +35,24 @@ func (c *Command) Execute(args []string) error {
 	if err != nil {
 		return err
 	}
-	fmt.Println("START", intervalStart)
+	articles, err := c.Cache.GetArticles()
+	if err != nil {
+		return err
+	}
+	var filteredArticles []feed.Article
+	for _, a := range articles {
+		if a.Updated.After(intervalStart) && !a.Updated.After(intervalStart.Add(opts.interval)) {
+			log.Debugf("Accept %s, %s", a.Id, a.Updated)
+			filteredArticles = append(filteredArticles, a)
+		} else {
+			log.Debugf("Drop %s, %s", a.Id, a.Updated)
+		}
+	}
+	formatted, err := feed.FormatHtml(filteredArticles)
+	if err != nil {
+		return err
+	}
+	fmt.Println(formatted)
 	return nil
 }
 

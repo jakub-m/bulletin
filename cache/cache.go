@@ -1,10 +1,10 @@
 package cache
 
 import (
-	"encoding/json"
 	"feedsummary/feed"
 	"feedsummary/log"
 	"fmt"
+	"io/ioutil"
 	"os"
 	"path"
 	"regexp"
@@ -35,13 +35,31 @@ func (c *Cache) StoreArticle(article feed.Article) error {
 		return err
 	}
 	defer fh.Close()
-	bytes, err := json.MarshalIndent(article, "", " ")
+	bytes, err := article.Marshall()
 	if err != nil {
 		return err
 	}
 	n, err := fh.Write(bytes)
 	log.Debugf("cache: wrote %d bytes", n)
 	return err
+}
+
+func (c *Cache) GetArticles() ([]feed.Article, error) {
+	infos, err := ioutil.ReadDir(c.cacheDir)
+	if err != nil {
+		return nil, err
+	}
+	var articles []feed.Article
+	for _, info := range infos {
+		fPath := path.Join(c.cacheDir, info.Name())
+		article, err := readArticle(fPath)
+		if err != nil {
+			log.Debugf("could not read Article from: %s", fPath)
+			continue
+		}
+		articles = append(articles, article)
+	}
+	return articles, nil
 }
 
 func jsonFileName(art feed.Article) string {
@@ -52,4 +70,16 @@ var regexEscape = regexp.MustCompile("[^a-zA-Z0-9]+")
 
 func escape(s string) string {
 	return regexEscape.ReplaceAllString(s, "_")
+}
+
+func readArticle(path string) (feed.Article, error) {
+	fh, err := os.Open(path)
+	if err != nil {
+		return feed.Article{}, err
+	}
+	bytes, err := ioutil.ReadAll(fh)
+	if err != nil {
+		return feed.Article{}, err
+	}
+	return feed.UnmarshallArticle(bytes)
 }

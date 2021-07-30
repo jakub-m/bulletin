@@ -28,6 +28,6 @@ func FormatHtml(feeds []Article) (string, error) {
 }
 
 const htmlTemplateArticlesRaw = `
-{{range .}}<a href="{{.Url}}">{{.Title}}</a>
+{{range .}}<a href="{{.Url}}">{{.Title}}</a></br>
 {{end}}
 `

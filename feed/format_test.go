@@ -25,8 +25,8 @@ func TestFormatHtml(t *testing.T) {
 	body, err := FormatHtml(feeds)
 	assert.NoError(t, err)
 	expected := `
-<a href="http://example.com/1">title-1</a>
-<a href="http://example.com/1">title-2</a>
+<a href="http://example.com/1">title-1</a></br>
+<a href="http://example.com/1">title-2</a></br>
 `
 
 	assert.Equal(t, strings.Trim(expected, "\n"), body)
