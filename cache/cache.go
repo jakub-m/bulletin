@@ -24,6 +24,8 @@ func NewCache(cacheDir string) (*Cache, error) {
 	return c, err
 }
 
+// StoreArticle should not be run in parallel for the same feed, because the writes to the same file might collide and
+// garble the content.
 func (c *Cache) StoreArticle(article feed.Article) error {
 	fname := jsonFileName(article)
 	fpath := path.Join(c.cacheDir, fname)

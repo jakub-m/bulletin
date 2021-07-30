@@ -9,9 +9,9 @@ fmt:
 clean:
 	rm -rf bin tmp_cache
 smoke: clean test build
-	rm -rf tmp_cache
-	mkdir -p tmp_cache 
-	bin/feedsummary --cache ./tmp_cache/ fetch --url http://googleaiblog.blogspot.com/atom.xml
+	rm -rf tmp
+	mkdir -p tmp/cache
+	bin/feedsummary --cache ./tmp/cache/ fetch --url http://googleaiblog.blogspot.com/atom.xml
 
 
 .PHONY: test build

@@ -1,7 +1,10 @@
 package main
 
 import (
+	"feedsummary/cache"
 	"feedsummary/command"
+	compose_command "feedsummary/command/compose"
+	fetch_command "feedsummary/command/fetch"
 	"flag"
 	"fmt"
 	"os"
@@ -20,37 +23,41 @@ func main() {
 }
 
 func mainErr() error {
-	commands := make(map[string]command.Command)
-	commands["fetch"] = &command.FetchCommand{}
+	availableCommands := []string{fetch_command.CommandName, compose_command.CommandName}
 
 	flag.Usage = func() {
-		fmt.Printf("Available commands: %s\n", strings.Join(keys(commands), ", "))
+		fmt.Printf("Available commands: %s\n", strings.Join(availableCommands, ", "))
 		flag.PrintDefaults()
 	}
-	var commonOpts command.Options
+	var opts options
 	defaultCacheDir := path.Join(os.TempDir(), cacheBaseName)
-	flag.StringVar(&commonOpts.CacheDir, "cache", defaultCacheDir, "cache directory")
+	flag.StringVar(&opts.CacheDir, "cache", defaultCacheDir, "cache directory")
 	flag.Parse()
 	if flag.NArg() == 0 {
 		flag.Usage()
 		return fmt.Errorf("missing command")
 	}
+
+	cacheInstance, err := cache.NewCache(opts.CacheDir)
+	if err != nil {
+		return err
+	}
+	commands := make(map[string]command.Command)
+	commands[fetch_command.CommandName] = &fetch_command.Command{
+		Cache: cacheInstance,
+	}
+	commands[compose_command.CommandName] = &compose_command.Command{
+		Cache: cacheInstance,
+	}
+
 	commandString := flag.Arg(0)
 	cmd, ok := commands[commandString]
 	if !ok {
 		return fmt.Errorf("unknown command: %s", commandString)
 	}
-	err := cmd.Execute(commonOpts, flag.Args()[1:])
-	if err != nil {
-		return err
-	}
-	return nil
+	return cmd.Execute(flag.Args()[1:])
 }
 
-func keys(m map[string]command.Command) []string {
-	var stringKeys []string
-	for k := range m {
-		stringKeys = append(stringKeys, k)
-	}
-	return stringKeys
+type options struct {
+	CacheDir string
 }

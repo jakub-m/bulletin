@@ -1,4 +1,4 @@
-package command
+package fetch
 
 import (
 	"feedsummary/atom"
@@ -10,11 +10,14 @@ import (
 	"fmt"
 )
 
-// FetchCommand fetches feed from a single source provided directly in the command line.
-type FetchCommand struct {
+const CommandName = "fetch"
+
+// Command fetches feed from a single source provided directly in the command line.
+type Command struct {
+	Cache *cache.Cache
 }
 
-func (c *FetchCommand) Execute(commonOpts Options, args []string) error {
+func (c *Command) Execute(args []string) error {
 	opts, err := getOptions(args)
 	if err != nil {
 		return err
@@ -34,12 +37,8 @@ func (c *FetchCommand) Execute(commonOpts Options, args []string) error {
 		return err
 	}
 	log.Infof("Caching %d articles", len(articles))
-	feedCache, err := cache.NewCache(commonOpts.CacheDir)
-	if err != nil {
-		return err
-	}
 	for _, a := range articles {
-		err := feedCache.StoreArticle(a)
+		err := c.Cache.StoreArticle(a)
 		if err != nil {
 			return err
 		}
@@ -50,7 +49,7 @@ func (c *FetchCommand) Execute(commonOpts Options, args []string) error {
 
 func getOptions(args []string) (options, error) {
 	var options options
-	fs := flag.NewFlagSet("fetch", flag.ContinueOnError)
+	fs := flag.NewFlagSet(CommandName, flag.ContinueOnError)
 	fs.StringVar(&options.url, "url", "", "the feed to fetch")
 	err := fs.Parse(args)
 	return options, err
