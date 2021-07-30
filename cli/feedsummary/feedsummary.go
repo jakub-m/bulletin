@@ -5,8 +5,11 @@ import (
 	"flag"
 	"fmt"
 	"os"
+	"path"
 	"strings"
 )
+
+const cacheBaseName = "feedsummary_cache"
 
 func main() {
 	err := mainerr()
@@ -24,6 +27,9 @@ func mainerr() error {
 		fmt.Printf("Available commands: %s\n", strings.Join(keys(commands), ", "))
 		flag.PrintDefaults()
 	}
+	var commonOpts command.Options
+	defaultCacheDir := path.Join(os.TempDir(), cacheBaseName)
+	flag.StringVar(&commonOpts.CacheDir, "cache", defaultCacheDir, "cache directory")
 	flag.Parse()
 	if flag.NArg() == 0 {
 		flag.Usage()
@@ -34,7 +40,7 @@ func mainerr() error {
 	if !ok {
 		return fmt.Errorf("unknown command: %s", commandString)
 	}
-	err := cmd.Execute(flag.Args()[1:])
+	err := cmd.Execute(commonOpts, flag.Args()[1:])
 	if err != nil {
 		return err
 	}

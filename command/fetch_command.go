@@ -2,6 +2,7 @@ package command
 
 import (
 	"feedsummary/atom"
+	"feedsummary/cache"
 	"feedsummary/feed"
 	"feedsummary/fetcher"
 	"feedsummary/log"
@@ -9,15 +10,11 @@ import (
 	"fmt"
 )
 
-type Command interface {
-	Execute(args []string) error
-}
-
 // FetchCommand fetches feed from a single source provided directly in the command line.
 type FetchCommand struct {
 }
 
-func (c *FetchCommand) Execute(args []string) error {
+func (c *FetchCommand) Execute(commonOpts Options, args []string) error {
 	opts, err := getOptions(args)
 	if err != nil {
 		return err
@@ -31,9 +28,21 @@ func (c *FetchCommand) Execute(args []string) error {
 	if err != nil {
 		return err
 	}
-	html, err := feed.FormatHtml(atomFeed.GetArticles())
+	articles := atomFeed.GetArticles()
+	html, err := feed.FormatHtml(articles)
 	if err != nil {
 		return err
+	}
+	log.Infof("Caching %d articles", len(articles))
+	feedCache, err := cache.NewCache(commonOpts.CacheDir)
+	if err != nil {
+		return err
+	}
+	for _, a := range articles {
+		err := feedCache.StoreArticle(a)
+		if err != nil {
+			return err
+		}
 	}
 	fmt.Println(html)
 	return nil
