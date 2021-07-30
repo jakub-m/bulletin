@@ -2,6 +2,7 @@ package main
 
 import (
 	"feedsummary/fetcher"
+	"fmt"
 	"log"
 	"os"
 )
@@ -16,4 +17,5 @@ func main() {
 		log.Fatalf("fetchurl: %s", err)
 	}
 	log.Printf("fetchurl: Got %d bytes", len(b))
+	fmt.Print(string(b))
 }
