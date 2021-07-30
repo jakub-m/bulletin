@@ -46,7 +46,7 @@ func TestParseAtomSchema(t *testing.T) {
 				Title:     "Title",
 				Published: parseTime(t, "2000-01-01T00:00:00.000+01:00"),
 				Updated:   parseTime(t, "2000-01-02T00:00:00.000+01:00"),
-				OrigLink: "http://example.com/1",
+				OrigLink:  "http://example.com/1",
 			},
 		},
 	}

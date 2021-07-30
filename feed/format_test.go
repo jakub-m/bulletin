@@ -22,7 +22,7 @@ func TestFormatHtml(t *testing.T) {
 			Updated: time.Time{}.Add(1 * time.Minute),
 		},
 	}
-	body, err := Html(feeds)
+	body, err := FormatHtml(feeds)
 	assert.NoError(t, err)
 	expected := `
 <a href="http://example.com/1">title-1</a>

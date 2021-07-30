@@ -18,7 +18,7 @@ func init() {
 	htmlTemplateArticles = t
 }
 
-func Html(feeds []Article) (string, error) {
+func FormatHtml(feeds []Article) (string, error) {
 	buf := new(bytes.Buffer)
 	err := htmlTemplateArticles.Execute(buf, feeds)
 	if err != nil {

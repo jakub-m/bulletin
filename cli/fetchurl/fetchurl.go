@@ -29,7 +29,7 @@ func main() {
 		log.Printf("%s\t%s", entry.Uid(), entry.Title)
 	}
 
-	html, err := feed.Html(a.GetArticles())
+	html, err := feed.FormatHtml(a.GetArticles())
 	if err != nil {
 		log.Fatalf("fetchurl: %s", err)
 	}
