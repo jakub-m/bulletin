@@ -25,8 +25,6 @@ func TestParserGoogleBlog(t *testing.T) {
 
 	assert.Equal(t, entry.Id, "tag:blogger.com,1999:blog-8474926331452026626.post-537064785672594983")
 	assert.Equal(t, entry.Title, "Mapping Africa’s Buildings with Satellite Imagery")
-	//assert.Equal(t, entry.Updated, time.Parse())
-	//assert.Equal(t, entry.Published, "")
 }
 
 func TestParser(t *testing.T) {
@@ -55,14 +53,14 @@ func TestParser(t *testing.T) {
 
 func TestParseXmlTime(t *testing.T) {
 	x := &XmlTime{}
-	tcs := []struct{
-		time string
+	tcs := []struct {
+		time     string
 		expected string
 	}{
 		{
 			"2006-01-02T15:04:05.000-07:00",
 			"2006-01-02T15:04:05-07:00",
-			},
+		},
 		{
 			"2021-07-27T09:49:00.001-07:00",
 			"2021-07-27T09:49:00-07:00",
