@@ -74,8 +74,8 @@ func TestParseXmlTime(t *testing.T) {
 }
 
 func TestEntryUid(t *testing.T) {
-	e := Entry {
-		Id: "some:id",
+	e := Entry{
+		Id:      "some:id",
 		Updated: parseTime(t, "2000-01-02T00:00:00.000+01:00"),
 	}
 	assert.Equal(t, "2000-01-01T23:00:00Z-some:id", e.Uid())
