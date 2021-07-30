@@ -1,4 +1,4 @@
-package compose
+package command
 
 import (
 	"feedsummary/cache"
@@ -10,9 +10,9 @@ import (
 	"time"
 )
 
-const CommandName = "compose"
+const ComposeCommandName = "compose"
 
-type Command struct {
+type ComposeCommand struct {
 	Cache *cache.Cache
 }
 
@@ -26,8 +26,8 @@ func init() {
 	referenceTime = t
 }
 
-func (c *Command) Execute(args []string) error {
-	opts, err := getOptions(args)
+func (c *ComposeCommand) Execute(args []string) error {
+	opts, err := getComposeOptions(args)
 	if err != nil {
 		return fmt.Errorf("compose: %s", err)
 	}
@@ -56,15 +56,15 @@ func (c *Command) Execute(args []string) error {
 	return nil
 }
 
-func getOptions(args []string) (options, error) {
-	var options options
-	fs := flag.NewFlagSet(CommandName, flag.ContinueOnError)
+func getComposeOptions(args []string) (composeOptions, error) {
+	var options composeOptions
+	fs := flag.NewFlagSet(ComposeCommandName, flag.ContinueOnError)
 	fs.DurationVar(&options.interval, "interval", 24*7*time.Hour, "time range of the articles")
 	err := fs.Parse(args)
 	return options, err
 }
 
-type options struct {
+type composeOptions struct {
 	interval time.Duration
 }
 

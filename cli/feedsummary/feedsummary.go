@@ -3,8 +3,6 @@ package main
 import (
 	"feedsummary/cache"
 	"feedsummary/command"
-	compose_command "feedsummary/command/compose"
-	fetch_command "feedsummary/command/fetch"
 	"flag"
 	"fmt"
 	"os"
@@ -23,7 +21,7 @@ func main() {
 }
 
 func mainErr() error {
-	availableCommands := []string{fetch_command.CommandName, compose_command.CommandName}
+	availableCommands := []string{command.FetchCommandName, command.ComposeCommandName}
 
 	flag.Usage = func() {
 		fmt.Printf("Available commands: %s\n", strings.Join(availableCommands, ", "))
@@ -43,10 +41,10 @@ func mainErr() error {
 		return err
 	}
 	commands := make(map[string]command.Command)
-	commands[fetch_command.CommandName] = &fetch_command.Command{
+	commands[command.FetchCommandName] = &command.FetchCommand{
 		Cache: cacheInstance,
 	}
-	commands[compose_command.CommandName] = &compose_command.Command{
+	commands[command.ComposeCommandName] = &command.ComposeCommand{
 		Cache: cacheInstance,
 	}
 
