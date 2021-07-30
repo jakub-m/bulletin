@@ -1,0 +1,11 @@
+<feed>
+  <id>Id</id>
+  <title type="text">Title</title>
+  <subtitle type="html">Subtitle</subtitle>
+  <entry>
+    <id>Id</id>
+    <title type="text">Title</title>
+    <published>2000-01-01T00:00:00.000+01:00</published>
+    <updated>2000-01-02T00:00:00.000+01:00</updated>
+  </entry>
+</feed>
