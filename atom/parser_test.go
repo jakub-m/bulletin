@@ -9,7 +9,7 @@ import (
 )
 
 func TestParserGoogleBlog(t *testing.T) {
-	f, err := os.Open("../testdata/google_ai_blog.xml")
+	f, err := os.Open("../testdata/atom_google_ai_blog.xml")
 	assert.NoError(t, err)
 	b, err := io.ReadAll(f)
 	assert.NoError(t, err)
@@ -28,7 +28,7 @@ func TestParserGoogleBlog(t *testing.T) {
 }
 
 func TestParser(t *testing.T) {
-	f, err := os.Open("../testdata/schema_full.xml")
+	f, err := os.Open("../testdata/atom_schema.xml")
 	assert.NoError(t, err)
 	b, err := io.ReadAll(f)
 	assert.NoError(t, err)
