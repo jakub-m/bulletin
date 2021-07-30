@@ -50,7 +50,7 @@ func (c *FetchCommand) Execute(commonOpts Options, args []string) error {
 
 func getOptions(args []string) (options, error) {
 	var options options
-	fs := flag.NewFlagSet("FetchCommand", flag.ContinueOnError)
+	fs := flag.NewFlagSet("fetch", flag.ContinueOnError)
 	fs.StringVar(&options.url, "url", "", "the feed to fetch")
 	err := fs.Parse(args)
 	return options, err
