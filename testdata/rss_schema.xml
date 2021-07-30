@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:cc="http://cyber.law.harvard.edu/rss/creativeCommonsRssModule.html">
-    <channel>
-        <title><![CDATA[Title]]></title>
-        <description><![CDATA[Description]]></description>
-        <link>https://netflixtechblog.com?source=rss----2615bd06b42e---4</link>
-        <lastBuildDate>Fri, 30 Jul 2021 09:13:38 GMT</lastBuildDate>
-        <item>
-            <title><![CDATA[Data Movement in Netflix Studio via Data Mesh]]></title>
-            <link>http://example.com/item</link>
-            <guid isPermaLink="false">http://example.com/guid/0123</guid>
-            <pubDate>Mon, 26 Jul 2021 18:00:56 GMT</pubDate>
-            <atom:updated>2021-07-28T21:30:35.048Z</atom:updated>
-            <content:encoded><![CDATA[<p>content</p>]]></content:encoded>
-        </item>
-    </channel>
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:cc="http://cyber.law.harvard.edu/rss/creativeCommonsRssModule.html" version="2.0">
+  <channel>
+    <title><![CDATA[Title]]></title>
+    <description><![CDATA[Description]]></description>
+    <lastBuildDate>Fri, 30 Jul 2021 09:13:38 GMT</lastBuildDate>
+    <item>
+      <title><![CDATA[Item Title]]></title>
+      <link>http://example.com/item</link>
+      <guid isPermaLink="false">http://example.com/guid/0123</guid>
+      <pubDate>Mon, 26 Jul 2021 18:00:56 GMT</pubDate>
+      <atom:updated>2021-07-28T21:30:35.048Z</atom:updated>
+      <content:encoded><![CDATA[<p>Content</p>]]></content:encoded>
+    </item>
+  </channel>
 </rss>

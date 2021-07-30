@@ -9,12 +9,7 @@ import (
 )
 
 func TestParserGoogleBlog(t *testing.T) {
-	f, err := os.Open("../testdata/atom_google_ai_blog.xml")
-	assert.NoError(t, err)
-	b, err := io.ReadAll(f)
-	assert.NoError(t, err)
-	feed, err := Parse(b)
-	assert.NoError(t, err)
+	feed := parseAtomFromFile(t, "../testdata/atom_google_ai_blog.xml")
 
 	assert.Equal(t, "tag:blogger.com,1999:blog-8474926331452026626", feed.Id)
 	assert.Equal(t, "Google AI Blog", feed.Title)
@@ -29,12 +24,7 @@ func TestParserGoogleBlog(t *testing.T) {
 }
 
 func TestParseAtomSchema(t *testing.T) {
-	f, err := os.Open("../testdata/atom_schema.xml")
-	assert.NoError(t, err)
-	b, err := io.ReadAll(f)
-	assert.NoError(t, err)
-	feed, err := Parse(b)
-	assert.NoError(t, err)
+	feed := parseAtomFromFile(t, "../testdata/atom_schema.xml")
 
 	expected := &Feed{
 		Id:       "Id",
@@ -73,6 +63,16 @@ func TestParseXmlTime(t *testing.T) {
 		assert.NoError(t, e)
 		assert.Equal(t, tc.expected, x.String())
 	}
+}
+
+func parseAtomFromFile(t *testing.T, path string) *Feed {
+	f, err := os.Open(path)
+	assert.NoError(t, err)
+	b, err := io.ReadAll(f)
+	assert.NoError(t, err)
+	feed, err := Parse(b)
+	assert.NoError(t, err)
+	return feed
 }
 
 func parseTime(t *testing.T, value string) *XmlTime {

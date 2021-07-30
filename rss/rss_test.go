@@ -1,0 +1,47 @@
+package rss
+
+import (
+	"github.com/stretchr/testify/assert"
+	"io"
+	"os"
+	"testing"
+)
+
+func TestParseSchema(t *testing.T) {
+	actual := parseRssFromFile(t, "../testdata/rss_schema.xml")
+	expected := &Channel{
+		Title:       "Title",
+		Description: "Description",
+		Items: []*Item{
+			{
+				Title:          "Item Title",
+				Link:           "http://example.com/item",
+				Guid:           "http://example.com/guid/0123",
+				ContentEncoded: "<p>Content</p>",
+			},
+		},
+	}
+	assert.Equal(t, expected, actual)
+}
+
+func TestParseNetflix(t *testing.T) {
+	feed := parseRssFromFile(t, "../testdata/rss_netflix_techblog.xml")
+	assert.Equal(t, "Netflix TechBlog - Medium", feed.Title)
+	assert.Equal(t, 113, len(feed.Description))
+	assert.Equal(t, 10, len(feed.Items))
+	item := feed.Items[0]
+	assert.Equal(t, "Data Movement in Netflix Studio via Data Mesh", item.Title)
+	assert.Equal(t, "https://medium.com/p/3fddcceb1059", item.Guid)
+	assert.Equal(t, 117, len(item.Link))
+	assert.Equal(t, 22294, len(item.ContentEncoded))
+}
+
+func parseRssFromFile(t *testing.T, path string) *Channel {
+	f, err := os.Open(path)
+	assert.NoError(t, err)
+	b, err := io.ReadAll(f)
+	assert.NoError(t, err)
+	feed, err := Parse(b)
+	assert.NoError(t, err)
+	return feed
+}
