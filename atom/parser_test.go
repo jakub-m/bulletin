@@ -16,18 +16,19 @@ func TestParserGoogleBlog(t *testing.T) {
 	feed, err := Parse(b)
 	assert.NoError(t, err)
 
-	assert.Equal(t, feed.Id, "tag:blogger.com,1999:blog-8474926331452026626")
-	assert.Equal(t, feed.Title, "Google AI Blog")
-	assert.Equal(t, feed.Subtitle, "The latest news from Google AI.")
+	assert.Equal(t, "tag:blogger.com,1999:blog-8474926331452026626", feed.Id)
+	assert.Equal(t, "Google AI Blog", feed.Title)
+	assert.Equal(t, "The latest news from Google AI.", feed.Subtitle)
 
 	assert.Equal(t, len(feed.Entries), 25)
 	entry := feed.Entries[0]
 
-	assert.Equal(t, entry.Id, "tag:blogger.com,1999:blog-8474926331452026626.post-537064785672594983")
-	assert.Equal(t, entry.Title, "Mapping Africa’s Buildings with Satellite Imagery")
+	assert.Equal(t, "tag:blogger.com,1999:blog-8474926331452026626.post-537064785672594983", entry.Id)
+	assert.Equal(t, "Mapping Africa’s Buildings with Satellite Imagery", entry.Title)
+	assert.Equal(t, "http://ai.googleblog.com/2021/07/mapping-africas-buildings-with.html", entry.OrigLink)
 }
 
-func TestParser(t *testing.T) {
+func TestParseAtomSchema(t *testing.T) {
 	f, err := os.Open("../testdata/atom_schema.xml")
 	assert.NoError(t, err)
 	b, err := io.ReadAll(f)
@@ -45,6 +46,7 @@ func TestParser(t *testing.T) {
 				Title:     "Title",
 				Published: parseTime(t, "2000-01-01T00:00:00.000+01:00"),
 				Updated:   parseTime(t, "2000-01-02T00:00:00.000+01:00"),
+				OrigLink: "http://example.com/1",
 			},
 		},
 	}

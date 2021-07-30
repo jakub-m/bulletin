@@ -29,16 +29,16 @@ func (f Feed) GetArticles() []feed.Article {
 	return articles
 }
 
-var _ (feed.WithArticles) = (*Feed)(nil)
+var _ feed.WithArticles = (*Feed)(nil)
 
 type Entry struct {
 	// Id identifies the entry using a universally unique and permanent URI. Two entries in a feed can have the same
 	// value for id if they represent the same entry at different points in time.
-	Id                 string   `xml:"id"`
-	Title              string   `xml:"title"`
-	Published          *XmlTime `xml:"published"`
-	Updated            *XmlTime `xml:"updated"`
-	FeedburnerOrigLink string   `xml:"feedburner:origLink"`
+	Id        string   `xml:"id"`
+	Title     string   `xml:"title"`
+	Published *XmlTime `xml:"published"`
+	Updated   *XmlTime `xml:"updated"`
+	OrigLink  string   `xml:"origLink"` // feedburner:origLink
 }
 
 func (e Entry) AsArticle() feed.Article {
@@ -48,7 +48,7 @@ func (e Entry) AsArticle() feed.Article {
 	}
 	return feed.Article{
 		Title:   e.Title,
-		Url:     e.FeedburnerOrigLink,
+		Url:     e.OrigLink,
 		Updated: updated,
 	}
 }
