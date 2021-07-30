@@ -8,5 +8,3 @@ type Command interface {
 type Options struct {
 	CacheDir string
 }
-
-

@@ -12,14 +12,14 @@ import (
 const cacheBaseName = "feedsummary_cache"
 
 func main() {
-	err := mainerr()
+	err := mainErr()
 	if err != nil {
 		fmt.Printf("ERROR. %s\n", err)
 		os.Exit(1)
 	}
 }
 
-func mainerr() error {
+func mainErr() error {
 	commands := make(map[string]command.Command)
 	commands["fetch"] = &command.FetchCommand{}
 

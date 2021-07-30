@@ -43,7 +43,7 @@ func (c *Cache) StoreArticle(article feed.Article) error {
 }
 
 func jsonFileName(art feed.Article) string {
-	return fmt.Sprintf("%s-%s.json", art.Updated.UTC().Format(time.RFC3339), escape(art.Id))
+	return fmt.Sprintf("%s::%s.json", art.Updated.UTC().Format(time.RFC3339), escape(art.Id))
 }
 
 var regexEscape = regexp.MustCompile("[^a-zA-Z0-9]+")

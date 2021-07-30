@@ -3,7 +3,6 @@ package atom
 import (
 	"encoding/xml"
 	"feedsummary/feed"
-	"fmt"
 	"time"
 )
 
@@ -47,16 +46,11 @@ func (e Entry) AsArticle() feed.Article {
 		updated = e.Updated.Time
 	}
 	return feed.Article{
+		Id:      e.Id,
 		Title:   e.Title,
 		Url:     e.OrigLink,
 		Updated: updated,
 	}
-}
-
-// Uid return unique Id of the Entry. If the same content was published or updated at different points in time,
-// it will have a different Uid.
-func (e *Entry) Uid() string {
-	return fmt.Sprintf("%s-%s", e.Updated.UTC().Format(time.RFC3339), e.Id)
 }
 
 type XmlTime struct {
