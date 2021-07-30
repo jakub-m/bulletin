@@ -1,8 +1,8 @@
 package main
 
 import (
+	"feedsummary/atom"
 	"feedsummary/fetcher"
-	"fmt"
 	"log"
 	"os"
 )
@@ -17,5 +17,12 @@ func main() {
 		log.Fatalf("fetchurl: %s", err)
 	}
 	log.Printf("fetchurl: Got %d bytes", len(b))
-	fmt.Print(string(b))
+
+	a, err := atom.Parse(b)
+	if err != nil {
+		log.Fatalf("fetchurl: %s", err)
+	}
+	for _, entry := range a.Entries {
+		log.Printf("%s\t%s", entry.Uid(), entry.Title)
+	}
 }
