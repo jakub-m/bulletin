@@ -8,6 +8,7 @@ import (
 	"os"
 	"path"
 	"regexp"
+	"strings"
 	"time"
 )
 
@@ -63,7 +64,10 @@ func (c *Cache) GetArticles() ([]feed.Article, error) {
 }
 
 func jsonFileName(art feed.Article) string {
-	return fmt.Sprintf("%s::%s.json", art.Updated.UTC().Format(time.RFC3339), escape(art.Id))
+	feedPart := strings.ToLower(escape(art.Feed.Id))
+	timePart := art.Updated.UTC().Format(time.RFC3339)
+	articlePart := escape(art.Id)
+	return fmt.Sprintf("%s::%s::%s.json", feedPart, timePart, articlePart)
 }
 
 var regexEscape = regexp.MustCompile("[^a-zA-Z0-9]+")
