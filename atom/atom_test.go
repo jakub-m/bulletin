@@ -78,7 +78,7 @@ func parseAtomFromFile(t *testing.T, path string) *Feed {
 func parseTime(t *testing.T, value string) *XmlTime {
 	parsed, err := time.Parse(time.RFC3339, value)
 	if err != nil {
-		t.Errorf("parseTime: %s", err)
+		t.Fatalf("parseTime: %s", err)
 	}
 	return &XmlTime{parsed}
 }

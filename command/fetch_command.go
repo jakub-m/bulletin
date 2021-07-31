@@ -6,6 +6,7 @@ import (
 	"feedsummary/feed"
 	"feedsummary/fetcher"
 	"feedsummary/log"
+	"feedsummary/rss"
 	"flag"
 	"fmt"
 )
@@ -27,11 +28,10 @@ func (c *FetchCommand) Execute(args []string) error {
 	if err != nil {
 		return err
 	}
-	atomFeed, err := atom.Parse(feedBody)
+	articles, err := parseArticles(feedBody)
 	if err != nil {
 		return err
 	}
-	articles := atomFeed.GetArticles()
 	html, err := feed.FormatHtml(articles)
 	if err != nil {
 		return err
@@ -45,6 +45,18 @@ func (c *FetchCommand) Execute(args []string) error {
 	}
 	fmt.Println(html)
 	return nil
+}
+
+func parseArticles(feedBody []byte) ([]feed.Article, error) {
+	atomFeed, atomErr := atom.Parse(feedBody)
+	if atomErr == nil && len(atomFeed.GetArticles()) > 0 {
+		return atomFeed.GetArticles(), nil
+	}
+	rssFeed, rssErr := rss.Parse(feedBody)
+	if rssErr == nil && len(rssFeed.GetArticles()) > 0 {
+		return rssFeed.GetArticles(), nil
+	}
+	return nil, fmt.Errorf("could not parse. Atom error: %s. Rss error: %s", atomErr, rssErr)
 }
 
 func getFetchOptions(args []string) (fetchOptions, error) {

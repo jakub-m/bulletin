@@ -5,6 +5,7 @@ import (
 	"io"
 	"os"
 	"testing"
+	"time"
 )
 
 func TestParseSchema(t *testing.T) {
@@ -17,6 +18,7 @@ func TestParseSchema(t *testing.T) {
 				Title:          "Item Title",
 				Link:           "http://example.com/item",
 				Guid:           "http://example.com/guid/0123",
+				PubDate:        parseTime(t, "2021-07-26T18:00:56Z"),
 				ContentEncoded: "<p>Content</p>",
 			},
 		},
@@ -44,4 +46,12 @@ func parseRssFromFile(t *testing.T, path string) *Channel {
 	feed, err := Parse(b)
 	assert.NoError(t, err)
 	return feed
+}
+
+func parseTime(t *testing.T, value string) *RssTime {
+	parsed, err := time.Parse(time.RFC3339, value)
+	if err != nil {
+		t.Fatalf("parseTime: %s", err)
+	}
+	return &RssTime{parsed}
 }

@@ -12,6 +12,7 @@ smoke: clean test build
 	rm -rf tmp
 	mkdir -p tmp/cache
 	bin/feedsummary --cache ./tmp/cache/ fetch --url http://googleaiblog.blogspot.com/atom.xml
+	bin/feedsummary --cache ./tmp/cache/ fetch --url https://netflixtechblog.com/feed
 	bin/feedsummary --cache ./tmp/cache/ compose
 
 .PHONY: test build
