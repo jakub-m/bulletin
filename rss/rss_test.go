@@ -29,11 +29,11 @@ func TestParseSchema(t *testing.T) {
 }
 
 func TestParseNetflix(t *testing.T) {
-	feed := parseRssFromFile(t, "../testdata/rss_netflix_techblog.xml")
-	assert.Equal(t, "Netflix TechBlog - Medium", feed.Title)
-	assert.Equal(t, 113, len(feed.Description))
-	assert.Equal(t, 10, len(feed.Items))
-	item := feed.Items[0]
+	channel := parseRssFromFile(t, "../testdata/rss_netflix_techblog.xml")
+	assert.Equal(t, "Netflix TechBlog - Medium", channel.Title)
+	assert.Equal(t, 113, len(channel.Description))
+	assert.Equal(t, 10, len(channel.Items))
+	item := channel.Items[0]
 	assert.Equal(t, "Data Movement in Netflix Studio via Data Mesh", item.Title)
 	assert.Equal(t, "https://medium.com/p/3fddcceb1059", item.Guid)
 	assert.Equal(t, "2021-07-26T18:00:56Z", fmt.Sprint(item.PubDate))

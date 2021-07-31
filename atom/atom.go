@@ -23,7 +23,7 @@ type Feed struct {
 func (f Feed) GetArticles() []feed.Article {
 	var articles []feed.Article
 	for _, e := range f.Entries {
-		articles = append(articles, e.AsArticle())
+		articles = append(articles, e.asArticle(f))
 	}
 	return articles
 }
@@ -40,12 +40,17 @@ type Entry struct {
 	OrigLink  string   `xml:"origLink"` // feedburner:origLink
 }
 
-func (e Entry) AsArticle() feed.Article {
+func (e Entry) asArticle(source Feed) feed.Article {
 	updated := e.Published.Time
 	if e.Updated != nil {
 		updated = e.Updated.Time
 	}
+	ff := feed.Feed{
+		Id:    source.Id,
+		Title: source.Title,
+	}
 	return feed.Article{
+		Feed:    ff,
 		Id:      e.Id,
 		Title:   e.Title,
 		Url:     e.OrigLink,

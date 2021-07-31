@@ -25,8 +25,15 @@ type Channel struct {
 
 func (c *Channel) GetArticles() []feed.Article {
 	var articles []feed.Article
+	f := feed.Feed{
+		// Id is implemented as Title for RSS becaus we cannot extract link reliably. There are <link>
+		//and <atom:link> that confuse XML parser and make it return zero element.
+		Id:    c.Title,
+		Title: c.Title,
+	}
 	for _, t := range c.Items {
 		a := feed.Article{
+			Feed:    f,
 			Id:      t.Guid,
 			Title:   t.Title,
 			Updated: t.PubDate.Time,

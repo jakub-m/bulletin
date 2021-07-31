@@ -13,9 +13,9 @@ func Test_getNearestInterval(t *testing.T) {
 		now       time.Time
 	}
 	tests := []struct {
-		name    string
-		args    args
-		want    time.Time
+		name string
+		args args
+		want time.Time
 	}{
 		{
 			name: "0",
@@ -24,7 +24,7 @@ func Test_getNearestInterval(t *testing.T) {
 				interval:  24 * time.Hour,
 				now:       time.Time{}.Add(36 * time.Hour),
 			},
-			want:    time.Time{},
+			want: time.Time{},
 		},
 		{
 			name: "1",
@@ -33,7 +33,7 @@ func Test_getNearestInterval(t *testing.T) {
 				interval:  24 * time.Hour,
 				now:       time.Time{}.Add(50 * time.Hour),
 			},
-			want:    time.Time{}.Add(24 * time.Hour),
+			want: time.Time{}.Add(24 * time.Hour),
 		},
 	}
 	for _, tt := range tests {
