@@ -1,6 +1,7 @@
 package rss
 
 import (
+	"encoding/json"
 	"github.com/stretchr/testify/assert"
 	"io"
 	"os"
@@ -23,7 +24,7 @@ func TestParseSchema(t *testing.T) {
 			},
 		},
 	}
-	assert.Equal(t, expected, actual)
+	assert.Equal(t, channelAsJson(t, expected), channelAsJson(t, actual))
 }
 
 func TestParseNetflix(t *testing.T) {
@@ -54,4 +55,13 @@ func parseTime(t *testing.T, value string) *RssTime {
 		t.Fatalf("parseTime: %s", err)
 	}
 	return &RssTime{parsed}
+}
+
+// channelAsJson is used because without it time.Time does not compare well when expressed with different timezones.
+func channelAsJson(t *testing.T, channel *Channel) string {
+	s, err := json.MarshalIndent(channel, "", " ")
+	if err != nil {
+		t.Fatalf("channelAsJson: %s", err)
+	}
+	return string(s)
 }
