@@ -2,6 +2,7 @@ package rss
 
 import (
 	"encoding/json"
+	"fmt"
 	"github.com/stretchr/testify/assert"
 	"io"
 	"os"
@@ -35,6 +36,7 @@ func TestParseNetflix(t *testing.T) {
 	item := feed.Items[0]
 	assert.Equal(t, "Data Movement in Netflix Studio via Data Mesh", item.Title)
 	assert.Equal(t, "https://medium.com/p/3fddcceb1059", item.Guid)
+	assert.Equal(t, "2021-07-26T18:00:56Z", fmt.Sprint(item.PubDate))
 	assert.Equal(t, 117, len(item.Link))
 	assert.Equal(t, 22294, len(item.ContentEncoded))
 }

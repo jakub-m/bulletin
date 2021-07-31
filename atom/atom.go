@@ -1,8 +1,8 @@
 package atom
 
 import (
-	"encoding/xml"
 	"bulletin/feed"
+	"encoding/xml"
 	"time"
 )
 

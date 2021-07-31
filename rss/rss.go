@@ -1,8 +1,8 @@
 package rss
 
 import (
-	"encoding/xml"
 	"bulletin/feed"
+	"encoding/xml"
 	"time"
 )
 
@@ -27,10 +27,10 @@ func (c *Channel) GetArticles() []feed.Article {
 	var articles []feed.Article
 	for _, t := range c.Items {
 		a := feed.Article{
-			Id:    t.Guid,
-			Title: t.Title,
-			//Updated: t.
-			Url: t.Link,
+			Id:      t.Guid,
+			Title:   t.Title,
+			Updated: t.PubDate.Time,
+			Url:     t.Link,
 		}
 		articles = append(articles, a)
 	}
