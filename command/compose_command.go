@@ -1,9 +1,9 @@
 package command
 
 import (
-	"feedsummary/cache"
-	"feedsummary/feed"
-	"feedsummary/log"
+	"bulletin/cache"
+	"bulletin/feed"
+	"bulletin/log"
 	"flag"
 	"fmt"
 	corelog "log"

@@ -2,7 +2,7 @@ package atom
 
 import (
 	"encoding/xml"
-	"feedsummary/feed"
+	"bulletin/feed"
 	"time"
 )
 

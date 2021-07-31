@@ -1,4 +1,4 @@
-module feedsummary
+module bulletin
 
 go 1.16
 

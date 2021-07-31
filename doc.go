@@ -8,4 +8,4 @@ Structure of the program:
 - composer of RSS feeds given time range.
 
 */
-package feedsummary
+package bulletin

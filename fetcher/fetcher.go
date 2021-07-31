@@ -1,7 +1,7 @@
 package fetcher
 
 import (
-	"feedsummary/log"
+	"bulletin/log"
 	"fmt"
 	"io"
 	"net/http"

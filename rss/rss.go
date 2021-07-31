@@ -2,7 +2,7 @@ package rss
 
 import (
 	"encoding/xml"
-	"feedsummary/feed"
+	"bulletin/feed"
 	"time"
 )
 

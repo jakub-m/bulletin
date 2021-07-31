@@ -1,8 +1,8 @@
 package main
 
 import (
-	"feedsummary/cache"
-	"feedsummary/command"
+	"bulletin/cache"
+	"bulletin/command"
 	"flag"
 	"fmt"
 	"os"
@@ -10,7 +10,7 @@ import (
 	"strings"
 )
 
-const cacheBaseName = "feedsummary_cache"
+const cacheBaseName = "bulletin_cache"
 
 func main() {
 	err := mainErr()

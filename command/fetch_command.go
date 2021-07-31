@@ -1,12 +1,12 @@
 package command
 
 import (
-	"feedsummary/atom"
-	"feedsummary/cache"
-	"feedsummary/feed"
-	"feedsummary/fetcher"
-	"feedsummary/log"
-	"feedsummary/rss"
+	"bulletin/atom"
+	"bulletin/cache"
+	"bulletin/feed"
+	"bulletin/fetcher"
+	"bulletin/log"
+	"bulletin/rss"
 	"flag"
 	"fmt"
 )

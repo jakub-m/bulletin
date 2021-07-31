@@ -1,8 +1,8 @@
 package cache
 
 import (
-	"feedsummary/feed"
-	"feedsummary/log"
+	"bulletin/feed"
+	"bulletin/log"
 	"fmt"
 	"io/ioutil"
 	"os"
