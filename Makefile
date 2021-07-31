@@ -10,9 +10,9 @@ clean:
 	rm -rf bin tmp
 smoke: clean test build
 	mkdir -p tmp/cache
-	#bin/bulletin --cache ./tmp/cache/ fetch --url http://googleaiblog.blogspot.com/atom.xml
+	bin/bulletin --cache ./tmp/cache/ fetch --url http://googleaiblog.blogspot.com/atom.xml
 	bin/bulletin --cache ./tmp/cache/ fetch --url https://netflixtechblog.com/feed
-	bin/bulletin --cache ./tmp/cache/ compose
+	bin/bulletin --cache ./tmp/cache/ compose --days 7
 
 .PHONY: test build
 

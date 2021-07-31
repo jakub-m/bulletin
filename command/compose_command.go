@@ -31,17 +31,15 @@ func (c *ComposeCommand) Execute(args []string) error {
 	if err != nil {
 		return fmt.Errorf("compose: %s", err)
 	}
-	intervalStart, err := getNearestInterval(referenceTime, opts.interval, time.Now())
-	if err != nil {
-		return err
-	}
+	interval := time.Duration(opts.intervalDays) * 24 * time.Hour
+	intervalStart := getNearestInterval(referenceTime, interval, time.Now())
 	articles, err := c.Cache.GetArticles()
 	if err != nil {
 		return err
 	}
 	var filteredArticles []feed.Article
 	for _, a := range articles {
-		if a.Updated.After(intervalStart) && !a.Updated.After(intervalStart.Add(opts.interval)) {
+		if a.Updated.After(intervalStart) && !a.Updated.After(intervalStart.Add(interval)) {
 			log.Debugf("Accept %s, %s", a.Id, a.Updated)
 			filteredArticles = append(filteredArticles, a)
 		} else {
@@ -59,25 +57,17 @@ func (c *ComposeCommand) Execute(args []string) error {
 func getComposeOptions(args []string) (composeOptions, error) {
 	var options composeOptions
 	fs := flag.NewFlagSet(ComposeCommandName, flag.ContinueOnError)
-	fs.DurationVar(&options.interval, "interval", 24*7*time.Hour, "time range of the articles")
+	fs.IntVar(&options.intervalDays, "days", 7, "time range of the articles in DAYS")
 	err := fs.Parse(args)
 	return options, err
 }
 
 type composeOptions struct {
-	interval time.Duration
+	intervalDays int
 }
 
-func getNearestInterval(reference time.Time, interval time.Duration, now time.Time) (time.Time, error) {
-	if now.Before(reference) {
-		return time.Time{}, fmt.Errorf("compose: cannot find interval %s before %s", now, reference)
-	}
-	prevPrevInterval, prevInterval := reference, reference
-	for t := reference; t.Before(now); t = t.Add(interval) {
-		prevPrevInterval, prevInterval = prevInterval, t
-	}
-	if prevPrevInterval.Add(interval).After(now) {
-		return time.Time{}, fmt.Errorf("compose: bug. bad interval end after now: %s", prevPrevInterval.Add(interval))
-	}
-	return prevPrevInterval, nil
+func getNearestInterval(reference time.Time, interval time.Duration, now time.Time) time.Time {
+	n := now.Sub(reference) / interval
+	d := (n - 1) * interval
+	return reference.Add(d)
 }

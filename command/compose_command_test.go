@@ -16,7 +16,6 @@ func Test_getNearestInterval(t *testing.T) {
 		name    string
 		args    args
 		want    time.Time
-		wantErr bool
 	}{
 		{
 			name: "0",
@@ -26,7 +25,6 @@ func Test_getNearestInterval(t *testing.T) {
 				now:       time.Time{}.Add(36 * time.Hour),
 			},
 			want:    time.Time{},
-			wantErr: false,
 		},
 		{
 			name: "1",
@@ -36,16 +34,11 @@ func Test_getNearestInterval(t *testing.T) {
 				now:       time.Time{}.Add(50 * time.Hour),
 			},
 			want:    time.Time{}.Add(24 * time.Hour),
-			wantErr: false,
 		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got, err := getNearestInterval(tt.args.reference, tt.args.interval, tt.args.now)
-			if (err != nil) != tt.wantErr {
-				t.Errorf("getNearestInterval() error = %v, wantErr %v", err, tt.wantErr)
-				return
-			}
+			got := getNearestInterval(tt.args.reference, tt.args.interval, tt.args.now)
 			if !reflect.DeepEqual(got, tt.want) {
 				t.Errorf("getNearestInterval() got = %v, want %v", got, tt.want)
 			}
