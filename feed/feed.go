@@ -16,12 +16,17 @@ type Article struct {
 	Id      string
 	Title   string
 	Updated time.Time
-	Url     string
+	// Url directs to the actual article.
+	Url string
 }
 
+// Feed is an aggregate of the articles.
 type Feed struct {
+	// Id uniquely identifies the Feed.
 	Id    string
 	Title string
+	// Url from where the Feed was fetched from. Points to RSS or Atom XML document.
+	Url string
 }
 
 func (a Article) Marshall() ([]byte, error) {

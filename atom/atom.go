@@ -18,14 +18,7 @@ type Feed struct {
 	Title    string   `xml:"title"`
 	Subtitle string   `xml:"subtitle"`
 	Entries  []*Entry `xml:"entry"`
-}
-
-func (f Feed) GetArticles() []feed.Article {
-	var articles []feed.Article
-	for _, e := range f.Entries {
-		articles = append(articles, e.asArticle(f))
-	}
-	return articles
+	Link     []*Link  `xml:"link"`
 }
 
 var _ feed.WithArticles = (*Feed)(nil)
@@ -40,14 +33,45 @@ type Entry struct {
 	OrigLink  string   `xml:"origLink"` // feedburner:origLink
 }
 
-func (e Entry) asArticle(source Feed) feed.Article {
+type Link struct {
+	Rel  string `xml:"rel,attr"`
+	Href string `xml:"href,attr"`
+	Type string `xml:"type,attr"`
+}
+
+func (f Feed) GetArticles() []feed.Article {
+	var articles []feed.Article
+	for _, e := range f.Entries {
+		articles = append(articles, e.asArticle(f))
+	}
+	return articles
+}
+
+// getUrl returns the most appropriate link.
+func (f Feed) getUrl() string {
+	if len(f.Link) == 1 {
+		return f.Link[0].Href
+	}
+	for _, s := range []string{"alternate", "self", ""} {
+		for _, l := range f.Link {
+			if l.Rel == s {
+				return l.Href
+			}
+		}
+
+	}
+	return ""
+}
+
+func (e Entry) asArticle(f Feed) feed.Article {
 	updated := e.Published.Time
 	if e.Updated != nil {
 		updated = e.Updated.Time
 	}
 	ff := feed.Feed{
-		Id:    source.Id,
-		Title: source.Title,
+		Id:    f.Id,
+		Title: f.Title,
+		Url:   f.getUrl(),
 	}
 	return feed.Article{
 		Feed:    ff,

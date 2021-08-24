@@ -7,6 +7,7 @@ import (
 	"net/http"
 )
 
+// Get fetches a raw content of the url.
 func Get(url string) ([]byte, error) {
 	visited := make(map[string]bool)
 	return getRec(url, visited)

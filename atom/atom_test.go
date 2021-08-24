@@ -1,11 +1,14 @@
 package atom
 
 import (
-	"github.com/stretchr/testify/assert"
 	"io"
 	"os"
+	"sort"
 	"testing"
-	"time"
+
+	"bulletin/testutils"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestParserGoogleBlog(t *testing.T) {
@@ -14,10 +17,16 @@ func TestParserGoogleBlog(t *testing.T) {
 	assert.Equal(t, "tag:blogger.com,1999:blog-8474926331452026626", feed.Id)
 	assert.Equal(t, "Google AI Blog", feed.Title)
 	assert.Equal(t, "The latest news from Google AI.", feed.Subtitle)
-
 	assert.Equal(t, len(feed.Entries), 25)
-	entry := feed.Entries[0]
 
+	var rels []string
+	for _, l := range feed.Link {
+		rels = append(rels, l.Rel)
+	}
+	sort.Strings(rels)
+	assert.Equal(t, []string{"alternate", "hub", "next", "self"}, rels)
+
+	entry := feed.Entries[0]
 	assert.Equal(t, "tag:blogger.com,1999:blog-8474926331452026626.post-537064785672594983", entry.Id)
 	assert.Equal(t, "Mapping Africa’s Buildings with Satellite Imagery", entry.Title)
 	assert.Equal(t, "http://ai.googleblog.com/2021/07/mapping-africas-buildings-with.html", entry.OrigLink)
@@ -76,9 +85,6 @@ func parseAtomFromFile(t *testing.T, path string) *Feed {
 }
 
 func parseTime(t *testing.T, value string) *XmlTime {
-	parsed, err := time.Parse(time.RFC3339, value)
-	if err != nil {
-		t.Fatalf("parseTime: %s", err)
-	}
+	parsed := testutils.ParseTime(t, value)
 	return &XmlTime{parsed}
 }
