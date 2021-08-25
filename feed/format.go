@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"html/template"
 	"log"
-	"strings"
+	"sort"
 )
 
 //go:embed page_template.gohtml
@@ -22,11 +22,35 @@ func init() {
 	}
 }
 
-func FormatHtml(feeds []Article) (string, error) {
+func FormatHtml(articles []Article) (string, error) {
 	buf := new(bytes.Buffer)
-	err := bulletinPageTemplate.Execute(buf, feeds)
+	grouped := groupArticlesPerFeed(articles)
+	err := bulletinPageTemplate.Execute(buf, grouped)
 	if err != nil {
 		return "", fmt.Errorf("feed: %s", err)
 	}
-	return strings.Trim(buf.String(), "\n"), nil
+	return buf.String(), nil
+}
+
+func groupArticlesPerFeed(articles []Article) [][]Article {
+	feedIdMap := make(map[string]Feed)
+	articlesByFeedId := make(map[string][]Article)
+	for _, article := range articles {
+		feedId := article.Feed.Id
+		feedIdMap[feedId] = article.Feed
+		articlesByFeedId[feedId] = append(articlesByFeedId[feedId], article)
+	}
+	var feeds []Feed
+	for _, f := range feedIdMap {
+		feeds = append(feeds, f)
+	}
+	sort.Slice(feeds, func(i, j int) bool {
+		return feeds[i].Title < feeds[j].Title
+	})
+
+	var groupedArticles [][]Article
+	for _, f := range feeds {
+		groupedArticles = append(groupedArticles, articlesByFeedId[f.Id])
+	}
+	return groupedArticles
 }

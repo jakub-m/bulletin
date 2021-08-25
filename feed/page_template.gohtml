@@ -1,8 +1,15 @@
+<!DOCTYPE html>
 <html>
     <head>
+        <style type="text/css">
+        </style>
     </head>
     <body>
-        {{range .}}<a href="{{.Url}}">{{.Title}}</a><br>
+        {{range .}}
+            <h3>{{(index . 0).Feed.Title}}</h3>
+            {{range .}}
+                <a href="{{.Url}}">{{.Title}}</a><br>
+            {{end}}
         {{end}}
     </body>
 </html>
