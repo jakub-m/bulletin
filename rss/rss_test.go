@@ -3,11 +3,12 @@ package rss
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/stretchr/testify/assert"
 	"io"
 	"os"
 	"testing"
 	"time"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestParseSchema(t *testing.T) {
@@ -15,7 +16,7 @@ func TestParseSchema(t *testing.T) {
 	expected := &Channel{
 		Title:       "Title",
 		Description: "Description",
-		Items: []*Item{
+		Items: []Item{
 			{
 				Title:          "Item Title",
 				Link:           "http://example.com/item",

@@ -18,20 +18,34 @@ type rssFeed struct {
 
 // Reed is RSS feed.
 type Channel struct {
-	Title       string  `xml:"title"`
-	Description string  `xml:"description"`
-	Items       []*Item `xml:"item"`
-	Link        string  `xml:"link"`
+	Title       string `xml:"title"`
+	Description string `xml:"description"`
+	Items       []Item `xml:"item"`
+	Links       []Link `xml:"link"`
+}
+
+type Item struct {
+	Title          string   `xml:"title"`
+	Link           string   `xml:"link"`
+	Guid           string   `xml:"guid"`
+	ContentEncoded string   `xml:"encoded"` // content:encoded
+	PubDate        *RssTime `xml:"pubDate"`
+}
+
+type Link struct {
+	Value string `xml:",chardata"`
+	Href  string `xml:"href,attr"`
+	Rel   string `xml:"rel,attr"`
+	Type  string `xml:"type,attr"`
 }
 
 func (c *Channel) GetArticles() []feed.Article {
 	var articles []feed.Article
+	feedLink := getBestLink(c.Links)
 	f := feed.Feed{
-		// Id is implemented as Title for RSS because we cannot extract link reliably. There are <link>
-		//and <atom:link> that confuse XML parser and make it return zero element.
-		Id:    c.Title,
+		Id:    feedLink,
 		Title: c.Title,
-		Url:   c.Link,
+		Url:   feedLink,
 	}
 	for _, t := range c.Items {
 		a := feed.Article{
@@ -46,12 +60,35 @@ func (c *Channel) GetArticles() []feed.Article {
 	return articles
 }
 
-type Item struct {
-	Title          string   `xml:"title"`
-	Link           string   `xml:"link"`
-	Guid           string   `xml:"guid"`
-	ContentEncoded string   `xml:"encoded"` // content:encoded
-	PubDate        *RssTime `xml:"pubDate"`
+func getBestLink(links []Link) string {
+	selfLinks := filterLinks(links, func(l Link) bool {
+		return l.Rel == "self"
+	})
+	if len(selfLinks) == 1 {
+		return firstLinkValue(selfLinks)
+	}
+	return firstLinkValue(links)
+}
+
+func firstLinkValue(links []Link) string {
+	if len(links) == 0 {
+		return ""
+	}
+	first := links[0]
+	if first.Href != "" {
+		return first.Href
+	}
+	return first.Value
+}
+
+func filterLinks(links []Link, fn func(l Link) bool) []Link {
+	var filtered []Link
+	for _, l := range links {
+		if fn(l) {
+			filtered = append(filtered, l)
+		}
+	}
+	return filtered
 }
 
 type RssTime struct {
