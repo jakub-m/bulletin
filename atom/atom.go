@@ -14,11 +14,11 @@ func Parse(raw []byte) (*Feed, error) {
 
 // Feed represents Atom feed. See schema in https://validator.w3.org/feed/docs/atom.html
 type Feed struct {
-	Id       string   `xml:"id"`
-	Title    string   `xml:"title"`
-	Subtitle string   `xml:"subtitle"`
-	Entries  []*Entry `xml:"entry"`
-	Link     []*Link  `xml:"link"`
+	Id       string  `xml:"id"`
+	Title    string  `xml:"title"`
+	Subtitle string  `xml:"subtitle"`
+	Entries  []Entry `xml:"entry"`
+	Links    []Link  `xml:"link"`
 }
 
 var _ feed.WithArticles = (*Feed)(nil)
@@ -30,7 +30,7 @@ type Entry struct {
 	Title     string   `xml:"title"`
 	Published *XmlTime `xml:"published"`
 	Updated   *XmlTime `xml:"updated"`
-	OrigLink  string   `xml:"origLink"` // feedburner:origLink
+	Links     []Link   `xml:"link"`
 }
 
 type Link struct {
@@ -47,39 +47,40 @@ func (f Feed) GetArticles() []feed.Article {
 	return articles
 }
 
-// getUrl returns the most appropriate link.
-func (f Feed) getUrl() string {
-	if len(f.Link) == 1 {
-		return f.Link[0].Href
-	}
-	for _, s := range []string{"alternate", "self", ""} {
-		for _, l := range f.Link {
-			if l.Rel == s {
-				return l.Href
-			}
-		}
-
-	}
-	return ""
-}
-
-func (e Entry) asArticle(f Feed) feed.Article {
+func (e Entry) asArticle(atomFeed Feed) feed.Article {
 	updated := e.Published.Time
 	if e.Updated != nil {
 		updated = e.Updated.Time
 	}
-	ff := feed.Feed{
-		Id:    f.Id,
-		Title: f.Title,
-		Url:   f.getUrl(),
+	feedUrl := getBestUrl(atomFeed.Links)
+	f := feed.Feed{
+		Id:    atomFeed.Id,
+		Title: atomFeed.Title,
+		Url:   feedUrl,
 	}
+	articleUrl := getBestUrl(e.Links)
 	return feed.Article{
-		Feed:    ff,
+		Feed:    f,
 		Id:      e.Id,
 		Title:   e.Title,
-		Url:     e.OrigLink,
+		Url:     articleUrl,
 		Updated: updated,
 	}
+}
+
+// getUrl returns the most appropriate link.
+func getBestUrl(links []Link) string {
+	if len(links) == 1 {
+		return links[0].Href
+	}
+	for _, rel := range []string{"alternate", "self", ""} {
+		for _, l := range links {
+			if l.Rel == rel {
+				return l.Href
+			}
+		}
+	}
+	return ""
 }
 
 type XmlTime struct {

@@ -20,7 +20,7 @@ func TestParserGoogleBlog(t *testing.T) {
 	assert.Equal(t, len(feed.Entries), 25)
 
 	var rels []string
-	for _, l := range feed.Link {
+	for _, l := range feed.Links {
 		rels = append(rels, l.Rel)
 	}
 	sort.Strings(rels)
@@ -29,7 +29,7 @@ func TestParserGoogleBlog(t *testing.T) {
 	entry := feed.Entries[0]
 	assert.Equal(t, "tag:blogger.com,1999:blog-8474926331452026626.post-537064785672594983", entry.Id)
 	assert.Equal(t, "Mapping Africa’s Buildings with Satellite Imagery", entry.Title)
-	assert.Equal(t, "http://ai.googleblog.com/2021/07/mapping-africas-buildings-with.html", entry.OrigLink)
+	assert.Equal(t, "http://ai.googleblog.com/feeds/537064785672594983/comments/default", entry.Links[0].Href)
 }
 
 func TestParseAtomSchema(t *testing.T) {
@@ -39,13 +39,13 @@ func TestParseAtomSchema(t *testing.T) {
 		Id:       "Id",
 		Title:    "Title",
 		Subtitle: "Subtitle",
-		Entries: []*Entry{
+		Entries: []Entry{
 			{
 				Id:        "Id",
 				Title:     "Title",
 				Published: parseTime(t, "2000-01-01T00:00:00.000+01:00"),
 				Updated:   parseTime(t, "2000-01-02T00:00:00.000+01:00"),
-				OrigLink:  "http://example.com/1",
+				Links:     nil,
 			},
 		},
 	}

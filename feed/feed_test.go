@@ -23,7 +23,7 @@ func TestGoogleBlogArticles(t *testing.T) {
 		},
 		Id:      "tag:blogger.com,1999:blog-8474926331452026626.post-537064785672594983",
 		Title:   "Mapping Africa’s Buildings with Satellite Imagery",
-		Url:     "http://ai.googleblog.com/2021/07/mapping-africas-buildings-with.html",
+		Url:     "http://feedproxy.google.com/~r/blogspot/gJZg/~3/bcEqeVSMnBQ/mapping-africas-buildings-with.html",
 		Updated: testutils.ParseTime(t, "2021-07-29T13:05:10.956-07:00"),
 	}
 	assert.Equal(t, asJson(t, expected), asJson(t, articles[0]))
@@ -41,6 +41,22 @@ func TestNetflixArticles(t *testing.T) {
 		Title:   "Data Movement in Netflix Studio via Data Mesh",
 		Url:     "https://netflixtechblog.com/data-movement-in-netflix-studio-via-data-mesh-3fddcceb1059?source=rss----2615bd06b42e---4",
 		Updated: testutils.ParseTime(t, "2021-07-26T18:00:56+00:00"),
+	}
+	assert.Equal(t, asJson(t, expected), asJson(t, articles[0]))
+}
+
+func TestMuratArticles(t *testing.T) {
+	articles := parseArticlesFromXml(t, "../testdata/atom_murat.xml")
+	expected := feed.Article{
+		Feed: feed.Feed{
+			Id:    "tag:blogger.com,1999:blog-8436330762136344379",
+			Title: "Metadata",
+			Url:   "http://muratbuffalo.blogspot.com/",
+		},
+		Id:      "tag:blogger.com,1999:blog-8436330762136344379.post-8449165989112346419",
+		Title:   "There is plenty of room at the bottom",
+		Url:     "http://muratbuffalo.blogspot.com/2021/08/there-is-plenty-of-room-at-bottom.html",
+		Updated: testutils.ParseTime(t, "2021-08-17T11:53:07.365-04:00"),
 	}
 	assert.Equal(t, asJson(t, expected), asJson(t, articles[0]))
 }
