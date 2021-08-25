@@ -1,10 +1,10 @@
 package feed
 
 import (
-	"github.com/stretchr/testify/assert"
-	"strings"
 	"testing"
 	"time"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestFormatHtml(t *testing.T) {
@@ -24,10 +24,6 @@ func TestFormatHtml(t *testing.T) {
 	}
 	body, err := FormatHtml(feeds)
 	assert.NoError(t, err)
-	expected := `
-<a href="http://example.com/1">title-1</a></br>
-<a href="http://example.com/1">title-2</a></br>
-`
-
-	assert.Equal(t, strings.Trim(expected, "\n"), body)
+	assert.Contains(t, body, `<a href="http://example.com/1">title-1</a>`)
+	assert.Contains(t, body, `<a href="http://example.com/1">title-2</a>`)
 }

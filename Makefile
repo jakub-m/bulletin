@@ -18,13 +18,17 @@ $(bin): $(gofiles)
 clean:
 	rm -rf bin tmp
 
-smoke: clean test build
-	mkdir -p tmp/cache
-	#bin/bulletin --cache ./tmp/cache/ fetch --url http://googleaiblog.blogspot.com/atom.xml
-	#bin/bulletin --cache ./tmp/cache/ fetch --url https://netflixtechblog.com/feed
-	bin/bulletin --cache ./tmp/cache/ fetch --url http://muratbuffalo.blogspot.com/feeds/posts/default
-	#bin/bulletin --cache ./tmp/cache/ fetch --url https://perspectives.mvdirona.com/feed/
-	bin/bulletin --cache ./tmp/cache/ compose --days 7 | tee bulletin.tmp.html
+smoke: clean build fetch compose
 
-.PHONY: clean smoke
+fetch:
+	mkdir -p tmp/cache
+	$(bin) --cache ./tmp/cache/ fetch --url http://googleaiblog.blogspot.com/atom.xml
+	$(bin) --cache ./tmp/cache/ fetch --url https://netflixtechblog.com/feed
+	$(bin) --cache ./tmp/cache/ fetch --url http://muratbuffalo.blogspot.com/feeds/posts/default
+	$(bin) --cache ./tmp/cache/ fetch --url https://perspectives.mvdirona.com/feed/
+
+compose: $(bin)
+	$(bin) --cache ./tmp/cache/ compose --days 31 | tee bulletin.tmp.html
+
+.PHONY: clean smoke fetch compose
 

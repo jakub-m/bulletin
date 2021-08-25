@@ -2,32 +2,31 @@ package feed
 
 import (
 	"bytes"
+	_ "embed"
 	"fmt"
 	"html/template"
 	"log"
 	"strings"
 )
 
-var htmlTemplateArticles *template.Template
+//go:embed page_template.gohtml
+var bulletinPageTemplateRaw string
+
+var bulletinPageTemplate *template.Template
 
 func init() {
-	t, err := template.New("articles").Parse(htmlTemplateArticlesRaw)
+	var err error
+	bulletinPageTemplate, err = template.New("page").Parse(bulletinPageTemplateRaw)
 	if err != nil {
 		log.Fatal("feed: cannot parse html template")
 	}
-	htmlTemplateArticles = t
 }
 
 func FormatHtml(feeds []Article) (string, error) {
 	buf := new(bytes.Buffer)
-	err := htmlTemplateArticles.Execute(buf, feeds)
+	err := bulletinPageTemplate.Execute(buf, feeds)
 	if err != nil {
 		return "", fmt.Errorf("feed: %s", err)
 	}
 	return strings.Trim(buf.String(), "\n"), nil
 }
-
-const htmlTemplateArticlesRaw = `
-{{range .}}<a href="{{.Url}}">{{.Title}}</a></br>
-{{end}}
-`
