@@ -26,6 +26,7 @@ fetch:
 	$(bin) --cache ./tmp/cache/ fetch --url https://netflixtechblog.com/feed
 	$(bin) --cache ./tmp/cache/ fetch --url http://muratbuffalo.blogspot.com/feeds/posts/default
 	$(bin) --cache ./tmp/cache/ fetch --url https://perspectives.mvdirona.com/feed/
+	$(bin) --cache ./tmp/cache/ fetch --url https://berthub.eu/articles/index.xml
 
 compose: $(bin)
 	$(bin) --cache ./tmp/cache/ compose --days 31 | tee bulletin.tmp.html

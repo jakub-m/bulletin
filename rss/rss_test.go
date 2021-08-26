@@ -42,6 +42,11 @@ func TestParseNetflix(t *testing.T) {
 	assert.Equal(t, 22294, len(item.ContentEncoded))
 }
 
+func TestParseBerthub(t *testing.T) {
+	channel := parseRssFromFile(t, "../testdata/rss_berthub.xml")
+	assert.Greater(t, len(channel.Items), 0)
+}
+
 func parseRssFromFile(t *testing.T, path string) *Channel {
 	f, err := os.Open(path)
 	assert.NoError(t, err)

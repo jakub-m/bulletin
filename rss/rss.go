@@ -2,6 +2,7 @@ package rss
 
 import (
 	"bulletin/feed"
+	btime "bulletin/time"
 	"encoding/xml"
 	"time"
 )
@@ -110,7 +111,7 @@ func (x *RssTime) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
 }
 
 func (x *RssTime) parse(value string) error {
-	t, err := time.Parse(time.RFC1123, value)
+	t, err := btime.Parse(value)
 	if err != nil {
 		return err
 	}

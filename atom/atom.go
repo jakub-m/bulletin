@@ -2,6 +2,7 @@ package atom
 
 import (
 	"bulletin/feed"
+	btime "bulletin/time"
 	"encoding/xml"
 	"time"
 )
@@ -83,8 +84,6 @@ type XmlTime struct {
 	time.Time
 }
 
-const timeFormat = `2006-01-02T15:04:05.000-07:00`
-
 func (x *XmlTime) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
 	var s string
 	if err := d.DecodeElement(&s, &start); err != nil {
@@ -94,7 +93,7 @@ func (x *XmlTime) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
 }
 
 func (x *XmlTime) parse(value string) error {
-	t, err := time.Parse(timeFormat, value)
+	t, err := btime.Parse(value)
 	if err != nil {
 		return err
 	}

@@ -1,0 +1,1420 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bert Hubert&#39;s writings</title>
+    <link>https://berthub.eu/articles/</link>
+    <description>Recent content on Bert Hubert&#39;s writings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 19 Aug 2021 09:27:09 +0200</lastBuildDate><atom:link href="https://berthub.eu/articles/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SkewDB</title>
+      <link>https://berthub.eu/articles/skewdb/</link>
+      <pubDate>Thu, 26 Aug 2021 12:22:53 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/skewdb/</guid>
+      <description>Welcome to SkewDB! A free database of GC and many other skews for over 25000 chromosomes.
+   Scatter plot of observed GC skew levels (y axis) and a calculated predictor (x axis)
+   This database is created by the open source Antonie software, based on public DNA sequence, annotation and taxonomic data as gathered from NCBI data.
+In addition, for all 25000 chromosomes, individual files are available that show all the various skews with 4096-nucleotide granularity.</description>
+    </item>
+    
+    <item>
+      <title>A Science Experiment: part 1</title>
+      <link>https://berthub.eu/articles/posts/a-science-experiment/</link>
+      <pubDate>Thu, 19 Aug 2021 09:27:09 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/a-science-experiment/</guid>
+      <description>So, I think I may have discovered something interesting in biology! Professional scientists know this feeling all too well. Exhilarated that it looks like you might be the first person ever to know something, but worried sick that it might not be real. Also, you might be fooling yourself &amp;ndash; and you are the easiest person to fool.
+And even if it is real, does it even mean something? Or did you effectively discover that hot things are not cold?</description>
+    </item>
+    
+    <item>
+      <title>KPN Interactieve TV zonder Experia Box</title>
+      <link>https://berthub.eu/articles/posts/kpn-interactieve-tv-zelf-doen/</link>
+      <pubDate>Thu, 12 Aug 2021 16:36:42 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/kpn-interactieve-tv-zelf-doen/</guid>
+      <description>Ik ben een heel tevreden klant van KPN Internet. Om diverse redenen gebruik ik de Experia Box niet, maar ik wil wel graag TV kunnen kijken met de KPN Interactieve TV Set Top Box. Vroeger ging dat &amp;ldquo;vanzelf goed&amp;rdquo;, tegenwoordig is daar wat werk voor nodig.
+ In augustus 2021 werkten deze instructies goed, maar er kunnen dingen veranderen bij KPN natuurlijk!
+ Je hebt het verhaal op deze pagina alleen nodig als je de Experia Box niet wil gebruiken.</description>
+    </item>
+    
+    <item>
+      <title>European Innovation &amp; Technical Capabilities</title>
+      <link>https://berthub.eu/articles/posts/european-innovation-and-capabilities/</link>
+      <pubDate>Sat, 07 Aug 2021 21:57:50 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/european-innovation-and-capabilities/</guid>
+      <description>Over the past few years I&amp;rsquo;ve been writing a lot about innovation, and specifically, the lack thereof in Europe. I also touch on how we&amp;rsquo;ve outsourced a ton of operational capabilities, leaving us relatively helpless.
+By now this is such a huge amount of words, audio and video that it is in dire need of a summary, if only to see if it makes any kind of sense taken together.</description>
+    </item>
+    
+    <item>
+      <title>SPRIND Podcast Transcript: Innovation, Europe, Secret Services</title>
+      <link>https://berthub.eu/articles/posts/sprind-podcast-innovation-secret-services/</link>
+      <pubDate>Thu, 05 Aug 2021 15:05:28 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/sprind-podcast-innovation-secret-services/</guid>
+      <description>This article is part of a series on (European) innovation and capabilities.
+ Earlier this year I was very happy to be interviewed by Thomas Ramge for Germany&amp;rsquo;s Federal Agency for Disruptive Innovation (SPRIND). Many podcasts are just two guys talking to each other, but here Thomas brought along a lot of expertise &amp;amp; spent serious time preparing, which contributed hugely to having a productive conversation. Even if it is still two guys!</description>
+    </item>
+    
+    <item>
+      <title>Leap seconds: Causing Bugs Even When They Don&#39;t Happen</title>
+      <link>https://berthub.eu/articles/posts/leapseconds-expose-bugs-even-when-they-dont-happen/</link>
+      <pubDate>Tue, 03 Aug 2021 10:03:10 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/leapseconds-expose-bugs-even-when-they-dont-happen/</guid>
+      <description>Leap seconds are controversial things. Since the Earth does not rotate at a steady rate, over time the Earth could get ahead or behind &amp;ldquo;atomic time&amp;rdquo;. Whatever solution you propose for this, someone is going to be unhappy.
+I take no position on what the best thing to do is here, except that one day I would like to do the math on the &amp;ldquo;great leap second gyroscopes&amp;rdquo; that we could mount near the poles to steady the Earth&amp;rsquo;s rotation, so we can stop talking about this.</description>
+    </item>
+    
+    <item>
+      <title>Beste dunne artsen: Ik maak me wat zorgen over jullie</title>
+      <link>https://berthub.eu/articles/posts/beste-dunne-artsen-ik-maak-me-wat-zorgen-over-jullie/</link>
+      <pubDate>Mon, 26 Jul 2021 11:50:41 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/beste-dunne-artsen-ik-maak-me-wat-zorgen-over-jullie/</guid>
+      <description>Recent barstte het weer los, de felle discussie tussen artsen en dikke mensen. Een belangrijk onderwerp, maar ook een onderwerp waarover een hoop zomaar geroepen wordt. Veel artsen en beleidsmakers zien een foto van dikke mensen en roepen &amp;ldquo;Zucht, leefstijl&amp;rdquo;. En dan vraag ik me weleens af, hebben jullie ook maar één te dikke vriend of vriendin met wie jullie hier weleens over praten?
+Want zolang we elkaar niet begrijpen is er een groot probleem.</description>
+    </item>
+    
+    <item>
+      <title>Demystifying European Digital Sovereignty</title>
+      <link>https://berthub.eu/articles/posts/demystifying-european-digital-sovereignty/</link>
+      <pubDate>Tue, 13 Jul 2021 21:15:30 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/demystifying-european-digital-sovereignty/</guid>
+      <description>This article is part of a series on (European) innovation and capabilities.
+ Recently I participated in a very useful panel that aimed to demystify European digital sovereignty. Even though we spoke for more than an hour (video), we obviously were not able to fix all of Europe&amp;rsquo;s sovereignty problems!
+The event was organized by Scaleway (previously Online SAS or Online.net), a 100% subsidiary of what I think is Europe&amp;rsquo;s most innovative telecommunications company, Iliad.</description>
+    </item>
+    
+    <item>
+      <title>Corona Newsflash: Help, stijging! En: kinderen vaccineren?</title>
+      <link>https://berthub.eu/articles/posts/corona-newsflash/</link>
+      <pubDate>Mon, 05 Jul 2021 21:30:13 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/corona-newsflash/</guid>
+      <description>Een extra update, twee weken na de vorige, want er is al weer voldoende te vertellen.
+Deze keer weer een aantal vragen op verzoek: De cijfers stijgen ineens heel hard, wat betekent dat? Is het veilig om naar evenementen te gaan? Zou mijn dochter/zoon zich moeten laten vaccineren? Werken de vaccins nog wel?
+Wat de f is er aan de hand met de cijfers ineens Goeie vraag. Ze gaan omhoog en hard ook.</description>
+    </item>
+    
+    <item>
+      <title>Eneco: moet dit nou? (update!)</title>
+      <link>https://berthub.eu/articles/posts/eneco-moet-dit-nou/</link>
+      <pubDate>Fri, 02 Jul 2021 20:45:37 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/eneco-moet-dit-nou/</guid>
+      <description>UPDATE: Zoals gezegd had ik Eneco om een reactie gevraagd en die is gekomen. In het kort, Eneco vertelt me dat de website een onjuiste weergave van zaken gaf. De teksten zullen aangepast worden. Het niet instemmen met ieder kwartier meten &amp;amp; analyse van gebruik zal geen effect hebben op het automatisch doorgeven van meterstanden voor de rekening en het online overzicht.
+Wel is het dan zo dat de Eneco App minder inzicht kan verschaffen zonder ieder kwartier verse data, maar dat is natuurlijk niet anders.</description>
+    </item>
+    
+    <item>
+      <title>Tracking-free audience statistics</title>
+      <link>https://berthub.eu/articles/posts/tracking-free-audience-statistics/</link>
+      <pubDate>Sun, 27 Jun 2021 13:46:27 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/tracking-free-audience-statistics/</guid>
+      <description>As regular readers of this blog will know, I am no friend of the surveillance capitalism that currently powers the web. It is becoming well-neigh impossible to develop any software or host any content without some component tracking your users &amp;amp; sending data to third parties.
+Even though I try very hard not to fall for this, periodically I discover that my sites also embed things that embed things that potentially leak your details to third parties.</description>
+    </item>
+    
+    <item>
+      <title>Corona: Delta Update</title>
+      <link>https://berthub.eu/articles/posts/corona-delta-update/</link>
+      <pubDate>Tue, 22 Jun 2021 09:00:45 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/corona-delta-update/</guid>
+      <description>In de vorige Corona update eind mei schreef ik over &amp;ldquo;delta&amp;rdquo;, toen nog bekend als de Indiase variant:
+ Het is helaas te vroeg om nu een eindoordeel te vellen over deze variant. Wat we wel weten is dat in de UK de vaccins prima standhouden - de overgrote meerderheid van de mensen in het ziekenhuis is ongevaccineerd.
+ Dit is nog steeds waar. Toch weten we nu een stuk meer.</description>
+    </item>
+    
+    <item>
+      <title>Help, My Sin Is Slow and My FPU is Inaccurate</title>
+      <link>https://berthub.eu/articles/posts/help-my-sin-is-slow-and-my-fpu-is-inaccurate/</link>
+      <pubDate>Sat, 19 Jun 2021 14:53:25 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/help-my-sin-is-slow-and-my-fpu-is-inaccurate/</guid>
+      <description>Afer 8 years, I have updated this this post for 2021-era Linux (and also to fix bitrotted links). I am extremely joyful to report that the (hard) problem from 2013 appears to have been solved! There is a small addendum at the end to reflect this happy news.
+ Back in 2013, I started writing code to do a simulation of biological system, and I got stuck after 20 lines.</description>
+    </item>
+    
+    <item>
+      <title>Europe&#39;s Software Problem</title>
+      <link>https://berthub.eu/articles/posts/europes-software-problem/</link>
+      <pubDate>Tue, 15 Jun 2021 09:56:07 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/europes-software-problem/</guid>
+      <description>This article is part of a series on (European) innovation and capabilities.
+ Europe&amp;rsquo;s communication needs are currently almost exclusively delivered by Chinese hardware that connects us to US-based platforms. For a variety of reasons, this is not a good idea.
+As stated recently by Charles Michel, President of the European Council, &amp;ldquo;Interdependence is natural, even desirable. Over-dependence, however, is not&amp;rdquo;.
+   Photo by Sara Kurfeß on Unsplash</description>
+    </item>
+    
+    <item>
+      <title>Recensie: Een spoor van vernieuwing, door Arthur Docters van Leeuwen en Lars Kuipers</title>
+      <link>https://berthub.eu/articles/posts/recensie-een-spoor-van-vernieuwing-arthur-docters-van-leeuwen/</link>
+      <pubDate>Mon, 14 Jun 2021 08:47:36 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/recensie-een-spoor-van-vernieuwing-arthur-docters-van-leeuwen/</guid>
+      <description>Reeds vorig jaar verschenen, maar zonder de aandacht gekregen te hebben die dit boek verdient.
+   Uitgeverij Prometheus, 460 pagina&amp;rsquo;s. bol.com, amazon.nl &amp;amp; kindle
+   &amp;ldquo;Een spoor van vernieuwing&amp;rdquo; laat zich lezen als memoires van een markante topambtenaar, maar ook als een interessante geschiedenis van de ontwikkeling van de rampenbestrijding, de inrichting van de politie en de opsporing, de BVD (voorloper AIVD) en de oprichting en ontwikkeling van wat we nu kennen als de AFM.</description>
+    </item>
+    
+    <item>
+      <title>Practical Reed-Solomon for Programmers</title>
+      <link>https://berthub.eu/articles/posts/reed-solomon-for-programmers/</link>
+      <pubDate>Sun, 13 Jun 2021 06:38:15 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/reed-solomon-for-programmers/</guid>
+      <description>Recently I was doing some work decoding the new Galileo High Accuracy Service data. In short, this new service will allow Galileo (&amp;ldquo;European GPS&amp;rdquo;) users to achieve decimeter-level accuracy, which is nice. This &amp;ldquo;HAS&amp;rdquo; data is transmitted highly redundantly by making good use of Reed-Solomon encoding.
+To work with this data, I attempted to learn more about Reed-Solomon and I found almost all explanations were useless to me - oodles of advanced math, but no guidance of how to use R-S in practice.</description>
+    </item>
+    
+    <item>
+      <title>Corona Update eind mei 2021</title>
+      <link>https://berthub.eu/articles/posts/corona-update-eind-mei-2021/</link>
+      <pubDate>Mon, 24 May 2021 14:16:45 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/corona-update-eind-mei-2021/</guid>
+      <description>Ja daar zijn we weer! De vorige update uit maart was getiteld &amp;ldquo;Licht aan het einde van de tunnel&amp;rdquo;. Nou wil ik niet al te veel pochen, en resultaten uit het verleden bieden geen garanties voor de toekomst, maar het klopte allemaal best behoorlijk. De spectaculaire daling in ziekenhuiscijfers kwam in werkelijkheid een week later dan ik verwacht had. Ok.
+Ik wil graag mijn Facebook- en IRC-vrienden bedanken voor hun vele goede vragen en suggesties voor deze post - want er zijn nog genoeg goede vragen over.</description>
+    </item>
+    
+    <item>
+      <title>Corona und dein Onkel</title>
+      <link>https://berthub.eu/articles/posts/corona-und-dein-onkel/</link>
+      <pubDate>Sun, 23 May 2021 20:48:24 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/corona-und-dein-onkel/</guid>
+      <description>Wir haben Coronamaßnahmen, aber Menschen weigern sich, mitzuhelfen. Es gibt effektive Impfungen, aber Menschen verkünden laut, diese niemals nehmen zu wollen.
+In diesem Text bringe ich einige Vorschläge, wie du einen wichtigen Beitrag zur Aufklärung der Menschen leisten kannst. Ja, genau du. Viele Leser meines Blogs sind die &amp;ldquo;Haustechniker&amp;rdquo; in der Verwandtschaft, die das WLAN einrichten, den Fernseher aufbauen oder schwierige Dinge erklären. Gute Aussichten, als jemand gesehen zu werden, den man um Rat fragen kann und der sich auskennt.</description>
+    </item>
+    
+    <item>
+      <title>Favorite Recipes</title>
+      <link>https://berthub.eu/articles/posts/favorite-recipes/</link>
+      <pubDate>Sun, 23 May 2021 11:50:58 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/favorite-recipes/</guid>
+      <description>This page is nothing special, I put recipes there I look up from time to time on the monstrous ad-laden recipe sites that also tell me your life story.
+I use cups because they aren&amp;rsquo;t the worst.
+Dutch Baby First: Heat cast iron pan, heat oven to 220C.
+Ingredients:
+ 3 large eggs 1/2 cup of full fat milk 1/2 cup of flour tablespoon of sugar / vanilla sugar 4 tablespoons of butter More butter for preparation  Whisk first four ingredients together, while melting the butter.</description>
+    </item>
+    
+    <item>
+      <title>Dear EU: Please Don&#39;t Ruin the Root</title>
+      <link>https://berthub.eu/articles/posts/dont-ruin-the-root/</link>
+      <pubDate>Mon, 10 May 2021 08:43:53 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/dont-ruin-the-root/</guid>
+      <description>I love Europe, and I want to see the European Union succeed. I also love the Internet, and I want to see it thrive as well. And it therefore pains me that it now appears that the European Union might inadvertently be picking an ugly fight with &amp;ldquo;The Internet&amp;rdquo;.
+ UPDATE: I did a presentation over at #RIPE82. Slides here, video here. This presentation goes into some more depth what NIS 2 actually is, and how it could be good or very bad.</description>
+    </item>
+    
+    <item>
+      <title>History of PowerDNS 2013-2020, part 3b: the business story</title>
+      <link>https://berthub.eu/articles/posts/history-of-powerdns-2013-2020-business/</link>
+      <pubDate>Wed, 21 Apr 2021 18:07:06 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/history-of-powerdns-2013-2020-business/</guid>
+      <description>This part of the history of PowerDNS is mostly about our business adventures &amp;amp; merger with Open-Xchange. The technical history of this period is described in part 3a.
+Business
+In 2013, PowerDNS was in a crucial phase. Existing business was going well, but we were receiving pointed signals there was trouble on the horizon.
+Some existing customers were close to deserting us, because we could not provide them with the top-down attention other vendors were lavishing on them.</description>
+    </item>
+    
+    <item>
+      <title>Useful Spy Books</title>
+      <link>https://berthub.eu/articles/posts/useful-spy-books/</link>
+      <pubDate>Sun, 18 Apr 2021 13:11:21 +0100</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/useful-spy-books/</guid>
+      <description>Reading a good book is a great joy. And recommending a good book is almost as enjoyable. I&amp;rsquo;ve long been fascinated by books on espionage, and this contributed in no small part to me eventually joining the Dutch intelligence world, and lately, rejoining it in some fashion.
+ If you have favorite books that should be on this page, please let me know on @PowerDNS_Bert or bert@hubertnet.nl! I&amp;rsquo;m especially looking for books written from different perspectives.</description>
+    </item>
+    
+    <item>
+      <title>Het gaat om de kerncentrales</title>
+      <link>https://berthub.eu/articles/posts/het-gaat-om-de-kerncentrales/</link>
+      <pubDate>Sun, 11 Apr 2021 10:44:49 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/het-gaat-om-de-kerncentrales/</guid>
+      <description>Er is in Nederland een levendige discussie gaande of we in moeten zetten op kernenergie of niet. Afhankelijk van wie je spreekt is kernenergie een groene en noodzakelijke manier om onze CO₂-doelen te halen, of is het overbodige onzin.
+Ik ben een groot gelover in het idee van kernenergie. Maar onze auto&amp;rsquo;s en huizen kunnen we niet aandrijven met ideeën. Die drijf je aan met kerncentrales.
+En daar hebben we het nooit over, de kernindustrie.</description>
+    </item>
+    
+    <item>
+      <title>Sadly, You Can&#39;t Print Your Own (safe) mRNA Vaccine</title>
+      <link>https://berthub.eu/articles/posts/sadly-you-cant-print-your-own-vaccine/</link>
+      <pubDate>Tue, 30 Mar 2021 15:46:36 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/sadly-you-cant-print-your-own-vaccine/</guid>
+      <description>Brief post, in response to the many many many technical people that propose to print their own mRNA vaccines &amp;ldquo;now that the source is out there&amp;rdquo;.
+I&amp;rsquo;ve spent a lot of time individually explaining why this is unlikely to happen any time soon, and I thought it a good idea to explain it here as well.
+ Mountains of details on how the vaccines are actually produced can be found on this awesome page by Jonas Neubert and Cornelia Scheitz.</description>
+    </item>
+    
+    <item>
+      <title>The Galileo Eccentric Satellite Surprise</title>
+      <link>https://berthub.eu/articles/posts/galileos-eccentric-satellites/</link>
+      <pubDate>Sun, 21 Mar 2021 11:11:31 +0100</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/galileos-eccentric-satellites/</guid>
+      <description>UPDATE: Back in December 2020 when this article was first posted, I noted that some receivers might not be able to deal with the advent of production signals from the eccentric satellites. This has indeed proved to be a problem for U-blox F9 series receivers in a specific configuration. The application note links to this article (thanks!) and also (correctly) states that the signals from the eccentric satellites do not in fact comply with the Galileo Open Service ICD.</description>
+    </item>
+    
+    <item>
+      <title>Corona Update: Licht aan het einde van de tunnel</title>
+      <link>https://berthub.eu/articles/posts/corona-update-maart-2021/</link>
+      <pubDate>Sun, 14 Mar 2021 09:42:08 +0100</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/corona-update-maart-2021/</guid>
+      <description>En toen was het toch weer tijd voor een Corona Update, de eerste sinds november 2020.
+Doordat er zoveel nieuws is geweest over varianten en vaccins is het zicht een beetje kwijt op waar we nu zijn. En dat is des te vervelender nu de cijfers weer omhoog lijken te gaan.
+Daarom een samenvatting die eigenlijk heel rooskleurig is, zelfs met de varianten. Dit betekent overigens niet dat de maatregelen al opgeheven kunnen worden!</description>
+    </item>
+    
+    <item>
+      <title>Hire Me - semi-popular science writing</title>
+      <link>https://berthub.eu/articles/posts/hire-me-semi-popular-science/</link>
+      <pubDate>Tue, 09 Mar 2021 11:25:34 +0100</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/hire-me-semi-popular-science/</guid>
+      <description>In short, if you need engaging in-depth articles on your scientific project, your research breakthrough or the grand new technical/space/molecular/medical thing you are building, you can hire me!
+(Semi-)Popular science writing I do a lot of what I call &amp;ldquo;(Semi-)popular science writing&amp;rdquo;. My recent article dissecting the BioNTech/Pfizer SARS-CoV-2 vaccine has racked up over 1.5 million views (so far), and it has done the rounds of the pharmaceutical world where it got favourable reviews.</description>
+    </item>
+    
+    <item>
+      <title>The CureVac Vaccine, and a brief tour through some of the wonders of nature</title>
+      <link>https://berthub.eu/articles/posts/curevac-vaccine-and-wonders-of-biology/</link>
+      <pubDate>Mon, 08 Mar 2021 18:22:24 +0100</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/curevac-vaccine-and-wonders-of-biology/</guid>
+      <description>In previous posts I described how the two currently approved mRNA vaccines both use &amp;lsquo;modified nucleosides&amp;rsquo; to enhance their efficiency.
+Meanwhile, a company called CureVac has created an mRNA vaccine that uses regular, unmodified, RNA. It is currently being tested in large scale trials. In this post I explain what the challenges are with this plain RNA approach, and we reverse engineer quite closely what CureVac has done with regular RNA to (hopefully) deliver an effective vaccine.</description>
+    </item>
+    
+    <item>
+      <title>Stimulating Innovation with Money</title>
+      <link>https://berthub.eu/articles/posts/stimulating-innovation/</link>
+      <pubDate>Sun, 07 Mar 2021 18:51:43 +0100</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/stimulating-innovation/</guid>
+      <description>This article is part of a series on (European) innovation and capabilities.
+ Periodically I read about governments or institutions wanting to stimulate innovation, often to achieve a certain (worthy) goal. Frequently, the far larger amounts of money that other countries or continents are spending on innovation are then bandied about as justification.
+And I die a little inside every time that happens.
+Money and innovation have a very intricate relation.</description>
+    </item>
+    
+    <item>
+      <title>Cybersecurity Is Like Food Safety: Digital HACCP</title>
+      <link>https://berthub.eu/articles/posts/cybersecurity-is-like-food-safety/</link>
+      <pubDate>Thu, 18 Feb 2021 09:31:12 +0100</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/cybersecurity-is-like-food-safety/</guid>
+      <description>There are lots of calls to invest in improving cybersecurity.
+But it struck me that it doesn&amp;rsquo;t work like that. Not getting hacked is not so much a question of buying the right stuff. It is a question of doing the right things and understanding what you are doing.
+It is easy to demand that people &amp;lsquo;invest&amp;rsquo; in something. You can even supply them with the money to do so. But that doesn&amp;rsquo;t mean that it will help.</description>
+    </item>
+    
+    <item>
+      <title>COVID-19 Scenarios and a Short Break</title>
+      <link>https://berthub.eu/articles/posts/covid-scenarios-and-a-short-break/</link>
+      <pubDate>Sun, 17 Jan 2021 14:15:50 +0100</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/covid-scenarios-and-a-short-break/</guid>
+      <description>Hi everyone,
+With apologies for flooding the airwaves and timelines with way too many posts and tweets, here&amp;rsquo;s one more post, the last COVID-19 related one for a while.
+I&amp;rsquo;ve been trying to provide high quality answers to the many questions I receive via email and various social media. I&amp;rsquo;ve also been trying to help many many people that found worrying news online &amp;amp; sent it to me, either for reassurance or simply to challenge me.</description>
+    </item>
+    
+    <item>
+      <title>How Tech Loses Out over at Companies, Countries and Continents</title>
+      <link>https://berthub.eu/articles/posts/how-tech-loses-out/</link>
+      <pubDate>Sat, 16 Jan 2021 20:13:17 +0100</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/how-tech-loses-out/</guid>
+      <description>This article is part of a series on (European) innovation and capabilities.
+ Hi everyone,
+This is a transcript of my presentation over at the European Microwave Week 2020, actually held in 2021. You can find the video here and the slides here. I&amp;rsquo;d like to thank Frank van Vliet, general chair of the EMW, for inviting me to do this talk.
+The words have only been edited lightly - it is still presentation style, so here and there the sentences are not written like how they&amp;rsquo;d be in a more formal piece of work.</description>
+    </item>
+    
+    <item>
+      <title>The Genetic Code and Proteins of the Other Covid-19 Vaccines </title>
+      <link>https://berthub.eu/articles/posts/genetic-code-of-covid-19-vaccines/</link>
+      <pubDate>Tue, 12 Jan 2021 13:47:18 +0100</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/genetic-code-of-covid-19-vaccines/</guid>
+      <description>Translations: 中文, 日本語
+As a followup to Reverse Engineering the source code of the BioNTech/Pfizer SARS-CoV-2 Vaccine, here is a look at the genetic code behind some of the other vaccines. I recommend at least skimming the earlier post before delving into this one, unless you are already fluent in modified mRNA bases and protein expression mechanics.
+To get an extremely full background on all vaccine work, I kindly refer you to excellent posts from Derek Lowe and Hilda Bastian.</description>
+    </item>
+    
+    <item>
+      <title>Analiza izvornog kôda vakcine BioNTech-Pfizer SARS-CoV-2</title>
+      <link>https://berthub.eu/articles/posts/naliza-izvornog-k%C3%B4da-vakcine-biontech-pfizer-sars-cov-2/</link>
+      <pubDate>Sun, 10 Jan 2021 21:12:20 +0100</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/naliza-izvornog-k%C3%B4da-vakcine-biontech-pfizer-sars-cov-2/</guid>
+      <description>Translations: ελληνικά / عربى / 中文 (Weixin video, Youtube video) / 粵文 / bahasa Indonesia / český / Català / český / Deutsch / Español / 2فارسی / فارسی / Français / עִברִית / Hrvatski / Italiano / Nederlands / 日本語 / 日本語 2 / नेपाली / Polskie / русский / Português / Română / Slovensky / Slovenščina / Türk / український / Markdown for translating
+Dobro došli! U ovom postu ćemo, znak po znak, ispitati izvorni kôd vakcine mRNA BioNTech / Pfizer SARS-CoV-2.</description>
+    </item>
+    
+    <item>
+      <title>DNA seen through the eyes of a coder (or,  If you are a hammer, everything looks like a nail)</title>
+      <link>https://berthub.eu/articles/posts/amazing-dna/</link>
+      <pubDate>Sat, 09 Jan 2021 13:33:46 +0000</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/amazing-dna/</guid>
+      <description>Updates: 8th of January 2021: This article has been revised and updated, scientifically and in terms of dead links. Revision made by Tomás Simões (@putadagravidade / tomasprsimoes@gmail.com). Feel free to contact me if I made a mistake.
+25th of August 2017: This page has led to a two-hour presentation called DNA: The code of Life as presented at SHA 2017. Includes slides and video and a summarizing blogpost. If you like this page, you&amp;rsquo;ll love the presentation.</description>
+    </item>
+    
+    <item>
+      <title>Reverzni inženiring izvorne kode cepiva BioNTech/Pfizer proti SARS-CoV-2</title>
+      <link>https://berthub.eu/articles/posts/reverzni-in%C5%BEeniring-izvorne-kode-cepiva-biontech-pfizer-proti-sars-cov-2/</link>
+      <pubDate>Fri, 08 Jan 2021 20:12:20 +0100</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/reverzni-in%C5%BEeniring-izvorne-kode-cepiva-biontech-pfizer-proti-sars-cov-2/</guid>
+      <description>Translations: ελληνικά / عربى / 中文 (Weixin video, Youtube video) / 粵文 / bahasa Indonesia / český / Català / český / Deutsch / English / Español / 2فارسی / فارسی / Français / עִברִית / Hrvatski / Italiano / Nederlands / 日本語 / 日本語 2 / नेपाली / Polskie / русский / Português / Română / Slovensky / Türk / український / Markdown for translating
+Pozdravljeni! V tem članku bomo črko po črko pregledali izvorno kodo cepiva BioNTech/Pfizer SARS-CoV-2 mRNA.</description>
+    </item>
+    
+    <item>
+      <title>Corona en je oom</title>
+      <link>https://berthub.eu/articles/posts/corona-en-je-oom/</link>
+      <pubDate>Thu, 07 Jan 2021 15:10:49 +0100</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/corona-en-je-oom/</guid>
+      <description>We hebben Coronamaatregelen, en men houdt zich er niet aan. Er zijn prachtige Coronavaccins, en mensen melden luidruchtig deze nooit te gaan nemen.
+In dit artikeltje kom ik met een suggestie hoe je een nuttige rol in de voorlichting kunt spelen. En jij bent daarbij belangrijk. Veel lezers van mijn blog zijn in hun familie de &amp;lsquo;huisnerd&amp;rsquo;: fixen de wifi, sluiten computers en tv&amp;rsquo;s aan, leggen moeilijke dingen uit.
+Kortom, goeie kans dat jij door je omgeving wordt gezien als iemand die weet waar &amp;lsquo;ie het over heeft.</description>
+    </item>
+    
+    <item>
+      <title>Talking about Corona</title>
+      <link>https://berthub.eu/articles/posts/talking-about-covid/</link>
+      <pubDate>Thu, 07 Jan 2021 15:10:49 +0100</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/talking-about-covid/</guid>
+      <description>In this page I want to offer some guidance how you can be useful in spreading good Corona information, specifically about vaccines.
+Importantly, many readers of my blog are the technology help desk for their families - the people that help fixing the wifi, install new computers and generally are useful for solving complex problems.
+That makes you, the reader very imporant. Your family and friends see you as someone who knows what they are talking about.</description>
+    </item>
+    
+    <item>
+      <title>Bu yazıda, BioNTech/Pfizer SARS-CoV-2 mRNA aşısının kaynak kodunu karakter karakter inceleyeceğiz</title>
+      <link>https://berthub.eu/articles/posts/biontech-pfizer-mrna-a%C5%9F%C4%B1lar%C4%B1n%C4%B1n-kaynak-kodu/</link>
+      <pubDate>Sat, 02 Jan 2021 08:12:20 +0100</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/biontech-pfizer-mrna-a%C5%9F%C4%B1lar%C4%B1n%C4%B1n-kaynak-kodu/</guid>
+      <description>NOT Bu yazı, https://berthub.eu/articles/posts/reverse-engineering-source-code-of-the-biontech-pfizer-vaccine/ adresindeki yazının Türkçe çevirisidir. https://gist.github.com/ugurkoltuk/2f87d8038d4fd42f4c6ad13472966797 Hoşgeldiniz! Bu yazıda, BioNTech/Pfizer SARS-CoV-2 mRNA aşısının kaynak kodunu karakter karakter inceleyeceğiz.
+ Bu yazıyı anlaşılırlık ve doğruluk açısından gözden geçiren pek çok insana teşekkür ederim. Tüm hatalar yine de benim hatalarımdır ve hataları hızla bert@hubertnet.nl ya da @PowerDNS_Bert adreslerinden birine bildirmenizi rica ederim (Çevirmenin notu: çeviri ya da Türkçe dil hatalarını da aşağıdaki yorum bölümünü kullanarak bildirmenizi rica ederim.)
+ Kulağa yanlış geliyor olabilir - sonuçta aşı, kolunuzdan damarınıza enjekte edilen bir sıvı.</description>
+    </item>
+    
+    <item>
+      <title>Reverse Engineering Source Code of the Biontech Pfizer Vaccine: Part 2</title>
+      <link>https://berthub.eu/articles/posts/part-2-reverse-engineering-source-code-of-the-biontech-pfizer-vaccine/</link>
+      <pubDate>Thu, 31 Dec 2020 12:22:03 +0100</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/part-2-reverse-engineering-source-code-of-the-biontech-pfizer-vaccine/</guid>
+      <description>All BNT162b2 vaccine data on this page is sourced from this World Health Organization document.
+ This is a living page, shared already so people can get going! But check back frequently for updates.
+ Translation: Français / 日本語
+In short: the vaccine mRNA has been optimized by the manufacturer by changing bits of RNA from (say) UUU to UUC, and people would like to understand the logic behind these changes.</description>
+    </item>
+    
+    <item>
+      <title>Ingeniería inversa del código fuente de la vacuna de BioNTech/Pfizer para el SARS-CoV-2</title>
+      <link>https://berthub.eu/articles/posts/ingenieria_inversa_del_codigo_fuente_de_la_vacuna_de_biontech_pfizer_para_el_sars-cov-2/</link>
+      <pubDate>Tue, 29 Dec 2020 14:12:20 +0100</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/ingenieria_inversa_del_codigo_fuente_de_la_vacuna_de_biontech_pfizer_para_el_sars-cov-2/</guid>
+      <description>Translations: ελληνικά / 中文 / Deutsch / Français / Hrvatski / Italiano / नेपाली / Polskie / Português
+¡Bienvenidos! En esta publicación daremos una mirada carácter por carácter al código fuente de la vacuna de ARNm de BioNTech/Pfizer al SARS-CoV-2.
+ Quiero agradecer a la gran cantidad de personas que se tomaron el tiempo de revisar que este artículo sea legible y correcto. Todos los errores, sin embargo, continúan siendo míos,&amp;gt; pero me encantaría poder escuchar sobre ellos rápidamente en bert@hubertnet.</description>
+    </item>
+    
+    <item>
+      <title>Een inkijkje in de broncode van het BioNTech/Pfizer SARS-CoV-2-vaccin</title>
+      <link>https://berthub.eu/articles/posts/dutch-reverse-engineering-source-code-of-the-biontech-pfizer-vaccine/</link>
+      <pubDate>Tue, 29 Dec 2020 11:12:20 +0100</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/dutch-reverse-engineering-source-code-of-the-biontech-pfizer-vaccine/</guid>
+      <description>Vertalingen: ελληνικά / عربى / 中文 / 粵文 / bahasa Indonesia / Català / český / Deutsch / English / Español / Français / עִברִית / עִברִית2 / Hrvatski / Italiano / नेपाली / Polskie / русский / Português. / Română / Markdown for translating
+ Mogelijk ook interessant, en minder technisch: Hoe werken de nieuwe (mRNA) Corona Vaccins, of dit item op BNR waar ik het ook uitleg. De Belgische podcast Nerdland bespreekt deze pagina ook op heel leuke wijze (vanaf minuut 7).</description>
+    </item>
+    
+    <item>
+      <title>Een inkijkje in de broncode van het BioNTech/Pfizer SARS-CoV-2-vaccin</title>
+      <link>https://berthub.eu/articles/posts/een-inkijkje-in-de-broncode-van-het-biontech-pfizer-sars-cov-2-vaccin/</link>
+      <pubDate>Tue, 29 Dec 2020 11:12:20 +0100</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/een-inkijkje-in-de-broncode-van-het-biontech-pfizer-sars-cov-2-vaccin/</guid>
+      <description>Vertalingen: ελληνικά / عربى / 中文 / 粵文 / bahasa Indonesia / Català / český / Deutsch / English / Español / Français / עִברִית / עִברִית2 / Hrvatski / Italiano / नेपाली / Polskie / русский / Português. / Română / Markdown for translating
+ Mogelijk ook interessant, en minder technisch: Hoe werken de nieuwe (mRNA) Corona Vaccins, of dit item op BNR waar ik het ook uitleg. De Belgische podcast Nerdland bespreekt deze pagina ook op heel leuke wijze (vanaf minuut 7).</description>
+    </item>
+    
+    <item>
+      <title>Merekayasa Balik Kode Sumber Vaksin SARS-CoV-2 BioNTech/Pfizer</title>
+      <link>https://berthub.eu/articles/posts/merekayasa-balik-kode-sumber-vaksin-sars-cov-2-biontech-pfizer/</link>
+      <pubDate>Tue, 29 Dec 2020 11:12:20 +0100</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/merekayasa-balik-kode-sumber-vaksin-sars-cov-2-biontech-pfizer/</guid>
+      <description>(artikel asli ditulis oleh Bert Hubert) Selamat datang! Pada artikel ini, kita akan mengamati kode sumber dari vaksin mRNA BioNTech/Pfizer SARS-CoV-2 berdasarkan ciri-ciri.
+  Saya menghaturkan terima kasih banyak kepada sejumlah besar orang yang meluangkan waktu untuk mempratinjau artikel ini untuk memastikan keterbacaan dan ketepatan. Seluruh kesalahan tetaplah milik saya, namun saya akan dengan senang hati menerima tanggapan Anda segera pada bert@hubertnet.nl atau @PowerDNS_Bert*   Pernyataan ini mungkin agak mengejutkan - vaksin adalah sebuah cairan yang disuntikkan ke lengan.</description>
+    </item>
+    
+    <item>
+      <title>Ingegnerizzazione inversa del Codice Sorgente del Vaccino BioNTech/Pfizer</title>
+      <link>https://berthub.eu/articles/posts/italian-reverse-engineering-source-code-of-the-biontech-pfizer-vaccine/</link>
+      <pubDate>Mon, 28 Dec 2020 01:43:20 +0100</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/italian-reverse-engineering-source-code-of-the-biontech-pfizer-vaccine/</guid>
+      <description>Benvenuti! In questo post daremo uno sguardo, carattere per carattere, al codice sorgente del vaccino a mRNA BioNTech/Pfizer contro il SARS-CoV-2.
+ Vorrei ringraziare le molte persone che hanno donato il proprio tempo a rivedere le bozze di questo articolo per migliorarne la leggibilità e la correttezza. Tutti gli errori sono miei, ma vorrei esserne informato prima possibile a bert@hubertnet.nl o @PowerDNS_Bert
+ Ora, questi termini potrebbero sembrare in contrasto - il vaccino è un liquido, che viene iniettato nel braccio.</description>
+    </item>
+    
+    <item>
+      <title>Αποκωδικοποιώντας τον πηγαίο κώδικα του εμβολίου κατά του Κορωνοϊού</title>
+      <link>https://berthub.eu/articles/posts/greek-reverse-engineering-source-code-of-the-biontech-pfizer-vaccine/</link>
+      <pubDate>Sat, 26 Dec 2020 20:09:13 +0100</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/greek-reverse-engineering-source-code-of-the-biontech-pfizer-vaccine/</guid>
+      <description>Αποκωδικοποιώντας τον πηγαίο κώδικα του εμβολίου κατά του Κορωνοϊού (BioNTech/Pfizer SARS-CoV-2 Vaccine) Καλώς ήρθατε! Σε αυτήν την ανάρτηση, θα ρίξουμε μια ματιά χαρακτήρα-προς-χαρακτήρα στον πηγαίο κώδικα του εμβολίου BioNTech / Pfizer SARS-CoV-2 mRNA.
+ Θέλω να ευχαριστήσω τον μεγάλο αριθμό ανθρώπων που αφιέρωσαν χρόνο στην προεπισκόπηση αυτού του άρθρου για την αναγνωσιμότητα και την ορθότητα. Ωστόσο, όλα τα λάθη παραμένουν δικά μου, αλλά θα ήθελα να τα ακούσω γρήγορα στο bert@hubertnet.</description>
+    </item>
+    
+    <item>
+      <title>Dekonstruktion des Programmcodes des BioNTech/Pfizer SARS-CoV-2 Impfstoffes</title>
+      <link>https://berthub.eu/articles/posts/german-reverse-engineering-source-code-of-the-biontech-pfizer-vaccine/</link>
+      <pubDate>Fri, 25 Dec 2020 20:12:20 +0100</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/german-reverse-engineering-source-code-of-the-biontech-pfizer-vaccine/</guid>
+      <description>Willkommen! In diesem Artikel werden wir einen Blick auf den Programmcode des BioNTech/Pfizer SARS-CoV-2 mRNA Impfstoffes werfen, und zwar Zeichen für Zeichen.
+ Ich möchte Allen danken, die zur Korrektheit und Lesbarkeit dieses Artikels beigetragen haben. Für alle Fehler zeige ich mich trotzdem selbst verantwortlich, und würde von ihnen gern schnellstmöglich hören: Via bert@hubertnet.nl oder @PowerDNS_Bert
+Hinweise zur deutschen Übersetzung bitte an f.zahn@mailbox.org oder @zahnstein
+ Nun, diese Worte wirken zunächst etwas verstörend - ein Impfstoff ist eine Flüssigkeit, die in meinen Arm injiziert wird.</description>
+    </item>
+    
+    <item>
+      <title>Reverse Engineering the source code of the BioNTech/Pfizer SARS-CoV-2 Vaccine</title>
+      <link>https://berthub.eu/articles/posts/reverse-engineering-source-code-of-the-biontech-pfizer-vaccine/</link>
+      <pubDate>Fri, 25 Dec 2020 20:12:20 +0100</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/reverse-engineering-source-code-of-the-biontech-pfizer-vaccine/</guid>
+      <description>Translations: ελληνικά / عربى / 中文 (Weixin video, Youtube video) / 粵文 / bahasa Indonesia / český / Català / český / Deutsch / Español / 2فارسی / فارسی / Français / עִברִית / Hrvatski / Italiano / Magyar / Nederlands / 日本語 / 日本語 2 / नेपाली / Polskie / русский / Português / Română / Slovensky / Slovenščina / Srpski / Türk / український / Markdown for translating / Fun video by LlamaExplains / Video version by Giff Ransom</description>
+    </item>
+    
+    <item>
+      <title>History of PowerDNS: 2013-2020 (Technology)</title>
+      <link>https://berthub.eu/articles/posts/history-of-powerdns-2013-2020/</link>
+      <pubDate>Mon, 21 Dec 2020 20:32:58 +0100</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/history-of-powerdns-2013-2020/</guid>
+      <description>In this part of the history of PowerDNS, I talk about the technical developments from 2013 to 2020. Over these years many fascinating business &amp;amp; hiring developments also happened, but these are described in a separate post, part 3B of the PowerDNS History.
+ Here are the earlier parts: Part 1, Part 2
+ For context, the 2013-2020 era is what I would describe as &amp;ldquo;PowerDNS 3.0&amp;rdquo; - how we grew from a one (or two) person company to a healthy and thriving department of Open-Xchange.</description>
+    </item>
+    
+    <item>
+      <title>Kerstdiner in Maart</title>
+      <link>https://berthub.eu/articles/posts/kerstdiner-in-maart/</link>
+      <pubDate>Sat, 12 Dec 2020 15:44:11 +0100</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/kerstdiner-in-maart/</guid>
+      <description>Kerstdiner met de familie, moeten we dat nou wel of niet doen dit jaar? Ooit studeerde ik in Delft. Niet dat ik m&amp;rsquo;n studie daar afgemaakt heb, maar ik heb er toch nog wat geleerd. Een van de dingen die ik daar opgestoken heb is dat je een kerstdiner prima in maart kan houden.
+Studentenhuizen, jaarclubs, disputen en dergelijke ontdekten met regelmaat dat het moeilijk is om een moment te vinden dat iedereen kan voor het kerstdiner.</description>
+    </item>
+    
+    <item>
+      <title>COVID-19: Things We&#39;re Not Even Trying</title>
+      <link>https://berthub.eu/articles/posts/covid-things-were-not-even-trying/</link>
+      <pubDate>Tue, 08 Dec 2020 10:13:31 +0100</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/covid-things-were-not-even-trying/</guid>
+      <description>As COVID-19 drags on, I&amp;rsquo;ve tried to stay optimistic about scientific and medical developments. By highlighting research, I have hoped to explain (in Dutch and English) how various things will work to defeat COVID-19, and how to look out for your health.
+But all this time I&amp;rsquo;ve been frustrated about the things we are not doing, or are not doing enough of.
+ 10th of January 2021 update: The advent of new highly transmissible variants makes this all even worse.</description>
+    </item>
+    
+    <item>
+      <title>History of PowerDNS: 2003-2013</title>
+      <link>https://berthub.eu/articles/posts/history-of-powerdns-2003-2013/</link>
+      <pubDate>Sun, 29 Nov 2020 16:24:11 +0100</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/history-of-powerdns-2003-2013/</guid>
+      <description>This is part two of the PowerDNS history as I recall it. As noted in part one, some of this stuff is rather old, and it is entirely possible I am misremembering things. Please do let me know if you find any important omissions or mistakes!
+At the end of 2002, beginning of 2003, PowerDNS as a going concern was gone. There were no more employees, there were no paying customers.</description>
+    </item>
+    
+    <item>
+      <title>Mijn nieuwe part-time baan</title>
+      <link>https://berthub.eu/articles/posts/mijn-nieuwe-part-time-baan/</link>
+      <pubDate>Fri, 27 Nov 2020 13:00:22 +0100</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/mijn-nieuwe-part-time-baan/</guid>
+      <description>Dit is waarschijnlijk de laatste keer dat ik zal bloggen over mijn nieuwe (part-time) baan.
+Met ingang van 1 december ben ik één van de drie leden van de commissie die lasten voor de Nederlandse inlichtingen- en veiligheidsdiensten toetst, de Toetsingscommissie Inzet Bevoegdheden (TIB).
+Als een van de civiele of militaire inlichtingen- en veiligheidsdiensten van Nederland gebruik wil maken van hun bevoegdheden tot aftappen, afluisteren, SIGINT- of hacking moeten ze eerst hun eigen juristen overtuigen, dan hun ministerie en tenslotte de TIB.</description>
+    </item>
+    
+    <item>
+      <title>My New Part Time Job</title>
+      <link>https://berthub.eu/articles/posts/my-new-part-time-job/</link>
+      <pubDate>Fri, 27 Nov 2020 12:55:54 +0100</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/my-new-part-time-job/</guid>
+      <description>So this is likely the last time you see me blog about my new (part time) job.
+(Nederlandse versie hier).
+Starting December 1st, I am one of the three members of the board that checks warrants for the Dutch intelligence and security services. This board is called &amp;ldquo;Toetsingscommissie Inzet Bevoegdheden&amp;rdquo; or TIB.
+If either of the civil or the military intelligence and security services of The Netherlands want to use their lawful intercept, SIGINT or hacking (&amp;amp; some other) legal powers, they have to first convince their own jurists, then their ministry and finally the TIB.</description>
+    </item>
+    
+    <item>
+      <title>History of PowerDNS: 1999-2003</title>
+      <link>https://berthub.eu/articles/posts/history-of-powerdns-1999-2003/</link>
+      <pubDate>Fri, 27 Nov 2020 12:29:55 +0100</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/history-of-powerdns-1999-2003/</guid>
+      <description>Hi everyone,
+I have often told the history of PowerDNS, or at least how I recall it, during talks and presentations. As I am about to truly leave DNS and PowerDNS, I thought it was high time to document my recollections.
+ Since this is a 20+ year old story right now, it is very possible I have forgotten or misremembered important things. Do let me know if you miss important things, or if you recall things differently!</description>
+    </item>
+    
+    <item>
+      <title>IKEA TRÅDFRI for Rebooting a Server or Modem</title>
+      <link>https://berthub.eu/articles/posts/ikea-tradfri-for-rebooting-serve-or-modem/</link>
+      <pubDate>Wed, 25 Nov 2020 12:20:33 +0100</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/ikea-tradfri-for-rebooting-serve-or-modem/</guid>
+      <description>Recently I revamped my home internet, and (hopefully) temporarily ended up with a modem that needs to be power cycled from time to time. We&amp;rsquo;re working on getting it fixed, but in the meantime I needed a solution for automated power cycling.
+There are various ways to turn the power off or on from a Linux computer, and some of these are very karmic. You can get a zigbee USB stick and ditto power plugs, and I am sure this is a lot of fun.</description>
+    </item>
+    
+    <item>
+      <title>Regulatory Capture, of de &#39;Gevangen Regelgever&#39;</title>
+      <link>https://berthub.eu/articles/posts/gevangen-regelgevers/</link>
+      <pubDate>Tue, 24 Nov 2020 14:44:40 +0100</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/gevangen-regelgevers/</guid>
+      <description>Er zijn dingen dat als je er van hoort, je ze ineens overal ziet. Wonderlijk genoeg is er zelfs een naam voor, het &amp;ldquo;Bader–Meinhof phenomenon&amp;rdquo;.
+Soms is het niet alleen een effect, maar is het ook echt zo. Dat is het geval bij de &amp;ldquo;Gevangen Regelgever&amp;rdquo;, beter bekend als &amp;ldquo;Regulatory Capture&amp;rdquo;.
+Heel in het kort is dit een zeer veel voorkomende situatie waarbij een toezichthouder (of regelgever) langzaam maar zeker de wereld gaat zien door de ogen van de sector waar toezicht op wordt gehouden.</description>
+    </item>
+    
+    <item>
+      <title>Hoe werken de nieuwe (mRNA) Corona Vaccins</title>
+      <link>https://berthub.eu/articles/posts/hoe-werken-de-nieuwe-corona-vaccins/</link>
+      <pubDate>Sat, 21 Nov 2020 19:05:02 +0100</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/hoe-werken-de-nieuwe-corona-vaccins/</guid>
+      <description>Er zijn nu twee vaccins die meer dan 90% effectief lijken te zijn tegen Corona. Dit is heel hard gegaan, maar dat is goed te verklaren. Universitair Hoofddocent en kinderarts Patricia Bruijning heeft het hier heel duidelijk uitgelegd.
+In het kort, we hebben zo snel vaccins want:
+ Het SARS-CoV-2 virus is een relatief makkelijk doelwit om een vaccin tegen te ontwikkelen. (het is geen griep) De coronavaccins worden ontwikkeld met nieuwe en veel snellere technologie Geld was geen probleem Toelatingsinstanties voor vaccins waren vanaf het begin nauw betrokken.</description>
+    </item>
+    
+    <item>
+      <title>Patricia Bruijning: Hoe kan het dat we zo snel een coronavaccin hebben?</title>
+      <link>https://berthub.eu/articles/posts/patricia-bruijning-over-corona-vaccins/</link>
+      <pubDate>Fri, 20 Nov 2020 20:32:29 +0100</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/patricia-bruijning-over-corona-vaccins/</guid>
+      <description>Ik heb hier een Twitter-draadje van Patricia Bruijning omgezet naar een webpagina, waardoor het verhaal wat makkelijker te lezen is voor mensen zonder Twitter.
+Dr Bruijning is Universitair Hoofddocent epidemiologie bij UMC Utrecht maar is ook kinderarts. Ze weet dus goed waar ze het over heeft en ook hoe de praktijk werkt. En ik ben erg blij dat ze de tijd heeft genomen ons goed voor te lichten!
+Hier haar uitleg hoe het komt dat we zo snel een coronavaccin krijgen, en waarom het veilig zal zijn:</description>
+    </item>
+    
+    <item>
+      <title>Corona-Update november: Twee vaccins en sneltests!</title>
+      <link>https://berthub.eu/articles/posts/corona-update-november/</link>
+      <pubDate>Mon, 16 Nov 2020 12:42:49 +0100</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/corona-update-november/</guid>
+      <description>Ja, daar zijn we weer! Voor het eerst [sinds juli](https://berthub.eu/articles/posts/corona-update-eind-juli/) weer een Corona Update. Er is inmiddels weer genoeg te melden: vaccins, tests, cijfers, medicijnen en vitamine D. Vaccins Om te beginnen, wow. En nog een keer wow. SINDS VANDAAG ER ZIJN TWEE WERKENDE VACCINS! En nog gekker, ze zijn in februari 2020 al ontworpen, toen het RNA (de broncode) van het virus pas net bekend was. Vergeleken met zelfs maar een paar jaar geleden is dit pure science fiction.</description>
+    </item>
+    
+    <item>
+      <title>Dutch COVID-19 Data Sources &amp; Their Interpretation</title>
+      <link>https://berthub.eu/articles/posts/dutch-covid-19-data-sources/</link>
+      <pubDate>Sat, 14 Nov 2020 09:04:20 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/dutch-covid-19-data-sources/</guid>
+      <description>As the world focuses on the terrible (but improving) Dutch COVID-19 numbers, I also see a lot of people interpreting the numbers badly. But we can hardly blame folks since most data is only described in Dutch. And even in Dutch the descriptions can be very confusing.
+So here goes.
+ NOTE: Corrections and additional links &amp;amp; sources are very welcome on bert@hubertnet.nl or @PowerDNS_Bert.
+ The main sources The RIVM is the &amp;ldquo;Dutch CDC&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>Some animated Dutch COVID-19 Figures</title>
+      <link>https://berthub.eu/articles/posts/some-dutch-covid-19-figures/</link>
+      <pubDate>Thu, 12 Nov 2020 14:23:24 +0100</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/some-dutch-covid-19-figures/</guid>
+      <description>Don&amp;rsquo;t take this too seriously. As part of my coping mechanisms, I try to understand the latest (Dutch) COVID-19 figures. I documented where to get the raw data and what they mean in an earlier post.
+ Please note I am not trying to make any kind of point with this data, not positive, not negative. I have no agenda, please do not read this as me trying to argue things aren&amp;rsquo;t that bad or that they are terrible.</description>
+    </item>
+    
+    <item>
+      <title>End to End Encryption: Talk for the European Internet Forum at the European Parliament</title>
+      <link>https://berthub.eu/articles/posts/end-to-end-encryption-european-internet-forum/</link>
+      <pubDate>Mon, 09 Nov 2020 11:03:55 +0100</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/end-to-end-encryption-european-internet-forum/</guid>
+      <description>Around a million years ago (it feels like) but actually 9 months ago I delivered a brief talk on end to end encryption for the European Internet Forum at the European Parliament.
+Because of my new job, I will soon no longer be able to opine on these things as easily. Given the upheaval caused this week by the end-to-end encryption paper from the Council of the European Union, I thought it timely to re-up my little speech now.</description>
+    </item>
+    
+    <item>
+      <title>Galileo&#39;s Ground Segment Problem</title>
+      <link>https://berthub.eu/articles/posts/galileos-ground-segment-problem/</link>
+      <pubDate>Mon, 19 Oct 2020 13:55:02 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/galileos-ground-segment-problem/</guid>
+      <description>The European Global Navigation Satellite System Galileo has recently been suffering from frequent &#34;almost disruptions&#34;, most likely partially due to Corona, and possibly also due to Brexit, but in any case due to some historical stinginess. Before I explain what is going on, I should hasten to say that most days of the week, Galileo is working well for most users. But for example, Monday the 28th of September, one satellite was off by a stunning 5 meters.</description>
+    </item>
+    
+    <item>
+      <title>GNSS Jamming and Spoofing, aka Galileo&#39;s Authentication Algorithm Part 3</title>
+      <link>https://berthub.eu/articles/posts/galileos-authentication-algorithm-part-3/</link>
+      <pubDate>Sun, 13 Sep 2020 11:49:53 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/galileos-authentication-algorithm-part-3/</guid>
+      <description>Welcome to part 3 of my series on OSNMA, the proposed Galileo Navigation Message Authentication protocol. This part can be read independently from [part 1](https://berthub.eu/articles/posts/galileos-authentication-algorithm-part-1/) and [part 2](https://berthub.eu/articles/posts/galileos-authentication-algorithm-part-2/), but it might be useful to read the introduction to part 1. This post attempts to explain GPS (GNSS) jamming and spoofing, so it might be a useful read even if you don&amp;rsquo;t care about Galileo or its authentication.
+As usual, I&amp;rsquo;ve been helped tremendously by Daniel Estévez &amp;amp; many other researchers and Galileo professionals, and again I am very greatful for all the links, corrections, suggestions and knowledge you provided.</description>
+    </item>
+    
+    <item>
+      <title>Vitamine D: De motorolie voor ons afweersysteem</title>
+      <link>https://berthub.eu/articles/posts/vitamine-d-de-motorolie-covid-19/</link>
+      <pubDate>Sun, 13 Sep 2020 10:43:38 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/vitamine-d-de-motorolie-covid-19/</guid>
+      <description>We horen veel over hoeveel mensen er nu besmet raken met COVID-19. Tegelijk viel het tot begin oktober erg mee met de ziekenhuisopnames en sterfgevallen. Ik kan ook niet verklaren hoe dat precies komt (het is niet alleen leeftijd), maar ik wil het in dit artikel wel hebben over &amp;ldquo;de zonlichtvitamine&amp;rdquo;, vitamine D. Want nu in september hebben we net een zomer lang zon gehad, en in maart kwamen we vers uit de winter.</description>
+    </item>
+    
+    <item>
+      <title>Galileo&#39;s Proposed Authentication Algorithm: Part 2</title>
+      <link>https://berthub.eu/articles/posts/galileos-authentication-algorithm-part-2/</link>
+      <pubDate>Wed, 26 Aug 2020 10:43:09 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/galileos-authentication-algorithm-part-2/</guid>
+      <description>Recapping from part 1: Galileo will soon add cryptographic signatures to the navigation messages. These cryptographic signatures are made with symmetric cryptography, which means clever techniques are required to prevent receivers from impersonating the network.
+The key to the technique is first signing messages, and only later disclosing the key used for the signatures, thus invalidating it for further use. Receivers can however verify that earlier signatures were indeed made with that key.</description>
+    </item>
+    
+    <item>
+      <title>Galileo&#39;s Proposed Authentication Algorithm: Part 1</title>
+      <link>https://berthub.eu/articles/posts/galileos-authentication-algorithm-part-1/</link>
+      <pubDate>Thu, 13 Aug 2020 20:50:09 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/galileos-authentication-algorithm-part-1/</guid>
+      <description>Position, velocity and time (PVT) information can be a &amp;lsquo;nice to have&amp;rsquo;, but in other circumstances knowing place and time has legal or military importance as well. Heavy vehicles for example are typically outfitted with tachographs that track driver speed and/or location. This has importance for rest regulations, but also to check if loads are actually from where they say they are.
+Our Global Navigation Satellite Systems so far are broadcasting unauthenticated data, at least to civilian users.</description>
+    </item>
+    
+    <item>
+      <title>Corona-update Eind Juli</title>
+      <link>https://berthub.eu/articles/posts/corona-update-eind-juli/</link>
+      <pubDate>Sat, 25 Jul 2020 14:42:06 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/corona-update-eind-juli/</guid>
+      <description>Toch weer een kleine Corona-update, vrij snel na de vorige van 1 juli.
+Want poeh, gaat het nou ineens weer mis in Nederland? Of valt het mee? Moeten we allemaal aan de maskers en komt het dan goed? En gaan de vaccins en medicijnen ons redden voor de winter?
+In tegenstelling tot vele roeptoeters heb ik daar ook allemaal geen zekere antwoorden op, maar hier toch een set updates over de meest recente ontwikkelingen.</description>
+    </item>
+    
+    <item>
+      <title>Multi-Signal GNSS &amp; the Curious Case of Galileo E24: Part 1</title>
+      <link>https://berthub.eu/articles/posts/the-curious-case-of-galileo-e24/</link>
+      <pubDate>Sat, 18 Jul 2020 09:07:23 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/the-curious-case-of-galileo-e24/</guid>
+      <description>GPS, GLONASS, Galileo, BeiDou (Global Navigational Satellite Systems, GNSS) are miracles of engineering. And within any complex system hide surprises and unsuspected complications.
+In this post I go over how we resolved an odd observation: that everyone (including major institutions) reported that one of the Galileo satellites (E24) appeared to be off by 1.5 meters, while actual positioning equipment (like phones) showed no problems at all.
+Through the explanation, we&amp;rsquo;ll casually learn a thing or two about the cool concept of multi-frequency GNSS.</description>
+    </item>
+    
+    <item>
+      <title>Review of the Uputronics GPS/RTC Raspberry Pi Expansion Board</title>
+      <link>https://berthub.eu/articles/posts/uputronics-gps-rtc-expansion-board/</link>
+      <pubDate>Thu, 09 Jul 2020 13:38:00 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/uputronics-gps-rtc-expansion-board/</guid>
+      <description>Hi everyone, Disclaimer: this is a review of a free sample I got sent by Uputronics.
+I recently spotted on Twitter that Uputronics had launched a GPS/RTS Raspberry Pi Expansion Board, and that they were looking for worthy projects to test it. I thought our Galileo/GPS/BeiDou/GLONASS monitoring project galmon.eu might be worthy and Uputronics agreed.
+Relevant for our purposes, this is an actual &amp;lsquo;timing receiver&amp;rsquo;. Any GNSS chip will get you a location, but some of them go the extra mile to also deliver a very stable clock signal.</description>
+    </item>
+    
+    <item>
+      <title>The new Galmon.eu Weekly Galileo Report</title>
+      <link>https://berthub.eu/articles/posts/briefly-on-the-galmon-weekly-report/</link>
+      <pubDate>Tue, 07 Jul 2020 11:54:59 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/briefly-on-the-galmon-weekly-report/</guid>
+      <description>I have a longer story brewing, but in this post I want to briefly announce the &amp;ldquo;Galmon.eu unofficial Weekly Performance Report&amp;rdquo;. This is a blog post version of an earlier Twitter thread.
+I&amp;rsquo;m very proud to present the first full Galmon.eu Weekly Galileo Report! And the good news is: it was a good week with very little to report. The email has just gone out, but you can also find it here.</description>
+    </item>
+    
+    <item>
+      <title>Corona Update: Juli</title>
+      <link>https://berthub.eu/articles/posts/corona-update-juli/</link>
+      <pubDate>Wed, 01 Jul 2020 17:37:17 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/corona-update-juli/</guid>
+      <description>Nu het RIVM gestopt is met dagelijkse updates vond ik dat het tijd was dat gat dan maar te vullen, al is het maar voor een dag. Een nieuwe Corona Update &amp;ldquo;hoe gaat het nu met&amp;rdquo;. De vorige was alweer van 21 april!
+De &amp;ldquo;Ik ben geen expert, maar toch&amp;rdquo;-factor Een boel dansleraren en opiniepeilers zijn inmiddels COVID-19 experts. In deze post heb ik erg mijn best gedaan alleen dingen te melden die we heel zeker weten.</description>
+    </item>
+    
+    <item>
+      <title>COVID-19: The T Cell Story</title>
+      <link>https://berthub.eu/articles/posts/covid-19-t-cells/</link>
+      <pubDate>Fri, 05 Jun 2020 18:52:24 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/covid-19-t-cells/</guid>
+      <description>When COVID-19 burst on to the scene, tests quickly showed that the everyone was susceptible - no pre-existing antibodies were found that bound to the SARS-CoV-2 virus. This led to dire predictions that over 80% of the population might eventually fall ill. Now more than six months in, this has not happened, and it does not appear to be close to happening. A few months ago, noted virologist Christian Drosten mused in his (German) podcast that some people might have a level of immunity after all, but he wasn&amp;rsquo;t yet sure.</description>
+    </item>
+    
+    <item>
+      <title>Vitamin D: the New COVID-19 Chloroquine?</title>
+      <link>https://berthub.eu/articles/posts/vitamin-d-the-new-covid-19-chloroquine/</link>
+      <pubDate>Sat, 30 May 2020 17:52:44 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/vitamin-d-the-new-covid-19-chloroquine/</guid>
+      <description>Welcome to this post, in which we&amp;rsquo;ll be taking a trip through the wild and bumpy ride that has been Vitamin D &amp;amp; sunlight research over the past few decades, and what it might mean for COVID-19.
+As with my previous post, before any non-specialist attempts to write something on COVID-19, we should wonder: are any actual experts already writing on this, and if not, why not. Enough badly informed stuff has already been published by amateurs that before posting we should be certain we are actually being helpful.</description>
+    </item>
+    
+    <item>
+      <title>COVID-19 Predictions &amp; Rampant Speculation: May 2020</title>
+      <link>https://berthub.eu/articles/posts/covid-19-rampant-speculation-may-2020/</link>
+      <pubDate>Sun, 24 May 2020 10:49:02 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/covid-19-rampant-speculation-may-2020/</guid>
+      <description>It turns out that so far, I have written over 44000 words on COVID-19. I&amp;rsquo;ve tried very hard to only report the best and most trustworthy science, but I did strive to include interesting new insights that were not yet mainstream.
+As an example, I spoke about vitamin D and sunlight real early, which now indeed appears to be a thing. No guarantees yet, but it definitely is a thing. I also mentioned the importance of ventilating indoor places early on, and this too now appears to be very relevant.</description>
+    </item>
+    
+    <item>
+      <title>How COVID-19 is diagnosed: bacterium assisted DNA searching</title>
+      <link>https://berthub.eu/articles/posts/dna-grep-2019-ncov/</link>
+      <pubDate>Fri, 22 May 2020 17:18:33 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/dna-grep-2019-ncov/</guid>
+      <description>This post is dedicated to lab technicians everywhere doing the difficult work institutes and hospitals rely on to investigate disease and keep us healthy. Lab work requires high precision, deep understanding, is physically demanding, and can even be dangerous. Although our healthcare systems &amp;amp; universities would come to a grinding halt without lab technicians, they are often almost literally invisible somewhere far away. Thank you all for your hard work!</description>
+    </item>
+    
+    <item>
+      <title>R and the Herd: Why we could be nearer to community immunity than we think</title>
+      <link>https://berthub.eu/articles/posts/r-and-the-herd/</link>
+      <pubDate>Thu, 14 May 2020 15:27:00 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/r-and-the-herd/</guid>
+      <description>Before any non-specialist attempts to write something on COVID-19, we should wonder: are any actual experts already writing on this, and if not, why not. Enough badly informed stuff has already been published by amateurs that before posting we should be certain we are actually being helpful.
+Recently, several interesting preprints have come out on why the practical &amp;ldquo;herd immunity&amp;rdquo; level may be lower, perhaps far lower, than the oft quoted 60-70%.</description>
+    </item>
+    
+    <item>
+      <title>Mitochondriën op Moederdag</title>
+      <link>https://berthub.eu/articles/posts/mitochondrien/</link>
+      <pubDate>Sun, 10 May 2020 17:15:46 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/mitochondrien/</guid>
+      <description>Een spontane wetenschapsupdate, omdat het Moederdag is, en speciaal voor iedereen die het nu zonder zijn of haar moeder moet doen. Want, we dragen allemaal letterlijk een beetje onze moeder bij ons!
+ Deze post is dankbaar geïnspireerd door deze Twitter thread van Efra Rivera-Serrano, PhD.
+   Bron: Efra Rivera-Serrano, link
+  Ons DNA is een mix van dat van onze beide ouders. Maar, in vrijwel al onze cellen leeft een wonderlijk wezentje wat we echt alleen van onze moeder geërfd hebben.</description>
+    </item>
+    
+    <item>
+      <title>COVID-19: het belang van ventileren</title>
+      <link>https://berthub.eu/articles/posts/corona-binnen/</link>
+      <pubDate>Sat, 09 May 2020 09:25:07 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/corona-binnen/</guid>
+      <description>Het RIVM, het &amp;ldquo;Outbreak Management Team&amp;rdquo; en het kabinet werken samen aan gedegen adviezen. Uiteindelijk worden dit ook wel de juiste adviezen, al blijft men soms lang aan oude dingen hangen: mensen zonder symptomen zijn niet besmettelijk (oeps, toch wel), maskers hebben geen zin (oeps, ze helpen wel voorkomen dat je andere mensen besmet). Uiteindelijk maakt men de draai wel, maar het kost even.
+Nu de scholen weer opengaan vroeg ik me af, wat weten we eigenlijk over hoe mensen besmet raken met COVID-19?</description>
+    </item>
+    
+    <item>
+      <title>Corona: Hoe en waar krijgen we het? Niemand die het weet.</title>
+      <link>https://berthub.eu/articles/posts/corona-hoe-en-wat/</link>
+      <pubDate>Mon, 27 Apr 2020 08:49:38 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/corona-hoe-en-wat/</guid>
+      <description>Ik blog al maanden over SARS-CoV-2 aka COVID-19 aka &amp;ldquo;het coronavirus&amp;rdquo;, waarbij ik grotendeels dingen uitleg en verwijs naar positieve ontwikkelingen.
+Ook zijn er stukjes over medische experimenten, over ons immuunsysteem en recent iets korts over het vermoedelijke belang van goede ventilatie om COVID-19 besmettingen tegen te gaan.
+Ik houd van de wetenschap en ben trots op het mooie onderzoek wat hier in internationale samenwerking verricht wordt.
+Maar nu dan toch een zeurstuk: waarom weten we niet waar en hoe mensen in Nederland besmet raken?</description>
+    </item>
+    
+    <item>
+      <title>Corona Update 21 April</title>
+      <link>https://berthub.eu/articles/posts/corona-update-21-april/</link>
+      <pubDate>Tue, 21 Apr 2020 14:30:40 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/corona-update-21-april/</guid>
+      <description>Ja, daar zijn we weer. Bij het beëindigen van de serie dagelijkse Corona updates had ik aangekondigd nog terug te komen als er weer wat te melden was.
+Bij deze een aflevering &amp;ldquo;hoe gaat het nu met&amp;rdquo;, met daarin nieuws over hoe het verder gaat met eerder gemelde ontwikkelingen. Daarnaast twee stukjes op veler verzoek: hoe gaat het met het testen en kan de economie al weer open.
+Om te beginnen, op 25 maart zei ik &amp;ldquo;De samenvatting is dat als iedereen zich aan de regels houdt (BLIJF THUIS, HOUD AFSTAND) we het waarschijnlijk net binnen de capaciteit gaan houden in Nederland&amp;rdquo;, en dat bleek dus te kloppen.</description>
+    </item>
+    
+    <item>
+      <title>Tracing App Backend Development</title>
+      <link>https://berthub.eu/articles/posts/tracing-app-backend/</link>
+      <pubDate>Tue, 14 Apr 2020 20:00:22 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/tracing-app-backend/</guid>
+      <description>bert@hubertnet.nl / @PowerDNS_Bert / LinkedIn
+Very quick post. The Dutch government just launched a tender for &amp;ldquo;digital technologies that can help with Corona&amp;rdquo;. The tender includes words on privacy sensitive contact tracing, it explicitly refers to PEPP-PT, the Pan-European Privacy-Preserving Proximity Tracing project.
+Responses are due on Tuesday the 14th of April, 12:00 (noon). The question/answer form asks if you can do a demo on the 18th of April and have something that could be rolled out on the 28th.</description>
+    </item>
+    
+    <item>
+      <title>Tracing App Thoughts and Links</title>
+      <link>https://berthub.eu/articles/posts/tracing-app-thoughts-and-links/</link>
+      <pubDate>Sat, 11 Apr 2020 13:46:27 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/tracing-app-thoughts-and-links/</guid>
+      <description>As many countries are now managing to drive down their COVID-19 epidemic, thoughts are turning to how to manage the outbreak beyond the &amp;ldquo;lockdown&amp;rdquo;. The restrictions we live under now do appear to work, but for multiple reasons, they&amp;rsquo;ll be hard to maintain.
+When the epidemic was small, it was possible to trace every new infection and isolate potential new cases. This did buy time, but for most countries, &amp;ldquo;the cat was out the bag already&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>Corona Updates: hoopgevende ontwikkelingen realistisch bekeken</title>
+      <link>https://berthub.eu/articles/posts/de-dagelijkse-corona-update/</link>
+      <pubDate>Mon, 06 Apr 2020 13:31:55 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/de-dagelijkse-corona-update/</guid>
+      <description>Ik heb op Facebook beloofd iedere dag een &#34;Corona Update&#34; te sturen met ontwikkelingen die hoopgevend zijn, terwijl ik het wel realistisch houd. Hier verzamel ik de updates zodat ze ook buiten Facebook te bekijken zijn. Er is genoeg nieuws om je zorgen over te maken dat ik het nodig vind ook dingen die kunnen helpen te belichten. Mensen die me kennen weten dat ik geen optimist ben, het is geen &amp;ldquo;goed nieuws show&amp;rdquo; hier.</description>
+    </item>
+    
+    <item>
+      <title>Why no breakthrough yet? Or, why is it &#39;taking so long&#39; to test COVID-19 treatments?</title>
+      <link>https://berthub.eu/articles/posts/corona-trial-math/</link>
+      <pubDate>Sat, 04 Apr 2020 13:27:10 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/corona-trial-math/</guid>
+      <description>Many many possible medicines are being touted as possibly being helpful in fighting COVID-19. Here&amp;rsquo;s a small list where we have some initial results or at least anecdotes:
+ (hydroxy)chloroquine, with azithromycin or zinc: This is the &amp;ldquo;tech-bro&amp;rdquo; favorite right now, partially based on recommendations from Elon Musk and Donald Trump, two noted medical professionals. There have been a few reports on this working or not working. This article argues that an alternation of negative and positive results actually is to be expected, even if the treatment is fairly effective, which it might be.</description>
+    </item>
+    
+    <item>
+      <title>Our amazing immune system</title>
+      <link>https://berthub.eu/articles/posts/immune-system/</link>
+      <pubDate>Wed, 01 Apr 2020 22:27:10 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/immune-system/</guid>
+      <description>(On this page in Dutch I post daily bits of realistic but hopeful Corona news. Here is a somehat rough translation of an article on our immune system I posted there, because I think it might also be useful for people that don&amp;rsquo;t speak Dutch).
+Wednesday, April 1st COVID-19 can only live thanks to us. Viruses cannot reproduce independently, they need our help. And our immune system makes this very hard, as aptly explained in this excellent xkcd comic:</description>
+    </item>
+    
+    <item>
+      <title>Corona Science Journal</title>
+      <link>https://berthub.eu/articles/posts/corona-science/</link>
+      <pubDate>Mon, 30 Mar 2020 11:09:45 +0100</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/corona-science/</guid>
+      <description>Hello and welcome to this stream of consciousness I dare to call &#34;the Corona Science Journal&#34;. Latest update: 30th of March 11:34 UTC. View history of this page [on GitHub](https://github.com/ahupowerdns/corona-science/commits/master) ([RSS](https://github.com/ahupowerdns/corona-science/commits/master/corona-science.md.atom)), where you can also submit changes, fixes and updates.  Note: I have been unable to keep up with the latest developments as I have shifted my efforts to a Dutch-language daily blog about positive COVID-19 developments, while keeping it real.</description>
+    </item>
+    
+    <item>
+      <title>Antibodies on command?</title>
+      <link>https://berthub.eu/articles/posts/antibodies/</link>
+      <pubDate>Fri, 27 Mar 2020 17:56:22 +0100</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/antibodies/</guid>
+      <description>(On this page in Dutch I post daily bits of realistic but hopeful Corona news. Here is a somehat rough translation of an article on antibodies I posted there, because I think it might also be useful for people that don&amp;rsquo;t speak Dutch).
+Friday March 27: antibodies on demand? Those who have read the previous posts will recall that antibodies from people who have already been cured can help us to be vaccinated temporarily, or even heal us faster from disease.</description>
+    </item>
+    
+    <item>
+      <title>Corona/COVID-19 Selftest Warning</title>
+      <link>https://berthub.eu/articles/posts/corona-selftest-warning/</link>
+      <pubDate>Sat, 21 Mar 2020 14:12:11 +0100</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/corona-selftest-warning/</guid>
+      <description>Several sites are now shipping &amp;ldquo;COVID-19 self test kits&amp;rdquo; or perhaps &amp;ldquo;Coronavirus self test kits&amp;rdquo;. These claim to detect the virus in 10 minutes based on a drop of blood.
+    These rapid self-test kits are currently:
+ Likely fake Even if not fake, they do NOT test for the virus, they do NOT do what you think they do Even if they do what they are supposed to, these tests have not been validated and could be wrong a lot.</description>
+    </item>
+    
+    <item>
+      <title>ICT van levensbelang: kantoorautomatisering is geen leidraad</title>
+      <link>https://berthub.eu/articles/posts/ict-van-levensbelang/</link>
+      <pubDate>Fri, 14 Feb 2020 09:00:00 +0100</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/ict-van-levensbelang/</guid>
+      <description>Gisteren verscheen het rapport &amp;ldquo;Patiëntveiligheid bij ICT-uitval in ziekenhuizen&amp;rdquo; van de Onderzoeksraad voor veiligheid.
+Omdat ik een bescheiden bijdrage heb geleverd aan dit rapport voel ik me geroepen een stukje te schrijven over wat in het rapport het &amp;ldquo;ICT-fundament&amp;rdquo; wordt genoemd.
+Voor de volledige duidelijkheid, wat ik hier schrijf heeft niets te maken met de Onderzoeksraad en ook niet specifiek met de inhoud van het rapport. Zie het als een overdenking over bedrijfskritische ICT.</description>
+    </item>
+    
+    <item>
+      <title>Amateur SARS/2019-NCoV RNA Comparison</title>
+      <link>https://berthub.eu/articles/posts/sars-ncov-comparison/</link>
+      <pubDate>Fri, 24 Jan 2020 13:42:01 +0100</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/sars-ncov-comparison/</guid>
+      <description>Here is a rough comparison between the reported genomes of SARS and 2019-nCoV (&amp;ldquo;Wuhan virus&amp;rdquo;). This is the output of an old but still interesting &amp;lsquo;alignment&amp;rsquo; algorithm called Needleman-Wunsch. In the world of computing we use &amp;lsquo;diff&amp;rsquo; for this purpose, DNA has some specific aspects which are incorporated into the alignment algorithms.
+Many years ago I wrote a Javascript demonstration of this algorithm, which can be found here. While you could paste the entire viral genomes in there, what follows is the slightly modified output of the nwunsch tool in my Antonie DNA toolset</description>
+    </item>
+    
+    <item>
+      <title>5G: The outsourced elephant in the room</title>
+      <link>https://berthub.eu/articles/posts/5g-elephant-in-the-room/</link>
+      <pubDate>Mon, 20 Jan 2020 15:00:00 +0100</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/5g-elephant-in-the-room/</guid>
+      <description>This article is part of a series on (European) innovation and capabilities.
+ In a break from the usual GPS/Galileo, DNA and C++ posts, here is a bit on 5G and national security. It turns out that through PowerDNS and its parent company Open-Xchange, we know a lot about how large scale European communication service providers work - most of whom are our customers in some way.
+In addition, in a previous life I worked in national security and because of that I have relevant knowledge of how governments (your own and foreign ones) &amp;ldquo;interact&amp;rdquo; with telecommunication providers.</description>
+    </item>
+    
+    <item>
+      <title>The Galmon GNSS Monitoring Project</title>
+      <link>https://berthub.eu/articles/posts/galmon-project/</link>
+      <pubDate>Wed, 08 Jan 2020 13:53:08 +0100</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/galmon-project/</guid>
+      <description>Welcome to the Galmon project!
+Our goals are to monitor the major Global Navigation Satellite Systems, including GPS, GLONASS, Galileo and BeiDou, but also Space Base Augmentation Systems like WAAS, EGNOS and GAGAN.
+Galmon is an open source &amp;amp; open data project with a community of over 30 station operators running more than 50 receivers. Some history of the project may be found in the second part of this blog post, and on this page on the big Galileo 2019 outage.</description>
+    </item>
+    
+    <item>
+      <title>A 2019 update on PowerDNS, Galileo, DoH and other things</title>
+      <link>https://berthub.eu/articles/posts/update-2019-powerdns-galileo-ripe-doh/</link>
+      <pubDate>Wed, 01 Jan 2020 15:37:52 +0100</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/update-2019-powerdns-galileo-ripe-doh/</guid>
+      <description>Last year I wrote a post listing what I had been doing in 2018, because it turned out it was a lot, so much that it was useful to summarise it somewhat.
+This year there is less to report, but people have wondered what I&amp;rsquo;ve been up to. And I&amp;rsquo;ve learned that if you leave room for speculation about your intentions, wrong answers tend to come up.
+This (professional) year for me mostly consisted of two things: DNS over HTTPS and Galileo.</description>
+    </item>
+    
+    <item>
+      <title>What Is Life?</title>
+      <link>https://berthub.eu/articles/posts/what-is-life/</link>
+      <pubDate>Mon, 30 Dec 2019 14:44:26 +0100</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/what-is-life/</guid>
+      <description>What is life? This question keeps many people awake at night and has led to rafts of definitions, some involving features (procreation, metabolism and so forth), some involving chemistry, entropy or energy flux and some are of a more philosophical bent. A BBC article noted there are over 100 definitions of life and it claims all are wrong.
+And indeed it does appear to be quite a challenge - every hard and fast rule is violated somewhere in biology.</description>
+    </item>
+    
+    <item>
+      <title>Is biology too complex to ever understand?</title>
+      <link>https://berthub.eu/articles/posts/biologists-physics-envy/</link>
+      <pubDate>Sat, 07 Dec 2019 14:53:42 +0100</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/biologists-physics-envy/</guid>
+      <description>Note: This article covers a lot of well-trodden ground, although this post has the benefit of 1) being rather brief and 2) advancing slightly on from earlier work. Noam Chomsky wrote 39 dense pages of philosophy on this subject in &amp;ldquo;Mysteries of Nature: How Deeply Hidden&amp;rdquo;. Evolutionary&amp;rsquo;s leading light Ernst Meyr wrote a whole book called &amp;ldquo;What makes biology unique&amp;rdquo;. Finally, a lot of this thinking is also covered in the quite philosophical work &amp;ldquo;The way of the Cell&amp;rdquo; by Franklin M.</description>
+    </item>
+    
+    <item>
+      <title>Dear anonymous internet user asking for help..</title>
+      <link>https://berthub.eu/articles/posts/anonymous-help/</link>
+      <pubDate>Mon, 02 Dec 2019 13:09:45 +0100</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/anonymous-help/</guid>
+      <description>Dear anonymous internet user, dear corporate employee hiding behind a gmail.com address, dear &amp;ldquo;GitHub account with a single issue&amp;rdquo;,
+Thank you for your interest in my free software, my project or the documentation I wrote for you. I am happy to hear you want to ask a question, have a problem, or perhaps even inform me of a new requirement you have.
+But with some small exceptions (do read on), I&amp;rsquo;m afraid I will not be able to help you.</description>
+    </item>
+    
+    <item>
+      <title>State of the world: The Real Data</title>
+      <link>https://berthub.eu/articles/posts/the-real-data/</link>
+      <pubDate>Sun, 24 Nov 2019 13:57:21 +0100</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/the-real-data/</guid>
+      <description>This page collects links to raw and live sources on how well the planet, including its vital infrastructure, is doing right now, potentially visualised attractively. But the key thing is, we want Real Data, from the most direct sources.
+Sources are expected to be realtime or at least updated frequently. Mere estimates of things based on questionable inputs are explicitly not welcome, no matter how pretty their output.
+Please submit new links or fixes to @PowerDNS_Bert or bert@hubertnet.</description>
+    </item>
+    
+    <item>
+      <title>The July Galileo Outage: What happened and why</title>
+      <link>https://berthub.eu/articles/posts/galileo-accident/</link>
+      <pubDate>Thu, 07 Nov 2019 09:48:53 +0100</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/galileo-accident/</guid>
+      <description>By bert hubert / bert@hubertnet.nl
+This post is an excerpt of a far longer post on Galileo, its structures and the cause of the outage. Here we&amp;rsquo;ll only focus on the outage - the potential underlying reasons behind it are described in the full article.
+Since the week-long outage in July I&amp;rsquo;ve been fascinated by Galileo and, together with a wonderful crew of developers, experts and receiver operators, have learned so much about what I now know are called &amp;lsquo;Global Navigation Satellite Systems&amp;rsquo; or GNSS.</description>
+    </item>
+    
+    <item>
+      <title>The State of Galileo as seen by an outsider</title>
+      <link>https://berthub.eu/articles/posts/state-of-galileo-and-accident/</link>
+      <pubDate>Thu, 07 Nov 2019 09:47:53 +0100</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/state-of-galileo-and-accident/</guid>
+      <description>By bert hubert / bert@hubertnet.nl
+In this post I want to document some mostly non-technical aspects of the EU&amp;rsquo;s Galileo Satellite Navigation Network. I will also share some observations on how things are going, and perhaps how they could be improved.
+ NOTE: A shorter version of this article, focusing only on the July outage, can be found here.
+ Since the week-long outage in July I&amp;rsquo;ve been fascinated by Galileo and, together with a wonderful crew of developers, experts and receiver operators, have learned so much about what I now know are called &amp;lsquo;Global Navigation Satellite Systems&amp;rsquo; or GNSS.</description>
+    </item>
+    
+    <item>
+      <title>GPS Lesson for 10-11 year olds</title>
+      <link>https://berthub.eu/articles/posts/gps-lesson/</link>
+      <pubDate>Mon, 14 Oct 2019 20:09:53 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/gps-lesson/</guid>
+      <description>The Netherlands is struggling with a shortage of primary school teachers, which as a nice side effect means that I get ample opportunities to do technical propaganda in the name of education.
+This is a quick writeup of a lesson on how GPS (or in general, satellite based navigation) works. I&amp;rsquo;d like to thank Jasper Vos and Michel Dingen of OBS De Notenkraker for the opportunity &amp;amp; the very useful feedback on the lessons!</description>
+    </item>
+    
+    <item>
+      <title>Economist submission: How the Internet Leaks</title>
+      <link>https://berthub.eu/articles/posts/economist-how-the-web-leaks/</link>
+      <pubDate>Sat, 05 Oct 2019 13:08:38 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/economist-how-the-web-leaks/</guid>
+      <description>Note: For context, please see this article on the Economist Job. I also want to thank Job Snijders who was of great help in writing this article.
+How the Internet Leaks A few weeks ago large swathes of the internet stopped working around the world. The cause was quickly found: a computer networking mistake over at a specialty metals company based in Pittsburgh, Pennsylvania. Earlier that month, a similar accident took down payment terminals in The Netherlands because of a misconfiguration in a Swiss datacenter which rerouted key parts of the internet to China.</description>
+    </item>
+    
+    <item>
+      <title>Economist submission: Towards a multi-stranded genome</title>
+      <link>https://berthub.eu/articles/posts/economist-pan-genome/</link>
+      <pubDate>Sat, 05 Oct 2019 13:05:35 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/economist-pan-genome/</guid>
+      <description>Note: For context, please see this article on the Economist Job. This is a condensed and updated version of my earlier post On the pan-genome.
+Towards a multi-stranded genome Given that the completion of the human genome project was announced in 2003, one could be forgiven for thinking the kinks would have been worked out by now. It turns out however that as published today, the human DNA reference sequence is neither complete nor a good description of mankind.</description>
+    </item>
+    
+    <item>
+      <title>Economist Job: my sample articles</title>
+      <link>https://berthub.eu/articles/posts/economist-job/</link>
+      <pubDate>Sat, 05 Oct 2019 12:52:08 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/economist-job/</guid>
+      <description>Over the holiday, I ran into this job advertisement from The Economist:
+ The Economist is looking for a new Science and Technology correspondent. Knowledge of the field, an ability to write informatively, succinctly and wittily, and an insatiable curiosity are more important attributes than prior journalistic experience. Please send a CV, a brief letter introducing yourself, and an article of 600 words suitable for publication to xxxx@economist.com. The closing date for applications is August 23rd.</description>
+    </item>
+    
+    <item>
+      <title>GPS, Galileo &amp; More: How do they work &amp; what happened during the big outage?</title>
+      <link>https://berthub.eu/articles/posts/gps-gnss-how-do-they-work/</link>
+      <pubDate>Mon, 30 Sep 2019 20:05:33 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/gps-gnss-how-do-they-work/</guid>
+      <description>By bert hubert bert@hubertnet.nl / @PowerDNS_Bert / https://galmon.eu/
+Late July 2019, Galileo, &amp;ldquo;the European GPS&amp;rdquo; suffered from a week long outage. I&amp;rsquo;m a proud European, and I think we should have our own well-functioning navigation system, so I tried to figure out what was going on. Surely someone was monitoring this stuff in public? I come from the internet where we monitor all the things, if someone asked for it or not.</description>
+    </item>
+    
+    <item>
+      <title>Beidou Satellites Misclassification</title>
+      <link>https://berthub.eu/articles/posts/beidou-satellites/</link>
+      <pubDate>Mon, 02 Sep 2019 08:37:13 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/beidou-satellites/</guid>
+      <description>Hi everyone,
+As noted previously I&amp;rsquo;ve gone all in on GNSS monitoring. GNSS is the generic term for GPS, Galileo, GLONASS and BeiDou satellites.
+Eventually a big blog post will come out, but meanwhile you can see the results on galmon.eu.
+A few days ago, an unknown GLONASS satellite started transmitting signals on slot R26 and I tried to figure out which one it was. By definition, GNSS satellites broadcast their own very precise location &amp;amp; speed, which makes it possible to match up their orbit to published &amp;ldquo;TLEs&amp;rdquo;, which document where objects in space are.</description>
+    </item>
+    
+    <item>
+      <title>Galileo Notes: Ephemeris, Anomalies, I/NAV, SFRBX</title>
+      <link>https://berthub.eu/articles/posts/galileo-notes/</link>
+      <pubDate>Tue, 30 Jul 2019 15:35:10 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/galileo-notes/</guid>
+      <description>I&amp;rsquo;ve recently been spending quite some time on the EU&amp;rsquo;s Galileo Navigation Satellite System. In this post you&amp;rsquo;ll find some rough notes on things I&amp;rsquo;ve found out, both about how to receive data &amp;amp; how to understand the Galileo ephemeris parameters.
+Feedback is very welcome on bert@hubertnet.nl or @PowerDNS_Bert! I&amp;rsquo;m no Galileo specialist, so I am sure this page could be better. Please also let me know if this page has been useful to you.</description>
+    </item>
+    
+    <item>
+      <title>On the Pan-Genome</title>
+      <link>https://berthub.eu/articles/posts/on-the-pan-genome/</link>
+      <pubDate>Fri, 12 Jul 2019 09:10:21 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/on-the-pan-genome/</guid>
+      <description>In this post I want to shine a light on an important development within the world of DNA which shows how much DNA and the world of computing are now intertwined. It turns out we share important problems, like in this case: file formats.
+ Note: I expect to be posting more DNA material as part of my efforts to write a book on this fascinating subject. If you enjoy reading about DNA, you might like the links/presentations/videos found on this page.</description>
+    </item>
+    
+    <item>
+      <title>From gnuplot to Matplotlib &amp; Pandas</title>
+      <link>https://berthub.eu/articles/posts/from-gnuplot-to-matplotlib-pandas/</link>
+      <pubDate>Mon, 01 Apr 2019 09:59:00 +0100</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/from-gnuplot-to-matplotlib-pandas/</guid>
+      <description>I&amp;rsquo;ve been using gnuplot since.. like forever. It is one of my best friends in plotting data and discovering what is going on. But for all its greatness, you do tend to run into a wall - once you step outside the things gnuplot is good at, suddenly large heaps of awk, sort, unique and odd shell scripts are required to get to the next level. This is no criticism of gnuplot - it is great for what it is for.</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43; iostreams: Unexpected but legal multithreaded behaviour</title>
+      <link>https://berthub.eu/articles/posts/iostreams-unexpected/</link>
+      <pubDate>Sun, 17 Mar 2019 17:46:37 +0100</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/iostreams-unexpected/</guid>
+      <description>In previous articles, I&amp;rsquo;ve waxed rhapsodic about how great C++ is. I also noted there however that every language, C++ included, has its dark sides. Some languages have an unavoidable pervasive dark side, like being slow or hard to multithread, for C++ that dark side is mostly its complexity. In this post I want to zoom in on a specific &amp;lsquo;gotcha&amp;rsquo; that recently took me several hours to resolve. I wrote this piece so anyone running into the same issue might find out about it if they search the web.</description>
+    </item>
+    
+    <item>
+      <title>What I Did in 2018</title>
+      <link>https://berthub.eu/articles/posts/what-i-did-in-2018/</link>
+      <pubDate>Sun, 30 Dec 2018 14:26:04 +0100</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/what-i-did-in-2018/</guid>
+      <description>This is a more personal post than I usually write, and it was prompted by several people asking what I had been up to lately. It turns out that it is somewhat of a story. It is a long story too.
+Since the beginning of 2018 day to day management of PowerDNS is now truly in the hands of professionals. I&amp;rsquo;m very proud to report that PowerDNS has not only survived the transition to Open-Xchange but is actually thriving &amp;amp; has achieved sufficient revenues &amp;amp; talented staff that we&amp;rsquo;ve solved the famous open source &amp;ldquo;what if Bert gets hit by a bus&amp;rdquo; problem.</description>
+    </item>
+    
+    <item>
+      <title>Liveblog: a Mars landing watch party with school kids</title>
+      <link>https://berthub.eu/articles/posts/liveblog/</link>
+      <pubDate>Tue, 27 Nov 2018 12:26:28 +0100</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/liveblog/</guid>
+      <description>Yesterday, NASA landed its InSight mission on Mars, and it all worked! The landing happened between 8 and 9PM local time, but I wanted to share the excitement with my kids&#39; classmates from school (aged between around 9 and 10), so I needed something that worked remotely.
+NASA provided a wonderful webcast in English, and although many children here in The Netherlands can follow that, I expected the stream to need more narration for the kids to truly experience the excitement of landing on another planet.</description>
+    </item>
+    
+    <item>
+      <title>A Philosophy of Software Design</title>
+      <link>https://berthub.eu/articles/posts/philosophy-of-software-design/</link>
+      <pubDate>Thu, 18 Oct 2018 12:07:35 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/philosophy-of-software-design/</guid>
+      <description>John Ousterhout, of TCL fame, has written a book that is as small (literally) as it is important. Weighing in at 178 none too big pages, it takes us on an inspired trip through what John has learned over the decades.
+There is no shortage of thought on programming. There is also no shortage of people doing programming. What is rare however is a compendium of mature insights from someone that clearly still is into programming.</description>
+    </item>
+    
+    <item>
+      <title>On Linus Torvalds, technical &amp; corporate communications</title>
+      <link>https://berthub.eu/articles/posts/linus-communications/</link>
+      <pubDate>Tue, 18 Sep 2018 10:24:42 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/linus-communications/</guid>
+      <description>Linus Torvalds has long been one of my heroes. The invention of Linux &amp;amp; the subsequent development of Git were technical and organizational miracles. You could fill a book simply by quoting examples of Linus dissecting technical problems to their components and making it obvious what should happen.
+However, over the past decade, Linus’ communication style has degraded from ‘Finnish style robust’ to needlessly hurtful screeds, tearing into people who did not deserve that.</description>
+    </item>
+    
+    <item>
+      <title>Modern C&#43;&#43; for C Programmers: Part 6</title>
+      <link>https://berthub.eu/articles/posts/cpp-6/</link>
+      <pubDate>Fri, 17 Aug 2018 21:58:51 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/cpp-6/</guid>
+      <description>NOTE: If you like this stuff, come work with me over at PowerDNS - aspiring C++ programmers welcome!
+In part 5 we discussed smart pointers, placement new and the powerful move constructor. As you may have gathered by now, parts 1 through 5 were a pitch to sell modern C++ to existing C specialists. To do so, I tried to show the best and most immediately useful parts of C++.</description>
+    </item>
+    
+    <item>
+      <title>Should C Programmers learn C&#43;&#43;, Go or Rust?</title>
+      <link>https://berthub.eu/articles/posts/cpp-rust-go/</link>
+      <pubDate>Mon, 30 Jul 2018 14:35:51 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/cpp-rust-go/</guid>
+      <description>I recently wrote a series of posts called &amp;lsquo;Modern C++ for C Programmers&amp;rsquo;. I mentioned in the introduction: &amp;ldquo;I hope to convince C programmers to give &amp;lsquo;2017 era C++&amp;rsquo; (which is entirely unlike 2003 C++) another good look. (&amp;hellip;) My goal is that when you go look for a new language to learn (say, Go or Rust), you will hopefully consider modern C++ as well.&amp;rdquo;
+Over the weeks as I posted new parts, I was blown away by the interest.</description>
+    </item>
+    
+    <item>
+      <title>Modern C&#43;&#43; for C Programmers: introduction</title>
+      <link>https://berthub.eu/articles/posts/cpp-intro/</link>
+      <pubDate>Sat, 28 Jul 2018 13:29:55 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/cpp-intro/</guid>
+      <description>NOTE: If you like this stuff, come work with me over at PowerDNS - aspiring C++ programmers welcome!
+2018 is an exciting time to be a programmer, with so many good &amp;ldquo;full service&amp;rdquo; programming languages to choose from: C, C++ 2017, Go, Python, Rust and who knows Swift too. Programming languages are complicated beasts - even the simplest languages have specifications that run (or would run) in the hundreds of pages, and once you include everything, no serious language is likely to clock in under a thousand.</description>
+    </item>
+    
+    <item>
+      <title>Modern C&#43;&#43; for C Programmers: Part 5</title>
+      <link>https://berthub.eu/articles/posts/cpp-5/</link>
+      <pubDate>Wed, 25 Jul 2018 11:26:51 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/cpp-5/</guid>
+      <description>NOTE: If you like this stuff, come work with me over at PowerDNS - aspiring C++ programmers welcome!
+Welcome back! In part 4 we went over the nitty-gritty of lambdas and how to store them, we explored the relation between the various C++ algorithms and containers, plus we took a stroll through some non-standard containers with exceptional capabilities.
+ Note: part 1 is here.
+ In this probably final part 5, we&amp;rsquo;ll be going over some of the most powerful stuff in modern C++: &amp;ldquo;perfect&amp;rdquo; reference counting and the concept of std::move.</description>
+    </item>
+    
+    <item>
+      <title>Modern C&#43;&#43; for C Programmers: Part 4</title>
+      <link>https://berthub.eu/articles/posts/cpp-4/</link>
+      <pubDate>Thu, 12 Jul 2018 13:07:40 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/cpp-4/</guid>
+      <description>NOTE: If you like this stuff, come work with me over at PowerDNS - aspiring C++ programmers welcome!
+Welcome back! In part 3 I discussed classes, polymorphism, references and templates, and finally built a source indexer out of basic containers that achieves 60MB/s indexing speed.
+In this part we continue with further C++ features that you can use to spice up your code &amp;lsquo;line by line&amp;rsquo;, without immediately having to use all 1400 pages of &amp;lsquo;The C++ Programming Language&amp;rsquo;.</description>
+    </item>
+    
+    <item>
+      <title>Werving nieuwe collega&#39;s: niet zo moeilijk, toch gaat het fout</title>
+      <link>https://berthub.eu/articles/posts/werving/</link>
+      <pubDate>Mon, 09 Jul 2018 11:05:31 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/werving/</guid>
+      <description>Welkom! Veel bedrijven en scholen in mijn omgeving worstelen op dit moment met het vinden van personeel. Sinds 1999 neem ik mensen aan en help ik bij werving, voor mijn eigen bedrijf &amp;amp; dat van anderen, maar ook voor scholen en instellingen. En als ik eerlijk ben, ik ben er inmiddels best goed in. In ieder geval ben ik onvoorstelbaar trots op de uitstekende mensen die ik heb kunnen overtuigen bij me te werken!</description>
+    </item>
+    
+    <item>
+      <title>Modern C&#43;&#43; for C Programmers: Part 3</title>
+      <link>https://berthub.eu/articles/posts/cpp-3/</link>
+      <pubDate>Mon, 02 Jul 2018 21:30:31 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/cpp-3/</guid>
+      <description>NOTE: If you like this stuff, come work with me over at PowerDNS - aspiring C++ programmers welcome!
+Welcome back! In part 2 I discussed basic classes, threading, atomic operations, smart pointers, resource acquisition and (very briefly) namespaces.
+In this part we continue with further C++ features that you can use to spice up your code &amp;lsquo;line by line&amp;rsquo;, without immediately having to use all 1400 pages of &amp;lsquo;The C++ Programming Language&amp;rsquo;.</description>
+    </item>
+    
+    <item>
+      <title>Modern C&#43;&#43; for C programmers: part 2</title>
+      <link>https://berthub.eu/articles/posts/cpp-2/</link>
+      <pubDate>Thu, 14 Jun 2018 20:26:28 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/cpp-2/</guid>
+      <description>NOTE: If you like this stuff, come work with me over at PowerDNS - aspiring C++ programmers welcome!
+Welcome back! In part 1 I discussed how std::string and std::vector interoperate with C, including with the C standard library qsort call. We also discovered that the C++ std::sort is 40% faster than C qsort because C++ is able to inline the comparison function.
+In this part we continue with further C++ features that you can use to spice up your code &amp;lsquo;line by line&amp;rsquo;, without immediately having to use all 1400 pages of &amp;lsquo;The C++ Programming Language&amp;rsquo;.</description>
+    </item>
+    
+    <item>
+      <title>Modern C&#43;&#43; for C Programmers: part 1</title>
+      <link>https://berthub.eu/articles/posts/c&#43;&#43;-1/</link>
+      <pubDate>Wed, 13 Jun 2018 21:04:19 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/c&#43;&#43;-1/</guid>
+      <description>NOTE: If you like this stuff, come work with me over at PowerDNS - aspiring C++ programmers welcome!
+Welcome to part 1 of Modern C++ for C Programmers, please see the introduction for the goals and context of this series.
+In this part we start with C++ features that you can use to spice up your code &amp;lsquo;line by line&amp;rsquo;, without immediately having to use all 1400 pages of &amp;lsquo;The C++ Programming Language&amp;rsquo;.</description>
+    </item>
+    
+    <item>
+      <title>Under-prepared Meetings</title>
+      <link>https://berthub.eu/articles/posts/meetings/</link>
+      <pubDate>Tue, 29 May 2018 19:13:46 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/meetings/</guid>
+      <description>Ahhh.. meetings. The one old school company thing that survives in this agile, open-office, &amp;lsquo;remote first&amp;rsquo;, nomadic worker world. And it is easy to see why: the &amp;lsquo;meeting&amp;rsquo; is the last guaranteed way to get everyone to pay attention for an hour, or at least, pretend to. It still is rare for people to fake attending two meetings at the same time in any case.
+The late great Andrew S. Grove, long time CEO of Intel and overall hero engineer, wrote the massively important book High Output Management.</description>
+    </item>
+    
+    <item>
+      <title>Spectre &amp; Meltdown: tapping into the CPU&#39;s subconscious thoughts</title>
+      <link>https://berthub.eu/articles/posts/spectre-meltdown/</link>
+      <pubDate>Sat, 06 Jan 2018 10:34:05 +0100</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/spectre-meltdown/</guid>
+      <description>Comments are very welcome on bert.hubert@powerdns.com or @PowerDNS_Bert. Update: several constructive remarks have been used to improve this text. Thanks!
+In this post I will attempt to fully explain the Spectre and Meltdown vulnerabilities in an accessible way. I decided to write it up after I realised it took me more than a day to figure it out, even though I&amp;rsquo;ve been doing security related stuff on CPUs for 20 years.</description>
+    </item>
+    
+    <item>
+      <title>Kolmo</title>
+      <link>https://berthub.eu/articles/posts/kolmo/</link>
+      <pubDate>Tue, 24 Oct 2017 10:24:57 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/kolmo/</guid>
+      <description>Welcome to Kolmo There are three avenues to learn about Kolmo (GitHub). There are two Youtube videos, one from the most excellent NLNOG 2017, the other from the equally excellent UKNOF 38. These videos explain a lot of the the history and the &amp;lsquo;why&amp;rsquo; behind Kolmo.
+There is also the kolmo.org website, which is &amp;lsquo;self-hosted&amp;rsquo; by the ws Kolmo-powered webserver.
+Finally, there is this post, in which I focus on what Kolmo actually does, without spending much time on the &amp;lsquo;why&amp;rsquo; or the history.</description>
+    </item>
+    
+    <item>
+      <title>Some brief notes on making ethernet cables</title>
+      <link>https://berthub.eu/articles/posts/ethernet-cables/</link>
+      <pubDate>Sat, 30 Sep 2017 20:07:40 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/ethernet-cables/</guid>
+      <description>Some brief notes on making ethernet cables With thanks to the most excellent NLNOG for a lot of mostly correct advice!
+Friends will tell you “crimping” ethernet cables is easy. Most of your friends either have overly rosy memories, or have practiced on 200 cables before telling you it is now easy. It is not easy.
+This page is for if you have a few extra euros/dollars/coins to spare, and don’t want to spend rare hours of concentrated effort to crimp an ethernet cable using unfamiliar equipment and supplies.</description>
+    </item>
+    
+    <item>
+      <title>Bol Com Vacature</title>
+      <link>https://berthub.eu/articles/posts/bol-com-vacature/</link>
+      <pubDate>Sat, 19 Aug 2017 21:08:33 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/bol-com-vacature/</guid>
+      <description>Onlangs vond ik via LinkedIn een advertentie voor de vacature &amp;lsquo;Senior Category Manager Domestic Appliances&amp;rsquo; bij bol.com. Hierin stond zoveel wartaal dat ik het de moeite vond een &amp;lsquo;best of&amp;rsquo; selectie te delen op Facebook. Daar vond men het ook erg grappig.
+Desondanks is het de moeite waard de vacature te decoderen: wat staat hier nou eigenlijk? Of exacter, wat bedoelen deze mensen. Komt ie.
+Update: Inhoudelijke reactie van bol.com in De Telegraaf</description>
+    </item>
+    
+    <item>
+      <title>Dna the Code of Life</title>
+      <link>https://berthub.eu/articles/posts/dna-the-code-of-life/</link>
+      <pubDate>Sat, 12 Aug 2017 20:01:03 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/dna-the-code-of-life/</guid>
+      <description>DNA: The Code of Life At the most magical SHA2017 gathering I gave two presentations, “DNA: The Code of Life” and the followup, “DNA: More greatest hits” (slides). The first presentation was recorded by the wonderful CCC C3VOC streaming crew, the second one by my friend Bart Smit (who is also wonderful). Without making this post too long, I want to thank everyone who helped me do this presentation — a lot of people contributed time, advice, recording abilities, great questions and enthusiasm.</description>
+    </item>
+    
+    <item>
+      <title>Talking to Technical People</title>
+      <link>https://berthub.eu/articles/posts/talking-to-technical-people/</link>
+      <pubDate>Fri, 07 Jul 2017 20:35:35 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/talking-to-technical-people/</guid>
+      <description>(Don’t) drop the hint: communicating with technical people  This post is a subset of the presentation “Escaping the data center — tales from a recovering manager”. Video, slides.
+ When we communicate at the office, we frequently do not directly say what we mean. A common conversation might go like this “Hey John, we did a survey and it turns out people can’t find what they are looking for on our website”.</description>
+    </item>
+    
+    <item>
+      <title>Encrypting Ip Addresses</title>
+      <link>https://berthub.eu/articles/posts/encrypting-ip-addresses/</link>
+      <pubDate>Sun, 07 May 2017 20:46:14 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/encrypting-ip-addresses/</guid>
+      <description>On IP address encryption: security analysis with respect for privacy Frequently, privacy concerns and regulations get in the way of security analysis. I’m a big fan of privacy, but I’m also a big fan of security and preventing people from getting hacked. If you are hacked you have no privacy either.
+Per-customer/subscriber traces are extremely useful for researching the security of networks. Specifically, lists of DNS requests per IP address make spotting infected users or infected devices very easy, especially if you look at “yesterday’s traffic” and compare it to today’s threat intelligence.</description>
+    </item>
+    
+    <item>
+      <title>On Linux Vdso and Clockgettime</title>
+      <link>https://berthub.eu/articles/posts/on-linux-vdso-and-clockgettime/</link>
+      <pubDate>Fri, 24 Mar 2017 20:22:18 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/on-linux-vdso-and-clockgettime/</guid>
+      <description>On Linux vDSO and clock_gettime sometimes being slow Like the previous post on this somewhat dormant blog, I want to share an oddity I discovered that no search engine could really find for me - even though once I found what the problem was, it turns out I was by no means the first person to discover this.
+Some system calls that are used extremely frequently in Linux can be speeded up by a mechanism called vDSO: a virtual dynamically linked shared object.</description>
+    </item>
+    
+    <item>
+      <title>How About Some Actual Innovation</title>
+      <link>https://berthub.eu/articles/posts/how-about-some-actual-innovation/</link>
+      <pubDate>Sun, 17 Apr 2016 20:45:41 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/how-about-some-actual-innovation/</guid>
+      <description>A meandering walk through innovation that also reviews a book
+ This article is part of a series on (European) innovation and capabilities.
+ I care deeply about innovation. It is literally where the future comes from, but it is a curious thing. Innovation and its more powerful partner, invention proceed at a snail&amp;rsquo;s pace. &amp;ldquo;In a world where change is the only constant&amp;rdquo; is a lie. It took this world 20 years to invent a decent can opener.</description>
+    </item>
+    
+    <item>
+      <title>How Many Hours for Multithreading the Server?</title>
+      <link>https://berthub.eu/articles/posts/how-many-hours-for-multithreading/</link>
+      <pubDate>Tue, 02 Sep 2014 20:25:58 +0200</pubDate>
+      
+      <guid>https://berthub.eu/articles/posts/how-many-hours-for-multithreading/</guid>
+      <description>How many hours for multithreading the server? Or: dealing with overly detailed project planning Many developers, me included, dread that moment. Someone sits down with you and wants to know how many &amp;ldquo;hours&amp;rdquo; each step of the project will take. And of course the thing is, if you are doing something that has been done many times before, you might be able to provide a detailed estimate. People that build houses work like this, but they still often get it wrong.</description>
+    </item>
+    
+  </channel>
+</rss>
