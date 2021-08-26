@@ -55,7 +55,7 @@ func (c *Cache) GetArticles() ([]feed.Article, error) {
 		fPath := path.Join(c.cacheDir, info.Name())
 		article, err := readArticle(fPath)
 		if err != nil {
-			log.Debugf("could not read Article from: %s", fPath)
+			log.Debugf("could not read Article from %s: %s", fPath, err)
 			continue
 		}
 		articles = append(articles, article)
@@ -81,6 +81,7 @@ func readArticle(path string) (feed.Article, error) {
 	if err != nil {
 		return feed.Article{}, err
 	}
+	defer fh.Close()
 	bytes, err := ioutil.ReadAll(fh)
 	if err != nil {
 		return feed.Article{}, err
