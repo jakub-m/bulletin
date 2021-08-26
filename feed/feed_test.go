@@ -21,10 +21,10 @@ func TestGoogleBlogArticles(t *testing.T) {
 			Title: "Google AI Blog",
 			Url:   "http://ai.googleblog.com/",
 		},
-		Id:      "tag:blogger.com,1999:blog-8474926331452026626.post-537064785672594983",
-		Title:   "Mapping Africa’s Buildings with Satellite Imagery",
-		Url:     "http://feedproxy.google.com/~r/blogspot/gJZg/~3/bcEqeVSMnBQ/mapping-africas-buildings-with.html",
-		Updated: testutils.ParseTime(t, "2021-07-29T13:05:10.956-07:00"),
+		Id:        "tag:blogger.com,1999:blog-8474926331452026626.post-537064785672594983",
+		Title:     "Mapping Africa’s Buildings with Satellite Imagery",
+		Url:       "http://feedproxy.google.com/~r/blogspot/gJZg/~3/bcEqeVSMnBQ/mapping-africas-buildings-with.html",
+		Published: testutils.ParseTime(t, "2021-07-28T08:27:00.004-07:00"),
 	}
 	assert.Equal(t, asJson(t, expected), asJson(t, articles[0]))
 }
@@ -37,10 +37,10 @@ func TestNetflixArticles(t *testing.T) {
 			Title: "Netflix TechBlog - Medium",
 			Url:   "https://netflixtechblog.com/feed",
 		},
-		Id:      "https://medium.com/p/3fddcceb1059",
-		Title:   "Data Movement in Netflix Studio via Data Mesh",
-		Url:     "https://netflixtechblog.com/data-movement-in-netflix-studio-via-data-mesh-3fddcceb1059?source=rss----2615bd06b42e---4",
-		Updated: testutils.ParseTime(t, "2021-07-26T18:00:56+00:00"),
+		Id:        "https://medium.com/p/3fddcceb1059",
+		Title:     "Data Movement in Netflix Studio via Data Mesh",
+		Url:       "https://netflixtechblog.com/data-movement-in-netflix-studio-via-data-mesh-3fddcceb1059?source=rss----2615bd06b42e---4",
+		Published: testutils.ParseTime(t, "2021-07-26T18:00:56+00:00"),
 	}
 	assert.Equal(t, asJson(t, expected), asJson(t, articles[0]))
 }
@@ -53,10 +53,10 @@ func TestMuratArticles(t *testing.T) {
 			Title: "Metadata",
 			Url:   "http://muratbuffalo.blogspot.com/",
 		},
-		Id:      "tag:blogger.com,1999:blog-8436330762136344379.post-8449165989112346419",
-		Title:   "There is plenty of room at the bottom",
-		Url:     "http://muratbuffalo.blogspot.com/2021/08/there-is-plenty-of-room-at-bottom.html",
-		Updated: testutils.ParseTime(t, "2021-08-17T11:53:07.365-04:00"),
+		Id:        "tag:blogger.com,1999:blog-8436330762136344379.post-8449165989112346419",
+		Title:     "There is plenty of room at the bottom",
+		Url:       "http://muratbuffalo.blogspot.com/2021/08/there-is-plenty-of-room-at-bottom.html",
+		Published: testutils.ParseTime(t, "2021-08-17T09:35:00.008-04:00"),
 	}
 	assert.Equal(t, asJson(t, expected), asJson(t, articles[0]))
 }

@@ -29,7 +29,6 @@ type Entry struct {
 	Id        string   `xml:"id"`
 	Title     string   `xml:"title"`
 	Published *XmlTime `xml:"published"`
-	Updated   *XmlTime `xml:"updated"`
 	Links     []Link   `xml:"link"`
 }
 
@@ -48,10 +47,7 @@ func (f Feed) GetArticles() []feed.Article {
 }
 
 func (e Entry) asArticle(atomFeed Feed) feed.Article {
-	updated := e.Published.Time
-	if e.Updated != nil {
-		updated = e.Updated.Time
-	}
+	published := e.Published.Time
 	feedUrl := getBestUrl(atomFeed.Links)
 	f := feed.Feed{
 		Id:    atomFeed.Id,
@@ -60,11 +56,11 @@ func (e Entry) asArticle(atomFeed Feed) feed.Article {
 	}
 	articleUrl := getBestUrl(e.Links)
 	return feed.Article{
-		Feed:    f,
-		Id:      e.Id,
-		Title:   e.Title,
-		Url:     articleUrl,
-		Updated: updated,
+		Feed:      f,
+		Id:        e.Id,
+		Title:     e.Title,
+		Url:       articleUrl,
+		Published: published,
 	}
 }
 

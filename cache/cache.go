@@ -65,7 +65,7 @@ func (c *Cache) GetArticles() ([]feed.Article, error) {
 
 func jsonFileName(art feed.Article) string {
 	feedPart := strings.ToLower(escape(art.Feed.Id))
-	timePart := art.Updated.UTC().Format(time.RFC3339)
+	timePart := art.Published.UTC().Format(time.RFC3339)
 	articlePart := escape(art.Id)
 	return fmt.Sprintf("%s::%s::%s.json", feedPart, timePart, articlePart)
 }

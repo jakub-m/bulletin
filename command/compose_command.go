@@ -40,11 +40,11 @@ func (c *ComposeCommand) Execute(args []string) error {
 	}
 	var filteredArticles []feed.Article
 	for _, a := range articles {
-		if a.Updated.After(intervalStart) && !a.Updated.After(intervalStart.Add(interval)) {
-			log.Debugf("Accept %s, %s", a.Id, a.Updated)
+		if a.Published.After(intervalStart) && !a.Published.After(intervalStart.Add(interval)) {
+			log.Debugf("Accept %s, %s", a.Id, a.Published)
 			filteredArticles = append(filteredArticles, a)
 		} else {
-			log.Debugf("Drop %s, %s", a.Id, a.Updated)
+			log.Debugf("Drop %s, %s", a.Id, a.Published)
 		}
 	}
 	formatted, err := feed.FormatHtml(opts.intervalDays, now, filteredArticles)

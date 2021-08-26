@@ -10,16 +10,16 @@ import (
 func TestFormatHtml(t *testing.T) {
 	feeds := []Article{
 		{
-			Id:      "id-1",
-			Title:   "title-1",
-			Url:     "http://example.com/1",
-			Updated: time.Time{},
+			Id:        "id-1",
+			Title:     "title-1",
+			Url:       "http://example.com/1",
+			Published: time.Time{},
 		},
 		{
-			Id:      "id-2",
-			Title:   "title-2",
-			Url:     "http://example.com/1",
-			Updated: time.Time{}.Add(1 * time.Minute),
+			Id:        "id-2",
+			Title:     "title-2",
+			Url:       "http://example.com/1",
+			Published: time.Time{}.Add(1 * time.Minute),
 		},
 	}
 	body, err := FormatHtml(1, time.Time{}, feeds)

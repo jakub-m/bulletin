@@ -49,7 +49,7 @@ func FormatHtml(periodDays int, now time.Time, articles []Article) (string, erro
 func groupArticlesPerFeed(articles []Article) [][]Article {
 	// sort articles per descending date.
 	sort.Slice(articles, func(i, j int) bool {
-		return !articles[i].Updated.Before(articles[j].Updated)
+		return !articles[i].Published.Before(articles[j].Published)
 	})
 
 	feedIdMap := make(map[string]Feed)
@@ -75,7 +75,7 @@ func groupArticlesPerFeed(articles []Article) [][]Article {
 }
 
 func formatArticleDate(bulletinTime time.Time, article Article) string {
-	dt := int(math.Round(bulletinTime.Sub(article.Updated).Hours() / 24.))
+	dt := int(math.Round(bulletinTime.Sub(article.Published).Hours() / 24.))
 	return formatDays(dt) + " old"
 }
 

@@ -49,11 +49,11 @@ func (c *Channel) GetArticles() []feed.Article {
 	}
 	for _, t := range c.Items {
 		a := feed.Article{
-			Feed:    f,
-			Id:      t.Guid,
-			Title:   t.Title,
-			Updated: t.PubDate.Time,
-			Url:     t.Link,
+			Feed:      f,
+			Id:        t.Guid,
+			Title:     t.Title,
+			Published: t.PubDate.Time,
+			Url:       t.Link,
 		}
 		articles = append(articles, a)
 	}
