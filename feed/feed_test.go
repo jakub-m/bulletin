@@ -33,9 +33,9 @@ func TestNetflixArticles(t *testing.T) {
 	articles := parseArticlesFromXml(t, "../testdata/rss_netflix_techblog.xml")
 	expected := feed.Article{
 		Feed: feed.Feed{
-			Id:    "https://netflixtechblog.com/feed",
+			Id:    "https://netflixtechblog.com?source=rss----2615bd06b42e---4",
 			Title: "Netflix TechBlog - Medium",
-			Url:   "https://netflixtechblog.com/feed",
+			Url:   "https://netflixtechblog.com?source=rss----2615bd06b42e---4",
 		},
 		Id:        "https://medium.com/p/3fddcceb1059",
 		Title:     "Data Movement in Netflix Studio via Data Mesh",

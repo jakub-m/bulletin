@@ -61,6 +61,12 @@ func (c *Channel) GetArticles() []feed.Article {
 }
 
 func getBestLink(links []Link) string {
+	basicLinks := filterLinks(links, func(l Link) bool {
+		return l.Value != ""
+	})
+	if len(basicLinks) > 0 {
+		return firstLinkValue(basicLinks)
+	}
 	selfLinks := filterLinks(links, func(l Link) bool {
 		return l.Rel == "self"
 	})
