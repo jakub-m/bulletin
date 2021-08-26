@@ -32,10 +32,6 @@ func (c *FetchCommand) Execute(args []string) error {
 	if err != nil {
 		return err
 	}
-	html, err := feed.FormatHtml(articles)
-	if err != nil {
-		return err
-	}
 	log.Infof("Caching %d articles", len(articles))
 	for _, a := range articles {
 		err := c.Cache.StoreArticle(a)
@@ -43,7 +39,6 @@ func (c *FetchCommand) Execute(args []string) error {
 			return err
 		}
 	}
-	fmt.Println(html)
 	return nil
 }
 

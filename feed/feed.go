@@ -15,7 +15,7 @@ type Article struct {
 	// Id identifies same articles. Two articles with the same Id will be included in the feed summary only once.
 	Id      string
 	Title   string
-	Updated time.Time
+	Updated time.Time // TODO use Published, not Updated?
 	// Url directs to the actual article.
 	Url string
 }

@@ -27,12 +27,13 @@ func init() {
 }
 
 func (c *ComposeCommand) Execute(args []string) error {
+	now := time.Now()
 	opts, err := getComposeOptions(args)
 	if err != nil {
 		return fmt.Errorf("compose: %s", err)
 	}
 	interval := time.Duration(opts.intervalDays) * 24 * time.Hour
-	intervalStart := getNearestInterval(referenceTime, interval, time.Now())
+	intervalStart := getNearestInterval(referenceTime, interval, now)
 	articles, err := c.Cache.GetArticles()
 	if err != nil {
 		return err
@@ -46,7 +47,7 @@ func (c *ComposeCommand) Execute(args []string) error {
 			log.Debugf("Drop %s, %s", a.Id, a.Updated)
 		}
 	}
-	formatted, err := feed.FormatHtml(filteredArticles)
+	formatted, err := feed.FormatHtml(opts.intervalDays, now, filteredArticles)
 	if err != nil {
 		return err
 	}
