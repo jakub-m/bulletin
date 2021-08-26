@@ -1,0 +1,6 @@
+The following links fail with `fetch`:
+
+- https://jvns.ca/atom.xml - failure
+- https://sifter.org/~simon/journal/rss - failure
+- https://erikbern.com/index.xml - some posts have zero time
+- https://www.hackerfactor.com/blog/index.php?/feeds/index.rss2 - empty, "bad bot"
