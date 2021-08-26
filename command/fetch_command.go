@@ -9,6 +9,7 @@ import (
 	"bulletin/rss"
 	"flag"
 	"fmt"
+	"os"
 )
 
 const FetchCommandName = "fetch"
@@ -23,20 +24,23 @@ func (c *FetchCommand) Execute(args []string) error {
 	if err != nil {
 		return err
 	}
-	log.Infof("Fetch feed from %s", opts.url)
-	feedBody, err := fetcher.Get(opts.url)
-	if err != nil {
-		return err
-	}
-	articles, err := parseArticles(feedBody)
-	if err != nil {
-		return err
-	}
-	log.Infof("Caching %d articles", len(articles))
-	for _, a := range articles {
-		err := c.Cache.StoreArticle(a)
+	log.Debugf("options: %+v", opts)
+	for _, url := range opts.urls {
+		log.Infof("Fetch feed from %s", url)
+		feedBody, err := fetcher.Get(url)
 		if err != nil {
 			return err
+		}
+		articles, err := parseArticles(feedBody)
+		if err != nil {
+			return err
+		}
+		log.Infof("Caching %d articles", len(articles))
+		for _, a := range articles {
+			err := c.Cache.StoreArticle(a)
+			if err != nil {
+				return err
+			}
 		}
 	}
 	return nil
@@ -57,11 +61,19 @@ func parseArticles(feedBody []byte) ([]feed.Article, error) {
 func getFetchOptions(args []string) (fetchOptions, error) {
 	var options fetchOptions
 	fs := flag.NewFlagSet(FetchCommandName, flag.ContinueOnError)
-	fs.StringVar(&options.url, "url", "", "the feed to fetch")
+	fs.Usage = func() {
+		fmt.Fprintf(os.Stderr, "Usage for fetch: pass URLs as positional arguments.\n")
+		fs.PrintDefaults()
+	}
 	err := fs.Parse(args)
+	if fs.NArg() == 0 {
+		//lint:ignore ST1005 the error is printed with usage and would look weird.
+		return options, fmt.Errorf("Missing URLs as positional arguments.")
+	}
+	options.urls = fs.Args()
 	return options, err
 }
 
 type fetchOptions struct {
-	url string
+	urls []string
 }
