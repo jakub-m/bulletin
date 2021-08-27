@@ -34,20 +34,21 @@ func (c *ComposeCommand) Execute(args []string) error {
 	}
 	interval := time.Duration(opts.intervalDays) * 24 * time.Hour
 	intervalStart := getNearestInterval(referenceTime, interval, now)
+	intervalEnd := intervalStart.Add(interval)
 	articles, err := c.Cache.GetArticles()
 	if err != nil {
 		return err
 	}
 	var filteredArticles []feed.Article
 	for _, a := range articles {
-		if a.Published.After(intervalStart) && !a.Published.After(intervalStart.Add(interval)) {
+		if a.Published.After(intervalStart) && !a.Published.After(intervalEnd) {
 			log.Debugf("Accept %s, %s", a.Id, a.Published)
 			filteredArticles = append(filteredArticles, a)
 		} else {
 			log.Debugf("Drop %s, %s", a.Id, a.Published)
 		}
 	}
-	formatted, err := feed.FormatHtml(opts.intervalDays, now, filteredArticles)
+	formatted, err := feed.FormatHtml(opts.intervalDays, intervalEnd, filteredArticles)
 	if err != nil {
 		return err
 	}

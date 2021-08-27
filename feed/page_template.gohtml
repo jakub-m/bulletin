@@ -6,22 +6,26 @@
             font-family: "-apple-system","BlinkMacSystemFont","Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
         }
         a:hover {
-            text-decoration: underline; 
+            text-decoration: underline !important;
         }
         a, a:link, a:visited 
         {
             text-decoration: none; 
             decoration: none; 
         }
+        a:visited.no-visited {
+            color: #007d9c;
+        }
         </style>
     </head>
     <body>
     <h2>
-        Bulletin for {{.BulletinDate}} for previous {{.PeriodDays}}
+        Bulletin for {{.BulletinEndDate}}
     </h2>
+        {{.PeriodDays}} digest
         {{range .GroupedArticles}}
             <h3>
-                <a href="{{(index . 0).Feed.Url}}">{{(index . 0).Feed.Title}}</a>
+                <a href="{{(index . 0).Feed.Url}}" class="no-visited">{{(index . 0).Feed.Title}}</a>
             </h3>
             <ul>
             {{range .}}

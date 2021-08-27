@@ -18,21 +18,21 @@ var bulletinPageTemplateRaw string
 
 type templateData struct {
 	GroupedArticles [][]Article
-	BulletinDate    string
+	BulletinEndDate string
 	PeriodDays      string
 }
 
-func FormatHtml(periodDays int, now time.Time, articles []Article) (string, error) {
+func FormatHtml(periodDays int, periodEnd time.Time, articles []Article) (string, error) {
 	buf := new(bytes.Buffer)
 	grouped := groupArticlesPerFeed(articles)
 	templateData := templateData{
 		GroupedArticles: grouped,
-		BulletinDate:    now.Local().Format(bulletinHeaderTimeFormat),
+		BulletinEndDate: periodEnd.Local().Format(bulletinHeaderTimeFormat),
 		PeriodDays:      formatDays(periodDays),
 	}
 	funcMap := template.FuncMap{
 		"articleDate": func(a Article) string {
-			return formatArticleDate(now, a)
+			return formatArticleDate(periodEnd, a)
 		},
 	}
 	bulletinPageTemplate, err := template.New("page").Funcs(funcMap).Parse(bulletinPageTemplateRaw)
