@@ -22,7 +22,7 @@ func TestFormatHtml(t *testing.T) {
 			Published: time.Time{}.Add(1 * time.Minute),
 		},
 	}
-	body, err := FormatHtml(1, time.Time{}, feeds)
+	body, err := FormatHtml(1, time.Time{}, nil, feeds)
 	assert.NoError(t, err)
 	assert.Contains(t, body, `<a href="http://example.com/1">title-1</a>`)
 	assert.Contains(t, body, `<a href="http://example.com/1">title-2</a>`)
