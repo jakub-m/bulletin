@@ -32,6 +32,14 @@ fetch: $(bin)
 	mkdir -p tmp/cache
 	cat feeds.conf | grep -v '^\#' | xargs $(bin) --cache ./tmp/cache/ fetch 
 
+watch-template: $(bin)
+	while [ 1 ]; do \
+		echo watch...; \
+		sleep 1; \
+		fswatch -1 feed/page_template.gohtml && \
+		$(bin) -cache ./tmp/cache compose -template feed/page_template.gohtml -days 7 | tee bulletin.tmp.html; \
+	done
+
 compose: $(bin)
 	$(bin) --cache ./tmp/cache/ compose --days 31 | tee bulletin.tmp.html
 
