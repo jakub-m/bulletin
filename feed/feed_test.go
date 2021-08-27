@@ -61,6 +61,22 @@ func TestMuratArticles(t *testing.T) {
 	assert.Equal(t, asJson(t, expected), asJson(t, articles[0]))
 }
 
+func TestDropboxArticles(t *testing.T) {
+	articles := parseArticlesFromXml(t, "../testdata/rss_dropbox.xml")
+	expected := feed.Article{
+		Feed: feed.Feed{
+			Id:    "https://dropbox.tech/feed",
+			Title: "dropbox.tech",
+			Url:   "https://dropbox.tech/feed",
+		},
+		Id:        "https://dropbox.tech/infrastructure/making-dropbox-data-centers-carbon-neutral",
+		Title:     "How we’re making Dropbox data centers 100% carbon neutral",
+		Url:       "https://dropbox.tech/infrastructure/making-dropbox-data-centers-carbon-neutral",
+		Published: testutils.ParseTime(t, "2021-08-03T06:00:00-07:00"),
+	}
+	assert.Equal(t, asJson(t, expected), asJson(t, articles[0]))
+}
+
 func asJson(t *testing.T, a feed.Article) string {
 	t.Helper()
 	j, err := json.MarshalIndent(a, "", " ")

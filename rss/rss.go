@@ -2,8 +2,10 @@ package rss
 
 import (
 	"bulletin/feed"
+	"bulletin/log"
 	btime "bulletin/time"
 	"encoding/xml"
+	"net/url"
 	"time"
 )
 
@@ -43,9 +45,17 @@ type Link struct {
 func (c *Channel) GetArticles() []feed.Article {
 	var articles []feed.Article
 	feedLink := getBestLink(c.Links)
+	feedTitle := c.Title
+	if feedTitle == "" {
+		if u, err := url.Parse(feedLink); err == nil {
+			feedTitle = u.Host
+		} else {
+			log.Debugf("could not parse url %s: %s", feedLink, err)
+		}
+	}
 	f := feed.Feed{
 		Id:    feedLink,
-		Title: c.Title,
+		Title: feedTitle,
 		Url:   feedLink,
 	}
 	for _, t := range c.Items {
