@@ -1,12 +1,9 @@
 package command
 
 import (
-	"bulletin/atom"
-	"bulletin/cache"
-	"bulletin/feed"
 	"bulletin/fetcher"
 	"bulletin/log"
-	"bulletin/rss"
+	"bulletin/storage"
 	"flag"
 	"fmt"
 	"os"
@@ -16,7 +13,7 @@ const FetchCommandName = "fetch"
 
 // FetchCommand fetches feed from a single source provided directly in the command line.
 type FetchCommand struct {
-	Cache *cache.Cache
+	Storage *storage.Storage
 }
 
 func (c *FetchCommand) Execute(args []string) error {
@@ -29,33 +26,15 @@ func (c *FetchCommand) Execute(args []string) error {
 		log.Infof("Fetch feed from %s", url)
 		feedBody, err := fetcher.Get(url)
 		if err != nil {
-			return err
+			log.Infof("Error. Could not fetch %s: %s", url, err)
+			continue
 		}
-		articles, err := parseArticles(feedBody)
+		err = c.Storage.StoreFeedBody(feedBody)
 		if err != nil {
 			return err
 		}
-		log.Infof("Caching %d articles", len(articles))
-		for _, a := range articles {
-			err := c.Cache.StoreArticle(a)
-			if err != nil {
-				return err
-			}
-		}
 	}
 	return nil
-}
-
-func parseArticles(feedBody []byte) ([]feed.Article, error) {
-	atomFeed, atomErr := atom.Parse(feedBody)
-	if atomErr == nil && len(atomFeed.GetArticles()) > 0 {
-		return atomFeed.GetArticles(), nil
-	}
-	rssFeed, rssErr := rss.Parse(feedBody)
-	if rssErr == nil && len(rssFeed.GetArticles()) > 0 {
-		return rssFeed.GetArticles(), nil
-	}
-	return nil, fmt.Errorf("could not parse. Atom error: %s. Rss error: %s", atomErr, rssErr)
 }
 
 func getFetchOptions(args []string) (fetchOptions, error) {

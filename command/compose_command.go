@@ -1,9 +1,10 @@
 package command
 
 import (
-	"bulletin/cache"
 	"bulletin/feed"
+	"bulletin/feedparser"
 	"bulletin/log"
+	"bulletin/storage"
 	"flag"
 	"fmt"
 	"io/ioutil"
@@ -14,7 +15,7 @@ import (
 const ComposeCommandName = "compose"
 
 type ComposeCommand struct {
-	Cache *cache.Cache
+	Storage *storage.Storage
 }
 
 var referenceTime time.Time
@@ -36,10 +37,7 @@ func (c *ComposeCommand) Execute(args []string) error {
 	interval := time.Duration(opts.intervalDays) * 24 * time.Hour
 	intervalStart := getNearestInterval(referenceTime, interval, now)
 	intervalEnd := intervalStart.Add(interval)
-	articles, err := c.Cache.GetArticles()
-	if err != nil {
-		return err
-	}
+	articles := c.getArticles()
 
 	var pageTemplate *string
 	if opts.templatePath != "" {
@@ -68,6 +66,29 @@ func (c *ComposeCommand) Execute(args []string) error {
 	}
 	fmt.Println(formatted)
 	return nil
+}
+
+func (c *ComposeCommand) getArticles() []feed.Article {
+	paths, err := c.Storage.ListFiles()
+	articles := []feed.Article{}
+	if err != nil {
+		log.Infof("Failed to list files: %s", err)
+	}
+	for _, path := range paths {
+		log.Debugf("Parse %s", path)
+		b, err := ioutil.ReadFile(path)
+		if err != nil {
+			log.Infof("Failed to open %s: %s", path, err)
+			continue
+		}
+		a, err := feedparser.GetArticles(b)
+		if err != nil {
+			log.Infof("Failed to parse %s: %s", path, err)
+			continue
+		}
+		articles = append(articles, a...)
+	}
+	return articles
 }
 
 func getComposeOptions(args []string) (composeOptions, error) {

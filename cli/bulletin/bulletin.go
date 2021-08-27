@@ -1,8 +1,8 @@
 package main
 
 import (
-	"bulletin/cache"
 	"bulletin/command"
+	"bulletin/storage"
 	"flag"
 	"fmt"
 	"os"
@@ -36,16 +36,15 @@ func mainErr() error {
 		return fmt.Errorf("missing command")
 	}
 
-	cacheInstance, err := cache.NewCache(opts.CacheDir)
-	if err != nil {
-		return err
+	storageInstance := &storage.Storage{
+		Path: opts.CacheDir,
 	}
 	commands := make(map[string]command.Command)
 	commands[command.FetchCommandName] = &command.FetchCommand{
-		Cache: cacheInstance,
+		Storage: storageInstance,
 	}
 	commands[command.ComposeCommandName] = &command.ComposeCommand{
-		Cache: cacheInstance,
+		Storage: storageInstance,
 	}
 
 	commandString := flag.Arg(0)
