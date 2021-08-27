@@ -13,6 +13,7 @@ func TestTime(t *testing.T) {
 		"Fri, 25 Jun 2021 11:03:04 GMT",
 		"2021-06-25T11:03:03.265Z",
 		"2021-08-23T03:19:41.679-04:00",
+		"2021-01-23T00:00",
 	}
 	for _, tc := range tcs {
 		tim, err := Parse(tc)

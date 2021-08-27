@@ -17,5 +17,5 @@ func GetArticles(feedBody []byte) ([]feed.Article, error) {
 	if rssErr == nil && len(rssFeed.GetArticles()) > 0 {
 		return rssFeed.GetArticles(), nil
 	}
-	return nil, fmt.Errorf("could not parse. Atom error: %s. Rss error: %s", atomErr, rssErr)
+	return nil, fmt.Errorf("could not parse. Atom error: %s. RSS error: %s", atomErr, rssErr)
 }

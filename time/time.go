@@ -10,6 +10,8 @@ var timeFormats = []string{
 	gotime.RFC1123Z,
 	gotime.RFC3339,
 	`2006-01-02T15:04:05.000-07:00`,
+	`2006-01-02T15:04:05.000`,
+	`2006-01-02T15:04`,
 }
 
 func Parse(value string) (gotime.Time, error) {
