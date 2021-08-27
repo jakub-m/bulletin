@@ -1,11 +1,21 @@
 package log
 
-import "log"
+import (
+	golog "log"
+)
+
+var verboseMode = false
+
+func SetVerbose(verbose bool) {
+	verboseMode = verbose
+}
 
 func Infof(format string, args ...interface{}) {
-	log.Printf(format, args...)
+	golog.Printf("I "+format, args...)
 }
 
 func Debugf(format string, args ...interface{}) {
-	log.Printf(format, args...)
+	if verboseMode {
+		golog.Printf("D "+format, args...)
+	}
 }

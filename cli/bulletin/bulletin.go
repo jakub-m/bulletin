@@ -2,6 +2,7 @@ package main
 
 import (
 	"bulletin/command"
+	"bulletin/log"
 	"bulletin/storage"
 	"flag"
 	"fmt"
@@ -29,15 +30,17 @@ func mainErr() error {
 	}
 	var opts options
 	defaultCacheDir := path.Join(os.TempDir(), cacheBaseName)
-	flag.StringVar(&opts.CacheDir, "cache", defaultCacheDir, "cache directory")
+	flag.StringVar(&opts.cacheDir, "cache", defaultCacheDir, "cache directory")
+	flag.BoolVar(&opts.verbose, "verbose", false, "verbose log")
 	flag.Parse()
 	if flag.NArg() == 0 {
 		flag.Usage()
 		return fmt.Errorf("missing command")
 	}
+	log.SetVerbose(opts.verbose)
 
 	storageInstance := &storage.Storage{
-		Path: opts.CacheDir,
+		Path: opts.cacheDir,
 	}
 	commands := make(map[string]command.Command)
 	commands[command.FetchCommandName] = &command.FetchCommand{
@@ -56,5 +59,6 @@ func mainErr() error {
 }
 
 type options struct {
-	CacheDir string
+	cacheDir string
+	verbose  bool
 }

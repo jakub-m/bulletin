@@ -5,7 +5,6 @@ import (
 	_ "embed"
 	"fmt"
 	"html/template"
-	"log"
 	"math"
 	"sort"
 	"time"
@@ -42,7 +41,7 @@ func FormatHtml(periodDays int, periodEnd time.Time, pageTemplate *string, artic
 	}
 	bulletinPageTemplate, err := template.New("page").Funcs(funcMap).Parse(pageTemplateBody)
 	if err != nil {
-		log.Fatal("feed: cannot parse html template")
+		return "", err
 	}
 	err = bulletinPageTemplate.Execute(buf, templateData)
 	if err != nil {
