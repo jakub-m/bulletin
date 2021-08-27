@@ -22,7 +22,11 @@ func main() {
 }
 
 func mainErr() error {
-	availableCommands := []string{command.FetchCommandName, command.ComposeCommandName}
+	availableCommands := []string{
+		command.ComposeCommandName,
+		command.FetchCommandName,
+		command.TestCommandName,
+	}
 
 	flag.Usage = func() {
 		fmt.Printf("Available commands: %s\n", strings.Join(availableCommands, ", "))
@@ -49,6 +53,7 @@ func mainErr() error {
 	commands[command.ComposeCommandName] = &command.ComposeCommand{
 		Storage: storageInstance,
 	}
+	commands[command.TestCommandName] = &command.TestCommand{}
 
 	commandString := flag.Arg(0)
 	cmd, ok := commands[commandString]
