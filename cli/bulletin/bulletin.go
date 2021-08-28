@@ -24,6 +24,7 @@ func main() {
 func mainErr() error {
 	availableCommands := []string{
 		command.ComposeCommandName,
+		command.CleanCommandName,
 		command.FetchCommandName,
 		command.TestCommandName,
 	}
@@ -54,6 +55,9 @@ func mainErr() error {
 		Storage: storageInstance,
 	}
 	commands[command.TestCommandName] = &command.TestCommand{}
+	commands[command.CleanCommandName] = &command.CleanCommand{
+		Storage: storageInstance,
+	}
 
 	commandString := flag.Arg(0)
 	cmd, ok := commands[commandString]
