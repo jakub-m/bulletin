@@ -2,7 +2,6 @@ The [list of feeds][ref_feeds] comes from my [bookmarks][ref_tw].
 
 # TODO
 
-- concurrent downloads
 - select bulletin reference day
 - BUG: some [feeds][ref_feeds] are not handled
 - BUG: some feeds result in zero time, why (e.g. this https://ahelwer.ca/index.xml)
