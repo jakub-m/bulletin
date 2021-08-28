@@ -30,7 +30,7 @@ fetch-smoke: $(bin)
 
 fetch: $(bin)
 	mkdir -p tmp/cache
-	cat feeds.conf | grep -v '^\#' | xargs $(bin) --cache ./tmp/cache/ fetch 
+	cat feeds.conf | grep -v '^\#' | xargs $(bin) --cache ./tmp/cache/ --verbose  fetch 
 
 watch-template: $(bin)
 	while [ 1 ]; do \

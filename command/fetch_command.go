@@ -22,16 +22,12 @@ func (c *FetchCommand) Execute(args []string) error {
 		return err
 	}
 	log.Debugf("options: %+v", opts)
-	for _, url := range opts.urls {
-		log.Infof("Fetch feed from %s", url)
-		feedBody, err := fetcher.Get(url)
-		if err != nil {
-			log.Infof("Error. Could not fetch %s: %s", url, err)
-			continue
-		}
-		err = c.Storage.StoreFeedBody(feedBody)
-		if err != nil {
-			return err
+	for _, r := range fetcher.GetAll(opts.urls) {
+		if r.Err == nil {
+			err = c.Storage.StoreFeedBody(r.Body)
+			if err != nil {
+				return err
+			}
 		}
 	}
 	return nil
