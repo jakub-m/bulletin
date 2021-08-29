@@ -3,6 +3,7 @@ package command
 import (
 	"bulletin/log"
 	"bulletin/storage"
+	"fmt"
 	"os"
 )
 
@@ -13,6 +14,10 @@ type CleanCommand struct {
 }
 
 func (c *CleanCommand) Execute(args []string) error {
+	if len(args) > 0 {
+		fmt.Println("clean command cleans the file cache.")
+		return nil
+	}
 	succeed := 0
 	files, err := c.Storage.ListFiles()
 	if err != nil {
