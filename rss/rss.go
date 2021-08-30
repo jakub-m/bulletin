@@ -64,7 +64,7 @@ func (c *Channel) GetArticles() []feed.Article {
 			Feed:        f,
 			Id:          t.Guid,
 			Title:       t.Title,
-			Description: feed.ExtractTextFromHTML(t.Description),
+			Description: feed.GetDescriptionFromHTML(t.Description),
 			Published:   t.PubDate.Time,
 			Url:         t.Link,
 		}
