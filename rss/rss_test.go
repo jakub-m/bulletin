@@ -19,6 +19,7 @@ func TestParseSchema(t *testing.T) {
 		Items: []Item{
 			{
 				Title:          "Item Title",
+				Description:    "Item description",
 				Link:           "http://example.com/item",
 				Guid:           "http://example.com/guid/0123",
 				PubDate:        parseTime(t, "2021-07-26T18:00:56Z"),

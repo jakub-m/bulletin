@@ -38,6 +38,11 @@
             {{range .}}
                 <li>
                     <a href="{{.Url}}">{{.Title}}</a> - {{articleDate .}}
+                    {{if .Description}}
+                    <div class="description">
+                    {{.Description}}
+                    </div>
+                    {{end}}
                 </li>
             {{end}}
             </ul>

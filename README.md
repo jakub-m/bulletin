@@ -6,6 +6,7 @@ The [list of feeds][ref_feeds] comes from my [bookmarks][ref_tw].
 - select bulletin reference day
 - support for default config of feeds and config of cache
 - mark visited sites
+- allow retrieving past bulletins (e.g. n - 1)
 - BUG: some [feeds][ref_feeds] are not handled
 - BUG: some feeds result in zero time, why (e.g. this https://ahelwer.ca/index.xml)
 - BUG: reference day changes based on interval, clarify

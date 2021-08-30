@@ -8,6 +8,7 @@
       <title><![CDATA[Item Title]]></title>
       <link>http://example.com/item</link>
       <guid isPermaLink="false">http://example.com/guid/0123</guid>
+      <description><![CDATA[Item description]]></description>
       <pubDate>Mon, 26 Jul 2021 18:00:56 GMT</pubDate>
       <atom:updated>2021-07-28T21:30:35.048Z</atom:updated>
       <content:encoded><![CDATA[<p>Content</p>]]></content:encoded>

@@ -29,6 +29,7 @@ type Channel struct {
 
 type Item struct {
 	Title          string   `xml:"title"`
+	Description    string   `xml:"description"`
 	Link           string   `xml:"link"`
 	Guid           string   `xml:"guid"`
 	ContentEncoded string   `xml:"encoded"` // content:encoded
@@ -60,11 +61,12 @@ func (c *Channel) GetArticles() []feed.Article {
 	}
 	for _, t := range c.Items {
 		a := feed.Article{
-			Feed:      f,
-			Id:        t.Guid,
-			Title:     t.Title,
-			Published: t.PubDate.Time,
-			Url:       t.Link,
+			Feed:        f,
+			Id:          t.Guid,
+			Title:       t.Title,
+			Description: feed.ExtractTextFromHTML(t.Description),
+			Published:   t.PubDate.Time,
+			Url:         t.Link,
 		}
 		articles = append(articles, a)
 	}

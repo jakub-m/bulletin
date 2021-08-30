@@ -13,9 +13,11 @@ type WithArticles interface {
 type Article struct {
 	Feed Feed
 	// Id identifies same articles. Two articles with the same Id will be included in the feed summary only once.
-	Id        string
-	Title     string
-	Published time.Time
+	Id    string
+	Title string
+	// Description is a short summary text (i.e. not HTML) of the Feed entry.
+	Description string
+	Published   time.Time
 	// Url directs to the actual article.
 	Url string
 }
