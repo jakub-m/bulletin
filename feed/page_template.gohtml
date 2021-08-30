@@ -35,18 +35,30 @@
         Bulletin for {{.BulletinEndDate}}
     </h2>
         {{.PeriodDays}} digest
+        {{/* the index */}}
+        <ul>
+            {{range .GroupedArticles}}
+                {{with (index . 0)}}
+                    <li><a href="#{{.Feed.Id}}" class="no-visited">{{.Feed.Title}}</a></li>
+                {{end}}
+            {{end}}
+        </ul>
+
+        {{/* articles */}}
         {{range .GroupedArticles}}
-            <h3>
-                <a href="{{(index . 0).Feed.Url}}" class="no-visited">{{(index . 0).Feed.Title}}</a>
-            </h3>
+            {{with (index . 0)}}
+                <h3 id="{{.Feed.Id}}">
+                    <a href="{{.Feed.Url}}" class="no-visited">{{.Feed.Title}}</a>
+                </h3>
+            {{end}}
             <ul>
             {{range .}}
                 <li class="article">
                     <a href="{{.Url}}">{{.Title}}</a>
                     {{if .Description}}
-                    <div class="description">
-                    {{.Description}}
-                    </div>
+                        <div class="description">
+                        {{.Description}}
+                        </div>
                     {{end}}
                 </li>
             {{end}}

@@ -2,9 +2,9 @@ The [list of feeds][ref_feeds] comes from my [bookmarks][ref_tw].
 
 # TODO
 
-- index of sources at the top
 - select bulletin reference day
-- support for default config of feeds and config of cache
+- support for default config of feeds and config of cache (~/.bulletin/config?)
+- support cache in known location (~/.bulletin/cache?)
 - style - mark visited sites
 - allow retrieving past bulletins (e.g. n - 1)
 - BUG: some [feeds][ref_feeds] are not handled
