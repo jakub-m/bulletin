@@ -11,7 +11,8 @@ import (
 	"strings"
 )
 
-const cacheBaseName = "bulletin_cache"
+const bulletinDir = ".bulletin"
+const cacheBaseName = "cache"
 
 func main() {
 	err := mainErr()
@@ -34,7 +35,11 @@ func mainErr() error {
 		flag.PrintDefaults()
 	}
 	var opts options
-	defaultCacheDir := path.Join(os.TempDir(), cacheBaseName)
+	homeDir, err := os.UserHomeDir()
+	if err != nil {
+		return err
+	}
+	defaultCacheDir := path.Join(homeDir, bulletinDir, cacheBaseName)
 	flag.StringVar(&opts.cacheDir, "cache", defaultCacheDir, "cache directory")
 	flag.BoolVar(&opts.verbose, "verbose", false, "verbose log")
 	flag.Parse()
@@ -43,6 +48,11 @@ func mainErr() error {
 		return fmt.Errorf("missing command")
 	}
 	log.SetVerbose(opts.verbose)
+	if opts.cacheDir == defaultCacheDir {
+		if err := os.MkdirAll(defaultCacheDir, 0755); err != nil {
+			return err
+		}
+	}
 
 	storageInstance := &storage.Storage{
 		Path: opts.cacheDir,
