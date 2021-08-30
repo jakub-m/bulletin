@@ -85,11 +85,14 @@ func TestTrimSentences(t *testing.T) {
 			input:    `1234567890123456789012345`,
 			expected: `12345678901234567890`,
 		},
-		// {
-		// // BUG. Rune boundary is broken
-		// 	input:    `1234567890123456789ąąxxx`,
-		// 	expected: `1234567890123456789ą`,
-		// },
+		{
+			input:    `ąąąąąąąąąąććććććććććęęęęęęęęęę`,
+			expected: `ąąąąąąąąąąćććććććććć`,
+		},
+		{
+			input:    `1234567890123456789ąąxxx`,
+			expected: `1234567890123456789ą`,
+		},
 	}
 
 	for _, tc := range tcs {

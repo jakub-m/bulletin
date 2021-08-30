@@ -3,6 +3,7 @@ package feed
 import (
 	"regexp"
 	"strings"
+	"unicode/utf8"
 
 	"bulletin/log"
 
@@ -47,7 +48,7 @@ func TrimSentences(input string, n int) string {
 	sentences := strings.SplitAfter(input, ".")
 	t := ""
 	for _, s := range sentences {
-		if len(t)+len(s) <= n {
+		if utf8.RuneCountInString(t)+utf8.RuneCountInString(s) <= n {
 			t = t + s
 		}
 	}
@@ -55,8 +56,16 @@ func TrimSentences(input string, n int) string {
 		// if there is no "." in the input
 		t = input
 	}
-	if len(t) > n {
-		return input[:n]
+	if utf8.RuneCountInString(t) > n {
+		return firstNRunes(input, n)
 	}
 	return t
+}
+
+func firstNRunes(s string, n int) string {
+	r := []rune(s)
+	if n < len(r) {
+		r = r[:n]
+	}
+	return string(r)
 }
