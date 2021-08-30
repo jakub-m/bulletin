@@ -41,7 +41,7 @@ watch-template: $(bin)
 	done
 
 compose: $(bin)
-	$(bin) --cache ./tmp/cache/ compose --days 31 | tee bulletin.tmp.html
+	$(bin) --cache ./tmp/cache/ compose --days 7 | tee bulletin.tmp.html
 
 .PHONY: clean smoke compose
 
