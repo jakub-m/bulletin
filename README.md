@@ -2,7 +2,6 @@ The [list of feeds][ref_feeds] comes from my [bookmarks][ref_tw].
 
 # TODO
 
-- add description of the feed
 - select bulletin reference day
 - support for default config of feeds and config of cache
 - mark visited sites

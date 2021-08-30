@@ -31,6 +31,7 @@ type Entry struct {
 	Title     string   `xml:"title"`
 	Published *XmlTime `xml:"published"`
 	Links     []Link   `xml:"link"`
+	Content   string   `xml:"content"`
 }
 
 type Link struct {
@@ -56,12 +57,14 @@ func (e Entry) asArticle(atomFeed Feed) feed.Article {
 		Url:   feedUrl,
 	}
 	articleUrl := getBestUrl(e.Links)
+	description := feed.GetDescriptionFromHTML(e.Content)
 	return feed.Article{
-		Feed:      f,
-		Id:        e.Id,
-		Title:     e.Title,
-		Url:       articleUrl,
-		Published: published,
+		Feed:        f,
+		Id:          e.Id,
+		Title:       e.Title,
+		Url:         articleUrl,
+		Published:   published,
+		Description: description,
 	}
 }
 

@@ -64,7 +64,7 @@ func (c *Channel) GetArticles() []feed.Article {
 			Feed:        f,
 			Id:          t.Guid,
 			Title:       t.Title,
-			Description: feed.GetDescriptionFromHTML(t.Description),
+			Description: getDescription(t),
 			Published:   t.PubDate.Time,
 			Url:         t.Link,
 		}
@@ -108,6 +108,14 @@ func filterLinks(links []Link, fn func(l Link) bool) []Link {
 		}
 	}
 	return filtered
+}
+
+func getDescription(i Item) string {
+	d := feed.GetDescriptionFromHTML(i.Description)
+	if d == "" {
+		return feed.GetDescriptionFromHTML(i.ContentEncoded)
+	}
+	return d
 }
 
 type RssTime struct {
