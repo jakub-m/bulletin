@@ -7,12 +7,16 @@ import (
 	"bulletin/storage"
 	"flag"
 	"fmt"
+	"io"
 	"io/ioutil"
 	corelog "log"
+	"os"
+	"path"
 	"time"
 )
 
 const ComposeCommandName = "compose"
+const filenameTimeLayout = "2006-01-02"
 
 type ComposeCommand struct {
 	Storage *storage.Storage
@@ -64,7 +68,12 @@ func (c *ComposeCommand) Execute(args []string) error {
 	if err != nil {
 		return err
 	}
-	fmt.Println(formatted)
+	w, err := newOutput(opts.output, intervalEnd)
+	if err != nil {
+		return err
+	}
+	defer w.Close()
+	fmt.Fprintln(w, formatted)
 	return nil
 }
 
@@ -91,11 +100,23 @@ func (c *ComposeCommand) getArticles() []feed.Article {
 	return articles
 }
 
+func newOutput(outPath string, intervalEnd time.Time) (io.WriteCloser, error) {
+	if outPath == "-" {
+		return &nopCloser{os.Stdout}, nil
+	}
+	if fileInfo, err := os.Stat(outPath); err == nil && fileInfo.IsDir() {
+		fname := fmt.Sprintf("bulletin-%s.html", intervalEnd.Format(filenameTimeLayout))
+		outPath = path.Join(outPath, fname)
+	}
+	return os.Create(outPath)
+}
+
 func getComposeOptions(args []string) (composeOptions, error) {
 	var options composeOptions
 	fs := flag.NewFlagSet(ComposeCommandName, flag.ContinueOnError)
 	fs.IntVar(&options.intervalDays, "days", 7, "time range of the articles in DAYS")
 	fs.StringVar(&options.templatePath, "template", "", "template to render the bulletin")
+	fs.StringVar(&options.output, "output", "-", "output. can be directory, concrete file name or `-` for stdout.")
 	err := fs.Parse(args)
 	return options, err
 }
@@ -103,10 +124,23 @@ func getComposeOptions(args []string) (composeOptions, error) {
 type composeOptions struct {
 	intervalDays int
 	templatePath string
+	output       string
 }
 
 func getNearestInterval(reference time.Time, interval time.Duration, now time.Time) time.Time {
 	n := now.Sub(reference) / interval
 	d := (n - 1) * interval
 	return reference.Add(d)
+}
+
+type nopCloser struct {
+	f *os.File
+}
+
+func (c *nopCloser) Close() error {
+	return nil
+}
+
+func (c *nopCloser) Write(p []byte) (n int, err error) {
+	return c.f.Write(p)
 }
