@@ -68,11 +68,12 @@ func (c *ComposeCommand) Execute(args []string) error {
 	if err != nil {
 		return err
 	}
-	w, err := newOutput(opts.output, intervalEnd)
+	w, err, actualPath := newOutput(opts.output, intervalEnd)
 	if err != nil {
 		return err
 	}
 	defer w.Close()
+	log.Infof("output: %s", actualPath)
 	fmt.Fprintln(w, formatted)
 	return nil
 }
@@ -100,15 +101,16 @@ func (c *ComposeCommand) getArticles() []feed.Article {
 	return articles
 }
 
-func newOutput(outPath string, intervalEnd time.Time) (io.WriteCloser, error) {
+func newOutput(outPath string, intervalEnd time.Time) (io.WriteCloser, error, string) {
 	if outPath == "-" {
-		return &nopCloser{os.Stdout}, nil
+		return &nopCloser{os.Stdout}, nil, "stdout"
 	}
 	if fileInfo, err := os.Stat(outPath); err == nil && fileInfo.IsDir() {
 		fname := fmt.Sprintf("bulletin-%s.html", intervalEnd.Format(filenameTimeLayout))
 		outPath = path.Join(outPath, fname)
 	}
-	return os.Create(outPath)
+	w, err := os.Create(outPath)
+	return w, err, outPath
 }
 
 func getComposeOptions(args []string) (composeOptions, error) {
@@ -116,7 +118,7 @@ func getComposeOptions(args []string) (composeOptions, error) {
 	fs := flag.NewFlagSet(ComposeCommandName, flag.ContinueOnError)
 	fs.IntVar(&options.intervalDays, "days", 7, "time range of the articles in DAYS")
 	fs.StringVar(&options.templatePath, "template", "", "template to render the bulletin")
-	fs.StringVar(&options.output, "output", "-", "output. can be directory, concrete file name or `-` for stdout.")
+	fs.StringVar(&options.output, "output", ".", "output. can be directory, concrete file name or `-` for stdout.")
 	err := fs.Parse(args)
 	return options, err
 }
