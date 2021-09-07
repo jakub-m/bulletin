@@ -22,7 +22,7 @@ func init() {
 		fmt.Println(err)
 		os.Exit(1)
 	}
-	defaultConfigPath = path.Join(wd, ".bulletin", "feeds.config")
+	defaultConfigPath = path.Join(wd, ".bulletin", "feeds.conf")
 }
 
 // FetchCommand fetches feed from a single source provided directly in the command line.
