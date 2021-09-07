@@ -75,7 +75,7 @@ func mainErr() error {
 			}}
 		return cmd.Execute([]string{})
 	}
-	if flag.NArg() == 1 {
+	if flag.NArg() >= 1 {
 		commandString := flag.Arg(0)
 		cmd, ok := commands[commandString]
 		if !ok {

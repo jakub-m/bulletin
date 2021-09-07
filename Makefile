@@ -22,11 +22,11 @@ smoke: clean build fetch-smoke compose
 
 fetch-smoke: $(bin)
 	mkdir -p tmp/cache
-	$(bin) --cache ./tmp/cache/ --verbose fetch -- \
-		http://googleaiblog.blogspot.com/atom.xml \
-		https://netflixtechblog.com/feed \
-		http://muratbuffalo.blogspot.com/feeds/posts/default \
-		https://perspectives.mvdirona.com/feed/ \
+	echo "http://googleaiblog.blogspot.com/atom.xml\n\
+https://netflixtechblog.com/feed\n\
+http://muratbuffalo.blogspot.com/feeds/posts/default\n\
+https://perspectives.mvdirona.com/feed/" | \
+	$(bin) --cache ./tmp/cache/ --verbose fetch --feeds -
 
 fetch: $(bin)
 	mkdir -p tmp/cache
