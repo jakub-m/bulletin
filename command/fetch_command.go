@@ -17,12 +17,12 @@ const FetchCommandName = "fetch"
 var defaultConfigPath string
 
 func init() {
-	wd, err := os.Getwd()
+	home, err := os.UserHomeDir()
 	if err != nil {
 		fmt.Println(err)
 		os.Exit(1)
 	}
-	defaultConfigPath = path.Join(wd, ".bulletin", "feeds.conf")
+	defaultConfigPath = path.Join(home, ".bulletin", "feeds.conf")
 }
 
 // FetchCommand fetches feed from a single source provided directly in the command line.
