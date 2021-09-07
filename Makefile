@@ -30,10 +30,10 @@ fetch-smoke: $(bin)
 
 fetch: $(bin)
 	mkdir -p tmp/cache
-	cat feeds.conf | grep -v '^\#' | xargs $(bin) --cache ./tmp/cache/ --verbose  fetch 
+	$(bin) --cache ./tmp/cache/ --verbose fetch  --feeds feeds.conf
 
 watch-template: $(bin)
-	while [ 1 ]; do \
+	while [ 1 ]; do 
 		echo watch...; \
 		sleep 1; \
 		fswatch -1 feed/page_template.gohtml && \
