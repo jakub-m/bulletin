@@ -32,6 +32,7 @@ func mainErr() error {
 
 	flag.Usage = func() {
 		fmt.Printf("Available commands: %s\n", strings.Join(availableCommands, ", "))
+		fmt.Printf("If commands are missing, it will run a default sequence generating a default bulletin.")
 		flag.PrintDefaults()
 	}
 	var opts options
@@ -43,10 +44,6 @@ func mainErr() error {
 	flag.StringVar(&opts.cacheDir, "cache", defaultCacheDir, "cache directory")
 	flag.BoolVar(&opts.verbose, "verbose", false, "verbose log")
 	flag.Parse()
-	if flag.NArg() == 0 {
-		flag.Usage()
-		return fmt.Errorf("missing command")
-	}
 	log.SetVerbose(opts.verbose)
 	if opts.cacheDir == defaultCacheDir {
 		if err := os.MkdirAll(defaultCacheDir, 0755); err != nil {
@@ -69,12 +66,26 @@ func mainErr() error {
 		Storage: storageInstance,
 	}
 
-	commandString := flag.Arg(0)
-	cmd, ok := commands[commandString]
-	if !ok {
-		return fmt.Errorf("unknown command: %s", commandString)
+	if flag.NArg() == 0 {
+		cmd := command.RunSequence{
+			Commands: []command.Command{
+				commands[command.CleanCommandName],
+				commands[command.FetchCommandName],
+				commands[command.ComposeCommandName],
+			}}
+		return cmd.Execute([]string{})
 	}
-	return cmd.Execute(flag.Args()[1:])
+	if flag.NArg() == 1 {
+		commandString := flag.Arg(0)
+		cmd, ok := commands[commandString]
+		if !ok {
+			return fmt.Errorf("unknown command: %s", commandString)
+		}
+		return cmd.Execute(flag.Args()[1:])
+	}
+	flag.Usage()
+	return fmt.Errorf("pass only one command")
+
 }
 
 type options struct {
