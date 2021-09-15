@@ -15,8 +15,12 @@ import (
 	"time"
 )
 
-const ComposeCommandName = "compose"
-const filenameTimeLayout = "2006-01-02"
+const (
+	ComposeCommandName = "compose"
+	durationDay        = time.Hour * 24
+	filenameTimeLayout = "2006-01-02"
+	referenceMonday    = "2000-01-03T00:00:00Z"
+)
 
 type ComposeCommand struct {
 	Storage *storage.Storage
@@ -25,11 +29,11 @@ type ComposeCommand struct {
 var referenceTime time.Time
 
 func init() {
-	t, err := time.Parse(time.RFC3339, "2000-01-03T00:00:00Z") // monday
+	t, err := time.Parse(time.RFC3339, referenceMonday)
 	if err != nil {
 		corelog.Fatal(err)
 	}
-	referenceTime = t
+	referenceTime = t.Add(4 * durationDay) // friday
 }
 
 func (c *ComposeCommand) Execute(args []string) error {
