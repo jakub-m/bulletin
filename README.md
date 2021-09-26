@@ -1,3 +1,5 @@
+[*The most recent bulletin: 2021-09-24*](bulletins/bulletin-2021-09-24.html)
+
 The [list of feeds][ref_feeds] comes from my [bookmarks][ref_tw].
 
 # TODO
