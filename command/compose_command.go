@@ -122,7 +122,12 @@ func filterArticlesInFeeds(feeds []feed.Feed, intervalStart, intervalEnd time.Ti
 
 func sortFeeds(feeds []feed.Feed) {
 	sort.Slice(feeds, func(i, j int) bool {
-		return strings.ToLower(feeds[i].Title) < strings.ToLower(feeds[j].Title)
+		f := feeds[i]
+		g := feeds[j]
+		if len(f.Articles) != len(g.Articles) {
+			return len(f.Articles) < len(g.Articles)
+		}
+		return strings.ToLower(f.Title) < strings.ToLower(g.Title)
 	})
 }
 
