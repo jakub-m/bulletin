@@ -40,6 +40,23 @@ type Link struct {
 	Type string `xml:"type,attr"`
 }
 
+// func (f Feed) GetFeedWithArticles() feed.Feed {
+// 	var articles []feed.Article
+// 	for _, e := range f.Entries {
+// 		articles = append(articles, e.asArticle(f))
+// 	}
+
+// 	return articles
+// 	ff := feed.Feed{
+// 		Id: "",
+// 		Title: "",
+// 		Url: "",
+// 		Articles: articles,
+// 	}
+// 	f.Entries[0].asArticle()
+// }
+
+// GetArticles is DEPRECATED.
 func (f Feed) GetArticles() []feed.Article {
 	var articles []feed.Article
 	for _, e := range f.Entries {
@@ -48,6 +65,22 @@ func (f Feed) GetArticles() []feed.Article {
 	return articles
 }
 
+func (atomFeed Feed) AsGenericFeed() feed.Feed {
+	articles := []feed.Article{}
+	for _, e := range atomFeed.Entries {
+		articles = append(articles, e.asGenericArticle())
+	}
+	feedUrl := getBestUrl(atomFeed.Links)
+	gf := feed.Feed{
+		Id:       atomFeed.Id,
+		Title:    atomFeed.Title,
+		Url:      feedUrl,
+		Articles: articles,
+	}
+	return gf
+}
+
+// DEPRECATE
 func (e Entry) asArticle(atomFeed Feed) feed.Article {
 	published := e.Published.Time
 	feedUrl := getBestUrl(atomFeed.Links)
@@ -60,6 +93,19 @@ func (e Entry) asArticle(atomFeed Feed) feed.Article {
 	description := feed.GetDescriptionFromHTML(e.Content)
 	return feed.Article{
 		Feed:        f,
+		Id:          e.Id,
+		Title:       e.Title,
+		Url:         articleUrl,
+		Published:   published,
+		Description: description,
+	}
+}
+
+func (e Entry) asGenericArticle() feed.Article {
+	published := e.Published.Time
+	articleUrl := getBestUrl(e.Links)
+	description := feed.GetDescriptionFromHTML(e.Content)
+	return feed.Article{
 		Id:          e.Id,
 		Title:       e.Title,
 		Url:         articleUrl,

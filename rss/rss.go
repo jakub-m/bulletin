@@ -27,6 +27,8 @@ type Channel struct {
 	Links       []Link `xml:"link"`
 }
 
+var _ feed.WithArticles = (*Channel)(nil)
+
 type Item struct {
 	Title          string   `xml:"title"`
 	Description    string   `xml:"description"`
@@ -43,6 +45,37 @@ type Link struct {
 	Type  string `xml:"type,attr"`
 }
 
+func (c *Channel) AsGenericFeed() feed.Feed {
+	var articles []feed.Article
+	feedLink := getBestLink(c.Links)
+	feedTitle := c.Title
+	if feedTitle == "" {
+		if u, err := url.Parse(feedLink); err == nil {
+			feedTitle = u.Host
+		} else {
+			log.Debugf("could not parse url %s: %s", feedLink, err)
+		}
+	}
+	gf := feed.Feed{
+		Id:    feedLink,
+		Title: feedTitle,
+		Url:   feedLink,
+	}
+	for _, t := range c.Items {
+		a := feed.Article{
+			Id:          t.Guid,
+			Title:       t.Title,
+			Description: getDescription(t),
+			Published:   t.PubDate.Time,
+			Url:         t.Link,
+		}
+		articles = append(articles, a)
+	}
+	gf.Articles = articles
+	return gf
+}
+
+// GetArticles is DEPRECATED.
 func (c *Channel) GetArticles() []feed.Article {
 	var articles []feed.Article
 	feedLink := getBestLink(c.Links)

@@ -82,6 +82,7 @@ func (c *ComposeCommand) Execute(args []string) error {
 	return nil
 }
 
+// getArticles is DEPRECATED
 func (c *ComposeCommand) getArticles() []feed.Article {
 	paths, err := c.Storage.ListFiles()
 	articles := []feed.Article{}
