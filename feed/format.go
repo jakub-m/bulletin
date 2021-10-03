@@ -20,9 +20,39 @@ type templateData struct {
 	GroupedArticles [][]Article
 	BulletinEndDate string
 	PeriodDays      string
+	Feeds           []Feed
+}
+
+func FormatFeedsAsHtml(periodDays int, periodEnd time.Time, pageTemplate *string, feeds []Feed) (string, error) {
+	buf := new(bytes.Buffer)
+	templateData := templateData{
+		Feeds:           feeds,
+		BulletinEndDate: periodEnd.Local().Format(bulletinHeaderTimeFormat),
+		PeriodDays:      formatDays(periodDays),
+	}
+	funcMap := template.FuncMap{
+		"articleDate": func(a Article) string {
+			return formatArticleDate(periodEnd, a)
+		},
+	}
+	pageTemplateBody := bulletinPageTemplateRaw
+	if pageTemplate != nil {
+		pageTemplateBody = *pageTemplate
+	}
+	bulletinPageTemplate, err := template.New("page").Funcs(funcMap).Parse(pageTemplateBody)
+	if err != nil {
+		return "", err
+	}
+	err = bulletinPageTemplate.Execute(buf, templateData)
+	if err != nil {
+		return "", fmt.Errorf("feed: %s", err)
+	}
+	return buf.String(), nil
+
 }
 
 // template is the gohtml rendering template. If missing, defaults to built-in template.
+// DEPRECATE
 func FormatHtml(periodDays int, periodEnd time.Time, pageTemplate *string, articles []Article) (string, error) {
 	buf := new(bytes.Buffer)
 	grouped := groupArticlesPerFeed(articles)

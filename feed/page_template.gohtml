@@ -42,25 +42,21 @@
         {{.PeriodDays}} digest
         {{/* the index */}}
         <ul>
-            {{range .GroupedArticles}}
-                {{with (index . 0)}}
-                    <li>
-                        <a href="#{{.Feed.Id}}" class="no-visited">{{.Feed.Title}}</a>
-                    </li>
-                {{end}}
+            {{range .Feeds}}
+                <li>
+                    <a href="#{{.Id}}" class="no-visited">{{.Title}}</a>
+                </li>
             {{end}}
         </ul>
 
         {{/* articles */}}
-        {{range .GroupedArticles}}
-            {{with (index . 0)}}
-                <h3 id="{{.Feed.Id}}">
-                    <a href="{{.Feed.Url}}" class="no-visited">{{.Feed.Title}}</a><br/>
-                    <a href="{{.Feed.Url}}" class="no-visited subtitle">{{.Feed.Url}}</a>
+        {{range .Feeds}}
+                <h3 id="{{.Id}}">
+                    <a href="{{.Url}}" class="no-visited">{{.Title}}</a><br/>
+                    <a href="{{.Url}}" class="no-visited subtitle">{{.Url}}</a>
                 </h3>
-            {{end}}
             <ul>
-            {{range .}}
+            {{range .Articles}}
                 <li class="article">
                     <a href="{{.Url}}">{{.Title}}</a>
                     {{if .Description}}

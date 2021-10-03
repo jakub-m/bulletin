@@ -12,6 +12,8 @@ import (
 	corelog "log"
 	"os"
 	"path"
+	"sort"
+	"strings"
 	"time"
 )
 
@@ -45,7 +47,9 @@ func (c *ComposeCommand) Execute(args []string) error {
 	interval := time.Duration(opts.intervalDays) * 24 * time.Hour
 	intervalStart := getNearestInterval(referenceTime, interval, now)
 	intervalEnd := intervalStart.Add(interval)
-	articles := c.getArticles()
+	feeds := c.getFeeds()
+	feeds = filterArticlesInFeeds(feeds, intervalStart, intervalEnd)
+	sortFeeds(feeds)
 
 	var pageTemplate *string
 	if opts.templatePath != "" {
@@ -58,17 +62,7 @@ func (c *ComposeCommand) Execute(args []string) error {
 		pageTemplate = &t
 	}
 
-	var filteredArticles []feed.Article
-	for _, a := range articles {
-		if a.Published.After(intervalStart) && !a.Published.After(intervalEnd) {
-			log.Debugf("Accept %s, %s", a.Id, a.Published)
-			filteredArticles = append(filteredArticles, a)
-		} else {
-			log.Debugf("Drop %s, %s", a.Id, a.Published)
-		}
-	}
-
-	formatted, err := feed.FormatHtml(opts.intervalDays, intervalEnd, pageTemplate, filteredArticles)
+	formatted, err := feed.FormatFeedsAsHtml(opts.intervalDays, intervalEnd, pageTemplate, feeds)
 	if err != nil {
 		return err
 	}
@@ -80,6 +74,29 @@ func (c *ComposeCommand) Execute(args []string) error {
 	log.Infof("output: %s", actualPath)
 	fmt.Fprintln(w, formatted)
 	return nil
+}
+
+func (c *ComposeCommand) getFeeds() []feed.Feed {
+	paths, err := c.Storage.ListFiles()
+	if err != nil {
+		log.Infof("Failed to list files: %s", err)
+	}
+	feeds := []feed.Feed{}
+	for _, path := range paths {
+		log.Debugf("Parse %s", path)
+		b, err := ioutil.ReadFile(path)
+		if err != nil {
+			log.Infof("Failed to open %s: %s", path, err)
+			continue
+		}
+		f, err := feedparser.GetFeed(b)
+		if err != nil {
+			log.Infof("Failed to parse %s: %s", path, err)
+			continue
+		}
+		feeds = append(feeds, f)
+	}
+	return feeds
 }
 
 // getArticles is DEPRECATED
@@ -104,6 +121,33 @@ func (c *ComposeCommand) getArticles() []feed.Article {
 		articles = append(articles, a...)
 	}
 	return articles
+}
+
+func filterArticlesInFeeds(feeds []feed.Feed, intervalStart, intervalEnd time.Time) []feed.Feed {
+	var newFeeds []feed.Feed
+	for _, f := range feeds {
+		var filteredArticles []feed.Article
+		for _, a := range f.Articles {
+			if a.Published.After(intervalStart) && !a.Published.After(intervalEnd) {
+				log.Debugf("Accept %s, %s", a.Id, a.Published)
+				filteredArticles = append(filteredArticles, a)
+			} else {
+				log.Debugf("Drop %s, %s", a.Id, a.Published)
+			}
+		}
+		newFeed := f
+		newFeed.Articles = filteredArticles
+		if len(newFeed.Articles) > 0 {
+			newFeeds = append(newFeeds, newFeed)
+		}
+	}
+	return newFeeds
+}
+
+func sortFeeds(feeds []feed.Feed) {
+	sort.Slice(feeds, func(i, j int) bool {
+		return strings.ToLower(feeds[i].Title) < strings.ToLower(feeds[j].Title)
+	})
 }
 
 func newOutput(outPath string, intervalEnd time.Time) (io.WriteCloser, error, string) {

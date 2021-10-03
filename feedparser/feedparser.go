@@ -32,6 +32,9 @@ func rssParser(feedBody []byte) (feed.Feed, error) {
 	if err != nil {
 		return feed.Feed{}, err
 	}
+	if rssFeed == nil {
+		return feed.Feed{}, fmt.Errorf("RSS: parser returned nil")
+	}
 	return rssFeed.AsGenericFeed(), nil
 }
 
