@@ -7,6 +7,7 @@ import (
 	"html/template"
 	"math"
 	"sort"
+	"strings"
 	"time"
 )
 
@@ -68,7 +69,7 @@ func groupArticlesPerFeed(articles []Article) [][]Article {
 		feeds = append(feeds, f)
 	}
 	sort.Slice(feeds, func(i, j int) bool {
-		return feeds[i].Title < feeds[j].Title
+		return strings.ToLower(feeds[i].Title) < strings.ToLower(feeds[j].Title)
 	})
 
 	var groupedArticles [][]Article

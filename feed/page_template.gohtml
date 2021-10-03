@@ -4,6 +4,7 @@
         <style type="text/css">
         :root {
             --blue: #007d9c;
+            --black: #000000;
         }
         body {
             font-family: "-apple-system","BlinkMacSystemFont","Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
@@ -28,6 +29,10 @@
         li.article:not(:last-child) { 
             margin-bottom: 1rem;
         }
+        .subtitle {
+            font-size: 75%;
+            color: var(--black) !important;
+        }
         </style>
     </head>
     <body>
@@ -39,7 +44,9 @@
         <ul>
             {{range .GroupedArticles}}
                 {{with (index . 0)}}
-                    <li><a href="#{{.Feed.Id}}" class="no-visited">{{.Feed.Title}}</a></li>
+                    <li>
+                        <a href="#{{.Feed.Id}}" class="no-visited">{{.Feed.Title}}</a>
+                    </li>
                 {{end}}
             {{end}}
         </ul>
@@ -48,7 +55,8 @@
         {{range .GroupedArticles}}
             {{with (index . 0)}}
                 <h3 id="{{.Feed.Id}}">
-                    <a href="{{.Feed.Url}}" class="no-visited">{{.Feed.Title}}</a>
+                    <a href="{{.Feed.Url}}" class="no-visited">{{.Feed.Title}}</a><br/>
+                    <a href="{{.Feed.Url}}" class="no-visited subtitle">{{.Feed.Url}}</a>
                 </h3>
             {{end}}
             <ul>
