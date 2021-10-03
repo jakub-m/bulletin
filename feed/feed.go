@@ -6,9 +6,8 @@ import (
 )
 
 type WithArticles interface {
-	// GetArticles is DEPRECATED
-	GetArticles() []Article
 	AsGenericFeed() Feed
+	// GetArticles is DEPRECATED
 }
 
 // Article is a generic feed agnostic to the original channel (Atom or RSS).

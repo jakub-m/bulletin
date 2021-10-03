@@ -75,37 +75,6 @@ func (c *Channel) AsGenericFeed() feed.Feed {
 	return gf
 }
 
-// GetArticles is DEPRECATED.
-func (c *Channel) GetArticles() []feed.Article {
-	var articles []feed.Article
-	feedLink := getBestLink(c.Links)
-	feedTitle := c.Title
-	if feedTitle == "" {
-		if u, err := url.Parse(feedLink); err == nil {
-			feedTitle = u.Host
-		} else {
-			log.Debugf("could not parse url %s: %s", feedLink, err)
-		}
-	}
-	f := feed.Feed{
-		Id:    feedLink,
-		Title: feedTitle,
-		Url:   feedLink,
-	}
-	for _, t := range c.Items {
-		a := feed.Article{
-			Feed:        f,
-			Id:          t.Guid,
-			Title:       t.Title,
-			Description: getDescription(t),
-			Published:   t.PubDate.Time,
-			Url:         t.Link,
-		}
-		articles = append(articles, a)
-	}
-	return articles
-}
-
 func getBestLink(links []Link) string {
 	basicLinks := filterLinks(links, func(l Link) bool {
 		return l.Value != ""

@@ -36,5 +36,9 @@ func getArticles(url string) ([]feed.Article, error) {
 	if err != nil {
 		return nil, err
 	}
-	return feedparser.GetArticles(body)
+	f, err := feedparser.GetFeed(body)
+	if err != nil {
+		return nil, err
+	}
+	return f.Articles, nil
 }

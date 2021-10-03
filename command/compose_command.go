@@ -99,30 +99,6 @@ func (c *ComposeCommand) getFeeds() []feed.Feed {
 	return feeds
 }
 
-// getArticles is DEPRECATED
-func (c *ComposeCommand) getArticles() []feed.Article {
-	paths, err := c.Storage.ListFiles()
-	articles := []feed.Article{}
-	if err != nil {
-		log.Infof("Failed to list files: %s", err)
-	}
-	for _, path := range paths {
-		log.Debugf("Parse %s", path)
-		b, err := ioutil.ReadFile(path)
-		if err != nil {
-			log.Infof("Failed to open %s: %s", path, err)
-			continue
-		}
-		a, err := feedparser.GetArticles(b)
-		if err != nil {
-			log.Infof("Failed to parse %s: %s", path, err)
-			continue
-		}
-		articles = append(articles, a...)
-	}
-	return articles
-}
-
 func filterArticlesInFeeds(feeds []feed.Feed, intervalStart, intervalEnd time.Time) []feed.Feed {
 	var newFeeds []feed.Feed
 	for _, f := range feeds {

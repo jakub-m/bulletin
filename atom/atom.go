@@ -40,31 +40,6 @@ type Link struct {
 	Type string `xml:"type,attr"`
 }
 
-// func (f Feed) GetFeedWithArticles() feed.Feed {
-// 	var articles []feed.Article
-// 	for _, e := range f.Entries {
-// 		articles = append(articles, e.asArticle(f))
-// 	}
-
-// 	return articles
-// 	ff := feed.Feed{
-// 		Id: "",
-// 		Title: "",
-// 		Url: "",
-// 		Articles: articles,
-// 	}
-// 	f.Entries[0].asArticle()
-// }
-
-// GetArticles is DEPRECATED.
-func (f Feed) GetArticles() []feed.Article {
-	var articles []feed.Article
-	for _, e := range f.Entries {
-		articles = append(articles, e.asArticle(f))
-	}
-	return articles
-}
-
 func (atomFeed Feed) AsGenericFeed() feed.Feed {
 	articles := []feed.Article{}
 	for _, e := range atomFeed.Entries {

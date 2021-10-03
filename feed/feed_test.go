@@ -108,11 +108,11 @@ func parseArticlesFromXml(t *testing.T, path string) []feed.Article {
 	}
 	atomFeed, atomErr := atom.Parse(b)
 	if atomErr == nil && len(atomFeed.Entries) > 0 {
-		return atomFeed.GetArticles()
+		return atomFeed.AsGenericFeed().Articles
 	}
 	rssFeed, rssErr := rss.Parse(b)
 	if rssErr == nil && len(rssFeed.Items) > 0 {
-		return rssFeed.GetArticles()
+		return rssFeed.AsGenericFeed().Articles
 	}
 	t.Fatalf("No articles. Atom err: %s, RSS err: %s", atomErr, rssErr)
 	return []feed.Article{}
