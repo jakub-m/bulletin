@@ -30,7 +30,8 @@
             margin-bottom: 1rem;
         }
         .subtitle {
-            font-size: 75%;
+            font-size: 50%;
+            font-variant-caps: small-caps;
             color: var(--black) !important;
         }
         </style>
@@ -44,7 +45,7 @@
         <ul>
             {{range .Feeds}}
                 <li>
-                    <a href="#{{.Id}}" class="no-visited">{{.Title}}</a>
+                    <a href="#{{.Id}}" class="no-visited">{{.Title}}</a> ({{len (.Articles)}})
                 </li>
             {{end}}
         </ul>
@@ -52,8 +53,10 @@
         {{/* articles */}}
         {{range .Feeds}}
                 <h3 id="{{.Id}}">
-                    <a href="{{.Url}}" class="no-visited">{{.Title}}</a><br/>
-                    <a href="{{.Url}}" class="no-visited subtitle">{{.Url}}</a>
+                    <a href="{{.Url}}" class="no-visited">
+                        {{.Title}}
+                        <div class="subtitle">{{prettyUrl .Url}}</div>
+                    </a>
                 </h3>
             <ul>
             {{range .Articles}}

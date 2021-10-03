@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"html/template"
 	"math"
+	"net/url"
 	"time"
 )
 
@@ -31,6 +32,9 @@ func FormatFeedsAsHtml(periodDays int, periodEnd time.Time, pageTemplate *string
 	funcMap := template.FuncMap{
 		"articleDate": func(a Article) string {
 			return formatArticleDate(periodEnd, a)
+		},
+		"prettyUrl": func(u string) string {
+			return formatPrettyUrl(u)
 		},
 	}
 	pageTemplateBody := bulletinPageTemplateRaw
@@ -59,4 +63,14 @@ func formatDays(days int) string {
 		return "1 day"
 	}
 	return fmt.Sprintf("%d days", days)
+}
+
+func formatPrettyUrl(rawUrl string) string {
+	u, err := url.Parse(rawUrl)
+	if err != nil {
+		return rawUrl
+	}
+	u.Fragment = ""
+	u.RawQuery = ""
+	return u.String()
 }
