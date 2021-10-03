@@ -55,27 +55,6 @@ func (atomFeed Feed) AsGenericFeed() feed.Feed {
 	return gf
 }
 
-// DEPRECATE
-func (e Entry) asArticle(atomFeed Feed) feed.Article {
-	published := e.Published.Time
-	feedUrl := getBestUrl(atomFeed.Links)
-	f := feed.Feed{
-		Id:    atomFeed.Id,
-		Title: atomFeed.Title,
-		Url:   feedUrl,
-	}
-	articleUrl := getBestUrl(e.Links)
-	description := feed.GetDescriptionFromHTML(e.Content)
-	return feed.Article{
-		Feed:        f,
-		Id:          e.Id,
-		Title:       e.Title,
-		Url:         articleUrl,
-		Published:   published,
-		Description: description,
-	}
-}
-
 func (e Entry) asGenericArticle() feed.Article {
 	published := e.Published.Time
 	articleUrl := getBestUrl(e.Links)

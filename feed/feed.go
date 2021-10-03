@@ -7,21 +7,6 @@ import (
 
 type WithArticles interface {
 	AsGenericFeed() Feed
-	// GetArticles is DEPRECATED
-}
-
-// Article is a generic feed agnostic to the original channel (Atom or RSS).
-type Article struct {
-	// Feed is DEPRECATED
-	Feed Feed
-	// Id identifies same articles. Two articles with the same Id will be included in the feed summary only once.
-	Id    string
-	Title string
-	// Description is a short summary text (i.e. not HTML) of the Feed entry.
-	Description string
-	Published   time.Time
-	// Url directs to the actual article.
-	Url string
 }
 
 // Feed is an aggregate of the articles.
@@ -32,6 +17,18 @@ type Feed struct {
 	// Url from where the Feed was fetched from. Points to RSS or Atom XML document.
 	Url      string
 	Articles []Article
+}
+
+// Article is a generic feed agnostic to the original channel (Atom or RSS).
+type Article struct {
+	// Id identifies same articles. Two articles with the same Id will be included in the feed summary only once.
+	Id    string
+	Title string
+	// Description is a short summary text (i.e. not HTML) of the Feed entry.
+	Description string
+	Published   time.Time
+	// Url directs to the actual article.
+	Url string
 }
 
 func (a Article) Marshall() ([]byte, error) {
