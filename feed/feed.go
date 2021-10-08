@@ -5,10 +5,6 @@ import (
 	"time"
 )
 
-type WithArticles interface {
-	AsGenericFeed() Feed
-}
-
 // Feed is an aggregate of the articles.
 type Feed struct {
 	// Id uniquely identifies the Feed.
@@ -39,4 +35,9 @@ func UnmarshallArticle(bytes []byte) (Article, error) {
 	var a Article
 	err := json.Unmarshal(bytes, &a)
 	return a, err
+}
+
+type FeedParser interface {
+	ParseFeed(body []byte) (Feed, error)
+	Name() string
 }

@@ -5,9 +5,34 @@ import (
 	"bulletin/log"
 	btime "bulletin/time"
 	"encoding/xml"
+	"fmt"
 	"net/url"
 	"time"
 )
+
+type rssFeedParser struct {
+}
+
+var FeedParser feed.FeedParser
+
+func init() {
+	FeedParser = &rssFeedParser{}
+}
+
+func (p *rssFeedParser) Name() string {
+	return "RSS"
+}
+
+func (p *rssFeedParser) ParseFeed(body []byte) (feed.Feed, error) {
+	ch, err := Parse(body)
+	if err == nil && ch == nil {
+		err = fmt.Errorf("rss parser returned nil")
+	}
+	if err != nil {
+		return feed.Feed{}, fmt.Errorf("rssFeedParser: %v", err)
+	}
+	return ch.AsGenericFeed(), nil
+}
 
 func Parse(raw []byte) (*Channel, error) {
 	var r rssFeed
@@ -26,8 +51,6 @@ type Channel struct {
 	Items       []Item `xml:"item"`
 	Links       []Link `xml:"link"`
 }
-
-var _ feed.WithArticles = (*Channel)(nil)
 
 type Item struct {
 	Title          string   `xml:"title"`

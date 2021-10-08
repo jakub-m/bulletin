@@ -37,11 +37,11 @@ watch-template: $(bin)
 		echo watch...; \
 		sleep 1; \
 		fswatch -1 feed/page_template.gohtml && \
-		$(bin) -cache ./tmp/cache compose -template feed/page_template.gohtml -days 7 | tee bulletin.tmp.html; \
+		$(bin) -cache ./tmp/cache compose -template feed/page_template.gohtml -days 7 -output bulletin.tmp.html; \
 	done
 
 compose: $(bin)
-	$(bin) --cache ./tmp/cache/ compose --days 7 | tee bulletin.tmp.html
+	$(bin) --cache ./tmp/cache/ compose -days 7 -output bulletin.tmp.html
 
 update-bulletin: $(bin)
 	(cd bulletins; ../bin/bulletin)

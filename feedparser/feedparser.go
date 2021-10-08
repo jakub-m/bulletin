@@ -7,36 +7,15 @@ import (
 	"fmt"
 )
 
-type feedParser func(feedBody []byte) (feed.Feed, error)
-
-var parsers []feedParser = []feedParser{
-	rssParser,
-	atomParser,
-}
-
-func rssParser(feedBody []byte) (feed.Feed, error) {
-	rssFeed, err := rss.Parse(feedBody)
-	if err != nil {
-		return feed.Feed{}, err
-	}
-	if rssFeed == nil {
-		return feed.Feed{}, fmt.Errorf("RSS: parser returned nil")
-	}
-	return rssFeed.AsGenericFeed(), nil
-}
-
-func atomParser(feedBody []byte) (feed.Feed, error) {
-	atomFeed, err := atom.Parse(feedBody)
-	if err != nil {
-		return feed.Feed{}, err
-	}
-	return atomFeed.AsGenericFeed(), nil
+var parsers []feed.FeedParser = []feed.FeedParser{
+	atom.FeedParser,
+	rss.FeedParser,
 }
 
 func GetFeed(feedBody []byte) (feed.Feed, error) {
 	var errs []error
 	for _, p := range parsers {
-		if f, err := p(feedBody); err == nil {
+		if f, err := p.ParseFeed(feedBody); err == nil {
 			if len(f.Articles) > 0 {
 				return f, nil
 			} else {

@@ -4,8 +4,33 @@ import (
 	"bulletin/feed"
 	btime "bulletin/time"
 	"encoding/xml"
+	"fmt"
 	"time"
 )
+
+var FeedParser feed.FeedParser
+
+func init() {
+	FeedParser = &atomFeedParser{}
+}
+
+type atomFeedParser struct {
+}
+
+func (p *atomFeedParser) Name() string {
+	return "Atom"
+}
+
+func (p *atomFeedParser) ParseFeed(body []byte) (feed.Feed, error) {
+	ch, err := Parse(body)
+	if err == nil && ch == nil {
+		err = fmt.Errorf("atom parser returned nil")
+	}
+	if err != nil {
+		return feed.Feed{}, fmt.Errorf("atomFeedParser: %v", err)
+	}
+	return ch.AsGenericFeed(), nil
+}
 
 func Parse(raw []byte) (*Feed, error) {
 	var feed Feed
@@ -21,8 +46,6 @@ type Feed struct {
 	Entries  []Entry `xml:"entry"`
 	Links    []Link  `xml:"link"`
 }
-
-var _ feed.WithArticles = (*Feed)(nil)
 
 type Entry struct {
 	// Id identifies the entry using a universally unique and permanent URI. Two entries in a feed can have the same
