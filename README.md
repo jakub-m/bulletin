@@ -1,6 +1,6 @@
 [**The most recent bulletin**][ref_current]
 
-[ref_current]:https://htmlpreview.github.io/?https://github.com/jakub-m/bulletin/blob/mainline/bulletins/bulletin-2021-10-01.html
+[ref_current]:https://htmlpreview.github.io/?https://github.com/jakub-m/bulletin/blob/mainline/bulletins/bulletin-2021-10-08.html
 
 The [list of feeds][ref_feeds] comes from my [bookmarks][ref_tw].
 
