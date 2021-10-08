@@ -1,9 +1,9 @@
 package feed_test
 
 import (
-	"bulletin/atom"
 	"bulletin/feed"
-	"bulletin/rss"
+	"bulletin/parser/atom"
+	"bulletin/parser/rss"
 	"bulletin/testutils"
 	"encoding/json"
 	"fmt"

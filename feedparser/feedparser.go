@@ -1,9 +1,9 @@
 package feedparser
 
 import (
-	"bulletin/atom"
 	"bulletin/feed"
-	"bulletin/rss"
+	"bulletin/parser/atom"
+	"bulletin/parser/rss"
 	"fmt"
 )
 
