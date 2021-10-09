@@ -3,6 +3,7 @@ package feedparser
 import (
 	"bulletin/feed"
 	"bulletin/parser/atom"
+	"bulletin/parser/monzo"
 	"bulletin/parser/rss"
 	"fmt"
 )
@@ -10,6 +11,7 @@ import (
 var parsers []feed.FeedParser = []feed.FeedParser{
 	atom.FeedParser,
 	rss.FeedParser,
+	monzo.FeedParser,
 }
 
 func GetFeed(feedBody []byte) (feed.Feed, error) {
