@@ -8,11 +8,7 @@ import (
 	"time"
 )
 
-var FeedParser feed.FeedParser
-
-func init() {
-	FeedParser = &atomFeedParser{}
-}
+var FeedParser feed.FeedParser = &atomFeedParser{}
 
 type atomFeedParser struct {
 }

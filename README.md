@@ -1,4 +1,4 @@
-Go straight to [High Scalability](http://highscalability.com/). If there is nothing new on HS, come back here. The _bulletin_ was created for the grim times of HS without regular update.
+Go straight to [High Scalability](http://highscalability.com/). If there is nothing new on HS, come back here. The _bulletin_ was created for those grim times of HS without regular update.
 
 _Bulletin_ is updated weekly at Fridays. Friday is hardcoded.
 

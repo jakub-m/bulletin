@@ -13,11 +13,7 @@ import (
 type rssFeedParser struct {
 }
 
-var FeedParser feed.FeedParser
-
-func init() {
-	FeedParser = &rssFeedParser{}
-}
+var FeedParser feed.FeedParser = &rssFeedParser{}
 
 func (p *rssFeedParser) Name() string {
 	return "RSS"
