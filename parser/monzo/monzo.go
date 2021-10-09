@@ -11,7 +11,12 @@ import (
 	"golang.org/x/net/html"
 )
 
-var ErrCouldNotParse = fmt.Errorf("could not parse")
+var (
+	ErrCouldNotParse = fmt.Errorf("could not parse")
+	ErrBadUrl        = fmt.Errorf("bad url")
+)
+
+const monzoBlogUrl = "https://monzo.com/blog/"
 
 var FeedParser feed.FeedParser = &monzoFeedParser{}
 
@@ -26,10 +31,20 @@ func (p *monzoFeedParser) Name() string {
 
 var nilFeed feed.Feed = feed.Feed{}
 
-func (p *monzoFeedParser) ParseFeed(body []byte) (feed.Feed, error) {
+func (p *monzoFeedParser) ParseFeed(body []byte, url string) (feed.Feed, error) {
+	if !strings.HasPrefix(url, monzoBlogUrl) {
+		return nilFeed, ErrBadUrl
+	}
 	doc, err := html.Parse(bytes.NewReader(body))
 	if err != nil {
 		return nilFeed, err
+	}
+
+	blogTitle := "?"
+	if n := findFirstNode(doc, hasTag("h1")); n != nil {
+		if m := findFirstNode(n, isTextNode()); m != nil {
+			blogTitle = m.Data
+		}
 	}
 
 	nodePostListing := findUlPostListing(doc)
@@ -44,6 +59,9 @@ func (p *monzoFeedParser) ParseFeed(body []byte) (feed.Feed, error) {
 	}
 
 	return feed.Feed{
+		Id:       "Monzo - " + blogTitle,
+		Title:    "Monzo - " + blogTitle,
+		Url:      url,
 		Articles: articles,
 	}, nil
 }
@@ -92,6 +110,12 @@ type nodeMatcher func(*html.Node) bool
 func hasTag(tag string) nodeMatcher {
 	return func(n *html.Node) bool {
 		return n.Type == html.ElementNode && n.Data == tag
+	}
+}
+
+func isTextNode() nodeMatcher {
+	return func(n *html.Node) bool {
+		return n.Type == html.TextNode
 	}
 }
 

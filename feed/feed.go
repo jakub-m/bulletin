@@ -38,6 +38,6 @@ func UnmarshallArticle(bytes []byte) (Article, error) {
 }
 
 type FeedParser interface {
-	ParseFeed(body []byte) (Feed, error)
+	ParseFeed(body []byte, url string) (Feed, error)
 	Name() string
 }

@@ -19,7 +19,7 @@ func (p *rssFeedParser) Name() string {
 	return "RSS"
 }
 
-func (p *rssFeedParser) ParseFeed(body []byte) (feed.Feed, error) {
+func (p *rssFeedParser) ParseFeed(body []byte, url string) (feed.Feed, error) {
 	ch, err := Parse(body)
 	if err == nil && ch == nil {
 		err = fmt.Errorf("rss parser returned nil")
@@ -59,7 +59,7 @@ type Item struct {
 
 type Link struct {
 	Value string `xml:",chardata"`
-	Href  string `xml:"href,attr"`
+	Href  string `xml:"href,attr"` // TODO fix relative urls
 	Rel   string `xml:"rel,attr"`
 	Type  string `xml:"type,attr"`
 }

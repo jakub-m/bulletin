@@ -17,7 +17,7 @@ func (p *atomFeedParser) Name() string {
 	return "Atom"
 }
 
-func (p *atomFeedParser) ParseFeed(body []byte) (feed.Feed, error) {
+func (p *atomFeedParser) ParseFeed(body []byte, url string) (feed.Feed, error) {
 	ch, err := Parse(body)
 	if err == nil && ch == nil {
 		err = fmt.Errorf("atom parser returned nil")
@@ -55,7 +55,7 @@ type Entry struct {
 
 type Link struct {
 	Rel  string `xml:"rel,attr"`
-	Href string `xml:"href,attr"`
+	Href string `xml:"href,attr"` // TODO fix relative links
 	Type string `xml:"type,attr"`
 }
 

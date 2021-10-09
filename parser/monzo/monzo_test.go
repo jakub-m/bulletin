@@ -11,7 +11,12 @@ import (
 )
 
 func TestMonzoParser(t *testing.T) {
-	f := parseFromFile(t, &monzoFeedParser{}, "testdata/monzo_com_blog_technology.html")
+	f := parseFromFile(t, &monzoFeedParser{}, "testdata/monzo_com_blog_technology.html", monzoBlogUrl)
+
+	assert.Equal(t, "Monzo - Technology", f.Id)
+	assert.Equal(t, "Monzo - Technology", f.Title)
+	assert.Equal(t, monzoBlogUrl, f.Url)
+
 	assert.Len(t, f.Articles, 13)
 	firstArticle := f.Articles[0]
 
@@ -22,13 +27,13 @@ func TestMonzoParser(t *testing.T) {
 	assert.Equal(t, firstArticle.Url, "/blog/2021/09/30/documenting-pull-requests-is-as-important-as-writing-good-code")
 }
 
-func parseFromFile(t *testing.T, parser feed.FeedParser, path string) feed.Feed {
-	file, err := os.Open(path)
+func parseFromFile(t *testing.T, parser feed.FeedParser, filePath, url string) feed.Feed {
+	file, err := os.Open(filePath)
 	assert.NoError(t, err)
 	defer file.Close()
 	body, err := io.ReadAll(file)
 	assert.NoError(t, err)
-	fe, err := parser.ParseFeed(body)
+	fe, err := parser.ParseFeed(body, url)
 	assert.NoError(t, err)
 	return fe
 }
