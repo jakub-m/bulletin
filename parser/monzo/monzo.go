@@ -13,7 +13,7 @@ import (
 
 var ErrCouldNotParse = fmt.Errorf("could not parse")
 
-var FeedParser = monzoFeedParser{}
+var FeedParser feed.FeedParser = &monzoFeedParser{}
 
 type monzoFeedParser struct {
 }
