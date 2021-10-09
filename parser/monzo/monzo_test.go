@@ -11,7 +11,7 @@ import (
 )
 
 func TestMonzoParser(t *testing.T) {
-	f := parseFromFile(t, &FeedParser{}, "testdata/monzo_com_blog_technology.html")
+	f := parseFromFile(t, &monzoFeedParser{}, "testdata/monzo_com_blog_technology.html")
 	assert.Len(t, f.Articles, 13)
 	firstArticle := f.Articles[0]
 
