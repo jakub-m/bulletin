@@ -1,11 +1,11 @@
 bin = bin/bulletin
-gofiles = $(shell find . -type f -name \*.go)
+gofiles = $(shell find . -type f -name \*.go -or -name \*.gohtml)
 
 default: test build
 
 build: $(bin)
 
-test: $(gofiles)
+test: $(gofiles) 
 	go test ./...
 
 fmt: $(gofiles)
