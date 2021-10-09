@@ -2,7 +2,6 @@ package feed
 
 import (
 	"encoding/json"
-	"fmt"
 	"net/url"
 	"time"
 )
@@ -46,10 +45,15 @@ type FeedParser interface {
 
 func FixRelativeUrls(f *Feed) {
 	for i, art := range f.Articles {
-		originalUrl, err := url.Parse(art.Url)
-		if err != nil || originalUrl.Host != "" {
+		originalArtUrl, err := url.Parse(art.Url)
+		if err != nil || originalArtUrl.Host != "" {
 			continue
 		}
-		f.Articles[i].Url = fmt.Sprintf("%s/%s", f.Url, art.Url)
+		newArtUrl, err := url.Parse(f.Url)
+		if err != nil {
+			continue
+		}
+		newArtUrl.Path = art.Url
+		f.Articles[i].Url = newArtUrl.String()
 	}
 }

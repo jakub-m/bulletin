@@ -92,7 +92,7 @@ func TestDropboxArticles(t *testing.T) {
 
 func TestFixRelativeUrls(t *testing.T) {
 	actual := &feed.Feed{
-		Url: "http://example.com",
+		Url: "http://example.com/abc",
 		Articles: []feed.Article{
 			{
 				Url: "",
@@ -112,16 +112,16 @@ func TestFixRelativeUrls(t *testing.T) {
 		},
 	}
 	expected := &feed.Feed{
-		Url: "http://example.com",
+		Url: "http://example.com/abc",
 		Articles: []feed.Article{
 			{
-				Url: "http://example.com/",
+				Url: "http://example.com",
 			},
 			{
 				Url: "http://example.com/foo",
 			},
 			{
-				Url: "http://example.com//bar",
+				Url: "http://example.com/bar",
 			},
 			{
 				Url: "http://example.com/xoxoxo",
