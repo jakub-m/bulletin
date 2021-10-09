@@ -46,7 +46,7 @@ func (c *FetchCommand) Execute(args []string) error {
 
 	for _, r := range fetcher.GetAll(urls) {
 		if r.Err == nil {
-			err = c.Storage.StoreFeedBody(r.Body)
+			err = c.Storage.StoreFeedBodyMeta(r.Body, r.Url)
 			if err != nil {
 				return err
 			}

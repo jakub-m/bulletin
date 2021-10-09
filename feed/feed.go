@@ -2,6 +2,8 @@ package feed
 
 import (
 	"encoding/json"
+	"fmt"
+	"net/url"
 	"time"
 )
 
@@ -40,4 +42,14 @@ func UnmarshallArticle(bytes []byte) (Article, error) {
 type FeedParser interface {
 	ParseFeed(body []byte, url string) (Feed, error)
 	Name() string
+}
+
+func FixRelativeUrls(f *Feed) {
+	for i, art := range f.Articles {
+		originalUrl, err := url.Parse(art.Url)
+		if err != nil || originalUrl.Host != "" {
+			continue
+		}
+		f.Articles[i].Url = fmt.Sprintf("%s/%s", f.Url, art.Url)
+	}
 }

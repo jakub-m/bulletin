@@ -66,7 +66,7 @@ func (c *ComposeCommand) Execute(args []string) error {
 	if err != nil {
 		return err
 	}
-	w, err, actualPath := newOutput(opts.output, intervalEnd)
+	w, actualPath, err := newOutput(opts.output, intervalEnd)
 	if err != nil {
 		return err
 	}
@@ -77,21 +77,27 @@ func (c *ComposeCommand) Execute(args []string) error {
 }
 
 func (c *ComposeCommand) getFeeds() []feed.Feed {
-	paths, err := c.Storage.ListFiles()
+	feedPaths, err := c.Storage.ListFeedFiles()
 	if err != nil {
 		log.Infof("Failed to list files: %s", err)
 	}
 	feeds := []feed.Feed{}
-	for _, path := range paths {
-		log.Debugf("Parse %s", path)
-		b, err := ioutil.ReadFile(path)
+	for _, feedPath := range feedPaths {
+		log.Debugf("Parse %s", feedPath)
+		body, err := ioutil.ReadFile(feedPath)
 		if err != nil {
-			log.Infof("Failed to open %s: %s", path, err)
+			log.Infof("Failed to open %s: %v", feedPath, err)
 			continue
 		}
-		f, err := feedparser.GetFeed(b)
+		meta, err := storage.GetMetaForFeedPath(feedPath)
 		if err != nil {
-			log.Infof("Failed to parse %s: %s", path, err)
+			log.Infof("Failed to load meta for %s: %v", feedPath, err)
+			continue
+		}
+		f, err := feedparser.GetFeed(body, meta.Url)
+		feed.FixRelativeUrls(&f)
+		if err != nil {
+			log.Infof("Failed to parse %s: %s", feedPath, err)
 			continue
 		}
 		feeds = append(feeds, f)
@@ -131,16 +137,16 @@ func sortFeeds(feeds []feed.Feed) {
 	})
 }
 
-func newOutput(outPath string, intervalEnd time.Time) (io.WriteCloser, error, string) {
+func newOutput(outPath string, intervalEnd time.Time) (io.WriteCloser, string, error) {
 	if outPath == "-" {
-		return &nopCloser{os.Stdout}, nil, "stdout"
+		return &nopCloser{os.Stdout}, "stdout", nil
 	}
 	if fileInfo, err := os.Stat(outPath); err == nil && fileInfo.IsDir() {
 		fname := fmt.Sprintf("bulletin-%s.html", intervalEnd.Format(filenameTimeLayout))
 		outPath = path.Join(outPath, fname)
 	}
 	w, err := os.Create(outPath)
-	return w, err, outPath
+	return w, outPath, err
 }
 
 func getComposeOptions(args []string) (composeOptions, error) {

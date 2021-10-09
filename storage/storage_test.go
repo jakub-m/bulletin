@@ -35,7 +35,7 @@ func TestStorage(t *testing.T) {
 	err = st.StoreFeedBody([]byte(longText))
 	assert.NoError(t, err)
 
-	paths, err := st.ListFiles()
+	paths, err := st.ListFeedFiles()
 	assert.NoError(t, err)
 
 	expected := make(map[string]bool)

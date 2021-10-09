@@ -90,6 +90,52 @@ func TestDropboxArticles(t *testing.T) {
 	assert.Equal(t, asJson(t, expected), asJson(t, actual))
 }
 
+func TestFixRelativeUrls(t *testing.T) {
+	actual := &feed.Feed{
+		Url: "http://example.com",
+		Articles: []feed.Article{
+			{
+				Url: "",
+			},
+			{
+				Url: "foo",
+			},
+			{
+				Url: "/bar",
+			},
+			{
+				Url: "http://example.com/xoxoxo",
+			},
+			{
+				Url: "http://localhost",
+			},
+		},
+	}
+	expected := &feed.Feed{
+		Url: "http://example.com",
+		Articles: []feed.Article{
+			{
+				Url: "http://example.com/",
+			},
+			{
+				Url: "http://example.com/foo",
+			},
+			{
+				Url: "http://example.com//bar",
+			},
+			{
+				Url: "http://example.com/xoxoxo",
+			},
+			{
+				Url: "http://localhost",
+			},
+		},
+	}
+
+	feed.FixRelativeUrls(actual)
+	assert.Equal(t, expected, actual)
+}
+
 func asJson(t *testing.T, a interface{}) string {
 	t.Helper()
 	j, err := json.MarshalIndent(a, "", " ")

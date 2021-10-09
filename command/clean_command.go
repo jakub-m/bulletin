@@ -19,16 +19,20 @@ func (c *CleanCommand) Execute(args []string) error {
 		return nil
 	}
 	succeed := 0
-	files, err := c.Storage.ListFiles()
+	feedPaths, err := c.Storage.ListFeedFiles()
 	if err != nil {
 		return err
 	}
-	for _, path := range files {
+	remove := func(path string) {
 		if err := os.Remove(path); err == nil {
 			succeed++
 		} else {
-			log.Infof("failed to remove %s: %s", path, err)
+			log.Infof("failed to remove %s: %v", path, err)
 		}
+	}
+	for _, feedPath := range feedPaths {
+		remove(feedPath)
+		remove(storage.GetMetaPath(feedPath))
 	}
 	log.Infof("removed %d files from %s", succeed, c.Storage.Path)
 	return nil

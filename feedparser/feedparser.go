@@ -14,10 +14,10 @@ var parsers []feed.FeedParser = []feed.FeedParser{
 	monzo.FeedParser,
 }
 
-func GetFeed(feedBody []byte) (feed.Feed, error) {
+func GetFeed(feedBody []byte, url string) (feed.Feed, error) {
 	var errs []error
 	for _, p := range parsers {
-		if f, err := p.ParseFeed(feedBody); err == nil {
+		if f, err := p.ParseFeed(feedBody, url); err == nil {
 			if len(f.Articles) > 0 {
 				return f, nil
 			} else {

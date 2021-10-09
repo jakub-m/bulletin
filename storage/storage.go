@@ -3,29 +3,70 @@ package storage
 import (
 	"bulletin/log"
 	"crypto/md5"
+	"encoding/json"
 	"fmt"
+	"io/ioutil"
 	"os"
 	"path"
 	"strings"
 )
 
-const feedSuffix = ".feed"
+const (
+	feedSuffix     = ".feed"
+	feedMetaSuffix = ".meta"
+)
 
 type Storage struct {
 	// Path is the path on the disk where the files will be stored.
 	Path string
 }
 
-// StoreFeedBody stores body of the feed (raw XML) to a file with name being a hash of its content.
-func (st *Storage) StoreFeedBody(body []byte) error {
-	fname := getFileName(body)
-	p := path.Join(st.Path, fname)
-	log.Debugf("Write %d B to %s", len(body), p)
-	return os.WriteFile(p, body, 0644)
+// FeedMeta is ad-hoc solution to address lack of url for Monzo blog. It
+// can be simplified by uniting "meta" and "feed body" entities.
+type FeedMeta struct {
+	Url string `json:"url"`
 }
 
-// ListFiles returns paths to all the stored feed files.
-func (st *Storage) ListFiles() ([]string, error) {
+func (st *Storage) StoreFeedBodyMeta(body []byte, url string) error {
+	meta := FeedMeta{
+		Url: url,
+	}
+	fname := getFileName(body)
+	metaPath := path.Join(st.Path, fname+feedMetaSuffix)
+	if err := st.storeFeedMeta(metaPath, meta); err != nil {
+		return err
+	}
+	bodyPath := path.Join(st.Path, fname)
+	if err := st.storeFeedBody(bodyPath, body); err != nil {
+		return err
+	}
+	return nil
+}
+
+// StoreFeedBody stores body of the feed (raw XML) to a file with name being a hash of its content.
+// DEPRECATED
+func (st *Storage) StoreFeedBody(body []byte) error {
+	fname := getFileName(body)
+	bodyPath := path.Join(st.Path, fname)
+	return st.storeFeedBody(bodyPath, body)
+}
+
+func (st *Storage) storeFeedBody(filePath string, body []byte) error {
+	log.Debugf("Write %d B to %s", len(body), filePath)
+	return os.WriteFile(filePath, body, 0644)
+}
+
+func (st *Storage) storeFeedMeta(filePath string, meta FeedMeta) error {
+	j, err := json.MarshalIndent(meta, "", " ")
+	if err != nil {
+		return err
+	}
+	log.Debugf("Write %d B to %s", len(filePath), filePath)
+	return os.WriteFile(filePath, j, 0644)
+}
+
+// ListFeedFiles returns paths to all the stored feed files.
+func (st *Storage) ListFeedFiles() ([]string, error) {
 	basePath := st.Path
 	entries, err := os.ReadDir(basePath)
 	if err != nil {
@@ -38,6 +79,21 @@ func (st *Storage) ListFiles() ([]string, error) {
 		}
 	}
 	return feedPaths, nil
+}
+
+func GetMetaForFeedPath(feedPath string) (FeedMeta, error) {
+	metaPath := GetMetaPath(feedPath)
+	b, err := ioutil.ReadFile(metaPath)
+	if err != nil {
+		return FeedMeta{}, err
+	}
+	meta := &FeedMeta{}
+	err = json.Unmarshal(b, meta)
+	return *meta, err
+}
+
+func GetMetaPath(feedPath string) string {
+	return feedPath + feedMetaSuffix
 }
 
 func getFileName(body []byte) string {

@@ -8,6 +8,7 @@ import (
 const workerCount = 5
 
 type GetAllResult struct {
+	Url  string
 	Body []byte
 	Err  error
 }
@@ -50,7 +51,11 @@ func worker(wg *sync.WaitGroup, urlChan <-chan string, resultChan chan<- GetAllR
 			log.Infof("Error. Could not fetch %s: %s", url, err)
 		}
 		log.Debugf("send result to resultChan %dB, %s", len(b), err)
-		resultChan <- GetAllResult{b, err}
+		resultChan <- GetAllResult{
+			Url:  url,
+			Body: b,
+			Err:  err,
+		}
 	}
 	log.Debugf("worker done")
 	wg.Done()
