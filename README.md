@@ -5,7 +5,7 @@ _Bulletin_ is updated weekly at Fridays. Friday is hardcoded.
 [**The most recent _bulletin_ here!**][ref_current]
 
 
-[ref_current]:https://htmlpreview.github.io/?https://github.com/jakub-m/bulletin/blob/mainline/bulletins/bulletin-2021-10-08.html
+[ref_current]:https://htmlpreview.github.io/?https://github.com/jakub-m/bulletin/blob/mainline/bulletins/bulletin-2021-10-15.html
 
 The [list of feeds][ref_feeds] comes from my [bookmarks][ref_tw].
 
