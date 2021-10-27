@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<title>Ayke van Laëthem</title>
+		<link rel="stylesheet" href="/assets/common.css"/>
+		<link rel="stylesheet" href="/assets/prism.css"/>
+		<link rel="icon" href="/assets/favicon.png"/>
+		<link rel="icon" sizes="128x128" href="/assets/logo-128.png"/>
+		<link rel="alternate" type="application/atom+xml" title="Blog" href="/feed.xml" />
+		<script src="/assets/common.js" async></script>
+		<script src="/assets/prism.js" defer></script>
+
+	</head>
+	<body vocab="http://schema.org/" typeof="Blog">
+
+		<header typeof="WPHeader">
+			<a href="/" id="title">
+				<img src="/assets/logo.png" class="avatar" width="43" height="43"/>
+				<span class="text">Ayke van Laëthem</span>
+			</a>
+			<div id="menu">
+
+<a href="/ledstrip">Ledstrip</a><a href="/about">About me</a>
+			</div>
+		</header>
+
+		<main>
+
+
+<article class="post" property="blogPost" typeof="BlogPosting">
+	<h1 property="headline name"><a href="/2021/06/what-is-int" property="url">What&#39;s the int type?</a></h1>
+	<time datetime="2021-06-25T17:01:44&#43;02:00" class="authored" property="datePublished">25 juni 2021</time>
+	<p property="description"><p>The int type is present in many programming languages, but their meaning varies. Unlike what many people think, it only indirectly related to pointer size or architecture word size.</p>
+</p>
+</article>
+
+<article class="post" property="blogPost" typeof="BlogPosting">
+	<h1 property="headline name"><a href="/2021/02/avr-bitshift" property="url">Optimizing constant bitshifts on AVR</a></h1>
+	<time datetime="2021-02-24T17:54:42&#43;01:00" class="authored" property="datePublished">24 februari 2021</time>
+	<p property="description"><p>The AVR architecture does not natively support arbitrary bit shifts. Therefore, compilers will have to be creative to make shifts short and fast. This post explores how a compiler could emit such constant shifts inline.</p>
+</p>
+</article>
+
+<article class="post" property="blogPost" typeof="BlogPosting">
+	<h1 property="headline name"><a href="/2020/09/gc-tinygo" property="url">Garbage collection in TinyGo</a></h1>
+	<time datetime="2020-09-24T22:22:10&#43;02:00" class="authored" property="datePublished">24 september 2020</time>
+	<p property="description"><p>An explanation of how garbage collectors work including some pseudocode how a real GC could be implemented.</p>
+</p>
+</article>
+
+<article class="post" property="blogPost" typeof="BlogPosting">
+	<h1 property="headline name"><a href="/2020/09/tinygo-esp32" property="url">ESP32 and ESP8266 support in TinyGo</a></h1>
+	<time datetime="2020-09-22T13:42:11&#43;02:00" class="authored" property="datePublished">22 september 2020</time>
+	<p property="description"><p>How ESP32/ESP8266 support got added to TinyGo, how we got there, and the current status of support.</p>
+</p>
+</article>
+
+<article class="post" property="blogPost" typeof="BlogPosting">
+	<h1 property="headline name"><a href="/2020/06/simavr-debug" property="url">Debug AVR programs using simavr and avr-gdb</a></h1>
+	<time datetime="2020-06-22T21:03:44&#43;02:00" class="authored" property="datePublished">22 juni 2020</time>
+	<p property="description"><p>Quick note to get started with debugging AVR programs in a simulator</p>
+</p>
+</article>
+
+<article class="post" property="blogPost" typeof="BlogPosting">
+	<h1 property="headline name"><a href="/2019/12/colors" property="url">What RGB and sRGB mean</a></h1>
+	<time datetime="2019-12-29T16:42:06&#43;01:00" class="authored" property="datePublished">29 december 2019</time>
+	<p property="description"><p>What RGB really means, what sRGB and gamma are and how to correctly blend colors.</p>
+</p>
+</article>
+
+<article class="post" property="blogPost" typeof="BlogPosting">
+	<h1 property="headline name"><a href="/2019/09/samd21-dma" property="url">DMA on the SAMD21</a></h1>
+	<time datetime="2019-09-19T13:05:40&#43;02:00" class="authored" property="datePublished">19 september 2019</time>
+	<p property="description"><p>How to configure DMA on the SAMD21, for example to use it with SPI.</p>
+</p>
+</article>
+
+<article class="post" property="blogPost" typeof="BlogPosting">
+	<h1 property="headline name"><a href="/2019/07/tinygo-plaground-simulator" property="url">How the TinyGo playground simulates hardware</a></h1>
+	<time datetime="2019-07-17T20:45:33&#43;02:00" class="authored" property="datePublished">17 juli 2019</time>
+	<p property="description"><p>The TinyGo playground simulates real hardware, including an e-paper display. How can it do such things? This post explains a bit about how the playground works to make this possible.</p>
+</p>
+</article>
+
+<article class="post" property="blogPost" typeof="BlogPosting">
+	<h1 property="headline name"><a href="/2019/04/llvm-from-go" property="url">LLVM from a Go perspective</a></h1>
+	<time datetime="2019-04-28T17:21:54&#43;02:00" class="authored" property="datePublished">28 april 2019</time>
+	<p property="description"><p>A high-level overview of LLVM IR, showing how two simple Go functions can be translated to IR.</p>
+</p>
+</article>
+
+<article class="post" property="blogPost" typeof="BlogPosting">
+	<h1 property="headline name"><a href="/2019/02/tinygo-goroutines" property="url">Goroutines in TinyGo</a></h1>
+	<time datetime="2019-02-25T13:07:57&#43;01:00" class="authored" property="datePublished">25 februari 2019</time>
+	<p property="description"><p>TinyGo uses LLVM coroutines to implement goroutines. This post explains what coroutines are and how they're used to implement goroutines.</p>
+</p>
+</article>
+
+
+		</main>
+
+		<footer typeof="WPFooter">
+			<nav>
+				<a href="/archive/">Archive</a>
+			</nav>
+		</footer>
+	</body>
+</html>
+
+
