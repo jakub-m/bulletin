@@ -3,6 +3,7 @@ package monzo
 
 import (
 	"bulletin/feed"
+	hp "bulletin/htmlparser"
 	"bytes"
 	"fmt"
 	"strings"
@@ -41,8 +42,8 @@ func (p *monzoFeedParser) ParseFeed(body []byte, url string) (feed.Feed, error) 
 	}
 
 	blogTitle := "?"
-	if n := findFirstNode(doc, hasTag("h1")); n != nil {
-		if m := findFirstNode(n, isTextNode()); m != nil {
+	if n := hp.FindFirstNode(doc, hp.HasTag("h1")); n != nil {
+		if m := hp.FindFirstNode(n, hp.IsTextNode()); m != nil {
 			blogTitle = m.Data
 		}
 	}
@@ -67,126 +68,40 @@ func (p *monzoFeedParser) ParseFeed(body []byte, url string) (feed.Feed, error) 
 }
 
 func findUlPostListing(doc *html.Node) *html.Node {
-	return findFirstNode(doc, func(n *html.Node) bool {
-		return n.Type == html.ElementNode && n.Data == "ul" && hasAttr(n, "class", startingWith("PostListing"))
+	return hp.FindFirstNode(doc, func(n *html.Node) bool {
+		return n.Type == html.ElementNode && n.Data == "ul" && hp.NodeHasAttr(n, "class", hp.StartingWith("PostListing"))
 	})
 }
 
 func findAllLiPosts(doc *html.Node) []*html.Node {
-	return findAllNodesRec(doc, func(n *html.Node) bool {
-		return n.Type == html.ElementNode && n.Data == "li" && hasAttr(n, "class", startingWith("PostListing"))
+	return hp.FindAllNodesRec(doc, func(n *html.Node) bool {
+		return n.Type == html.ElementNode && n.Data == "li" && hp.NodeHasAttr(n, "class", hp.StartingWith("PostListing"))
 	})
 }
 
 func getArticleFromNode(doc *html.Node) feed.Article {
 	article := feed.Article{}
 
-	if n := findFirstNode(doc, hasTag("h2")); n != nil {
-		title := firstChildNodeText(n)
+	if n := hp.FindFirstNode(doc, hp.HasTag("h2")); n != nil {
+		title := hp.FirstChildNodeText(n)
 		article.Id = title
 		article.Title = title
 	}
-	if n := findFirstNode(doc, hasTag("p")); n != nil {
-		article.Description = firstChildNodeText(n)
+	if n := hp.FindFirstNode(doc, hp.HasTag("p")); n != nil {
+		article.Description = hp.FirstChildNodeText(n)
 	}
-	if n := findFirstNode(doc, hasTag("time")); n != nil {
+	if n := hp.FindFirstNode(doc, hp.HasTag("time")); n != nil {
 		//article.Description = firstChildNodeText(n)
 		//time here
-		timeString := strings.Trim(firstChildNodeText(n), " ")
+		timeString := strings.Trim(hp.FirstChildNodeText(n), " ")
 		if t, err := time.Parse("2 January 2006", timeString); err == nil {
 			article.Published = t
 		}
 	}
-	if n := findFirstNode(doc, hasTag("a")); n != nil {
-		href := getAttrValue(n.Attr, "href")
+	if n := hp.FindFirstNode(doc, hp.HasTag("a")); n != nil {
+		href := hp.GetAttrValue(n.Attr, "href")
 		article.Url = href
 	}
 
 	return article
-}
-
-type nodeMatcher func(*html.Node) bool
-
-func hasTag(tag string) nodeMatcher {
-	return func(n *html.Node) bool {
-		return n.Type == html.ElementNode && n.Data == tag
-	}
-}
-
-func isTextNode() nodeMatcher {
-	return func(n *html.Node) bool {
-		return n.Type == html.TextNode
-	}
-}
-
-func firstChildNodeText(doc *html.Node) string {
-	if t := findFirstNode(doc, func(n *html.Node) bool {
-		return n.Type == html.TextNode
-	}); t != nil {
-		return t.Data
-	}
-	return ""
-}
-
-func findFirstNode(n *html.Node, fn nodeMatcher) *html.Node {
-	var f func(*html.Node) *html.Node
-	f = func(n *html.Node) *html.Node {
-		if fn(n) {
-			return n
-		}
-		for c := n.FirstChild; c != nil; c = c.NextSibling {
-			if r := f(c); r != nil {
-				return r
-			}
-		}
-		return nil
-	}
-	return f(n)
-}
-
-func findAllNodesRec(n *html.Node, fn nodeMatcher) []*html.Node {
-	var f func(*html.Node) []*html.Node
-	f = func(n *html.Node) []*html.Node {
-		nodes := []*html.Node{}
-		if fn(n) {
-			nodes = append(nodes, n)
-		}
-		for c := n.FirstChild; c != nil; c = c.NextSibling {
-			if r := f(c); r != nil {
-				nodes = append(nodes, r...)
-			}
-		}
-		return nodes
-	}
-	return f(n)
-}
-
-type stringMatcher func(string) bool
-
-func startingWith(prefix string) stringMatcher {
-	return func(s string) bool {
-		return strings.HasPrefix(s, prefix)
-	}
-}
-
-func hasAttr(n *html.Node, key string, matcher stringMatcher) bool {
-	for _, attr := range n.Attr {
-		if attr.Key == key {
-			for _, part := range strings.Split(attr.Val, " ") {
-				if matcher(part) {
-					return true
-				}
-			}
-		}
-	}
-	return false
-}
-
-func getAttrValue(attributes []html.Attribute, key string) string {
-	for _, a := range attributes {
-		if a.Key == key {
-			return a.Val
-		}
-	}
-	return ""
 }

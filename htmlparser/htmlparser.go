@@ -79,6 +79,7 @@ func IsTextNode() NodeMatcher {
 
 type StringMatcher func(string) bool
 
+// NodeHasAttr is deprecated, use HasAttr instead.
 func NodeHasAttr(n *html.Node, key string, matcher StringMatcher) bool {
 	for _, attr := range n.Attr {
 		if attr.Key == key {
