@@ -20,7 +20,6 @@ nl="
 
 dir=$(cd $(dirname $0) && pwd)
 
-make build
 cd bulletins
 ../bin/bulletin
 cd .. 

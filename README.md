@@ -1,4 +1,3 @@
-make[1]: Nothing to be done for `build'.
 [**The most recent _bulletin_ here!**][ref_current]
 
 [ref_current]:https://htmlpreview.github.io/?https://github.com/jakub-m/bulletin/blob/mainline/bulletins/bulletin-2021-10-29.html
