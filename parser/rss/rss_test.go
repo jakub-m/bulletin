@@ -48,6 +48,11 @@ func TestParseBerthub(t *testing.T) {
 	assert.Greater(t, len(channel.Items), 0)
 }
 
+func TestEncodingIso_8859_1(t *testing.T) {
+	channel := parseRssFromFile(t, "testdata/rss_sifter.xml")
+	assert.Greater(t, len(channel.Items), 0)
+}
+
 func parseRssFromFile(t *testing.T, path string) *Channel {
 	f, err := os.Open(path)
 	assert.NoError(t, err)

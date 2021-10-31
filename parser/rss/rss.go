@@ -4,8 +4,10 @@ import (
 	"bulletin/feed"
 	"bulletin/log"
 	btime "bulletin/time"
+	"bytes"
 	"encoding/xml"
 	"fmt"
+	"io"
 	"net/url"
 	"time"
 )
@@ -32,7 +34,14 @@ func (p *rssFeedParser) ParseFeed(body []byte, url string) (feed.Feed, error) {
 
 func Parse(raw []byte) (*Channel, error) {
 	var r rssFeed
-	err := xml.Unmarshal(raw, &r)
+	decoder := xml.NewDecoder(bytes.NewBuffer(raw))
+	decoder.CharsetReader = func(charset string, input io.Reader) (io.Reader, error) {
+		if charset == "iso-8859-1" {
+			return input, nil
+		}
+		return nil, fmt.Errorf("charset not supported %v", charset)
+	}
+	err := decoder.Decode(&r)
 	return r.Channel, err
 }
 
