@@ -15,7 +15,7 @@ import (
 )
 
 func TestGoogleBlogArticles(t *testing.T) {
-	actual := getFeed(t, "../testdata/atom_google_ai_blog.xml")
+	actual := getFeed(t, "../parser/atom/testdata/atom_google_ai_blog.xml")
 	expected := feed.Feed{
 		Id:    "tag:blogger.com,1999:blog-8474926331452026626",
 		Title: "Google AI Blog",
@@ -34,7 +34,7 @@ func TestGoogleBlogArticles(t *testing.T) {
 }
 
 func TestNetflixArticles(t *testing.T) {
-	actual := getFeed(t, "../testdata/rss_netflix_techblog.xml")
+	actual := getFeed(t, "../parser/rss/testdata/rss_netflix_techblog.xml")
 	expected := feed.Feed{
 		Id:    "https://netflixtechblog.com?source=rss----2615bd06b42e---4",
 		Title: "Netflix TechBlog - Medium",
@@ -53,7 +53,7 @@ func TestNetflixArticles(t *testing.T) {
 }
 
 func TestMuratArticles(t *testing.T) {
-	actual := getFeed(t, "../testdata/atom_murat.xml")
+	actual := getFeed(t, "../parser/atom/testdata/atom_murat.xml")
 	expected := feed.Feed{
 		Id:    "tag:blogger.com,1999:blog-8436330762136344379",
 		Title: "Metadata",
@@ -72,7 +72,7 @@ func TestMuratArticles(t *testing.T) {
 }
 
 func TestDropboxArticles(t *testing.T) {
-	actual := getFeed(t, "../testdata/rss_dropbox.xml")
+	actual := getFeed(t, "../parser/rss/testdata/rss_dropbox.xml")
 	expected := feed.Feed{
 		Id:    "https://dropbox.tech/feed",
 		Title: "dropbox.tech",

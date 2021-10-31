@@ -12,7 +12,7 @@ import (
 )
 
 func TestParseSchema(t *testing.T) {
-	actual := parseRssFromFile(t, "../../testdata/rss_schema.xml")
+	actual := parseRssFromFile(t, "testdata/rss_schema.xml")
 	expected := &Channel{
 		Title:       "Title",
 		Description: "Description",
@@ -31,7 +31,7 @@ func TestParseSchema(t *testing.T) {
 }
 
 func TestParseNetflix(t *testing.T) {
-	channel := parseRssFromFile(t, "../../testdata/rss_netflix_techblog.xml")
+	channel := parseRssFromFile(t, "testdata/rss_netflix_techblog.xml")
 	assert.Equal(t, "Netflix TechBlog - Medium", channel.Title)
 	assert.Equal(t, 113, len(channel.Description))
 	assert.Equal(t, 10, len(channel.Items))
@@ -44,7 +44,7 @@ func TestParseNetflix(t *testing.T) {
 }
 
 func TestParseBerthub(t *testing.T) {
-	channel := parseRssFromFile(t, "../../testdata/rss_berthub.xml")
+	channel := parseRssFromFile(t, "testdata/rss_berthub.xml")
 	assert.Greater(t, len(channel.Items), 0)
 }
 

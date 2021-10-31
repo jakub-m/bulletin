@@ -12,7 +12,7 @@ import (
 )
 
 func TestParserGoogleBlog(t *testing.T) {
-	feed := parseAtomFromFile(t, "../../testdata/atom_google_ai_blog.xml")
+	feed := parseAtomFromFile(t, "testdata/atom_google_ai_blog.xml")
 
 	assert.Equal(t, "tag:blogger.com,1999:blog-8474926331452026626", feed.Id)
 	assert.Equal(t, "Google AI Blog", feed.Title)
@@ -33,7 +33,7 @@ func TestParserGoogleBlog(t *testing.T) {
 }
 
 func TestParseAtomSchema(t *testing.T) {
-	feed := parseAtomFromFile(t, "../../testdata/atom_schema.xml")
+	feed := parseAtomFromFile(t, "testdata/atom_schema.xml")
 
 	expected := &Feed{
 		Id:       "Id",
