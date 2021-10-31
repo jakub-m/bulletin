@@ -1,6 +1,7 @@
 package atom
 
 import (
+	"fmt"
 	"io"
 	"os"
 	"sort"
@@ -70,6 +71,19 @@ func TestParseXmlTime(t *testing.T) {
 		e := x.parse(tc.time)
 		assert.NoError(t, e)
 		assert.Equal(t, tc.expected, x.String())
+	}
+}
+
+func TestParseVarious(t *testing.T) {
+	files := []string{
+		"testdata/atom_jvns_ca.xml",
+	}
+
+	for _, file := range files {
+		f := parseAtomFromFile(t, file)
+		assert.Greater(t, len(f.Entries), 0, fmt.Sprintf("expected articles for %s", file))
+		g := f.AsGenericFeed()
+		assert.Greater(t, len(g.Articles), 0, fmt.Sprintf("expected articles for generic feed of %s", file))
 	}
 }
 

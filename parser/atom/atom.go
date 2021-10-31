@@ -2,6 +2,7 @@ package atom
 
 import (
 	"bulletin/feed"
+	"bulletin/log"
 	btime "bulletin/time"
 	"encoding/xml"
 	"fmt"
@@ -49,6 +50,7 @@ type Entry struct {
 	Id        string   `xml:"id"`
 	Title     string   `xml:"title"`
 	Published *XmlTime `xml:"published"`
+	Updated   *XmlTime `xml:"updated"`
 	Links     []Link   `xml:"link"`
 	Content   string   `xml:"content"`
 }
@@ -62,7 +64,12 @@ type Link struct {
 func (atomFeed Feed) AsGenericFeed() feed.Feed {
 	articles := []feed.Article{}
 	for _, e := range atomFeed.Entries {
-		articles = append(articles, e.asGenericArticle())
+		genericArt, err := e.asGenericArticle()
+		if err != nil {
+			log.Debugf("AsGenericFeed: feed %s :%v", atomFeed.Id, err)
+			continue
+		}
+		articles = append(articles, genericArt)
 	}
 	feedUrl := getBestUrl(atomFeed.Links)
 	gf := feed.Feed{
@@ -74,17 +81,27 @@ func (atomFeed Feed) AsGenericFeed() feed.Feed {
 	return gf
 }
 
-func (e Entry) asGenericArticle() feed.Article {
-	published := e.Published.Time
+func (e Entry) asGenericArticle() (feed.Article, error) {
+	if e.Published == nil && e.Updated == nil {
+		return feed.Article{}, fmt.Errorf("asGenericArticle: cannot determine date for the article")
+	}
+	var published time.Time
+	if e.Published == nil {
+		// It happens that Published is missing, so we do our best here.
+		published = e.Updated.Time
+	} else {
+		published = e.Published.Time
+	}
 	articleUrl := getBestUrl(e.Links)
 	description := feed.GetDescriptionFromHTML(e.Content)
-	return feed.Article{
+	art := feed.Article{
 		Id:          e.Id,
 		Title:       e.Title,
 		Url:         articleUrl,
 		Published:   published,
 		Description: description,
 	}
+	return art, nil
 }
 
 // getUrl returns the most appropriate link.
