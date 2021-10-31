@@ -34,7 +34,7 @@ func (c *TestCommand) Execute(args []string) error {
 
 func getArticles(url string) ([]feed.Article, error) {
 	body, err := fetchOrRead(url)
-	log.Debugf("Got %d KB", len(body)/1<<10)
+	log.Debugf("Got %d KB", len(body)/(1<<10))
 	if err != nil {
 		return nil, err
 	}
