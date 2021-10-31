@@ -6,6 +6,8 @@ import (
 	"bulletin/fetcher"
 	"bulletin/log"
 	"fmt"
+	"io"
+	"os"
 )
 
 const TestCommandName = "test"
@@ -16,7 +18,7 @@ type TestCommand struct {
 func (c *TestCommand) Execute(args []string) error {
 	urls := args
 	if len(urls) == 0 {
-		log.Infof("pass urls of the feeds to test as positional arguments")
+		log.Infof("pass URLs or file paths of the feeds to test as positional arguments")
 		return nil
 	}
 	for _, url := range urls {
@@ -31,7 +33,7 @@ func (c *TestCommand) Execute(args []string) error {
 }
 
 func getArticles(url string) ([]feed.Article, error) {
-	body, err := fetcher.Get(url)
+	body, err := fetchOrRead(url)
 	log.Debugf("Got %d KB", len(body)/1<<10)
 	if err != nil {
 		return nil, err
@@ -41,4 +43,17 @@ func getArticles(url string) ([]feed.Article, error) {
 		return nil, err
 	}
 	return f.Articles, nil
+}
+
+func fetchOrRead(url string) ([]byte, error) {
+	if _, err := os.Stat(url); err == nil {
+		f, err := os.Open(url)
+		if err != nil {
+			return nil, err
+		}
+		defer f.Close()
+		return io.ReadAll(f)
+	} else {
+		return fetcher.Get(url)
+	}
 }
