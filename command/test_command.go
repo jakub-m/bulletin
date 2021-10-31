@@ -8,6 +8,7 @@ import (
 	"fmt"
 	"io"
 	"os"
+	"sort"
 )
 
 const TestCommandName = "test"
@@ -24,7 +25,9 @@ func (c *TestCommand) Execute(args []string) error {
 	for _, url := range urls {
 		log.Infof("testing %s", url)
 		if articles, err := getArticles(url); err == nil {
-			fmt.Printf("good\t%s\t%d articles\n", url, len(articles))
+			sortArticlesByDateAsc(articles)
+			latestArticle := articles[len(articles)-1]
+			fmt.Printf("good\t%s\t%d articles, latest: %s\n", url, len(articles), latestArticle.Published)
 		} else {
 			fmt.Printf("BAD\t%s\t%s\n", url, err)
 		}
@@ -43,6 +46,12 @@ func getArticles(url string) ([]feed.Article, error) {
 		return nil, err
 	}
 	return f.Articles, nil
+}
+
+func sortArticlesByDateAsc(articles []feed.Article) {
+	sort.Slice(articles, func(i, j int) bool {
+		return articles[i].Published.Before(articles[j].Published)
+	})
 }
 
 func fetchOrRead(url string) ([]byte, error) {
