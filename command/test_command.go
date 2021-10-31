@@ -9,6 +9,7 @@ import (
 	"io"
 	"os"
 	"sort"
+	"time"
 )
 
 const TestCommandName = "test"
@@ -27,7 +28,8 @@ func (c *TestCommand) Execute(args []string) error {
 		if articles, err := getArticles(url); err == nil {
 			sortArticlesByDateAsc(articles)
 			latestArticle := articles[len(articles)-1]
-			fmt.Printf("good\t%s\t%d articles, latest: %s\n", url, len(articles), latestArticle.Published)
+			hoursSinceLast := time.Since(latestArticle.Published).Hours()
+			fmt.Printf("good\t%s\t%d articles, latest %.0f days ago (%s)\n", url, len(articles), hoursSinceLast/24, latestArticle.Published)
 		} else {
 			fmt.Printf("BAD\t%s\t%s\n", url, err)
 		}
