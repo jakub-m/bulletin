@@ -7,6 +7,10 @@ import (
 	"net/http"
 )
 
+const UserAgent = "github.com/jakub-m/bulletin/1"
+
+var httpClient = &http.Client{}
+
 // Get fetches a raw content of the url.
 func Get(url string) ([]byte, error) {
 	visited := make(map[string]bool)
@@ -20,7 +24,9 @@ func getRec(url string, visited map[string]bool) ([]byte, error) {
 	}
 	visited[url] = true
 
-	resp, err := http.Get(url)
+	req, err := http.NewRequest("GET", url, nil)
+	req.Header.Set("User-Agent", UserAgent)
+	resp, err := httpClient.Do(req)
 	if err != nil {
 		return nil, fetcherError(err)
 	}
