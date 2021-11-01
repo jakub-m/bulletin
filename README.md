@@ -1,4 +1,4 @@
-[**The most recent _bulletin_ here!**][ref_current]
+&#128073; [**THE MOST RECENT _BULLETIN_ HERE**][ref_current] &#128072;
 
 [ref_current]:https://htmlpreview.github.io/?https://github.com/jakub-m/bulletin/blob/mainline/bulletins/bulletin-2021-10-29.html
 

@@ -1,4 +1,4 @@
-[**The most recent _bulletin_ here!**][ref_current]
+&#128073; [**THE MOST RECENT _BULLETIN_ HERE**][ref_current] &#128072;
 
 [ref_current]:__CURRENT__
 
