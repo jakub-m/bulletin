@@ -44,7 +44,7 @@ compose: $(bin)
 	$(bin) --cache ./tmp/cache/ compose -days 7 -output bulletin.tmp.html
 
 update: $(bin)
-	./update/update.sh | tee README.md
+	./update/update.sh > README.md
 
 
 
