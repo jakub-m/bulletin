@@ -42,6 +42,9 @@
             font-variant-caps: small-caps;
             color: var(--black) !important;
         }
+        .text-black {
+            color: var(--black) !important;
+        }
         .footer {
             font-size: 80%;
             width:100%;
@@ -61,6 +64,11 @@
             {{range .Feeds}}
                 <li>
                     <a href="#{{.Id}}" class="no-visited">{{.Title}}</a> ({{len (.Articles)}})
+                    <ul>
+                    {{range .Articles}}
+                      <li><a href="#{{.Id}}" class="no-visited text-black">{{.Title}}</a></li>
+                    {{end}}
+                    </ul>
                 </li>
             {{end}}
         </ul>
@@ -75,7 +83,7 @@
                 </h3>
             <ul>
             {{range .Articles}}
-                <li class="article">
+                <li class="article" id="{{.Id}}">
                     <a href="{{.Url}}">{{.Title}}</a>
                     {{if .Description}}
                         <div class="description">
