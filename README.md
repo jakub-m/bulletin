@@ -1,6 +1,6 @@
 &#128073; [**THE MOST RECENT _BULLETIN_ HERE**][ref_current] &#128072;
 
-[ref_current]:https://htmlpreview.github.io/?https://github.com/jakub-m/bulletin/blob/mainline/bulletins/bulletin-2021-12-03.html
+[ref_current]:https://htmlpreview.github.io/?https://github.com/jakub-m/bulletin/blob/mainline/bulletins/bulletin-2021-12-10.html
 
 Go straight to [High Scalability](http://highscalability.com/). If there is nothing new on HS, come back here. The _bulletin_ was created for those grim times of HS without regular update.
 
@@ -16,6 +16,7 @@ The [list of feeds][ref_feeds] comes from my [bookmarks][ref_tw].
 
 # Past bulletins:
 
+- [2021-12-10](https://htmlpreview.github.io/?https://github.com/jakub-m/bulletin/blob/mainline/bulletins/bulletin-2021-12-10.html)
 - [2021-12-03](https://htmlpreview.github.io/?https://github.com/jakub-m/bulletin/blob/mainline/bulletins/bulletin-2021-12-03.html)
 - [2021-11-26](https://htmlpreview.github.io/?https://github.com/jakub-m/bulletin/blob/mainline/bulletins/bulletin-2021-11-26.html)
 - [2021-11-19](https://htmlpreview.github.io/?https://github.com/jakub-m/bulletin/blob/mainline/bulletins/bulletin-2021-11-19.html)
