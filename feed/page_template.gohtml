@@ -55,7 +55,7 @@
         </style>
     </head>
     <body>
-    <h2>
+    <h2 id="top">
         Bulletin for {{.BulletinEndDate}}
     </h2>
         {{.PeriodDays}} digest
@@ -93,6 +93,8 @@
                 </li>
             {{end}}
             </ul>
+
+            <a href="#top">[back to top]</a>
         {{end}}
         <div class="footer">
             ~~&nbsp;<a href="https://github.com/jakub-m/bulletin">Bulletin</a>&nbsp;by Jakub Mikians&nbsp;~~
