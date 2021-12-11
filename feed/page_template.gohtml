@@ -52,21 +52,35 @@
             justify-content: center;
             margin-top: 72pt;
         }
+        .back-to-top {
+            width: 30px;
+        }
+
+        .article-container {
+            display: flex;
+        }
+        .article-container .left {
+            flex-grow: 1;
+        }
+        .article-container .right {
+            margin-left: 20px;
+            white-space: nowrap;
+        }
         </style>
     </head>
     <body>
-    <h2 id="top">
-        Bulletin for {{.BulletinEndDate}}
+    <h2>
+        <a href="https://github.com/jakub-m/bulletin">Bulletin</a> for {{.BulletinEndDate}}
     </h2>
         {{.PeriodDays}} digest
         {{/* the index */}}
         <ul>
             {{range .Feeds}}
                 <li>
-                    <a href="#{{.Id}}" class="no-visited">{{.Title}}</a> ({{len (.Articles)}})
+                    <a href="#{{.Id}}" id="index for {{.Id}}" class="no-visited">{{.Title}}</a> ({{len (.Articles)}})
                     <ul>
                     {{range .Articles}}
-                      <li><a href="#{{.Id}}" class="no-visited text-black">{{.Title}}</a></li>
+                      <li><a href="#{{.Id}}" id="index for {{.Id}}" class="no-visited text-black">{{.Title}}</a></li>
                     {{end}}
                     </ul>
                 </li>
@@ -83,18 +97,24 @@
                 </h3>
             <ul>
             {{range .Articles}}
-                <li class="article" id="{{.Id}}">
-                    <a href="{{.Url}}">{{.Title}}</a>
-                    {{if .Description}}
-                        <div class="description">
-                        {{.Description}}
-                        </div>
-                    {{end}}
-                </li>
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="{{.Id}}">
+                            <a href="{{.Url}}">{{.Title}}</a>
+                            {{if .Description}}
+                                <div class="description">
+                                {{.Description}}
+                                </div>
+                            {{end}}
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for {{.Id}}" class="text-black">&#5169;</a>
+                    </div>
+                </div>
             {{end}}
             </ul>
 
-            <a href="#top">[back to top]</a>
         {{end}}
         <div class="footer">
             ~~&nbsp;<a href="https://github.com/jakub-m/bulletin">Bulletin</a>&nbsp;by Jakub Mikians&nbsp;~~
