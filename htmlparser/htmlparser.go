@@ -50,6 +50,27 @@ func FindAllNodesRec(n *html.Node, fn NodeMatcher) []*html.Node {
 	return f(n)
 }
 
+func ListChildren(n *html.Node, matcher NodeMatcher) []*html.Node {
+	nodes := []*html.Node{}
+	for c := n.FirstChild; c != nil; c = c.NextSibling {
+		if matcher(c) {
+			nodes = append(nodes, c)
+		}
+	}
+	return nodes
+}
+
+func All(matchers ...NodeMatcher) NodeMatcher {
+	return func(n *html.Node) bool {
+		for _, m := range matchers {
+			if !m(n) {
+				return false
+			}
+		}
+		return true
+	}
+}
+
 func HasTag(tag string) NodeMatcher {
 	return func(n *html.Node) bool {
 		return n.Type == html.ElementNode && n.Data == tag
