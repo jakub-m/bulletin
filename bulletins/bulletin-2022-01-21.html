@@ -1,0 +1,2355 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+        :root {
+            --blue: #007d9c;
+            --black: #000000;
+        }
+
+        html {
+            font-size: 16px;
+             
+            font-family: "-apple-system","BlinkMacSystemFont","Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+        }
+
+        body {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            line-height: 1.3;
+             
+        }
+        .main-envelope {
+        }
+        a:hover {
+            text-decoration: underline !important;
+        }
+        a, a:link, a:visited 
+        {
+            text-decoration: none; 
+            decoration: none; 
+            color: var(--blue);
+        }
+        a:visited.no-visited {
+            color: var(--blue);
+        }
+        h3 {
+            margin-top: 1.5rem;
+        }
+        li {
+          list-style-type: square;
+
+        }
+        li.article:not(:last-child) { 
+            margin-bottom: 1rem;
+        }
+        .subtitle {
+            font-size: 0.75rem;
+            font-variant-caps: small-caps;
+            color: var(--black) !important;
+        }
+        .text-black {
+            color: var(--black) !important;
+        }
+        .footer {
+            width:100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 3rem;
+        }
+        .article-container {
+            display: flex;
+        }
+        .article-container .left {
+            flex-grow: 1;
+        }
+        .article-container .right {
+            margin-left: 1rem;
+            white-space: nowrap;
+        }
+        </style>
+    </head>
+    <body>
+    <h2>
+        <a href="https://github.com/jakub-m/bulletin">Bulletin</a> for Friday, 21 Jan 2022
+    </h2>
+        7 days digest
+        
+        <ul>
+            
+                <li>
+                    <a href="#https%3a%2f%2fblog.cryptographyengineering.com" id="index for https://blog.cryptographyengineering.com" class="no-visited">A Few Thoughts on Cryptographic Engineering</a> (1)
+                    <ul>
+                    
+                      <li><a href="#http%3a%2f%2fblog.cryptographyengineering.com%2f%3fp%3d6302" id="index for http://blog.cryptographyengineering.com/?p=6302" class="no-visited text-black">An extremely casual code review of MetaMask’s crypto</a></li>
+                    
+                    </ul>
+                </li>
+            
+                <li>
+                    <a href="#https%3a%2f%2fably.com%2f" id="index for https://ably.com/" class="no-visited">Ably Blog: Data in Motion</a> (1)
+                    <ul>
+                    
+                      <li><a href="#61e68de89e29d1001ebf3682" id="index for 61e68de89e29d1001ebf3682" class="no-visited text-black">The realtime web: evolution of the user experience</a></li>
+                    
+                    </ul>
+                </li>
+            
+                <li>
+                    <a href="#https%3a%2f%2fahelwer.ca%2f" id="index for https://ahelwer.ca/" class="no-visited">Andrew Helwer</a> (1)
+                    <ul>
+                    
+                      <li><a href="#https%3a%2f%2fahelwer.ca%2fpost%2f2022-01-19-z3-rbac%2f" id="index for https://ahelwer.ca/post/2022-01-19-z3-rbac/" class="no-visited text-black">Regexes in the Z3 Theorem Prover</a></li>
+                    
+                    </ul>
+                </li>
+            
+                <li>
+                    <a href="#https%3a%2f%2fberthub.eu%2farticles%2f" id="index for https://berthub.eu/articles/" class="no-visited">Bert Hubert&#39;s writings</a> (1)
+                    <ul>
+                    
+                      <li><a href="#https%3a%2f%2fberthub.eu%2farticles%2fposts%2fsimple-parallelism-idiom%2f" id="index for https://berthub.eu/articles/posts/simple-parallelism-idiom/" class="no-visited text-black">Simple generic parallelism idiom &amp; C&#43;&#43;17 specifics</a></li>
+                    
+                    </ul>
+                </li>
+            
+                <li>
+                    <a href="#https%3a%2f%2flemire.me%2fblog" id="index for https://lemire.me/blog" class="no-visited">Daniel Lemire&#39;s blog</a> (1)
+                    <ul>
+                    
+                      <li><a href="#https%3a%2f%2flemire.me%2fblog%2f%3fp%3d19617" id="index for https://lemire.me/blog/?p=19617" class="no-visited text-black">What is the ‘range’ of a number type?</a></li>
+                    
+                    </ul>
+                </li>
+            
+                <li>
+                    <a href="#https%3a%2f%2feli.thegreenplace.net%2f" id="index for https://eli.thegreenplace.net/" class="no-visited">Eli Bendersky&#39;s website</a> (1)
+                    <ul>
+                    
+                      <li><a href="#tag%3aeli.thegreenplace.net%2c2022-01-17%3a%2f2022%2fin-defense-of-books%2f" id="index for tag:eli.thegreenplace.net,2022-01-17:/2022/in-defense-of-books/" class="no-visited text-black">In defense of books</a></li>
+                    
+                    </ul>
+                </li>
+            
+                <li>
+                    <a href="#https%3a%2f%2fengineering.fb.com" id="index for https://engineering.fb.com" class="no-visited">Engineering at Meta</a> (1)
+                    <ul>
+                    
+                      <li><a href="#https%3a%2f%2fengineering.fb.com%2f%3fp%3d18459" id="index for https://engineering.fb.com/?p=18459" class="no-visited text-black">FOQS: Making a distributed priority queue disaster-ready</a></li>
+                    
+                    </ul>
+                </li>
+            
+                <li>
+                    <a href="#https%3a%2f%2feugeneyan.com" id="index for https://eugeneyan.com" class="no-visited">Eugene Yan</a> (1)
+                    <ul>
+                    
+                      <li><a href="#https%3a%2f%2feugeneyan.com%2f%2fwriting%2fhow-to-keep-learning%2f" id="index for https://eugeneyan.com//writing/how-to-keep-learning/" class="no-visited text-black">How to Keep Learning about Machine Learning</a></li>
+                    
+                    </ul>
+                </li>
+            
+                <li>
+                    <a href="#https%3a%2f%2ffuture.a16z.com" id="index for https://future.a16z.com" class="no-visited">Future</a> (1)
+                    <ul>
+                    
+                      <li><a href="#https%3a%2f%2ffuture.a16z.com%2f%3fp%3d2913" id="index for https://future.a16z.com/?p=2913" class="no-visited text-black">Building American Dynamism</a></li>
+                    
+                    </ul>
+                </li>
+            
+                <li>
+                    <a href="#https%3a%2f%2fwww.ardanlabs.com%2fblog%2f" id="index for https://www.ardanlabs.com/blog/" class="no-visited">Go (Golang) Programming Blog - Ardan Labs on</a> (1)
+                    <ul>
+                    
+                      <li><a href="#https%3a%2f%2fwww.ardanlabs.com%2fblog%2f2022%2f01%2fvisualizations-in-go.html" id="index for https://www.ardanlabs.com/blog/2022/01/visualizations-in-go.html" class="no-visited text-black">Visualization in Go - Plotting Stock Information</a></li>
+                    
+                    </ul>
+                </li>
+            
+                <li>
+                    <a href="#http%3a%2f%2fhighscalability.com%2fblog%2f" id="index for http://highscalability.com/blog/" class="no-visited">High Scalability</a> (1)
+                    <ul>
+                    
+                      <li><a href="#426227%3a4867632%3a36393538" id="index for 426227:4867632:36393538" class="no-visited text-black">Designing Tinder</a></li>
+                    
+                    </ul>
+                </li>
+            
+                <li>
+                    <a href="#https%3a%2f%2flethain.com%2f" id="index for https://lethain.com/" class="no-visited">Irrational Exuberance</a> (1)
+                    <ul>
+                    
+                      <li><a href="#https%3a%2f%2flethain.com%2fmental-models-mix-match%2f" id="index for https://lethain.com/mental-models-mix-match/" class="no-visited text-black">Mix and match mental models.</a></li>
+                    
+                    </ul>
+                </li>
+            
+                <li>
+                    <a href="#http%3a%2f%2fjvns.ca" id="index for http://jvns.ca" class="no-visited">Julia Evans</a> (1)
+                    <ul>
+                    
+                      <li><a href="#https%3a%2f%2fjvns.ca%2fblog%2f2022%2f01%2f15%2fsome-ways-dns-can-break%2f" id="index for https://jvns.ca/blog/2022/01/15/some-ways-dns-can-break/" class="no-visited text-black">Some ways DNS can break</a></li>
+                    
+                    </ul>
+                </li>
+            
+                <li>
+                    <a href="#http%3a%2f%2fbrooker.co.za%2fblog%2f" id="index for http://brooker.co.za/blog/" class="no-visited">Marc Brooker&#39;s Blog</a> (1)
+                    <ul>
+                    
+                      <li><a href="#http%3a%2f%2fbrooker.co.za%2fblog%2f2022%2f01%2f19%2fpredictability" id="index for http://brooker.co.za/blog/2022/01/19/predictability" class="no-visited text-black">DynamoDB&#39;s Best Feature: Predictability</a></li>
+                    
+                    </ul>
+                </li>
+            
+                <li>
+                    <a href="#tag%3ablogger.com%2c1999%3ablog-8436330762136344379" id="index for tag:blogger.com,1999:blog-8436330762136344379" class="no-visited">Metadata</a> (1)
+                    <ul>
+                    
+                      <li><a href="#tag%3ablogger.com%2c1999%3ablog-8436330762136344379.post-498852752198598221" id="index for tag:blogger.com,1999:blog-8436330762136344379.post-498852752198598221" class="no-visited text-black">Clear communication</a></li>
+                    
+                    </ul>
+                </li>
+            
+                <li>
+                    <a href="#Monzo%20-%20Technology" id="index for Monzo - Technology" class="no-visited">Monzo - Technology</a> (1)
+                    <ul>
+                    
+                      <li><a href="#My%20first%206%20months%20at%20Monzo%20as%20a%20Backend%20Engineer" id="index for My first 6 months at Monzo as a Backend Engineer" class="no-visited text-black">My first 6 months at Monzo as a Backend Engineer</a></li>
+                    
+                    </ul>
+                </li>
+            
+                <li>
+                    <a href="#https%3a%2f%2fhacks.mozilla.org" id="index for https://hacks.mozilla.org" class="no-visited">Mozilla Hacks – the Web developer blog</a> (1)
+                    <ul>
+                    
+                      <li><a href="#https%3a%2f%2fhacks.mozilla.org%2f%3fp%3d47555" id="index for https://hacks.mozilla.org/?p=47555" class="no-visited text-black">Contributing to MDN: Meet the Contributors</a></li>
+                    
+                    </ul>
+                </li>
+            
+                <li>
+                    <a href="#https%3a%2f%2fnetflixtechblog.com%3fsource%3drss----2615bd06b42e---4" id="index for https://netflixtechblog.com?source=rss----2615bd06b42e---4" class="no-visited">Netflix TechBlog - Medium</a> (1)
+                    <ul>
+                    
+                      <li><a href="#https%3a%2f%2fmedium.com%2fp%2f5bcc52d853d1" id="index for https://medium.com/p/5bcc52d853d1" class="no-visited text-black">Auto-Diagnosis and Remediation in Netflix Data Platform</a></li>
+                    
+                    </ul>
+                </li>
+            
+                <li>
+                    <a href="#https%3a%2f%2fwww.tbray.org%2fongoing%2f" id="index for https://www.tbray.org/ongoing/" class="no-visited">ongoing by Tim Bray</a> (1)
+                    <ul>
+                    
+                      <li><a href="#https%3a%2f%2fwww.tbray.org%2fongoing%2fWhen%2f202x%2f2022%2f01%2f16%2fPulp-Fiction" id="index for https://www.tbray.org/ongoing/When/202x/2022/01/16/Pulp-Fiction" class="no-visited text-black">Pulp Fiction</a></li>
+                    
+                    </ul>
+                </li>
+            
+                <li>
+                    <a href="#https%3a%2f%2fsyslog.ravelin.com%3fsource%3drss----e35b8c575db5---4" id="index for https://syslog.ravelin.com?source=rss----e35b8c575db5---4" class="no-visited">Ravelin Tech Blog - Medium</a> (1)
+                    <ul>
+                    
+                      <li><a href="#https%3a%2f%2fmedium.com%2fp%2f49a0dcc8f7e8" id="index for https://medium.com/p/49a0dcc8f7e8" class="no-visited text-black">Classification with TabNet: Deep Dive</a></li>
+                    
+                    </ul>
+                </li>
+            
+                <li>
+                    <a href="#https%3a%2f%2fblog.sentry.io" id="index for https://blog.sentry.io" class="no-visited">Sentry Blog RSS</a> (1)
+                    <ul>
+                    
+                      <li><a href="#https%3a%2f%2fblog.sentry.io%2f2022%2f01%2f18%2fdeprecation-from-u2f-api-to-webauthn%2f" id="index for https://blog.sentry.io/2022/01/18/deprecation-from-u2f-api-to-webauthn/" class="no-visited text-black">Deprecation From U2F API to WebAuthn</a></li>
+                    
+                    </ul>
+                </li>
+            
+                <li>
+                    <a href="#https%3a%2f%2fengineering.atspotify.com" id="index for https://engineering.atspotify.com" class="no-visited">Spotify Engineering</a> (1)
+                    <ul>
+                    
+                      <li><a href="#https%3a%2f%2fengineering.atspotify.com%2f%3fp%3d4962" id="index for https://engineering.atspotify.com/?p=4962" class="no-visited text-black">Product Lessons from ML Home: Spotify’s One-Stop Shop for Machine Learning</a></li>
+                    
+                    </ul>
+                </li>
+            
+                <li>
+                    <a href="#https%3a%2f%2fstaysaasy.com%2ffeed.xml" id="index for https://staysaasy.com/feed.xml" class="no-visited">Stay SaaSy</a> (1)
+                    <ul>
+                    
+                      <li><a href="#https%3a%2f%2fstaysaasy.com%2fsoftware%2f2022%2f01%2f17%2fcomplexity" id="index for https://staysaasy.com/software/2022/01/17/complexity" class="no-visited text-black">Complexity Debt</a></li>
+                    
+                    </ul>
+                </li>
+            
+                <li>
+                    <a href="#https%3a%2f%2fstratechery.com" id="index for https://stratechery.com" class="no-visited">Stratechery by Ben Thompson</a> (1)
+                    <ul>
+                    
+                      <li><a href="#https%3a%2f%2fstratechery.com%2f%3fp%3d8327" id="index for https://stratechery.com/?p=8327" class="no-visited text-black">The Intel Split</a></li>
+                    
+                    </ul>
+                </li>
+            
+                <li>
+                    <a href="#https%3a%2f%2fblog.pragmaticengineer.com%2f" id="index for https://blog.pragmaticengineer.com/" class="no-visited">The Pragmatic Engineer</a> (1)
+                    <ul>
+                    
+                      <li><a href="#61e6d25a66b03d003b6b0246" id="index for 61e6d25a66b03d003b6b0246" class="no-visited text-black">Becoming a Better Writer in Tech</a></li>
+                    
+                    </ul>
+                </li>
+            
+                <li>
+                    <a href="#https%3a%2f%2fwww.gsb.stanford.edu%2finsights%2fthink-fast-talk-smart-podcast" id="index for https://www.gsb.stanford.edu/insights/think-fast-talk-smart-podcast" class="no-visited">Think Fast, Talk Smart: Communication Techniques</a> (1)
+                    <ul>
+                    
+                      <li><a href="#gid%3a%2f%2fart19-episode-locator%2fV0%2ff9Fx1ofDAMbty6mYzE1Y2IZ08W0uOQSwJY7gkzOv_CE" id="index for gid://art19-episode-locator/V0/f9Fx1ofDAMbty6mYzE1Y2IZ08W0uOQSwJY7gkzOv_CE" class="no-visited text-black">Make Numbers Count: How to Communicate Data Effectively </a></li>
+                    
+                    </ul>
+                </li>
+            
+                <li>
+                    <a href="#https%3a%2f%2fblog.timescale.com%2f" id="index for https://blog.timescale.com/" class="no-visited">Timescale Blog</a> (1)
+                    <ul>
+                    
+                      <li><a href="#61e7f5f51cf7db003ba0efbd" id="index for 61e7f5f51cf7db003ba0efbd" class="no-visited text-black">How to shape sample data with PostgreSQL generate_series() and SQL</a></li>
+                    
+                    </ul>
+                </li>
+            
+                <li>
+                    <a href="#https%3a%2f%2fhackaday.com" id="index for https://hackaday.com" class="no-visited">Blog – Hackaday</a> (2)
+                    <ul>
+                    
+                      <li><a href="#https%3a%2f%2fhackaday.com%2f%3fp%3d515197" id="index for https://hackaday.com/?p=515197" class="no-visited text-black">Bringing the Power of EDM to the Home Shop</a></li>
+                    
+                      <li><a href="#https%3a%2f%2fhackaday.com%2f%3fp%3d516312" id="index for https://hackaday.com/?p=516312" class="no-visited text-black">Setup Menu Uses Text Editor Hack</a></li>
+                    
+                    </ul>
+                </li>
+            
+                <li>
+                    <a href="#https%3a%2f%2ftech.fb.com" id="index for https://tech.fb.com" class="no-visited">Facebook Technology</a> (2)
+                    <ul>
+                    
+                      <li><a href="#https%3a%2f%2ftech.fb.com%2f%3fp%3d12419" id="index for https://tech.fb.com/?p=12419" class="no-visited text-black">Meta Plays ‘After the Fall,’ a cooperative online zombie survival shooter built for VR</a></li>
+                    
+                      <li><a href="#https%3a%2f%2ftech.fb.com%2f%3fp%3d12410" id="index for https://tech.fb.com/?p=12410" class="no-visited text-black">That Other Gaming Podcast Episode 4: Mechanics with Numinous Games’ Amy Green</a></li>
+                    
+                    </ul>
+                </li>
+            
+                <li>
+                    <a href="#tag%3ablogger.com%2c1999%3ablog-8474926331452026626" id="index for tag:blogger.com,1999:blog-8474926331452026626" class="no-visited">Google AI Blog</a> (2)
+                    <ul>
+                    
+                      <li><a href="#tag%3ablogger.com%2c1999%3ablog-8474926331452026626.post-5208713773063526431" id="index for tag:blogger.com,1999:blog-8474926331452026626.post-5208713773063526431" class="no-visited text-black">Introducing StylEx: A New Approach for Visual Explanation of Classifiers</a></li>
+                    
+                      <li><a href="#tag%3ablogger.com%2c1999%3ablog-8474926331452026626.post-4719309247607599773" id="index for tag:blogger.com,1999:blog-8474926331452026626.post-4719309247607599773" class="no-visited text-black">Learning to Route by Task for Efficient Inference</a></li>
+                    
+                    </ul>
+                </li>
+            
+                <li>
+                    <a href="#https%3a%2f%2fkrebsonsecurity.com" id="index for https://krebsonsecurity.com" class="no-visited">Krebs on Security</a> (2)
+                    <ul>
+                    
+                      <li><a href="#https%3a%2f%2fkrebsonsecurity.com%2f%3fp%3d58154" id="index for https://krebsonsecurity.com/?p=58154" class="no-visited text-black">IRS Will Soon Require Selfies for Online Access</a></li>
+                    
+                      <li><a href="#https%3a%2f%2fkrebsonsecurity.com%2f%3fp%3d58116" id="index for https://krebsonsecurity.com/?p=58116" class="no-visited text-black">At Request of U.S., Russia Rounds Up 14 REvil Ransomware Affiliates</a></li>
+                    
+                    </ul>
+                </li>
+            
+                <li>
+                    <a href="#https%3a%2f%2fcircleci.com%2fblog%2f" id="index for https://circleci.com/blog/" class="no-visited">The CircleCI Blog Feed - CircleCI</a> (2)
+                    <ul>
+                    
+                      <li><a href="#https%3a%2f%2fcircleci.com%2fblog%2fapi-performance-testing-with-k6%2f" id="index for https://circleci.com/blog/api-performance-testing-with-k6/" class="no-visited text-black">API performance testing with k6</a></li>
+                    
+                      <li><a href="#https%3a%2f%2fcircleci.com%2fblog%2fusing-runner-for-local-testing%2f" id="index for https://circleci.com/blog/using-runner-for-local-testing/" class="no-visited text-black">Testing locally with CircleCI runners</a></li>
+                    
+                    </ul>
+                </li>
+            
+                <li>
+                    <a href="#https%3a%2f%2fwww.weave.works%2ffeed.xml" id="index for https://www.weave.works/feed.xml" class="no-visited">Weaveworks</a> (2)
+                    <ul>
+                    
+                      <li><a href="#https%3a%2f%2fwww.weave.works%2fblog%2fblogachieving-production-ready-kubernetes" id="index for https://www.weave.works/blog/blogachieving-production-ready-kubernetes" class="no-visited text-black">Production-ready Kubernetes: what it means and how to achieve it</a></li>
+                    
+                      <li><a href="#https%3a%2f%2fwww.weave.works%2fblog%2fblogkubernetes-devops-the-perfect-match" id="index for https://www.weave.works/blog/blogkubernetes-devops-the-perfect-match" class="no-visited text-black">Kubernetes DevOps: The Perfect Match</a></li>
+                    
+                    </ul>
+                </li>
+            
+                <li>
+                    <a href="#https%3a%2f%2fwww.amazon.science%2f" id="index for https://www.amazon.science/" class="no-visited">Amazon Science Homepage</a> (3)
+                    <ul>
+                    
+                      <li><a href="#https%3a%2f%2fwww.amazon.science%2fworking-at-amazon%2famazon-advertising-lihong-li-using-reinforcement-learning-algorithms" id="index for https://www.amazon.science/working-at-amazon/amazon-advertising-lihong-li-using-reinforcement-learning-algorithms" class="no-visited text-black">Decisions, decisions: Lihong Li&#39;s Amazon Ads reinforcement learning research</a></li>
+                    
+                      <li><a href="#https%3a%2f%2fwww.amazon.science%2flatest-news%2famazons-dynamodb-10-years-later" id="index for https://www.amazon.science/latest-news/amazons-dynamodb-10-years-later" class="no-visited text-black">Amazon’s DynamoDB — 10 years later</a></li>
+                    
+                      <li><a href="#https%3a%2f%2fwww.amazon.science%2fblog%2fhierarchical-representations-improve-image-retrieval" id="index for https://www.amazon.science/blog/hierarchical-representations-improve-image-retrieval" class="no-visited text-black">Hierarchical representations improve image retrieval</a></li>
+                    
+                    </ul>
+                </li>
+            
+                <li>
+                    <a href="#https%3a%2f%2fgoteleport.com%2fblog%2f" id="index for https://goteleport.com/blog/" class="no-visited">The Teleport Blog</a> (3)
+                    <ul>
+                    
+                      <li><a href="#https%3a%2f%2fgoteleport.com%2fblog%2fhow-to-use-ssh-agent-safely%2f" id="index for https://goteleport.com/blog/how-to-use-ssh-agent-safely/" class="no-visited text-black">How to Use SSH Agent Safely</a></li>
+                    
+                      <li><a href="#https%3a%2f%2fgoteleport.com%2fblog%2fz3-rbac%2f" id="index for https://goteleport.com/blog/z3-rbac/" class="no-visited text-black">Using Z3 Theorem Prover to analyze RBAC</a></li>
+                    
+                      <li><a href="#https%3a%2f%2fgoteleport.com%2fblog%2fidentity-based-access-for-ssh%2f" id="index for https://goteleport.com/blog/identity-based-access-for-ssh/" class="no-visited text-black">Identity-Based Access for SSH</a></li>
+                    
+                    </ul>
+                </li>
+            
+                <li>
+                    <a href="#https%3a%2f%2fblog.cloudflare.com%2f" id="index for https://blog.cloudflare.com/" class="no-visited">The Cloudflare Blog</a> (4)
+                    <ul>
+                    
+                      <li><a href="#61e7e53885cee0000bd1d461" id="index for 61e7e53885cee0000bd1d461" class="no-visited text-black">Tonga’s likely lengthy Internet outage</a></li>
+                    
+                      <li><a href="#61e6ca641b75b4000be1eae9" id="index for 61e6ca641b75b4000be1eae9" class="no-visited text-black">Tomonari Sato: Why I joined Cloudflare and why I’m helping Cloudflare grow in Japan</a></li>
+                    
+                      <li><a href="#61de92f70bfc69000a525d58" id="index for 61de92f70bfc69000a525d58" class="no-visited text-black">Cloudflare customers on Free plans can now also get real-time DDoS alerts</a></li>
+                    
+                      <li><a href="#61e02558815caf000a982ed4" id="index for 61e02558815caf000a982ed4" class="no-visited text-black">A Workers optimization
+that reduces your bill</a></li>
+                    
+                    </ul>
+                </li>
+            
+                <li>
+                    <a href="#https%3a%2f%2fstackoverflow.blog" id="index for https://stackoverflow.blog" class="no-visited">Stack Overflow Blog</a> (5)
+                    <ul>
+                    
+                      <li><a href="#https%3a%2f%2fstackoverflow.blog%2f%3fp%3d19415" id="index for https://stackoverflow.blog/?p=19415" class="no-visited text-black">Here’s how Stack Overflow users responded to Log4Shell, the Log4j vulnerability affecting almost everyone</a></li>
+                    
+                      <li><a href="#https%3a%2f%2fstackoverflow.blog%2f%3fp%3d19406" id="index for https://stackoverflow.blog/?p=19406" class="no-visited text-black">A chat with the folks who lead training and certification at AWS</a></li>
+                    
+                      <li><a href="#https%3a%2f%2fstackoverflow.blog%2f%3fp%3d19400" id="index for https://stackoverflow.blog/?p=19400" class="no-visited text-black">Plan for tradeoffs: You can’t optimize all software quality attributes</a></li>
+                    
+                      <li><a href="#https%3a%2f%2fstackoverflow.blog%2f%3fp%3d19398" id="index for https://stackoverflow.blog/?p=19398" class="no-visited text-black">The Overflow #108: Determining dependencies and phantom braking</a></li>
+                    
+                      <li><a href="#https%3a%2f%2fstackoverflow.blog%2f%3fp%3d19393" id="index for https://stackoverflow.blog/?p=19393" class="no-visited text-black">Safety in numbers: crowdsourcing data on nefarious IP addresses</a></li>
+                    
+                    </ul>
+                </li>
+            
+                <li>
+                    <a href="#https%3a%2f%2fpacketpushers.net" id="index for https://packetpushers.net" class="no-visited">The Full Feed - All of the Packet Pushers Podcasts</a> (5)
+                    <ul>
+                    
+                      <li><a href="#https%3a%2f%2fpacketpushers.net%2f%3fpost_type%3dpodcast%26p%3d52468" id="index for https://packetpushers.net/?post_type=podcast&amp;p=52468" class="no-visited text-black">Day Two Cloud 130: Getting Started With OpenShift For Kubernetes Orchestration</a></li>
+                    
+                      <li><a href="#https%3a%2f%2fpacketpushers.net%2f%3fpost_type%3dpodcast%26p%3d52440" id="index for https://packetpushers.net/?post_type=podcast&amp;p=52440" class="no-visited text-black">Full Stack Journey 062: Advice And Recommendations For Tech Learners</a></li>
+                    
+                      <li><a href="#https%3a%2f%2fpacketpushers.net%2f%3fpost_type%3dpodcast%26p%3d52438" id="index for https://packetpushers.net/?post_type=podcast&amp;p=52438" class="no-visited text-black">Tech Bytes: Why Network Design Matters For Security Clouds (Sponsored)</a></li>
+                    
+                      <li><a href="#https%3a%2f%2fpacketpushers.net%2f%3fpost_type%3dpodcast%26p%3d52436" id="index for https://packetpushers.net/?post_type=podcast&amp;p=52436" class="no-visited text-black">Network Break 365: Salesforce Forces Multi-Factor Authentication; FAA Implements 5G Buffer Zones</a></li>
+                    
+                      <li><a href="#https%3a%2f%2fpacketpushers.net%2f%3fpost_type%3dpodcast%26p%3d52433" id="index for https://packetpushers.net/?post_type=podcast&amp;p=52433" class="no-visited text-black">Heavy Networking 613: Deploying An Active-Active Data Center Network For Private Cloud (Sponsored)</a></li>
+                    
+                    </ul>
+                </li>
+            
+                <li>
+                    <a href="#https%3a%2f%2fchangelog.com%2fmaster" id="index for https://changelog.com/master" class="no-visited">Changelog Master Feed</a> (7)
+                    <ul>
+                    
+                      <li><a href="#changelog.com%2f14%2f1523" id="index for changelog.com/14/1523" class="no-visited text-black">Keep on-call simple (Ship It! #36)</a></li>
+                    
+                      <li><a href="#changelog.com%2f2%2f1399" id="index for changelog.com/2/1399" class="no-visited text-black">AI-driven development in Go (Go Time #213)</a></li>
+                    
+                      <li><a href="#changelog.com%2f7%2f1560" id="index for changelog.com/7/1560" class="no-visited text-black">Democratizing ML for speech (Practical AI #164)</a></li>
+                    
+                      <li><a href="#changelog.com%2f1%2f1544" id="index for changelog.com/1/1544" class="no-visited text-black">Making the ZFS file system (The Changelog #475)</a></li>
+                    
+                      <li><a href="#changelog.com%2f4%2f1533" id="index for changelog.com/4/1533" class="no-visited text-black">Making the last database you’ll ever need (Founders Talk #85)</a></li>
+                    
+                      <li><a href="#changelog.com%2f6%2f1547" id="index for changelog.com/6/1547" class="no-visited text-black">Temporal is like React for the backend (JS Party #208)</a></li>
+                    
+                      <li><a href="#changelog.com%2f14%2f1521" id="index for changelog.com/14/1521" class="no-visited text-black">How I found my lost network packets (Ship It! #35)</a></li>
+                    
+                    </ul>
+                </li>
+            
+                <li>
+                    <a href="#https%3a%2f%2fcloud.google.com%2fblog%2f" id="index for https://cloud.google.com/blog/" class="no-visited">Cloud Blog</a> (20)
+                    <ul>
+                    
+                      <li><a href="#https%3a%2f%2fcloud.google.com%2fblog%2ftopics%2fdevelopers-practitioners%2ffind-products-faster-new-all-products-page%2f" id="index for https://cloud.google.com/blog/topics/developers-practitioners/find-products-faster-new-all-products-page/" class="no-visited text-black">Find products faster with the new All Products page</a></li>
+                    
+                      <li><a href="#https%3a%2f%2fcloud.google.com%2fblog%2fproducts%2fai-machine-learning%2frunning-alphafold-on-vertexai%2f" id="index for https://cloud.google.com/blog/products/ai-machine-learning/running-alphafold-on-vertexai/" class="no-visited text-black">Bio-pharma organizations can now leverage the groundbreaking protein folding system, AlphaFold, with Vertex AI</a></li>
+                    
+                      <li><a href="#https%3a%2f%2fcloud.google.com%2fblog%2fproducts%2fdata-analytics%2fgoogle-cloud-data-fusion-accelerator-for-sap-procure-to-pay%2f" id="index for https://cloud.google.com/blog/products/data-analytics/google-cloud-data-fusion-accelerator-for-sap-procure-to-pay/" class="no-visited text-black">Data Fusion SAP accelerator for Procure 2 Pay</a></li>
+                    
+                      <li><a href="#https%3a%2f%2fcloud.google.com%2fblog%2fproducts%2fdata-analytics%2fsap-batch-and-realtime-connectors-for-google-cloud-data-fusion%2f" id="index for https://cloud.google.com/blog/products/data-analytics/sap-batch-and-realtime-connectors-for-google-cloud-data-fusion/" class="no-visited text-black">Data Fusion SAP Connectors</a></li>
+                    
+                      <li><a href="#https%3a%2f%2fcloud.google.com%2fblog%2fproducts%2fdata-analytics%2fgeneral-availability-for-cmek-in-data-fusion%2f" id="index for https://cloud.google.com/blog/products/data-analytics/general-availability-for-cmek-in-data-fusion/" class="no-visited text-black">Encrypt Data Fusion data and metadata using Customer Managed Encryption Keys (CMEK)</a></li>
+                    
+                      <li><a href="#https%3a%2f%2fcloud.google.com%2fblog%2fproducts%2fnetworking%2fdns-based-traffic-routing-for-global-application-deployment%2f" id="index for https://cloud.google.com/blog/products/networking/dns-based-traffic-routing-for-global-application-deployment/" class="no-visited text-black">How to publish applications to our users globally with Cloud DNS Routing policies?</a></li>
+                    
+                      <li><a href="#https%3a%2f%2fcloud.google.com%2fblog%2ftopics%2fhealthcare-life-sciences%2fhighmark-is-using-google-cloud-services-for-secure-by-design%2f" id="index for https://cloud.google.com/blog/topics/healthcare-life-sciences/highmark-is-using-google-cloud-services-for-secure-by-design/" class="no-visited text-black">Developing and securing a platform for healthcare innovation with Google Cloud</a></li>
+                    
+                      <li><a href="#https%3a%2f%2fcloud.google.com%2fblog%2ftopics%2fretail%2fretail-transformation-nrf-2022-forecasting-search-modern-store-always-be-pivoting%2f" id="index for https://cloud.google.com/blog/topics/retail/retail-transformation-nrf-2022-forecasting-search-modern-store-always-be-pivoting/" class="no-visited text-black">Retailers now need to &#34;always be pivoting.&#34; Here&#39;s three moves keeping them going</a></li>
+                    
+                      <li><a href="#https%3a%2f%2fcloud.google.com%2fblog%2fproducts%2finfrastructure-modernization%2fwhats-new-in-google-cloud-vmware-engine%2f" id="index for https://cloud.google.com/blog/products/infrastructure-modernization/whats-new-in-google-cloud-vmware-engine/" class="no-visited text-black">New in Google Cloud VMware Engine: Single nodes, certifications and more</a></li>
+                    
+                      <li><a href="#https%3a%2f%2fcloud.google.com%2fblog%2fproducts%2fdatabases%2fcloud-sql-for-mysql-launches-database-auditing%2f" id="index for https://cloud.google.com/blog/products/databases/cloud-sql-for-mysql-launches-database-auditing/" class="no-visited text-black">Keep tabs on your tables: Cloud SQL for MySQL launches database auditing</a></li>
+                    
+                      <li><a href="#https%3a%2f%2fcloud.google.com%2fblog%2fproducts%2foperations%2fwrite-and-deploy-cloud-monitoring-alert-notifications-to-third-party-services%2f" id="index for https://cloud.google.com/blog/products/operations/write-and-deploy-cloud-monitoring-alert-notifications-to-third-party-services/" class="no-visited text-black">Creating custom notifications with Cloud Monitoring and Cloud Run</a></li>
+                    
+                      <li><a href="#https%3a%2f%2fcloud.google.com%2fblog%2fproducts%2foperations%2fpub-sub-webook-and-slack-notifications-are-now-available%2f" id="index for https://cloud.google.com/blog/products/operations/pub-sub-webook-and-slack-notifications-are-now-available/" class="no-visited text-black">Webhook, Pub/Sub, and Slack Alerting notification channels launched</a></li>
+                    
+                      <li><a href="#https%3a%2f%2fcloud.google.com%2fblog%2ftopics%2finside-google-cloud%2fwhats-new-google-cloud%2f" id="index for https://cloud.google.com/blog/topics/inside-google-cloud/whats-new-google-cloud/" class="no-visited text-black">What’s new with Google Cloud</a></li>
+                    
+                      <li><a href="#https%3a%2f%2fcloud.google.com%2fblog%2ftopics%2fdevelopers-practitioners%2fbigquery-explainable-ai-now-ga-help-you-interpret-your-machine-learning-models%2f" id="index for https://cloud.google.com/blog/topics/developers-practitioners/bigquery-explainable-ai-now-ga-help-you-interpret-your-machine-learning-models/" class="no-visited text-black">BigQuery Explainable AI now in GA to help you interpret your machine learning models</a></li>
+                    
+                      <li><a href="#https%3a%2f%2fcloud.google.com%2fblog%2fproducts%2fworkspace%2fthe-future-of-work-requires-more-human-approach-to-security%2f" id="index for https://cloud.google.com/blog/products/workspace/the-future-of-work-requires-more-human-approach-to-security/" class="no-visited text-black">The future of work requires a more human approach to security</a></li>
+                    
+                      <li><a href="#https%3a%2f%2fcloud.google.com%2fblog%2fproducts%2foperations%2fget-better-hybrid-and-multicloud-log-insights%2f" id="index for https://cloud.google.com/blog/products/operations/get-better-hybrid-and-multicloud-log-insights/" class="no-visited text-black">Patterns for better insights and troubleshooting with hybrid cloud logs</a></li>
+                    
+                      <li><a href="#https%3a%2f%2fcloud.google.com%2fblog%2fproducts%2fdatabases%2funderstanding-firestore-performance-with-key-visualizer%2f" id="index for https://cloud.google.com/blog/products/databases/understanding-firestore-performance-with-key-visualizer/" class="no-visited text-black">Understanding Firestore performance with Key Visualizer</a></li>
+                    
+                      <li><a href="#https%3a%2f%2fcloud.google.com%2fblog%2fproducts%2fdatabases%2fwayfair-migrates-to-cloud-sql-and-cloud-spanner%2f" id="index for https://cloud.google.com/blog/products/databases/wayfair-migrates-to-cloud-sql-and-cloud-spanner/" class="no-visited text-black">How Wayfair is modernizing, one database at a time</a></li>
+                    
+                      <li><a href="#https%3a%2f%2fcloud.google.com%2fblog%2fproducts%2fdevops-sre%2fimplementing-google-cloud-devops-for-your-cloud-native-organization%2f" id="index for https://cloud.google.com/blog/products/devops-sre/implementing-google-cloud-devops-for-your-cloud-native-organization/" class="no-visited text-black">DevOps for tech companies and startups: Learn from over 32,000 professionals on how to drive success with Google Cloud’s DORA research</a></li>
+                    
+                      <li><a href="#https%3a%2f%2fcloud.google.com%2fblog%2ftopics%2fretail%2fretail-forecasting-ai-real-time-insights-vertex-ai-forecast%2f" id="index for https://cloud.google.com/blog/topics/retail/retail-forecasting-ai-real-time-insights-vertex-ai-forecast/" class="no-visited text-black">How can demand forecasting approach real time responsiveness? Vertex AI makes it possible</a></li>
+                    
+                    </ul>
+                </li>
+            
+        </ul>
+
+        
+        
+                <h3 id="https://blog.cryptographyengineering.com">
+                    <a href="https://blog.cryptographyengineering.com" class="no-visited">
+                        A Few Thoughts on Cryptographic Engineering
+                        <div class="subtitle">https://blog.cryptographyengineering.com</div>
+                    </a>
+                </h3>
+            <ul>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="http://blog.cryptographyengineering.com/?p=6302">
+                            <a href="https://blog.cryptographyengineering.com/2022/01/14/an-extremely-casual-code-review-of-metamasks-crypto/">An extremely casual code review of MetaMask’s crypto</a>
+                            
+                                <div class="description">
+                                NB: This post describes a very casual code review of a few cryptography functions used by MetaMask. It does not describe any vulnerabilities. If you’re the kind of person who likes a meandering and amateurish code review that goes absolutely nowhere, you’ll enjoy this post. Otherwise you might want to read something more exciting: I … Continue reading An extremely casual code review of MetaMask’s crypto →
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for http%3a%2f%2fblog.cryptographyengineering.com%2f%3fp%3d6302" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+            </ul>
+
+        
+                <h3 id="https://ably.com/">
+                    <a href="https://ably.com/" class="no-visited">
+                        Ably Blog: Data in Motion
+                        <div class="subtitle">https://ably.com/</div>
+                    </a>
+                </h3>
+            <ul>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="61e68de89e29d1001ebf3682">
+                            <a href="https://ably.com/blog/the-realtime-web-evolution-of-the-user-experience/">The realtime web: evolution of the user experience</a>
+                            
+                                <div class="description">
+                                Learn how the web has evolved to support asynchronous communication, and how organizations are putting realtime at the heart of their products.
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for 61e68de89e29d1001ebf3682" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+            </ul>
+
+        
+                <h3 id="https://ahelwer.ca/">
+                    <a href="https://ahelwer.ca/" class="no-visited">
+                        Andrew Helwer
+                        <div class="subtitle">https://ahelwer.ca/</div>
+                    </a>
+                </h3>
+            <ul>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://ahelwer.ca/post/2022-01-19-z3-rbac/">
+                            <a href="https://ahelwer.ca/post/2022-01-19-z3-rbac/">Regexes in the Z3 Theorem Prover</a>
+                            
+                                <div class="description">
+                                Republished from Teleport’s official blog ( link ) Z3 is a satisfiability modulo theories (SMT) solver developed by Microsoft Research. With a description like that you’d expect it to be restricted to esoteric corners of the computerized mathematics world, but it’s made impressive inroads addressing conventional software engineering needs: analyzing network ACLs and firewalls in Microsoft Azure, for example. Anyway, here’s how you’d write this in Python: import z3 solver = z3 . Solver() x = z3 .
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2fahelwer.ca%2fpost%2f2022-01-19-z3-rbac%2f" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+            </ul>
+
+        
+                <h3 id="https://berthub.eu/articles/">
+                    <a href="https://berthub.eu/articles/" class="no-visited">
+                        Bert Hubert&#39;s writings
+                        <div class="subtitle">https://berthub.eu/articles/</div>
+                    </a>
+                </h3>
+            <ul>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://berthub.eu/articles/posts/simple-parallelism-idiom/">
+                            <a href="https://berthub.eu/articles/posts/simple-parallelism-idiom/">Simple generic parallelism idiom &amp; C&#43;&#43;17 specifics</a>
+                            
+                                <div class="description">
+                                If you programmed something and it turns out to be too slow, often you’d like to farm out the work to multiple threads. At this point you typically have a few choices: use some kind of producer/consumer pipe half-ass it by dividing the work into n chunks and launch n threads and hope for the best rely on one of the magic parallelization solutions (#pragma omp) use (newfangled) language features All of these options are painful to some extent.
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2fberthub.eu%2farticles%2fposts%2fsimple-parallelism-idiom%2f" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+            </ul>
+
+        
+                <h3 id="https://lemire.me/blog">
+                    <a href="https://lemire.me/blog" class="no-visited">
+                        Daniel Lemire&#39;s blog
+                        <div class="subtitle">https://lemire.me/blog</div>
+                    </a>
+                </h3>
+            <ul>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://lemire.me/blog/?p=19617">
+                            <a href="https://lemire.me/blog/2022/01/17/what-is-the-range-of-a-number-type/">What is the ‘range’ of a number type?</a>
+                            
+                                <div class="description">
+                                In programming, we often represent numbers using types that have specific ranges. For example, 64-bit signed integer types can represent all integers between -9223372036854775808 and 9223372036854775807, inclusively. All integers inside this range are valid, all integers outside are “out of range”. It is simple. What about floating-point numbers? The nuance with floating-point numbers is that … Continue reading What is the ‘range’ of a number type?
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2flemire.me%2fblog%2f%3fp%3d19617" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+            </ul>
+
+        
+                <h3 id="https://eli.thegreenplace.net/">
+                    <a href="https://eli.thegreenplace.net/" class="no-visited">
+                        Eli Bendersky&#39;s website
+                        <div class="subtitle">https://eli.thegreenplace.net/</div>
+                    </a>
+                </h3>
+            <ul>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="tag:eli.thegreenplace.net,2022-01-17:/2022/in-defense-of-books/">
+                            <a href="https://eli.thegreenplace.net/2022/in-defense-of-books/">In defense of books</a>
+                            
+                                <div class="description">
+                                When I&#39;m asked &#34;what podcasts do you listen to?&#34;, after an uncomfortable pause I&#39;m forced to answer that &#34;I usually don&#39;t&#34;. The full explanation is almost always too long for a brief friendly chat, but I did manage to articulate it to friends a couple of times in recent history; I think it&#39;s time to put it down in writing. Generally speaking, I prefer Slow Media , and the slower the better. Consuming information is a marathon, not a sprint. Suppose I&#39;m interested in 20 different topics.
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for tag%3aeli.thegreenplace.net%2c2022-01-17%3a%2f2022%2fin-defense-of-books%2f" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+            </ul>
+
+        
+                <h3 id="https://engineering.fb.com">
+                    <a href="https://engineering.fb.com" class="no-visited">
+                        Engineering at Meta
+                        <div class="subtitle">https://engineering.fb.com</div>
+                    </a>
+                </h3>
+            <ul>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://engineering.fb.com/?p=18459">
+                            <a href="https://engineering.fb.com/2022/01/18/production-engineering/foqs-disaster-ready/">FOQS: Making a distributed priority queue disaster-ready</a>
+                            
+                                <div class="description">
+                                Facebook Ordered Queueing Service (FOQS) is a fully managed, distributed priority queueing service used for reliable message delivery among many services. FOQS has evolved from a regional deployment into a geo-distributed, global deployment to help ensure that data stored within logical queues is highly available, even through large-scale disaster scenarios. Migrating to a global architecture [...] Read More...
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2fengineering.fb.com%2f%3fp%3d18459" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+            </ul>
+
+        
+                <h3 id="https://eugeneyan.com">
+                    <a href="https://eugeneyan.com" class="no-visited">
+                        Eugene Yan
+                        <div class="subtitle">https://eugeneyan.com</div>
+                    </a>
+                </h3>
+            <ul>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://eugeneyan.com//writing/how-to-keep-learning/">
+                            <a href="https://eugeneyan.com//writing/how-to-keep-learning/">How to Keep Learning about Machine Learning</a>
+                            
+                                <div class="description">
+                                Beyond getting that starting role, how does one continue growing in the field?
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2feugeneyan.com%2f%2fwriting%2fhow-to-keep-learning%2f" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+            </ul>
+
+        
+                <h3 id="https://future.a16z.com">
+                    <a href="https://future.a16z.com" class="no-visited">
+                        Future
+                        <div class="subtitle">https://future.a16z.com</div>
+                    </a>
+                </h3>
+            <ul>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://future.a16z.com/?p=2913">
+                            <a href="https://future.a16z.com/building-american-dynamism/">Building American Dynamism</a>
+                            
+                                <div class="description">
+                                Two weeks before the start of our perpetual lockdown, The New York Times columnist and Substack writer Ross Douthat released “The Decadent Society,” a survey of America’s general apathy toward building a more dynamic future. While the book itself isn’t particularly surprising in its critique, the timing of its release was important: it was among... Read More The post Building American Dynamism appeared first on Future .
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2ffuture.a16z.com%2f%3fp%3d2913" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+            </ul>
+
+        
+                <h3 id="https://www.ardanlabs.com/blog/">
+                    <a href="https://www.ardanlabs.com/blog/" class="no-visited">
+                        Go (Golang) Programming Blog - Ardan Labs on
+                        <div class="subtitle">https://www.ardanlabs.com/blog/</div>
+                    </a>
+                </h3>
+            <ul>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://www.ardanlabs.com/blog/2022/01/visualizations-in-go.html">
+                            <a href="https://www.ardanlabs.com/blog/2022/01/visualizations-in-go.html">Visualization in Go - Plotting Stock Information</a>
+                            
+                                <div class="description">
+                                Introduction You’d like to visualize some stock data using Go, but after looking at the Go ecosystem you see very little in charting. You find gonum, which has some plotting capabilities, but it generates static charts. It’s 2022, and you’d like to have interactive features such as zooming, panning, and more. You turn to the HTML landscape, and see many more options and decide to take this path. After a short survey, you decide to use plotly.
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2fwww.ardanlabs.com%2fblog%2f2022%2f01%2fvisualizations-in-go.html" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+            </ul>
+
+        
+                <h3 id="http://highscalability.com/blog/">
+                    <a href="http://highscalability.com/blog/" class="no-visited">
+                        High Scalability
+                        <div class="subtitle">http://highscalability.com/blog/</div>
+                    </a>
+                </h3>
+            <ul>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="426227:4867632:36393538">
+                            <a href="http://highscalability.com/blog/2022/1/17/designing-tinder.html">Designing Tinder</a>
+                            
+                                <div class="description">
+                                This is a guest post by Ankit Sirmorya . Ankit is working as a Machine Learning Lead/Sr. Machine Learning Engineer at Amazon and has led several machine-learning initiatives across the Amazon ecosystem. Ankit has been working on applying machine learning to solve ambiguous business problems and improve customer experience. For instance, he created a platform for experimenting with different hypotheses on Amazon product pages using reinforcement learning techniques. Gathering Requirements
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for 426227%3a4867632%3a36393538" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+            </ul>
+
+        
+                <h3 id="https://lethain.com/">
+                    <a href="https://lethain.com/" class="no-visited">
+                        Irrational Exuberance
+                        <div class="subtitle">https://lethain.com/</div>
+                    </a>
+                </h3>
+            <ul>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://lethain.com/mental-models-mix-match/">
+                            <a href="https://lethain.com/mental-models-mix-match/">Mix and match mental models.</a>
+                            
+                                <div class="description">
+                                A few days ago, I got to have a delightful chat with Katie Wilde , digging into a question that we’ve both found difficult to answer: what distinguishes managers perceived to have good judgment from those perceived to have bad judgment? In exploring that question, the topic of mental models came up frequently. Mental model is a somewhat overloaded term, but roughly means having a structured view on a given topic. For managers, it’s usually easiest to see in evolving process.
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2flethain.com%2fmental-models-mix-match%2f" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+            </ul>
+
+        
+                <h3 id="http://jvns.ca">
+                    <a href="http://jvns.ca/atom.xml" class="no-visited">
+                        Julia Evans
+                        <div class="subtitle">http://jvns.ca/atom.xml</div>
+                    </a>
+                </h3>
+            <ul>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://jvns.ca/blog/2022/01/15/some-ways-dns-can-break/">
+                            <a href="https://jvns.ca/blog/2022/01/15/some-ways-dns-can-break/">Some ways DNS can break</a>
+                            
+                                <div class="description">
+                                When I first learned about it, DNS didn’t seem like it should be THAT complicated. Like, there are DNS records, they’re stored on a server, what’s the big deal? But with DNS, reading about how it works in a textbook doesn’t prepare you for the sheer volume of different ways DNS can break your system in practice. It’s not just caching problems! So I asked people on Twitter for example of DNS problems they’ve run into, especially DNS problems that didn’t initially appear to be DNS problems .64.0.
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2fjvns.ca%2fblog%2f2022%2f01%2f15%2fsome-ways-dns-can-break%2f" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+            </ul>
+
+        
+                <h3 id="http://brooker.co.za/blog/">
+                    <a href="http://brooker.co.za/blog/" class="no-visited">
+                        Marc Brooker&#39;s Blog
+                        <div class="subtitle">http://brooker.co.za/blog/</div>
+                    </a>
+                </h3>
+            <ul>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="http://brooker.co.za/blog/2022/01/19/predictability">
+                            <a href="http://brooker.co.za/blog/2022/01/19/predictability.html">DynamoDB&#39;s Best Feature: Predictability</a>
+                            
+                                <div class="description">
+                                DynamoDB&#39;s Best Feature: Predictability Happy birthday! It&#39;s 10 years since the launch of DynamoDB , Amazon&#39;s fast, scalable, NoSQL database. Back when DynamoDB launched, I was leading the team rethinking the control plane of EBS . At the time, we had a large number of manually-administered MySQL replication trees, which were giving us a lot of operational pain. Writes went to a single primary, and reads came from replicas, with lots of eventual consistency and weird anomalies in the mix.
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for http%3a%2f%2fbrooker.co.za%2fblog%2f2022%2f01%2f19%2fpredictability" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+            </ul>
+
+        
+                <h3 id="tag:blogger.com,1999:blog-8436330762136344379">
+                    <a href="http://muratbuffalo.blogspot.com/" class="no-visited">
+                        Metadata
+                        <div class="subtitle">http://muratbuffalo.blogspot.com/</div>
+                    </a>
+                </h3>
+            <ul>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="tag:blogger.com,1999:blog-8436330762136344379.post-498852752198598221">
+                            <a href="http://muratbuffalo.blogspot.com/2022/01/clear-communication.html">Clear communication</a>
+                            
+                                <div class="description">
+                                My cat is a great communicator. Today, just before noon, he meowed in front of my room. When I opened the door, he walked down the stairs till halfway, stopped, looked back at me, made eye contact, and meowed again. When I started following him, he passed the living room, stopped, looked back at me, meowed again, and waited for me to catch up. He then led me to the kitchen next to his feeder, and made me feed him. Many technical people forget this first rule of communication. Divide and conquer.
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for tag%3ablogger.com%2c1999%3ablog-8436330762136344379.post-498852752198598221" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+            </ul>
+
+        
+                <h3 id="Monzo - Technology">
+                    <a href="https://monzo.com/blog/technology" class="no-visited">
+                        Monzo - Technology
+                        <div class="subtitle">https://monzo.com/blog/technology</div>
+                    </a>
+                </h3>
+            <ul>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="My first 6 months at Monzo as a Backend Engineer">
+                            <a href="https://monzo.com/blog/2022/02/17/my-first-6-months-at-monzo-as-a-backend-engineer">My first 6 months at Monzo as a Backend Engineer</a>
+                            
+                                <div class="description">
+                                Bee Skerritt joined the Infrastructure squad as a backend engineer. In this post, he explains his journey to Monzo and his experience so far. 
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for My%20first%206%20months%20at%20Monzo%20as%20a%20Backend%20Engineer" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+            </ul>
+
+        
+                <h3 id="https://hacks.mozilla.org">
+                    <a href="https://hacks.mozilla.org" class="no-visited">
+                        Mozilla Hacks – the Web developer blog
+                        <div class="subtitle">https://hacks.mozilla.org</div>
+                    </a>
+                </h3>
+            <ul>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://hacks.mozilla.org/?p=47555">
+                            <a href="https://hacks.mozilla.org/2022/01/contributing-to-mdn-meet-the-contributors/">Contributing to MDN: Meet the Contributors</a>
+                            
+                                <div class="description">
+                                If you’ve ever built anything with web technologies, you’re probably familiar with MDN Web Docs. With about 13,000 pages documenting how to use programming languages such as HTML, CSS and JavaScript, the site has about 8,000 people using it at any given moment. MDN relies on contributors to help maintain its ever-expanding and up to date documentation. The post Contributing to MDN: Meet the Contributors appeared first on Mozilla Hacks - the Web developer blog .
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2fhacks.mozilla.org%2f%3fp%3d47555" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+            </ul>
+
+        
+                <h3 id="https://netflixtechblog.com?source=rss----2615bd06b42e---4">
+                    <a href="https://netflixtechblog.com?source=rss----2615bd06b42e---4" class="no-visited">
+                        Netflix TechBlog - Medium
+                        <div class="subtitle">https://netflixtechblog.com</div>
+                    </a>
+                </h3>
+            <ul>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://medium.com/p/5bcc52d853d1">
+                            <a href="https://netflixtechblog.com/auto-diagnosis-and-remediation-in-netflix-data-platform-5bcc52d853d1?source=rss----2615bd06b42e---4">Auto-Diagnosis and Remediation in Netflix Data Platform</a>
+                            
+                                <div class="description">
+                                By Vikram Srivastava and Marcelo Mayworm Netflix has one of the most complex data platforms in the cloud on which our data scientists and engineers run batch and streaming workloads. As our subscribers grow worldwide and Netflix enters the world of gaming , the number of batch workflows and real-time data pipelines increases rapidly. And we can’t discount the productivity impact it causes on data platform users. These steps launch jobs on clusters running Apache Spark and TrinoDb via Genie .
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2fmedium.com%2fp%2f5bcc52d853d1" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+            </ul>
+
+        
+                <h3 id="https://www.tbray.org/ongoing/">
+                    <a href="https://www.tbray.org/ongoing/ongoing.atom" class="no-visited">
+                        ongoing by Tim Bray
+                        <div class="subtitle">https://www.tbray.org/ongoing/ongoing.atom</div>
+                    </a>
+                </h3>
+            <ul>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://www.tbray.org/ongoing/When/202x/2022/01/16/Pulp-Fiction">
+                            <a href="https://www.tbray.org/ongoing/When/202x/2022/01/16/Pulp-Fiction">Pulp Fiction</a>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2fwww.tbray.org%2fongoing%2fWhen%2f202x%2f2022%2f01%2f16%2fPulp-Fiction" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+            </ul>
+
+        
+                <h3 id="https://syslog.ravelin.com?source=rss----e35b8c575db5---4">
+                    <a href="https://syslog.ravelin.com?source=rss----e35b8c575db5---4" class="no-visited">
+                        Ravelin Tech Blog - Medium
+                        <div class="subtitle">https://syslog.ravelin.com</div>
+                    </a>
+                </h3>
+            <ul>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://medium.com/p/49a0dcc8f7e8">
+                            <a href="https://syslog.ravelin.com/classification-with-tabnet-deep-dive-49a0dcc8f7e8?source=rss----e35b8c575db5---4">Classification with TabNet: Deep Dive</a>
+                            
+                                <div class="description">
+                                Photo by Mika Baumeister on  Unsplash Tabular data is the bread and butter for training fraud detection algorithms at Ravelin. We extract transaction, identity, product, and network attributes (read this blog if you’re interested in our network features) and place them into a big table of features which can be easily used by different Machine Learning models for training and inference. Decision tree based models (e. TabNet prediction intuition on Income dataset. Source: https://arxiv.07442.e.g.
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2fmedium.com%2fp%2f49a0dcc8f7e8" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+            </ul>
+
+        
+                <h3 id="https://blog.sentry.io">
+                    <a href="https://blog.sentry.io" class="no-visited">
+                        Sentry Blog RSS
+                        <div class="subtitle">https://blog.sentry.io</div>
+                    </a>
+                </h3>
+            <ul>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://blog.sentry.io/2022/01/18/deprecation-from-u2f-api-to-webauthn/">
+                            <a href="https://blog.sentry.io/2022/01/18/deprecation-from-u2f-api-to-webauthn/">Deprecation From U2F API to WebAuthn</a>
+                            
+                                <div class="description">
+                                If you’re using the U2F API for registration and authentication of your U2F devices, you will notice a dire situation is coming soon: Google…
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2fblog.sentry.io%2f2022%2f01%2f18%2fdeprecation-from-u2f-api-to-webauthn%2f" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+            </ul>
+
+        
+                <h3 id="https://engineering.atspotify.com">
+                    <a href="https://engineering.atspotify.com" class="no-visited">
+                        Spotify Engineering
+                        <div class="subtitle">https://engineering.atspotify.com</div>
+                    </a>
+                </h3>
+            <ul>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://engineering.atspotify.com/?p=4962">
+                            <a href="https://engineering.atspotify.com/2022/01/19/product-lessons-from-ml-home-spotifys-one-stop-shop-for-machine-learning/">Product Lessons from ML Home: Spotify’s One-Stop Shop for Machine Learning</a>
+                            
+                                <div class="description">
+                                Introduction  Building platforms is a hard business. Building platforms for discerning machine learning (ML) practitioners with bespoke needs and a do-it-yourself ethos is even harder. In today’s post, we will give you a peek into how we built ML Home, the internal user interface for Spotify’s Machine Learning Platform, and the product lessons we learned [...]
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2fengineering.atspotify.com%2f%3fp%3d4962" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+            </ul>
+
+        
+                <h3 id="https://staysaasy.com/feed.xml">
+                    <a href="https://staysaasy.com/" class="no-visited">
+                        Stay SaaSy
+                        <div class="subtitle">https://staysaasy.com/</div>
+                    </a>
+                </h3>
+            <ul>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://staysaasy.com/software/2022/01/17/complexity">
+                            <a href="https://staysaasy.com/software/2022/01/17/complexity.html">Complexity Debt</a>
+                            
+                                <div class="description">
+                                At growth companies, complexity kills. The reason is simple - complexity is slow, and slow don’t grow. For example, say the software you’re building has a piece of code that has been optimized for the last 4 years, mostly by one SME. It might run 40% faster than a simpler, less optimized version. But it’s become very complex, and even SME has some trouble keeping all of it in their head at once. One final, critical detail - the code is not bad code. It’s actually very good code.
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2fstaysaasy.com%2fsoftware%2f2022%2f01%2f17%2fcomplexity" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+            </ul>
+
+        
+                <h3 id="https://stratechery.com">
+                    <a href="https://stratechery.com" class="no-visited">
+                        Stratechery by Ben Thompson
+                        <div class="subtitle">https://stratechery.com</div>
+                    </a>
+                </h3>
+            <ul>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://stratechery.com/?p=8327">
+                            <a href="https://stratechery.com/2022/the-intel-split/">The Intel Split</a>
+                            
+                                <div class="description">
+                                It appears that Intel&#39;s partnership with TSMC is much larger than it first seemed; the implications for Intel as whole are massive.
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2fstratechery.com%2f%3fp%3d8327" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+            </ul>
+
+        
+                <h3 id="https://blog.pragmaticengineer.com/">
+                    <a href="https://blog.pragmaticengineer.com/" class="no-visited">
+                        The Pragmatic Engineer
+                        <div class="subtitle">https://blog.pragmaticengineer.com/</div>
+                    </a>
+                </h3>
+            <ul>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="61e6d25a66b03d003b6b0246">
+                            <a href="https://blog.pragmaticengineer.com/becoming-a-better-writer-in-tech/">Becoming a Better Writer in Tech</a>
+                            
+                                <div class="description">
+                                Writing is an increasingly important skill for engineering leaders. Indeed, poor writing can hamper career progression, above a certain level. Tactics for more clear, more frequent and more confident.I’ve observed that my writing is not up to par with my peers. How can I improve my professional writing, This is a content summary only. Click on the blog title to continue reading this post and browse The Pragmatic Engineer blog.
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for 61e6d25a66b03d003b6b0246" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+            </ul>
+
+        
+                <h3 id="https://www.gsb.stanford.edu/insights/think-fast-talk-smart-podcast">
+                    <a href="https://www.gsb.stanford.edu/insights/think-fast-talk-smart-podcast" class="no-visited">
+                        Think Fast, Talk Smart: Communication Techniques
+                        <div class="subtitle">https://www.gsb.stanford.edu/insights/think-fast-talk-smart-podcast</div>
+                    </a>
+                </h3>
+            <ul>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="gid://art19-episode-locator/V0/f9Fx1ofDAMbty6mYzE1Y2IZ08W0uOQSwJY7gkzOv_CE">
+                            <a href="https://www.gsb.stanford.edu">Make Numbers Count: How to Communicate Data Effectively </a>
+                            
+                                <div class="description">
+                                “We have to make data emotional because emotions are what drive us to act,” says  Chip Heath , a professor of organizational behavior and author of the new book,  Making Numbers Count: The Art of Science of Communicating Numbers . In this interview with podcast host Matt Abrahams, Heath talks about ways that data and statistics can be used to illuminate — or obscure — our message. “A lot of people in the world don’t understand numbers like the numbers people,” he says.
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for gid%3a%2f%2fart19-episode-locator%2fV0%2ff9Fx1ofDAMbty6mYzE1Y2IZ08W0uOQSwJY7gkzOv_CE" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+            </ul>
+
+        
+                <h3 id="https://blog.timescale.com/">
+                    <a href="https://blog.timescale.com/" class="no-visited">
+                        Timescale Blog
+                        <div class="subtitle">https://blog.timescale.com/</div>
+                    </a>
+                </h3>
+            <ul>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="61e7f5f51cf7db003ba0efbd">
+                            <a href="https://blog.timescale.com/blog/how-to-shape-sample-data-with-postgresql-generate_series-and-sql/">How to shape sample data with PostgreSQL generate_series() and SQL</a>
+                            
+                                <div class="description">
+                                Learn how to quickly create recurring time-series data for charting and testing PostgreSQL and TimescaleDB functions.
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for 61e7f5f51cf7db003ba0efbd" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+            </ul>
+
+        
+                <h3 id="https://hackaday.com">
+                    <a href="https://hackaday.com" class="no-visited">
+                        Blog – Hackaday
+                        <div class="subtitle">https://hackaday.com</div>
+                    </a>
+                </h3>
+            <ul>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://hackaday.com/?p=515197">
+                            <a href="https://hackaday.com/2022/01/20/bringing-the-power-of-edm-to-the-home-shop/">Bringing the Power of EDM to the Home Shop</a>
+                            
+                                <div class="description">
+                                When you see something made from metal that seems like it would be impossible to manufacture, chances are good it was made with some variety of electrical discharge machining. EDM …read more
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2fhackaday.com%2f%3fp%3d515197" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://hackaday.com/?p=516312">
+                            <a href="https://hackaday.com/2022/01/20/setup-menu-uses-text-editor-hack/">Setup Menu Uses Text Editor Hack</a>
+                            
+                                <div class="description">
+                                Many embedded devices that require a setup menu will use a USB serial port which you connect to your favorite terminal emulator. But we recently encountered a generic USB knob …read more
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2fhackaday.com%2f%3fp%3d516312" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+            </ul>
+
+        
+                <h3 id="https://tech.fb.com">
+                    <a href="https://tech.fb.com" class="no-visited">
+                        Facebook Technology
+                        <div class="subtitle">https://tech.fb.com</div>
+                    </a>
+                </h3>
+            <ul>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://tech.fb.com/?p=12419">
+                            <a href="https://tech.fb.com/meta-plays-after-the-fall-vr-zombie-shooter/">Meta Plays ‘After the Fall,’ a cooperative online zombie survival shooter built for VR</a>
+                            
+                                <div class="description">
+                                It doesn’t take long after stepping into the frozen wastelands of Los Angeles that are depicted in After the Fall to feel overwhelmed. After meeting the main cast of characters, learning how to handle weapons and items, and eventually setting off on the first Harvest Run, stuff gets really intense really quickly. The friend I […] The post Meta Plays ‘After the Fall,’ a cooperative online zombie survival shooter built for VR appeared first on Facebook Technology .
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2ftech.fb.com%2f%3fp%3d12419" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://tech.fb.com/?p=12410">
+                            <a href="https://tech.fb.com/that-other-gaming-podcast-episode-4-mechanics-with-numinous-games-amy-green/">That Other Gaming Podcast Episode 4: Mechanics with Numinous Games’ Amy Green</a>
+                            
+                                <div class="description">
+                                In Episode 1 of That Other Gaming Podcast, listeners got the inside scoop on After the Fall, a fast-paced, action-packed post-apocalyptic zombie adventure from Vertigo Games. In Episode 2, we interviewed Schell Games CEO &amp; Founder Jesse Schell about their upcoming game, Lost Recipes. And in Episode 3, we sat down with Meta VP of […] The post That Other Gaming Podcast Episode 4: Mechanics with Numinous Games’ Amy Green appeared first on Facebook Technology .
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2ftech.fb.com%2f%3fp%3d12410" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+            </ul>
+
+        
+                <h3 id="tag:blogger.com,1999:blog-8474926331452026626">
+                    <a href="http://ai.googleblog.com/" class="no-visited">
+                        Google AI Blog
+                        <div class="subtitle">http://ai.googleblog.com/</div>
+                    </a>
+                </h3>
+            <ul>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="tag:blogger.com,1999:blog-8474926331452026626.post-5208713773063526431">
+                            <a href="http://ai.googleblog.com/2022/01/introducing-stylex-new-approach-for.html">Introducing StylEx: A New Approach for Visual Explanation of Classifiers</a>
+                            
+                                <div class="description">
+                                Posted by Oran Lang and Inbar Mosseri, Software Engineers, Google Research Neural networks can perform certain tasks remarkably well, but understanding how they reach their decisions — e.g., identifying which signals in an image cause a model to determine it to be of one class and not another — is often a mystery . These insights can also be helpful in guiding health care providers, revealing model biases, providing support for downstream decision makers, and even aiding scientific discovery.g.
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for tag%3ablogger.com%2c1999%3ablog-8474926331452026626.post-5208713773063526431" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="tag:blogger.com,1999:blog-8474926331452026626.post-4719309247607599773">
+                            <a href="http://ai.googleblog.com/2022/01/learning-to-route-by-task-for-efficient.html">Learning to Route by Task for Efficient Inference</a>
+                            
+                                <div class="description">
+                                Posted by Sneha Kudugunta, Research Software Engineer and Orhan Firat, Research Scientist, Google Research Scaling large language models has resulted in significant quality improvements in natural language understanding ( T5 ), generation ( GPT-3 ) and multilingual neural machine translation ( M4 ). One common approach to building a larger model is to increase the depth (number of layers) and width (layer dimensionality), simply enlarging existing dimensions of the network.g.g.0 BLEU on average.
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for tag%3ablogger.com%2c1999%3ablog-8474926331452026626.post-4719309247607599773" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+            </ul>
+
+        
+                <h3 id="https://krebsonsecurity.com">
+                    <a href="https://krebsonsecurity.com" class="no-visited">
+                        Krebs on Security
+                        <div class="subtitle">https://krebsonsecurity.com</div>
+                    </a>
+                </h3>
+            <ul>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://krebsonsecurity.com/?p=58154">
+                            <a href="https://krebsonsecurity.com/2022/01/irs-will-soon-require-selfies-for-online-access/">IRS Will Soon Require Selfies for Online Access</a>
+                            
+                                <div class="description">
+                                If you created an online account to manage your tax records with the U.S. Internal Revenue Service (IRS), those login credentials will cease to work later this year. The agency says that by the summer of 2022, the only way to log in to irs.gov will be through ID.me, an online identity verification service that requires applicants to submit copies of bills and identity documents, as well as a live video feed of their faces via a mobile device.
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2fkrebsonsecurity.com%2f%3fp%3d58154" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://krebsonsecurity.com/?p=58116">
+                            <a href="https://krebsonsecurity.com/2022/01/at-request-of-u-s-russia-rounds-up-14-revil-ransomware-affiliates/">At Request of U.S., Russia Rounds Up 14 REvil Ransomware Affiliates</a>
+                            
+                                <div class="description">
+                                The Russian government said today it arrested 14 people accused of working for &#34;REvil,&#34; a particularly aggressive ransomware group that has extorted hundreds of millions of dollars from victim organizations. The Russian Federal Security Service (FSB) said the actions were taken in response to a request from U.S.
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2fkrebsonsecurity.com%2f%3fp%3d58116" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+            </ul>
+
+        
+                <h3 id="https://circleci.com/blog/">
+                    <a href="https://circleci.com/blog/" class="no-visited">
+                        The CircleCI Blog Feed - CircleCI
+                        <div class="subtitle">https://circleci.com/blog/</div>
+                    </a>
+                </h3>
+            <ul>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://circleci.com/blog/api-performance-testing-with-k6/">
+                            <a href="https://circleci.com/blog/api-performance-testing-with-k6/">API performance testing with k6</a>
+                            
+                                <div class="description">
+                                This tutorial covers: What k6 is and how it works Writing and executing k6 performance tests Analyzing k6 performance test results Performance testing measures how well systems perform when subjected to various workloads. The key qualities being tested are stability and responsiveness. Performance testing shows the robustness and reliability of systems in general, along with the specific potential breaking points. Then you will learn how to interpret the results obtained from the tests. account.
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2fcircleci.com%2fblog%2fapi-performance-testing-with-k6%2f" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://circleci.com/blog/using-runner-for-local-testing/">
+                            <a href="https://circleci.com/blog/using-runner-for-local-testing/">Testing locally with CircleCI runners</a>
+                            
+                                <div class="description">
+                                In this article you will learn how to set up the CircleCI runner agent on your local machine to run tests. You will also learn how to configure your CircleCI pipeline so that the runner is invoked correctly. Many development teams start their CI/CD journey with a local build box (or six) that run their tests. In several mobile teams I worked on, for example, we had a few Mac Mini boxes with physical devices plugged in that we used for running local UI and unit tests. Your config.circleci/config.
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2fcircleci.com%2fblog%2fusing-runner-for-local-testing%2f" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+            </ul>
+
+        
+                <h3 id="https://www.weave.works/feed.xml">
+                    <a href="https://www.weave.works/" class="no-visited">
+                        Weaveworks
+                        <div class="subtitle">https://www.weave.works/</div>
+                    </a>
+                </h3>
+            <ul>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://www.weave.works/blog/blogachieving-production-ready-kubernetes">
+                            <a href="https://www.weave.works/blog/achieving-production-ready-kubernetes">Production-ready Kubernetes: what it means and how to achieve it</a>
+                            
+                                <div class="description">
+                                Kubernetes is open source software for deploying, scaling and managing containerized applications. As an orchestrator, it handles the work of scheduling containers on a cluster and also manages the workloads, to ensure they run as you intended.    Because Kubernetes was designed from the outset with the idea of software development and operations working together, operations tasks and how they get performed represent an integral component of Kubernetes’ architecture and design.
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2fwww.weave.works%2fblog%2fblogachieving-production-ready-kubernetes" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://www.weave.works/blog/blogkubernetes-devops-the-perfect-match">
+                            <a href="https://www.weave.works/blog/kubernetes-devops-the-perfect-match">Kubernetes DevOps: The Perfect Match</a>
+                            
+                                <div class="description">
+                                Kubernetes has had a meteoric rise over the past few years as organizations have made the switch to containerized workloads and application infrastructure, leveraging the scalability that Kubernetes offers. Simultaneously, DevOps as a culture has taken off and has become almost the default approach to software development, testing, and deployment, allowing organizations to accelerate the pace at which they deliver applications and services to customers.
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2fwww.weave.works%2fblog%2fblogkubernetes-devops-the-perfect-match" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+            </ul>
+
+        
+                <h3 id="https://www.amazon.science/">
+                    <a href="https://www.amazon.science/" class="no-visited">
+                        Amazon Science Homepage
+                        <div class="subtitle">https://www.amazon.science/</div>
+                    </a>
+                </h3>
+            <ul>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://www.amazon.science/working-at-amazon/amazon-advertising-lihong-li-using-reinforcement-learning-algorithms">
+                            <a href="https://www.amazon.science/working-at-amazon/amazon-advertising-lihong-li-using-reinforcement-learning-algorithms">Decisions, decisions: Lihong Li&#39;s Amazon Ads reinforcement learning research</a>
+                            
+                                <div class="description">
+                                The scientist&#39;s work is driving practical outcomes within an exploding machine learning research field.
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2fwww.amazon.science%2fworking-at-amazon%2famazon-advertising-lihong-li-using-reinforcement-learning-algorithms" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://www.amazon.science/latest-news/amazons-dynamodb-10-years-later">
+                            <a href="https://www.amazon.science/latest-news/amazons-dynamodb-10-years-later">Amazon’s DynamoDB — 10 years later</a>
+                            
+                                <div class="description">
+                                Amazon DynamoDB was introduced 10 years ago today; one of its key contributors reflects on its origins, and discusses the &#39;never-ending journey&#39; to make DynamoDB more secure, more available and more performant.
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2fwww.amazon.science%2flatest-news%2famazons-dynamodb-10-years-later" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://www.amazon.science/blog/hierarchical-representations-improve-image-retrieval">
+                            <a href="https://www.amazon.science/blog/hierarchical-representations-improve-image-retrieval">Hierarchical representations improve image retrieval</a>
+                            
+                                <div class="description">
+                                A new metric-learning loss function groups together superclasses and learns commonalities within them.
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2fwww.amazon.science%2fblog%2fhierarchical-representations-improve-image-retrieval" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+            </ul>
+
+        
+                <h3 id="https://goteleport.com/blog/">
+                    <a href="https://goteleport.com/blog/" class="no-visited">
+                        The Teleport Blog
+                        <div class="subtitle">https://goteleport.com/blog/</div>
+                    </a>
+                </h3>
+            <ul>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://goteleport.com/blog/how-to-use-ssh-agent-safely/">
+                            <a href="https://goteleport.com/blog/how-to-use-ssh-agent-safely/">How to Use SSH Agent Safely</a>
+                            
+                                <div class="description">
+                                The SSH agent ( ssh-agent ) is an SSH key manager that stores the SSH key in a process memory so that users can log into SSH servers without having to type the key’s passphrase every time they authenticate with the server. In addition to the key management feature, SSH agent supports agent forwarding, which helps to authenticate with servers that sit behind a bastion or jump server . However, the more critical security risk is associated with SSH agent forwarding. 1. 2. 3. You can also update .
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2fgoteleport.com%2fblog%2fhow-to-use-ssh-agent-safely%2f" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://goteleport.com/blog/z3-rbac/">
+                            <a href="https://goteleport.com/blog/z3-rbac/">Using Z3 Theorem Prover to analyze RBAC</a>
+                            
+                                <div class="description">
+                                Z3 is a satisfiability modulo theories (SMT) solver developed by Microsoft Research. With a description like that, you’d expect it to be restricted to esoteric corners of the computerized mathematics world, but it has made impressive inroads addressing conventional software engineering needs: analyzing network ACLs and firewalls in Microsoft Azure, for example. Z3 Automata was sadly never open-sourced, but the following years saw a ton of work put into Z3’s string and regex functionality.
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2fgoteleport.com%2fblog%2fz3-rbac%2f" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://goteleport.com/blog/identity-based-access-for-ssh/">
+                            <a href="https://goteleport.com/blog/identity-based-access-for-ssh/">Identity-Based Access for SSH</a>
+                            
+                                <div class="description">
+                                Lack of access accountability and unmonitored access create a considerable security risk for organizations, and the best way to mitigate this challenge is by implementing identity-based access.” Identity-based access entails integrating identity providers with access providers with single sign-on (SSO) features to deliver an efficient and secure access method. In this article, we’ll talk about the features and advantages of identity-based access and how it can be used with SSH.
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2fgoteleport.com%2fblog%2fidentity-based-access-for-ssh%2f" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+            </ul>
+
+        
+                <h3 id="https://blog.cloudflare.com/">
+                    <a href="https://blog.cloudflare.com/" class="no-visited">
+                        The Cloudflare Blog
+                        <div class="subtitle">https://blog.cloudflare.com/</div>
+                    </a>
+                </h3>
+            <ul>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="61e7e53885cee0000bd1d461">
+                            <a href="https://blog.cloudflare.com/tonga-internet-outage/">Tonga’s likely lengthy Internet outage</a>
+                            
+                                <div class="description">
+                                The latest Internet outage, in the South Pacific country of Tonga (with 169 islands), is still ongoing. It started with the large eruption of Hunga Tonga–Hunga Haʻapai, an uninhabited volcanic island of the Tongan archipelago on Friday, January 14, 2022
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for 61e7e53885cee0000bd1d461" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="61e6ca641b75b4000be1eae9">
+                            <a href="https://blog.cloudflare.com/tomonari-sato-why-i-joined-cloudflare-and-why-im-helping-cloudflare-grow-in-japan/">Tomonari Sato: Why I joined Cloudflare and why I’m helping Cloudflare grow in Japan</a>
+                            
+                                <div class="description">
+                                I’m excited to announce that I recently joined Cloudflare in Japan as Vice-President and Managing Director, to help build and expand our customer, partner base, and presence in Japan
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for 61e6ca641b75b4000be1eae9" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="61de92f70bfc69000a525d58">
+                            <a href="https://blog.cloudflare.com/free-ddos-alerts/">Cloudflare customers on Free plans can now also get real-time DDoS alerts</a>
+                            
+                                <div class="description">
+                                We’re excited to announce that customers using our Free plan can now get real-time alerts about HTTP DDoS attacks that were automatically detected and mitigated by Cloudflare
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for 61de92f70bfc69000a525d58" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="61e02558815caf000a982ed4">
+                            <a href="https://blog.cloudflare.com/workers-optimization-reduces-your-bill/">A Workers optimization
+that reduces your bill</a>
+                            
+                                <div class="description">
+                                Recently, we made an optimization to the Cloudflare Workers runtime which reduces the amount of time Workers need to spend in memory. We&#39;re passing the savings on to you for all your Unbound Workers
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for 61e02558815caf000a982ed4" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+            </ul>
+
+        
+                <h3 id="https://stackoverflow.blog">
+                    <a href="https://stackoverflow.blog" class="no-visited">
+                        Stack Overflow Blog
+                        <div class="subtitle">https://stackoverflow.blog</div>
+                    </a>
+                </h3>
+            <ul>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://stackoverflow.blog/?p=19415">
+                            <a href="https://stackoverflow.blog/2022/01/19/heres-how-stack-overflow-users-responded-to-log4shell-the-log4j-vulnerability-affecting-almost-everyone/">Here’s how Stack Overflow users responded to Log4Shell, the Log4j vulnerability affecting almost everyone</a>
+                            
+                                <div class="description">
+                                When the Log4j security issue was disclosed, developers came looking for answers. We took a look at our site data around it. The post Here’s how Stack Overflow users responded to Log4Shell, the Log4j vulnerability affecting almost everyone appeared first on Stack Overflow Blog .
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2fstackoverflow.blog%2f%3fp%3d19415" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://stackoverflow.blog/?p=19406">
+                            <a href="https://stackoverflow.blog/2022/01/18/aws-technical-training-certification-learning/">A chat with the folks who lead training and certification at AWS</a>
+                            
+                                <div class="description">
+                                From teachers to tutorials to peer groups, and now, video games, there are lots of ways to acquire skills on the AWS platform. The post A chat with the folks who lead training and certification at AWS appeared first on Stack Overflow Blog .
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2fstackoverflow.blog%2f%3fp%3d19406" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://stackoverflow.blog/?p=19400">
+                            <a href="https://stackoverflow.blog/2022/01/17/plan-for-tradeoffs-you-cant-optimize-all-software-quality-attributes/">Plan for tradeoffs: You can’t optimize all software quality attributes</a>
+                            
+                                <div class="description">
+                                An essential part of requirements analysis is understanding which quality characteristics are the most important so that designers can address them appropriately. The post Plan for tradeoffs: You can’t optimize all software quality attributes appeared first on Stack Overflow Blog .
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2fstackoverflow.blog%2f%3fp%3d19400" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://stackoverflow.blog/?p=19398">
+                            <a href="https://stackoverflow.blog/2022/01/14/the-overflow-108-determining-dependencies-and-phantom-braking/">The Overflow #108: Determining dependencies and phantom braking</a>
+                            
+                                <div class="description">
+                                Welcome to ISSUE #108 of The Overflow! This newsletter is by developers, for developers, written and curated by the Stack Overflow team and Cassidy Williams. This week: UX headaches, the clear downsides of phantom braking, and testing with real dependencies instead of mockup or fakes.  From the blog Favor real dependencies for unit testing stackoverflow.blogWhich dependencies should… The post The Overflow #108: Determining dependencies and phantom braking appeared first on Stack Overflow Blog .
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2fstackoverflow.blog%2f%3fp%3d19398" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://stackoverflow.blog/?p=19393">
+                            <a href="https://stackoverflow.blog/2022/01/14/crowdsec-security-ips-ip-blocking/">Safety in numbers: crowdsourcing data on nefarious IP addresses</a>
+                            
+                                <div class="description">
+                                Modern DevOps could learn a few things from industrialized hackers. The post Safety in numbers: crowdsourcing data on nefarious IP addresses appeared first on Stack Overflow Blog .
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2fstackoverflow.blog%2f%3fp%3d19393" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+            </ul>
+
+        
+                <h3 id="https://packetpushers.net">
+                    <a href="https://packetpushers.net" class="no-visited">
+                        The Full Feed - All of the Packet Pushers Podcasts
+                        <div class="subtitle">https://packetpushers.net</div>
+                    </a>
+                </h3>
+            <ul>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://packetpushers.net/?post_type=podcast&amp;p=52468">
+                            <a href="https://packetpushers.net/podcast/day-two-cloud-130-getting-started-with-openshift-for-kubernetes-orchestration/">Day Two Cloud 130: Getting Started With OpenShift For Kubernetes Orchestration</a>
+                            
+                                <div class="description">
+                                On today&#39;s Day Two Cloud we have a career conversation with Angela Andrews, a Solution Architect at Red Hat. Angela provides an introduction to OpenShift, a cloud-based offering for running and orchestrating Kubernetes containers in public clouds and on premises from Red Hat. We also discuss how to integrate communication skills with technical knowledge, the role of a Solution Architect, how to stay on top of new and changing technologies, and more.
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2fpacketpushers.net%2f%3fpost_type%3dpodcast%26p%3d52468" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://packetpushers.net/?post_type=podcast&amp;p=52440">
+                            <a href="https://feeds.packetpushers.net/link/17413/15016481/full-stack-journey-062-advice-and-recommendations-for-tech-learners">Full Stack Journey 062: Advice And Recommendations For Tech Learners</a>
+                            
+                                <div class="description">
+                                The Full Stack Journey is back for 2022, and kicking off the year Scott shares recommendations for learning new technologies based on his own career experiences and the technology transitions he&#39;s lived through, including virtualization to networking and networking to containers. Scott also shares four key takeaways for learners in the tech industry. The post Full Stack Journey 062: Advice And Recommendations For Tech Learners appeared first on Packet Pushers .
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2fpacketpushers.net%2f%3fpost_type%3dpodcast%26p%3d52440" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://packetpushers.net/?post_type=podcast&amp;p=52438">
+                            <a href="https://packetpushers.net/podcast/tech-bytes-why-network-design-matters-for-security-clouds-sponsored/">Tech Bytes: Why Network Design Matters For Security Clouds (Sponsored)</a>
+                            
+                                <div class="description">
+                                On today’s Tech Bytes podcast we’re talking security clouds; that is, cloud services that offer capabilities including firewalls, traffic inspection, Web gateways, and more. We explore why these clouds aren’t all the same, and why the architecture, including networking, makes a difference. Netskope is this episode&#39;s sponsor. The post Tech Bytes: Why Network Design Matters For Security Clouds (Sponsored) appeared first on Packet Pushers .
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2fpacketpushers.net%2f%3fpost_type%3dpodcast%26p%3d52438" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://packetpushers.net/?post_type=podcast&amp;p=52436">
+                            <a href="https://packetpushers.net/podcast/network-break-365-salesforce-forces-multi-factor-authentication-faa-implements-5g-buffer-zones/">Network Break 365: Salesforce Forces Multi-Factor Authentication; FAA Implements 5G Buffer Zones</a>
+                            
+                                <div class="description">
+                                This week on Network Break we discuss why Salesforce is requiring multi-factor authentication from customers starting in February 2022, examine an SFP module that comes with a tiny computer running Linux, highlight the vast gap between cloud hype and cloud spending compared to traditional IT gear, and cover more IT news. The post Network Break 365: Salesforce Forces Multi-Factor Authentication; FAA Implements 5G Buffer Zones appeared first on Packet Pushers .
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2fpacketpushers.net%2f%3fpost_type%3dpodcast%26p%3d52436" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://packetpushers.net/?post_type=podcast&amp;p=52433">
+                            <a href="https://packetpushers.net/podcast/heavy-networking-613-deploying-an-active-active-data-center-network-for-private-cloud-sponsored/">Heavy Networking 613: Deploying An Active-Active Data Center Network For Private Cloud (Sponsored)</a>
+                            
+                                <div class="description">
+                                This Heavy Networking episode focuses on building a data center fabric. Pluribus Networks is our sponsor. Pluribus brought along a customer to talk about their active/active DC deployment. We’ll get into stretching layer 2 safely, Pluribus&#39;s L3 capabilities, operational concerns of active/active when the DCs are many hundreds of miles apart, and the pressure of delivering customer-facing services that drove the selection of the Pluribus architecture.
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2fpacketpushers.net%2f%3fpost_type%3dpodcast%26p%3d52433" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+            </ul>
+
+        
+                <h3 id="https://changelog.com/master">
+                    <a href="https://changelog.com/master" class="no-visited">
+                        Changelog Master Feed
+                        <div class="subtitle">https://changelog.com/master</div>
+                    </a>
+                </h3>
+            <ul>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="changelog.com/14/1523">
+                            <a href="https://changelog.com/shipit/36">Keep on-call simple (Ship It! #36)</a>
+                            
+                                <div class="description">
+                                Gerhard loves simple ideas executed well, which is why he is excited to be speaking today with Ildar Iskhakov &amp; Matvey Kukuy about their startup Amixr, a.k.a. Grafana OnCall. Ildar &amp; Matvey started with a simple idea and a simple stack - Django, Celery, RabbitMQ &amp; MySQL - all running on Kubernetes. Because they kept their main thing their main thing, and kept improving it every day for a couple of years, now your on-call can be simple too.
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for changelog.com%2f14%2f1523" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="changelog.com/2/1399">
+                            <a href="https://changelog.com/gotime/213">AI-driven development in Go (Go Time #213)</a>
+                            
+                                <div class="description">
+                                Alexey Palazhchenko joins Natalie to discuss the implications of GitHub’s Copilot on code generation. Go’s design lends itself nicely to computer generated authoring: thanks to go fmt, there’s already only one Go style. This means AI-generated code will be consistent and seamless. Its focus on simplicity &amp; readability make it tailor made for this new approach to software creation. Where might this take us?
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for changelog.com%2f2%2f1399" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="changelog.com/7/1560">
+                            <a href="https://changelog.com/practicalai/164">Democratizing ML for speech (Practical AI #164)</a>
+                            
+                                <div class="description">
+                                You might know about MLPerf, a benchmark from MLCommons that measures how fast systems can train models to a target quality metric. However, MLCommons is working on so much more! David Kanter joins us in this episode to discuss two new speech datasets that are democratizing machine learning for speech via data scale and language/speaker diversity.
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for changelog.com%2f7%2f1560" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="changelog.com/1/1544">
+                            <a href="https://changelog.com/podcast/475">Making the ZFS file system (The Changelog #475)</a>
+                            
+                                <div class="description">
+                                This week Matt Ahrens joins Adam to talk about ZFS. Matt co-founded the ZFS project at Sun Microsystems in 2001. And 20 years later Adam picked up ZFS for use in his home lab and loved it. So, he reached out to Matt and invited him on the show.
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for changelog.com%2f1%2f1544" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="changelog.com/4/1533">
+                            <a href="https://changelog.com/founderstalk/85">Making the last database you’ll ever need (Founders Talk #85)</a>
+                            
+                                <div class="description">
+                                This week Adam is joined by Sam Lambert, CEO of PlanetScale. Now that PlanetScale is in general availability, Adam had to get Sam on the show to talk about the behind the scenes of building this database platform, how this is the last database you’ll ever need and what that means for developers, why serverless, its open source underpinnings with Vitess, and a preview of what’s to come.
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for changelog.com%2f4%2f1533" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="changelog.com/6/1547">
+                            <a href="https://changelog.com/jsparty/208">Temporal is like React for the backend (JS Party #208)</a>
+                            
+                                <div class="description">
+                                Swyx is known for learning in public, and he joins the party to teach Ali and Nick about what he’s been working on with Temporal IO, what it is, and why he’s excited about it. We also talk about his role as Director of Developer Experience, including what developer experience is, how to do it, and what goals to set.
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for changelog.com%2f6%2f1547" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="changelog.com/14/1521">
+                            <a href="https://changelog.com/shipit/35">How I found my lost network packets (Ship It! #35)</a>
+                            
+                                <div class="description">
+                                Today Gerhard shares the entire story behind his lost packets. He is talking with Drew Marshall, director at Trunk Networks and No One Internet, a Cloud Services Provider &amp; ISP based in Sussex, UK. Gerhard’s Vodafone ISP gateway was losing packets, and recording some of the previous episodes used to be challenging as his internet connection would cut out up to 10 seconds at a time, multiple times per recording session. He was convinced that his Unifi Dream Machine Pro was not the issue.
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for changelog.com%2f14%2f1521" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+            </ul>
+
+        
+                <h3 id="https://cloud.google.com/blog/">
+                    <a href="https://cloud.google.com/blog/" class="no-visited">
+                        Cloud Blog
+                        <div class="subtitle">https://cloud.google.com/blog/</div>
+                    </a>
+                </h3>
+            <ul>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://cloud.google.com/blog/topics/developers-practitioners/find-products-faster-new-all-products-page/">
+                            <a href="https://cloud.google.com/blog/topics/developers-practitioners/find-products-faster-new-all-products-page/">Find products faster with the new All Products page</a>
+                            
+                                <div class="description">
+                                Welcome to a new way of exploring Google Cloud products. Finding your favorite products and discovering new ones requires a user interface that’s easy-to-use, clear, informative, and delightful. Google Cloud users have primarily used our side menu to navigate, but with almost one hundred products and growing, it’s safe to say our product list has outgrown the side menu.  That’s why we created a new All products page to help you easily navigate to your favorite Google Cloud products.
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2fcloud.google.com%2fblog%2ftopics%2fdevelopers-practitioners%2ffind-products-faster-new-all-products-page%2f" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://cloud.google.com/blog/products/ai-machine-learning/running-alphafold-on-vertexai/">
+                            <a href="https://cloud.google.com/blog/products/ai-machine-learning/running-alphafold-on-vertexai/">Bio-pharma organizations can now leverage the groundbreaking protein folding system, AlphaFold, with Vertex AI</a>
+                            
+                                <div class="description">
+                                At Google Cloud, we believe the products we bring to market should be strongly informed by our research efforts across Alphabet. For example, Vertex AI was ideated, incubated and developed based on the pioneering research from Google’s research entities.  Today, we’re proud to announce another deep integration between Google Cloud and Alphabet’s AI research organizations: the ability in Vertex AI to run DeepMind ’s groundbreaking protein structure prediction system, AlphaFold . Figure 1. 1. 2.g.
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2fcloud.google.com%2fblog%2fproducts%2fai-machine-learning%2frunning-alphafold-on-vertexai%2f" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://cloud.google.com/blog/products/data-analytics/google-cloud-data-fusion-accelerator-for-sap-procure-to-pay/">
+                            <a href="https://cloud.google.com/blog/products/data-analytics/google-cloud-data-fusion-accelerator-for-sap-procure-to-pay/">Data Fusion SAP accelerator for Procure 2 Pay</a>
+                            
+                                <div class="description">
+                                Earlier this year, we announced SAP Integration with Cloud Data Fusion , Google Cloud’s native data integration platform to seamlessly move data out of SAP Business Suite, SAP ERP, and S4/HANA. This was followed by the release of our accelerator for SAP Order to Cash which simplifies integrating SAP Order to Cash data into BigQuery and allows organizations to gain invaluable insights using Looker .  We are now releasing our accelerator for the procure-to-pay process. Read Article
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2fcloud.google.com%2fblog%2fproducts%2fdata-analytics%2fgoogle-cloud-data-fusion-accelerator-for-sap-procure-to-pay%2f" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://cloud.google.com/blog/products/data-analytics/sap-batch-and-realtime-connectors-for-google-cloud-data-fusion/">
+                            <a href="https://cloud.google.com/blog/products/data-analytics/sap-batch-and-realtime-connectors-for-google-cloud-data-fusion/">Data Fusion SAP Connectors</a>
+                            
+                                <div class="description">
+                                Businesses today have a growing demand for data analysis and insight-based action. More often than not, the valuable data driving these actions is in mission critical operational systems. Among all the applications that are in the market today, SAP is the leading provider of ERP software and Google Cloud is introducing integration with SAP to help unlock the value of SAP data quickly and easily. This blog describes 3 connectors: SAP ODP, SLT connector,  and SAP ODATA. An optional X...
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2fcloud.google.com%2fblog%2fproducts%2fdata-analytics%2fsap-batch-and-realtime-connectors-for-google-cloud-data-fusion%2f" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://cloud.google.com/blog/products/data-analytics/general-availability-for-cmek-in-data-fusion/">
+                            <a href="https://cloud.google.com/blog/products/data-analytics/general-availability-for-cmek-in-data-fusion/">Encrypt Data Fusion data and metadata using Customer Managed Encryption Keys (CMEK)</a>
+                            
+                                <div class="description">
+                                We are pleased to announce the general availability of Customer Managed Encryption Keys (CMEK) integration for Cloud Data Fusion. CMEK enables encryption of both user data and metadata at rest with a key that you can control through Cloud Key Management Service (KMS) . This capability will help meet the security, privacy and compliance requirements of CDF customers (particularly in regulated industries) for mission-critical workloads. This can be done by granting the cloudkms. 2.cmek.key...
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2fcloud.google.com%2fblog%2fproducts%2fdata-analytics%2fgeneral-availability-for-cmek-in-data-fusion%2f" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://cloud.google.com/blog/products/networking/dns-based-traffic-routing-for-global-application-deployment/">
+                            <a href="https://cloud.google.com/blog/products/networking/dns-based-traffic-routing-for-global-application-deployment/">How to publish applications to our users globally with Cloud DNS Routing policies?</a>
+                            
+                                <div class="description">
+                                When building applications that are critical to your business, one key consideration is always high availability. In Google Cloud, we recommend building your strategic applications on a multi-regional architecture. In this article, we will see how Cloud DNS routing policies can help simplify your multi-regional design. As an example, let’s take a web application that is internal to our company, such as a knowledge-sharing wiki application.wiki.example.example.wiki.example.com ... Read Article
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2fcloud.google.com%2fblog%2fproducts%2fnetworking%2fdns-based-traffic-routing-for-global-application-deployment%2f" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://cloud.google.com/blog/topics/healthcare-life-sciences/highmark-is-using-google-cloud-services-for-secure-by-design/">
+                            <a href="https://cloud.google.com/blog/topics/healthcare-life-sciences/highmark-is-using-google-cloud-services-for-secure-by-design/">Developing and securing a platform for healthcare innovation with Google Cloud</a>
+                            
+                                <div class="description">
+                                In an industry as highly regulated as healthcare, building a single secure and compliant application that tracks patient care and appointments at a clinic requires a great deal of planning from development and security teams. So, imagine what it would be like to build a solution that includes almost everything related to a patient’s healthcare, including insurance and billing. That’s what Highmark Health (Highmark)—a U.S. Automation capabilities help ensure that security policies are enforced.”
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2fcloud.google.com%2fblog%2ftopics%2fhealthcare-life-sciences%2fhighmark-is-using-google-cloud-services-for-secure-by-design%2f" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://cloud.google.com/blog/topics/retail/retail-transformation-nrf-2022-forecasting-search-modern-store-always-be-pivoting/">
+                            <a href="https://cloud.google.com/blog/topics/retail/retail-transformation-nrf-2022-forecasting-search-modern-store-always-be-pivoting/">Retailers now need to &#34;always be pivoting.&#34; Here&#39;s three moves keeping them going</a>
+                            
+                                <div class="description">
+                                For years, retailers have been told that they must embrace a litany of new technologies, trends, and imperatives like online shopping, mobile apps, omnichannel, and digital transformation. In search of growth and stability, retailers adopted many of these, only to realize that for every box they ticked, there was another one waiting. And then the pandemic hit, along with rising social movements and increasingly harsh weather. The pivot is now a given. What matters is how you do it...
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2fcloud.google.com%2fblog%2ftopics%2fretail%2fretail-transformation-nrf-2022-forecasting-search-modern-store-always-be-pivoting%2f" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://cloud.google.com/blog/products/infrastructure-modernization/whats-new-in-google-cloud-vmware-engine/">
+                            <a href="https://cloud.google.com/blog/products/infrastructure-modernization/whats-new-in-google-cloud-vmware-engine/">New in Google Cloud VMware Engine: Single nodes, certifications and more</a>
+                            
+                                <div class="description">
+                                We’ve made several updates to Google Cloud VMware Engine in the past few months — today’s post provides a recap of our latest milestones.  Google Cloud VMware Engine delivers an enterprise-grade VMware stack running natively in Google Cloud. This fully managed cloud service is one of the fastest paths to the cloud for VMware workloads without making changes to existing applications or operating models across a variety of use-cases. New private clouds will now deploy on vSphere version 7.1.2.1.2.
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2fcloud.google.com%2fblog%2fproducts%2finfrastructure-modernization%2fwhats-new-in-google-cloud-vmware-engine%2f" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://cloud.google.com/blog/products/databases/cloud-sql-for-mysql-launches-database-auditing/">
+                            <a href="https://cloud.google.com/blog/products/databases/cloud-sql-for-mysql-launches-database-auditing/">Keep tabs on your tables: Cloud SQL for MySQL launches database auditing</a>
+                            
+                                <div class="description">
+                                If you manage sensitive data in your MySQL database, you might be obligated to record and monitor user database activity, especially if you work in a regulated industry. Although you could set up MySQL’s slow query log or general log to create an audit trail of user activity, these logs significantly impact database performance and aren’t formatted optimally for auditing. You can now define audit rules that govern which database activity is recorded. Read Article
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2fcloud.google.com%2fblog%2fproducts%2fdatabases%2fcloud-sql-for-mysql-launches-database-auditing%2f" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://cloud.google.com/blog/products/operations/write-and-deploy-cloud-monitoring-alert-notifications-to-third-party-services/">
+                            <a href="https://cloud.google.com/blog/products/operations/write-and-deploy-cloud-monitoring-alert-notifications-to-third-party-services/">Creating custom notifications with Cloud Monitoring and Cloud Run</a>
+                            
+                                <div class="description">
+                                The uniqueness of each organization in the enterprise IT space creates interesting challenges in how they need to handle alerts. With many commercial tools in the IT Service Management (ITSM) market, and lots of custom internal tools, we equip teams with tools that are both flexible and powerful. This post is for Google Cloud customers who want to deliver Cloud Monitoring alert notifications to third-party services that don’t have supported notification channels ./tf-modules and ./environments .
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2fcloud.google.com%2fblog%2fproducts%2foperations%2fwrite-and-deploy-cloud-monitoring-alert-notifications-to-third-party-services%2f" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://cloud.google.com/blog/products/operations/pub-sub-webook-and-slack-notifications-are-now-available/">
+                            <a href="https://cloud.google.com/blog/products/operations/pub-sub-webook-and-slack-notifications-are-now-available/">Webhook, Pub/Sub, and Slack Alerting notification channels launched</a>
+                            
+                                <div class="description">
+                                When an alert fires from your applications, your team needs to know as soon as possible to mitigate any user-facing issues. Customers with complex operating environments rely on incident management or related services to organize and coordinate their responses to issues. They need the flexibility to route alert notifications to platforms or services in the formats that they can accept. You can configure your Google Cloud alerts to be sent to any vendor or custom-built tool used by your team. 
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2fcloud.google.com%2fblog%2fproducts%2foperations%2fpub-sub-webook-and-slack-notifications-are-now-available%2f" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://cloud.google.com/blog/topics/inside-google-cloud/whats-new-google-cloud/">
+                            <a href="https://cloud.google.com/blog/topics/inside-google-cloud/whats-new-google-cloud/">What’s new with Google Cloud</a>
+                            
+                                <div class="description">
+                                Want to know the latest from Google Cloud? Find it here in one handy location. Check back regularly for our newest updates, announcements, resources, events, learning opportunities, and more.  Tip : Not sure where to find what you’re looking for on the Google Cloud blog? Start here:  Google Cloud blog 101: Full list of topics, links, and resources . Learn more . Learn how Wayfair was able to migrate quickly while still being able to serve production traffic at scale. Read more .g. Read more ....
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2fcloud.google.com%2fblog%2ftopics%2finside-google-cloud%2fwhats-new-google-cloud%2f" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://cloud.google.com/blog/topics/developers-practitioners/bigquery-explainable-ai-now-ga-help-you-interpret-your-machine-learning-models/">
+                            <a href="https://cloud.google.com/blog/topics/developers-practitioners/bigquery-explainable-ai-now-ga-help-you-interpret-your-machine-learning-models/">BigQuery Explainable AI now in GA to help you interpret your machine learning models</a>
+                            
+                                <div class="description">
+                                Explainable AI (XAI) helps you understand and interpret how your machine learning models make decisions. We&#39;re excited to announce that BigQuery Explainable AI is now generally available (GA) . BigQuery is the data warehouse that supports explainable AI in a most comprehensive way w.r.t both XAI methodology and model types. It does this at BigQuery scale, enabling millions of explanations within seconds with a single SQL query. Global explainability (a.k.a. Local explainability (a.k.a.g.g. ML.e.
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2fcloud.google.com%2fblog%2ftopics%2fdevelopers-practitioners%2fbigquery-explainable-ai-now-ga-help-you-interpret-your-machine-learning-models%2f" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://cloud.google.com/blog/products/workspace/the-future-of-work-requires-more-human-approach-to-security/">
+                            <a href="https://cloud.google.com/blog/products/workspace/the-future-of-work-requires-more-human-approach-to-security/">The future of work requires a more human approach to security</a>
+                            
+                                <div class="description">
+                                Most businesses that have adopted off-site or hybrid working models over the last two years made the change under immense pressure. The need was incredibly urgent and timing was a major factor. Now that they’ve had a chance to adapt and settle in, leaders are revisiting how their teams work in a more proactive way. They’re updating strategies and policies with a focus on what will be best for both the company and the employees long term.  With this thinking, security requires a new approach.
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2fcloud.google.com%2fblog%2fproducts%2fworkspace%2fthe-future-of-work-requires-more-human-approach-to-security%2f" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://cloud.google.com/blog/products/operations/get-better-hybrid-and-multicloud-log-insights/">
+                            <a href="https://cloud.google.com/blog/products/operations/get-better-hybrid-and-multicloud-log-insights/">Patterns for better insights and troubleshooting with hybrid cloud logs</a>
+                            
+                                <div class="description">
+                                Hybrid and multi-cloud environments produce a boundless array of logs including application and server logs, logs related to cloud services, APIs, orchestrators, gateways and just about anything else running in the environment. Due to this high volume, logging systems may become slow and unmanageable when you urgently need them to troubleshoot an issue, and even harder to use them to get insights. These insights did not need to be real-time., specifically related to their network logs.
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2fcloud.google.com%2fblog%2fproducts%2foperations%2fget-better-hybrid-and-multicloud-log-insights%2f" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://cloud.google.com/blog/products/databases/understanding-firestore-performance-with-key-visualizer/">
+                            <a href="https://cloud.google.com/blog/products/databases/understanding-firestore-performance-with-key-visualizer/">Understanding Firestore performance with Key Visualizer</a>
+                            
+                                <div class="description">
+                                Firestore is a serverless, scalable, NoSQL document database. It is ideal for rapid and flexible web and mobile application development, and uniquely supports real-time client device syncing to the database. To get the best performance out of Firestore , while also making the most out of Firestore&#39;s automatic scaling and load balancing features, you need to make sure the data layout of your application allows requests to be processed optimally, particularly as your user traffic increases.
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2fcloud.google.com%2fblog%2fproducts%2fdatabases%2funderstanding-firestore-performance-with-key-visualizer%2f" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://cloud.google.com/blog/products/databases/wayfair-migrates-to-cloud-sql-and-cloud-spanner/">
+                            <a href="https://cloud.google.com/blog/products/databases/wayfair-migrates-to-cloud-sql-and-cloud-spanner/">How Wayfair is modernizing, one database at a time</a>
+                            
+                                <div class="description">
+                                Editor&#39;s note: With 18 fulfillment centers, 38 delivery centers, and a catalog of more than 22 million items, online retailer Wayfair needed a way to quickly move from their on-premises data centers running SQL Server to Google Cloud—without derailing their team of over 3,000 engineers, their tens of millions of customers, or their 16,000 supplier partners.This story recaps their journey, their choices, and the advantages they’re already enjoying. We also needed to bring our own licenses.22%.
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2fcloud.google.com%2fblog%2fproducts%2fdatabases%2fwayfair-migrates-to-cloud-sql-and-cloud-spanner%2f" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://cloud.google.com/blog/products/devops-sre/implementing-google-cloud-devops-for-your-cloud-native-organization/">
+                            <a href="https://cloud.google.com/blog/products/devops-sre/implementing-google-cloud-devops-for-your-cloud-native-organization/">DevOps for tech companies and startups: Learn from over 32,000 professionals on how to drive success with Google Cloud’s DORA research</a>
+                            
+                                <div class="description">
+                                Many technology-driven organizations and startups use DevOps as a business enabler, allowing them to bring ideas to market quickly, increase developer productivity, and increase their customer base. Adopting DevOps workflows can drive success but many companies continue to struggle with how to get started or optimize the DevOps tools they currently have incorporated. Compromising stability is not an option. However, using Docker increases the operational burden on developers... Read Article
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2fcloud.google.com%2fblog%2fproducts%2fdevops-sre%2fimplementing-google-cloud-devops-for-your-cloud-native-organization%2f" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+                <div class="article-container">
+                    <div class="left">
+                        <li class="article" id="https://cloud.google.com/blog/topics/retail/retail-forecasting-ai-real-time-insights-vertex-ai-forecast/">
+                            <a href="https://cloud.google.com/blog/topics/retail/retail-forecasting-ai-real-time-insights-vertex-ai-forecast/">How can demand forecasting approach real time responsiveness? Vertex AI makes it possible</a>
+                            
+                                <div class="description">
+                                Everyone wishes they had a crystal ball—especially retailers and consumer goods companies looking for the next big trend, or logistics companies worried about the next big storm.  With a veritable universe of data now at their fingertips (or at least at their keyboards), these companies can now get closer to real-time forecasting across a range of areas when they leverage the right AI and machine learning tools. Read Article
+                                </div>
+                            
+                        </li>
+                    </div>
+                    <div class="right">
+                        <a href="#index for https%3a%2f%2fcloud.google.com%2fblog%2ftopics%2fretail%2fretail-forecasting-ai-real-time-insights-vertex-ai-forecast%2f" class="text-black">&#5169;</a>
+                    </div>
+                </div>
+            
+            </ul>
+
+        
+        <div class="footer">
+            ~~&nbsp;<a href="https://github.com/jakub-m/bulletin">Bulletin</a>&nbsp;by Jakub Mikians&nbsp;~~
+        </div>
+    </body>
+</html>
+
