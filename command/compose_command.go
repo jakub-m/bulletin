@@ -142,7 +142,7 @@ func newOutput(outPath string, intervalEnd time.Time) (io.WriteCloser, string, e
 		return &nopCloser{os.Stdout}, "stdout", nil
 	}
 	if fileInfo, err := os.Stat(outPath); err == nil && fileInfo.IsDir() {
-		fname := fmt.Sprintf("bulletin-%s.html", intervalEnd.Format(filenameTimeLayout))
+		fname := fmt.Sprintf("bulletin-%s.md", intervalEnd.Format(filenameTimeLayout))
 		outPath = path.Join(outPath, fname)
 	}
 	w, err := os.Create(outPath)

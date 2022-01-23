@@ -13,7 +13,7 @@ import (
 
 const bulletinHeaderTimeFormat = `Monday, 02 Jan 2006`
 
-//go:embed page_template.gohtml
+//go:embed markdown_template.gohtml
 var bulletinPageTemplateRaw string
 
 type templateData struct {

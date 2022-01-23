@@ -7,12 +7,16 @@ set -o pipefail
 
 function _file_to_url {
     local fname=$1
-    echo "https://htmlpreview.github.io/?https://github.com/jakub-m/bulletin/blob/mainline/$fname"
+    if echo "$fname" | grep "html$"; then
+        echo "https://htmlpreview.github.io/?https://github.com/jakub-m/bulletin/blob/mainline/$fname"
+    else
+        echo $fname
+    fi
 }
 
 function _date_from_fname {
     local fname=$1
-    echo $fname | perl -ne 'print "$1" if /bulletin-([\d-]+).html/'
+    echo $fname | perl -ne 'print "$1" if /bulletin-([\d-]+).(html|md)/'
 }
 
 nl="
@@ -27,11 +31,11 @@ cd ..
 template_file="$dir/README.template.md"
 
 
-recent_file=$(find bulletins -name bulletin\*.html | sort | tail -n1)
+recent_file=$(find bulletins -name bulletin\*.html -or -name bulletin\*.md | sort | tail -n1)
 recent_url=$(_file_to_url $recent_file)
 
 sed "s|__CURRENT__|$recent_url|" $template_file
 
-for fname in $(find bulletins -name bulletin\*.html | sort -r); do
+for fname in $(find bulletins -name bulletin\*.html -or -name bulleting\*.md | sort -r); do
     echo "- [$(_date_from_fname $fname)]($(_file_to_url $fname))"
 done
