@@ -45,6 +45,9 @@ compose: $(bin)
 
 update: $(bin)
 	./update/update.sh > README.md
+	git add README.md bulletins
+	git commit -m "update"
+
 
 
 
