@@ -1,0 +1,36 @@
+# [Bulletin](https://github.com/jakub-m/bulletin) for {{.BulletinEndDate}}
+    
+{{.PeriodDays}} digest
+
+{{/* index */}}
+
+{{range .Feeds}}
+[{{.Title}}](#{{.Id}}) ({{len (.Articles)}})
+{{- range .Articles}}
+* [{{.Title}}](#{{.Id}}) <a name="toc_{{.Id}}" />
+{{- end}}
+{{end}}
+
+{{/* articles */}}
+
+{{range .Feeds}}
+
+<a name="{{.Id}}" />
+
+# [{{.Title}}]({{.Url}})
+
+{{prettyUrl .Url}}
+
+{{range .Articles}}
+
+<a name="{{.Id}}" />
+
+## [{{.Title}}]({{.Url}})
+
+{{if .Description}}
+{{.Description}}
+{{end}} ([BACK TO TOP](#toc_{{.Id}}))
+{{end}}
+{{end}}
+
+[Bulletin](https://github.com/jakub-m/bulletin) by Jakub Mikians
