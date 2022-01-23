@@ -5,9 +5,9 @@
 {{/* index */}}
 
 {{range .Feeds}}
-[{{.Title}}](#{{.Id}}) ({{len (.Articles)}})
+[{{.Title}}](#{{hash .Id}}) ({{len (.Articles)}})
 {{- range .Articles}}
-* [{{.Title}}](#{{.Id}}) <a name="toc_{{.Id}}" />
+* [{{.Title}}](#{{hash .Id}}) <a name="toc_{{hash .Id}}" />
 {{- end}}
 {{end}}
 
@@ -15,7 +15,7 @@
 
 {{range .Feeds}}
 
-<a name="{{.Id}}" />
+<a name="{{hash .Id}}" />
 
 # [{{.Title}}]({{.Url}})
 
@@ -23,13 +23,13 @@
 
 {{range .Articles}}
 
-<a name="{{.Id}}" />
+<a name="{{hash .Id}}" />
 
 ## [{{.Title}}]({{.Url}})
 
 {{if .Description}}
 {{.Description}}
-{{end}} ([BACK TO TOP](#toc_{{.Id}}))
+{{end}} ([BACK TO TOP](#toc_{{hash .Id}}))
 {{end}}
 {{end}}
 

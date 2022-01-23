@@ -2,6 +2,7 @@ package feed
 
 import (
 	"bytes"
+	"crypto/md5"
 	_ "embed"
 	"fmt"
 	"html/template"
@@ -35,6 +36,9 @@ func FormatFeedsAsHtml(periodDays int, periodEnd time.Time, pageTemplate *string
 		},
 		"prettyUrl": func(u string) string {
 			return formatPrettyUrl(u)
+		},
+		"hash": func(s string) string {
+			return fmt.Sprintf("%x", md5.Sum([]byte(s)))
 		},
 	}
 	pageTemplateBody := bulletinPageTemplateRaw
