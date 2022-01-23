@@ -16,39 +16,21 @@ The [list of feeds][ref_feeds] comes from my [bookmarks][ref_tw].
 
 # Past bulletins:
 
-- [2022-01-21](bulletins/bulletin-2022-01-21.html
-https://htmlpreview.github.io/?https://github.com/jakub-m/bulletin/blob/mainline/bulletins/bulletin-2022-01-21.html)
-- [2022-01-14](bulletins/bulletin-2022-01-14.html
-https://htmlpreview.github.io/?https://github.com/jakub-m/bulletin/blob/mainline/bulletins/bulletin-2022-01-14.html)
-- [2022-01-07](bulletins/bulletin-2022-01-07.html
-https://htmlpreview.github.io/?https://github.com/jakub-m/bulletin/blob/mainline/bulletins/bulletin-2022-01-07.html)
-- [2021-12-31](bulletins/bulletin-2021-12-31.html
-https://htmlpreview.github.io/?https://github.com/jakub-m/bulletin/blob/mainline/bulletins/bulletin-2021-12-31.html)
-- [2021-12-24](bulletins/bulletin-2021-12-24.html
-https://htmlpreview.github.io/?https://github.com/jakub-m/bulletin/blob/mainline/bulletins/bulletin-2021-12-24.html)
-- [2021-12-17](bulletins/bulletin-2021-12-17.html
-https://htmlpreview.github.io/?https://github.com/jakub-m/bulletin/blob/mainline/bulletins/bulletin-2021-12-17.html)
-- [2021-12-10](bulletins/bulletin-2021-12-10.html
-https://htmlpreview.github.io/?https://github.com/jakub-m/bulletin/blob/mainline/bulletins/bulletin-2021-12-10.html)
-- [2021-12-03](bulletins/bulletin-2021-12-03.html
-https://htmlpreview.github.io/?https://github.com/jakub-m/bulletin/blob/mainline/bulletins/bulletin-2021-12-03.html)
-- [2021-11-26](bulletins/bulletin-2021-11-26.html
-https://htmlpreview.github.io/?https://github.com/jakub-m/bulletin/blob/mainline/bulletins/bulletin-2021-11-26.html)
-- [2021-11-19](bulletins/bulletin-2021-11-19.html
-https://htmlpreview.github.io/?https://github.com/jakub-m/bulletin/blob/mainline/bulletins/bulletin-2021-11-19.html)
-- [2021-11-12](bulletins/bulletin-2021-11-12.html
-https://htmlpreview.github.io/?https://github.com/jakub-m/bulletin/blob/mainline/bulletins/bulletin-2021-11-12.html)
-- [2021-11-05](bulletins/bulletin-2021-11-05.html
-https://htmlpreview.github.io/?https://github.com/jakub-m/bulletin/blob/mainline/bulletins/bulletin-2021-11-05.html)
-- [2021-10-29](bulletins/bulletin-2021-10-29.html
-https://htmlpreview.github.io/?https://github.com/jakub-m/bulletin/blob/mainline/bulletins/bulletin-2021-10-29.html)
-- [2021-10-22](bulletins/bulletin-2021-10-22.html
-https://htmlpreview.github.io/?https://github.com/jakub-m/bulletin/blob/mainline/bulletins/bulletin-2021-10-22.html)
-- [2021-10-15](bulletins/bulletin-2021-10-15.html
-https://htmlpreview.github.io/?https://github.com/jakub-m/bulletin/blob/mainline/bulletins/bulletin-2021-10-15.html)
-- [2021-10-08](bulletins/bulletin-2021-10-08.html
-https://htmlpreview.github.io/?https://github.com/jakub-m/bulletin/blob/mainline/bulletins/bulletin-2021-10-08.html)
-- [2021-10-01](bulletins/bulletin-2021-10-01.html
-https://htmlpreview.github.io/?https://github.com/jakub-m/bulletin/blob/mainline/bulletins/bulletin-2021-10-01.html)
-- [2021-09-24](bulletins/bulletin-2021-09-24.html
-https://htmlpreview.github.io/?https://github.com/jakub-m/bulletin/blob/mainline/bulletins/bulletin-2021-09-24.html)
+- [2022-01-21](https://htmlpreview.github.io/?https://github.com/jakub-m/bulletin/blob/mainline/bulletins/bulletin-2022-01-21.html)
+- [2022-01-14](https://htmlpreview.github.io/?https://github.com/jakub-m/bulletin/blob/mainline/bulletins/bulletin-2022-01-14.html)
+- [2022-01-07](https://htmlpreview.github.io/?https://github.com/jakub-m/bulletin/blob/mainline/bulletins/bulletin-2022-01-07.html)
+- [2021-12-31](https://htmlpreview.github.io/?https://github.com/jakub-m/bulletin/blob/mainline/bulletins/bulletin-2021-12-31.html)
+- [2021-12-24](https://htmlpreview.github.io/?https://github.com/jakub-m/bulletin/blob/mainline/bulletins/bulletin-2021-12-24.html)
+- [2021-12-17](https://htmlpreview.github.io/?https://github.com/jakub-m/bulletin/blob/mainline/bulletins/bulletin-2021-12-17.html)
+- [2021-12-10](https://htmlpreview.github.io/?https://github.com/jakub-m/bulletin/blob/mainline/bulletins/bulletin-2021-12-10.html)
+- [2021-12-03](https://htmlpreview.github.io/?https://github.com/jakub-m/bulletin/blob/mainline/bulletins/bulletin-2021-12-03.html)
+- [2021-11-26](https://htmlpreview.github.io/?https://github.com/jakub-m/bulletin/blob/mainline/bulletins/bulletin-2021-11-26.html)
+- [2021-11-19](https://htmlpreview.github.io/?https://github.com/jakub-m/bulletin/blob/mainline/bulletins/bulletin-2021-11-19.html)
+- [2021-11-12](https://htmlpreview.github.io/?https://github.com/jakub-m/bulletin/blob/mainline/bulletins/bulletin-2021-11-12.html)
+- [2021-11-05](https://htmlpreview.github.io/?https://github.com/jakub-m/bulletin/blob/mainline/bulletins/bulletin-2021-11-05.html)
+- [2021-10-29](https://htmlpreview.github.io/?https://github.com/jakub-m/bulletin/blob/mainline/bulletins/bulletin-2021-10-29.html)
+- [2021-10-22](https://htmlpreview.github.io/?https://github.com/jakub-m/bulletin/blob/mainline/bulletins/bulletin-2021-10-22.html)
+- [2021-10-15](https://htmlpreview.github.io/?https://github.com/jakub-m/bulletin/blob/mainline/bulletins/bulletin-2021-10-15.html)
+- [2021-10-08](https://htmlpreview.github.io/?https://github.com/jakub-m/bulletin/blob/mainline/bulletins/bulletin-2021-10-08.html)
+- [2021-10-01](https://htmlpreview.github.io/?https://github.com/jakub-m/bulletin/blob/mainline/bulletins/bulletin-2021-10-01.html)
+- [2021-09-24](https://htmlpreview.github.io/?https://github.com/jakub-m/bulletin/blob/mainline/bulletins/bulletin-2021-09-24.html)

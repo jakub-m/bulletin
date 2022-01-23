@@ -7,7 +7,7 @@ set -o pipefail
 
 function _file_to_url {
     local fname=$1
-    if echo "$fname" | grep "html$"; then
+    if echo "$fname" | grep -q "html$"; then
         echo "https://htmlpreview.github.io/?https://github.com/jakub-m/bulletin/blob/mainline/$fname"
     else
         echo $fname
