@@ -2,6 +2,8 @@
     
 {{.PeriodDays}} digest
 
+---
+
 {{/* index */}}
 
 {{range .Feeds}}
@@ -9,6 +11,7 @@
 {{- range .Articles}}
 * [{{.Title}}](#{{hash .Id}}) <a name="toc_{{hash .Id}}" />
 {{- end}}
+---
 {{end}}
 
 {{/* articles */}}
