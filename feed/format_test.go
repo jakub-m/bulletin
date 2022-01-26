@@ -23,7 +23,7 @@ func TestFormatHtml(t *testing.T) {
 				{
 					Id:        "id-2",
 					Title:     "title-2",
-					Url:       "http://example.com/1",
+					Url:       "http://example.com/2",
 					Published: time.Time{}.Add(1 * time.Minute),
 				},
 			},
@@ -31,6 +31,6 @@ func TestFormatHtml(t *testing.T) {
 	}
 	body, err := FormatFeedsAsHtml(1, time.Time{}, nil, feeds)
 	assert.NoError(t, err)
-	assert.Contains(t, body, `<a href="http://example.com/1">title-1</a>`)
-	assert.Contains(t, body, `<a href="http://example.com/1">title-2</a>`)
+	assert.Contains(t, body, `## [title-1](http://example.com/1)`)
+	assert.Contains(t, body, `## [title-2](http://example.com/2)`)
 }
