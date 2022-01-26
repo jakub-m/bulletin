@@ -34,6 +34,7 @@ func (p *rssFeedParser) ParseFeed(body []byte, url string) (feed.Feed, error) {
 
 func Parse(raw []byte) (*Channel, error) {
 	var r rssFeed
+	raw = substituteIllegalXmlChars(raw)
 	decoder := xml.NewDecoder(bytes.NewBuffer(raw))
 	decoder.CharsetReader = func(charset string, input io.Reader) (io.Reader, error) {
 		if charset == "iso-8859-1" {
@@ -42,7 +43,10 @@ func Parse(raw []byte) (*Channel, error) {
 		return nil, fmt.Errorf("charset not supported %v", charset)
 	}
 	err := decoder.Decode(&r)
-	return r.Channel, err
+	if err != nil {
+		return nil, fmt.Errorf("rss/Parse: %v", err)
+	}
+	return r.Channel, nil
 }
 
 type rssFeed struct {
@@ -171,4 +175,12 @@ func (x *RssTime) parse(value string) error {
 
 func (x *RssTime) String() string {
 	return x.Format(time.RFC3339)
+}
+
+func substituteIllegalXmlChars(xml []byte) []byte {
+	// seems that Go xml parser does not like those characters
+	xml = bytes.ReplaceAll(xml, []byte("&ldquo;"), []byte("&quot;"))
+	xml = bytes.ReplaceAll(xml, []byte("&rdquo;"), []byte("&quot;"))
+	xml = bytes.ReplaceAll(xml, []byte("&rsquo;"), []byte("&amp;"))
+	return xml
 }

@@ -54,7 +54,6 @@ func TestEncodingIso_8859_1(t *testing.T) {
 }
 
 func TestStuffWithStuff(t *testing.T) {
-	t.Skip("on it")
 	channel := parseRssFromFile(t, "testdata/rss_stuffwithstuff.xml")
 	assert.Greater(t, len(channel.Items), 0)
 }
