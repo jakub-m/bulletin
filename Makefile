@@ -43,12 +43,12 @@ watch-template: $(bin)
 compose: $(bin)
 	$(bin) --cache ./tmp/cache/ compose -days 7 -output bulletin.tmp.html
 
+up: update
 update: $(bin)
 	./update/update.sh > README.md
 	git add README.md bulletins
 	git commit -m "update"
-
-
+	echo "Don't forget to 'git push'!"
 
 
 .PHONY: clean smoke compose update
