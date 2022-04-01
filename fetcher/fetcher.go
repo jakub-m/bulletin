@@ -5,11 +5,14 @@ import (
 	"fmt"
 	"io"
 	"net/http"
+	"time"
 )
 
 const UserAgent = "github.com/jakub-m/bulletin/1"
 
-var httpClient = &http.Client{}
+var httpClient = &http.Client{
+	Timeout: 10 * time.Second,
+}
 
 // Get fetches a raw content of the url.
 func Get(url string) ([]byte, error) {
