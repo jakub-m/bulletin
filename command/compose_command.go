@@ -7,13 +7,13 @@ import (
 	"bulletin/storage"
 	"flag"
 	"fmt"
+	"hash/fnv"
 	"io"
 	"io/ioutil"
 	corelog "log"
 	"os"
 	"path"
 	"sort"
-	"strings"
 	"time"
 )
 
@@ -133,8 +133,18 @@ func sortFeeds(feeds []feed.Feed) {
 		if len(f.Articles) != len(g.Articles) {
 			return len(f.Articles) < len(g.Articles)
 		}
-		return strings.ToLower(f.Title) < strings.ToLower(g.Title)
+		// shuffles the feeds deterministically
+		return feedSortHash(f) < feedSortHash(f)
 	})
+}
+
+func feedSortHash(f feed.Feed) uint32 {
+	hash := fnv.New32()
+	fmt.Fprintf(hash, f.Id)
+	for _, art := range f.Articles {
+		fmt.Fprint(hash, art.Id)
+	}
+	return hash.Sum32()
 }
 
 func newOutput(outPath string, intervalEnd time.Time) (io.WriteCloser, string, error) {
