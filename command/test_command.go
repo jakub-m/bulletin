@@ -5,8 +5,10 @@ import (
 	"bulletin/feedparser"
 	"bulletin/fetcher"
 	"bulletin/log"
+	"flag"
 	"fmt"
 	"io"
+	"net/url"
 	"os"
 	"sort"
 	"time"
@@ -14,11 +16,49 @@ import (
 
 const TestCommandName = "test"
 
+var feedSuffixes = []string{
+	"all.atom.xml",
+	"atom.xml",
+	"feed",
+	"feed.xml",
+	"index.xml",
+	"rss",
+	"rss.xml",
+}
+
 type TestCommand struct {
 }
 
 func (c *TestCommand) Execute(args []string) error {
-	urls := args
+	flagDiscover := false
+	fs := flag.NewFlagSet("test", flag.ContinueOnError)
+	fs.BoolVar(&flagDiscover, "x", false, "try to discover feed based on base url")
+	err := fs.Parse(args)
+	if err != nil {
+		return err
+	}
+
+	urls := fs.Args()
+	if flagDiscover {
+		extendedUrls := []string{}
+		for _, base := range urls {
+			extendedUrls = append(extendedUrls, base)
+			for _, suffix := range feedSuffixes {
+				baseUrl, err := url.Parse(base)
+				if err != nil {
+					return nil
+				}
+				suffixUrl, err := url.Parse(suffix)
+				if err != nil {
+					return err
+				}
+				extended := baseUrl.ResolveReference(suffixUrl).String()
+				extendedUrls = append(extendedUrls, extended)
+			}
+		}
+		urls = extendedUrls
+	}
+
 	if len(urls) == 0 {
 		log.Infof("pass URLs or file paths of the feeds to test as positional arguments")
 		return nil
