@@ -1,17 +1,15 @@
 package monzo
 
 import (
-	"bulletin/feed"
+	"bulletin/testutils"
 	"fmt"
-	"io"
-	"os"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
 )
 
 func TestMonzoParser(t *testing.T) {
-	f := parseFromFile(t, &monzoFeedParser{}, "testdata/monzo_com_blog_technology.html", monzoBlogUrl)
+	f := testutils.ParseFromFile(t, &monzoFeedParser{}, "testdata/monzo_com_blog_technology.html", monzoBlogUrl)
 
 	assert.Equal(t, "Monzo - Technology", f.Id)
 	assert.Equal(t, "Monzo - Technology", f.Title)
@@ -25,15 +23,4 @@ func TestMonzoParser(t *testing.T) {
 	assert.Equal(t, firstArticle.Description[:20], "How our engineering ")
 	assert.Equal(t, "2021-09-30 00:00:00 +0000 UTC", fmt.Sprint(firstArticle.Published))
 	assert.Equal(t, firstArticle.Url, "/blog/2021/09/30/documenting-pull-requests-is-as-important-as-writing-good-code")
-}
-
-func parseFromFile(t *testing.T, parser feed.FeedParser, filePath, url string) feed.Feed {
-	file, err := os.Open(filePath)
-	assert.NoError(t, err)
-	defer file.Close()
-	body, err := io.ReadAll(file)
-	assert.NoError(t, err)
-	fe, err := parser.ParseFeed(body, url)
-	assert.NoError(t, err)
-	return fe
 }
