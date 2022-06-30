@@ -48,7 +48,9 @@ func (c *ComposeCommand) Execute(args []string) error {
 	intervalStart := getNearestInterval(referenceTime, interval, now)
 	intervalEnd := intervalStart.Add(interval)
 	feeds := c.getFeeds()
+	log.Debugf("compose: got %d feeds", len(feeds))
 	feeds = filterArticlesInFeeds(feeds, intervalStart, intervalEnd)
+	log.Debugf("compose: after filtering got %d feeds. start %s, end %s", len(feeds), intervalStart, intervalEnd)
 	sortFeeds(feeds)
 
 	var pageTemplate *string
@@ -107,6 +109,7 @@ func (c *ComposeCommand) getFeeds() []feed.Feed {
 
 func filterArticlesInFeeds(feeds []feed.Feed, intervalStart, intervalEnd time.Time) []feed.Feed {
 	var newFeeds []feed.Feed
+	log.Debugf("interval start %s, end %s", intervalStart, intervalEnd)
 	for _, f := range feeds {
 		var filteredArticles []feed.Article
 		for _, a := range f.Articles {

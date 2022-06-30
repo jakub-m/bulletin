@@ -42,7 +42,7 @@ func mainErr() error {
 	}
 	defaultCacheDir := path.Join(homeDir, bulletinDir, cacheBaseName)
 	flag.StringVar(&opts.cacheDir, "cache", defaultCacheDir, "cache directory")
-	flag.BoolVar(&opts.verbose, "verbose", false, "verbose log")
+	flag.BoolVar(&opts.verbose, "v", false, "verbose log")
 	flag.Parse()
 	log.SetVerbose(opts.verbose)
 	if opts.cacheDir == defaultCacheDir {
