@@ -20,6 +20,7 @@ var feedSuffixes = []string{
 	"all.atom.xml",
 	"atom.xml",
 	"feed",
+	"feed.atom",
 	"feed.xml",
 	"index.xml",
 	"rss",
