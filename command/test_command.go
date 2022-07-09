@@ -31,29 +31,32 @@ type TestCommand struct {
 }
 
 func (c *TestCommand) Execute(args []string) error {
-	flagDiscover := false
+	flagSingle := false
 	fs := flag.NewFlagSet("test", flag.ContinueOnError)
-	fs.BoolVar(&flagDiscover, "x", false, "try to discover feed based on base url")
+	fs.BoolVar(&flagSingle, "1", false, "try single url instead of discovering")
 	err := fs.Parse(args)
 	if err != nil {
 		return err
 	}
 
 	urls := fs.Args()
-	if flagDiscover {
+	if !flagSingle {
 		extendedUrls := []string{}
 		for _, base := range urls {
 			extendedUrls = append(extendedUrls, base)
 			for _, suffix := range feedSuffixes {
 				baseUrl, err := url.Parse(base)
+				log.Debugf("base url for %s is %s", base, baseUrl)
 				if err != nil {
 					return nil
 				}
 				suffixUrl, err := url.Parse(suffix)
+				log.Debugf("try suffix: %s", suffixUrl)
 				if err != nil {
 					return err
 				}
 				extended := baseUrl.ResolveReference(suffixUrl).String()
+				log.Debugf("extended url: %s", extended)
 				extendedUrls = append(extendedUrls, extended)
 			}
 		}
@@ -72,7 +75,7 @@ func (c *TestCommand) Execute(args []string) error {
 			hoursSinceLast := time.Since(latestArticle.Published).Hours()
 			fmt.Printf("good\t%s\t%d articles, latest %.0f days ago (%s)\n", url, len(articles), hoursSinceLast/24, latestArticle.Published)
 		} else {
-			fmt.Printf("BAD\t%s\t%s\n", url, err)
+			log.Infof("BAD\t%s\t%s\n", url, err)
 		}
 	}
 	return nil

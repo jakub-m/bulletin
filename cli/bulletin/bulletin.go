@@ -42,9 +42,10 @@ func mainErr() error {
 	}
 	defaultCacheDir := path.Join(homeDir, bulletinDir, cacheBaseName)
 	flag.StringVar(&opts.cacheDir, "cache", defaultCacheDir, "cache directory")
-	flag.BoolVar(&opts.verbose, "v", false, "verbose log")
+	flag.BoolVar(&opts.logSilent, "q", false, "quiet")
+	flag.BoolVar(&opts.logVerbose, "v", false, "verbose")
 	flag.Parse()
-	log.SetVerbose(opts.verbose)
+	log.SetLogLevel(opts.getLogLevel())
 	if opts.cacheDir == defaultCacheDir {
 		if err := os.MkdirAll(defaultCacheDir, 0755); err != nil {
 			return err
@@ -89,6 +90,16 @@ func mainErr() error {
 }
 
 type options struct {
-	cacheDir string
-	verbose  bool
+	cacheDir              string
+	logSilent, logVerbose bool
+}
+
+func (o options) getLogLevel() log.LogLevel {
+	if o.logVerbose {
+		return log.LevelDebug
+	}
+	if o.logSilent {
+		return log.LevelSilent
+	}
+	return log.LevelInfo
 }

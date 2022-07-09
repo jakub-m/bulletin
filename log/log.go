@@ -1,21 +1,35 @@
 package log
 
 import (
+	"io"
 	golog "log"
 )
 
-var verboseMode = false
+type LogLevel int
 
-func SetVerbose(verbose bool) {
-	verboseMode = verbose
+const (
+	LevelDebug LogLevel = iota
+	LevelInfo
+	LevelSilent
+)
+
+var logLevel = LevelInfo
+
+func SetLogLevel(lev LogLevel) {
+	logLevel = lev
+	if lev == LevelSilent {
+		golog.SetOutput(io.Discard)
+	}
 }
 
 func Infof(format string, args ...interface{}) {
-	golog.Printf("I "+format, args...)
+	if logLevel <= LevelInfo {
+		golog.Printf("I "+format, args...)
+	}
 }
 
 func Debugf(format string, args ...interface{}) {
-	if verboseMode {
+	if logLevel <= LevelDebug {
 		golog.Printf("D "+format, args...)
 	}
 }
