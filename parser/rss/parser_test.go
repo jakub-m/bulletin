@@ -43,19 +43,18 @@ func TestParseNetflix(t *testing.T) {
 	assert.Equal(t, 22294, len(item.ContentEncoded))
 }
 
-func TestParseBerthub(t *testing.T) {
-	channel := parseRssFromFile(t, "testdata/rss_berthub.xml")
-	assert.Greater(t, len(channel.Items), 0)
-}
-
-func TestEncodingIso_8859_1(t *testing.T) {
-	channel := parseRssFromFile(t, "testdata/rss_sifter.xml")
-	assert.Greater(t, len(channel.Items), 0)
-}
-
-func TestStuffWithStuff(t *testing.T) {
-	channel := parseRssFromFile(t, "testdata/rss_stuffwithstuff.xml")
-	assert.Greater(t, len(channel.Items), 0)
+func TestBasicParsing(t *testing.T) {
+	testdata := []string{
+		"testdata/rss_berthub.xml",
+		"testdata/rss_sifter.xml",
+		"testdata/rss_stuffwithstuff.xml",
+	}
+	for _, fname := range testdata {
+		t.Run(fname, func(t *testing.T) {
+			channel := parseRssFromFile(t, fname)
+			assert.Greater(t, len(channel.Items), 0)
+		})
+	}
 }
 
 func parseRssFromFile(t *testing.T, path string) *Channel {
