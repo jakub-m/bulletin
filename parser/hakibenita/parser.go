@@ -2,12 +2,13 @@ package hakibenita
 
 import (
 	"bulletin/feed"
-	hp "bulletin/htmlparser"
 	"bulletin/time"
 	"bytes"
 	"fmt"
 	"log"
 	"strings"
+
+	hp "github.com/jakub-m/htmlquery"
 
 	"golang.org/x/net/html"
 )

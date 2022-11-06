@@ -4,12 +4,13 @@ package benoitessiambre
 
 import (
 	"bulletin/feed"
-	hp "bulletin/htmlparser"
 	"bulletin/time"
 	"bytes"
 	"fmt"
 	"strings"
 	gotime "time"
+
+	hp "github.com/jakub-m/htmlquery"
 
 	"golang.org/x/net/html"
 )

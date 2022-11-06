@@ -3,11 +3,12 @@ package monzo
 
 import (
 	"bulletin/feed"
-	hp "bulletin/htmlparser"
 	"bytes"
 	"fmt"
 	"strings"
 	"time"
+
+	hp "github.com/jakub-m/htmlquery"
 
 	"golang.org/x/net/html"
 )
