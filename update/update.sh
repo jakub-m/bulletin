@@ -36,6 +36,6 @@ recent_url=$(_file_to_url $recent_file)
 
 sed "s|__CURRENT__|$recent_url|" $template_file
 
-for fname in $(find bulletins -name bulletin\*.html -or -name bulleting\*.md | sort -r); do
+for fname in $(find bulletins -name bulletin\*.html -or -name bulletin\*.md | sort -r); do
     echo "- [$(_date_from_fname $fname)]($(_file_to_url $fname))"
 done
