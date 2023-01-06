@@ -1,6 +1,6 @@
 &#128073; [**THE MOST RECENT _BULLETIN_ HERE**][ref_current] &#128072;
 
-[ref_current]:bulletins/bulletin-2022-12-30.md
+[ref_current]:bulletins/bulletin-2023-01-06.md
 
 Go straight to [High Scalability](http://highscalability.com/). If there is nothing new on HS, come back here. The _bulletin_ was created for those grim times of HS without regular update.
 
@@ -16,6 +16,7 @@ The [list of feeds][ref_feeds] comes from my [bookmarks][ref_tw].
 
 # Past bulletins:
 
+- [2023-01-06](bulletins/bulletin-2023-01-06.md)
 - [2022-12-30](bulletins/bulletin-2022-12-30.md)
 - [2022-12-23](bulletins/bulletin-2022-12-23.md)
 - [2022-12-16](bulletins/bulletin-2022-12-16.md)
