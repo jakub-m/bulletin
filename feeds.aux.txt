@@ -4,6 +4,7 @@ Dropped, too much stuff that I didn't read. Still awesome content though.
 * https://hackernoon.com/feed
 * https://blog.coinbase.com/feed
 * https://www.johndcook.com/blog/feed
+* https://cloudblog.withgoogle.com/rss
 
 Tried, didn't work out.
 * https://www.notion.so/blog/topic/tech - no date on the main blog page.
