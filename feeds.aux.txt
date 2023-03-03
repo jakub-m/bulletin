@@ -10,3 +10,6 @@ Tried, didn't work out.
 * https://www.notion.so/blog/topic/tech - no date on the main blog page.
 * http://www.paulgraham.com/articles.html - no dates on the main page
 * https://qvault.io/articles/feed - captcha
+
+Pending custom parser:
+* https://www.robinlinacre.com/
