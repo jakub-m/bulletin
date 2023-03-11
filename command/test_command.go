@@ -63,7 +63,7 @@ func (c *TestCommand) Execute(args []string) error {
 		return fmt.Errorf("feed url missing for %s", url)
 	}
 
-	feedUrl, err = gourl.JoinPath(url, feedUrl)
+	feedUrl, err = joinPaths(url, feedUrl)
 	if err != nil {
 		return fmt.Errorf("error while testing %s and %s: %s", url, feedUrl, err)
 	}
@@ -120,4 +120,19 @@ func getAttr(n *html.Node, key string) string {
 		}
 	}
 	return ""
+}
+
+func joinPaths(url1, url2 string) (string, error) {
+	u1, err := gourl.Parse(url1)
+	if err != nil {
+		return "", err
+	}
+	u2, err := gourl.Parse(url2)
+	if err != nil {
+		return "", err
+	}
+	if u2.Host != "" {
+		return u2.String(), nil
+	}
+	return gourl.JoinPath(fmt.Sprintf("%s://%s", u1.Scheme, u1.Host), u2.Path)
 }
