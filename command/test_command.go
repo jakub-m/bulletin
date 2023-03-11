@@ -5,80 +5,79 @@ import (
 	"bulletin/feedparser"
 	"bulletin/fetcher"
 	"bulletin/log"
+	"bytes"
 	"flag"
 	"fmt"
 	"io"
-	"net/url"
+	gourl "net/url"
 	"os"
 	"sort"
 	"time"
+
+	hq "github.com/jakub-m/htmlquery"
+
+	"golang.org/x/net/html"
 )
 
 const TestCommandName = "test"
-
-var feedSuffixes = []string{
-	"all.atom.xml",
-	"atom.xml",
-	"feed",
-	"feed.atom",
-	"feed.rss",
-	"feed.xml",
-	"index.xml",
-	"rss",
-	"rss.xml",
-}
 
 type TestCommand struct {
 }
 
 func (c *TestCommand) Execute(args []string) error {
-	flagSingle := false
 	fs := flag.NewFlagSet("test", flag.ContinueOnError)
-	fs.BoolVar(&flagSingle, "1", false, "try single url instead of discovering")
 	err := fs.Parse(args)
 	if err != nil {
 		return err
 	}
+	if len(fs.Args()) != 1 {
+		return fmt.Errorf("expected exactly one url")
+	}
+	url := fs.Args()[0]
 
-	urls := fs.Args()
-	if !flagSingle {
-		extendedUrls := []string{}
-		for _, base := range urls {
-			extendedUrls = append(extendedUrls, base)
-			for _, suffix := range feedSuffixes {
-				baseUrl, err := url.Parse(base)
-				log.Debugf("base url for %s is %s", base, baseUrl)
-				if err != nil {
-					return nil
-				}
-				suffixUrl, err := url.Parse(suffix)
-				log.Debugf("try suffix: %s", suffixUrl)
-				if err != nil {
-					return err
-				}
-				extended := baseUrl.ResolveReference(suffixUrl).String()
-				log.Debugf("extended url: %s", extended)
-				extendedUrls = append(extendedUrls, extended)
-			}
-		}
-		urls = extendedUrls
+	body, err := fetcher.Get(url)
+	if err != nil {
+		return fmt.Errorf("error while fetching %s: %s", url, err)
 	}
 
-	if len(urls) == 0 {
-		log.Infof("pass URLs or file paths of the feeds to test as positional arguments")
-		return nil
+	doc, err := html.Parse(bytes.NewReader(body))
+	if err != nil {
+		return fmt.Errorf("error while parsing %s: %s", url, err)
 	}
-	for _, url := range urls {
-		log.Infof("testing %s", url)
-		if articles, err := getArticles(url); err == nil {
-			sortArticlesByDateAsc(articles)
-			latestArticle := articles[len(articles)-1]
-			hoursSinceLast := time.Since(latestArticle.Published).Hours()
-			fmt.Printf("good\t%s\t%d articles, latest %.0f days ago (%s)\n", url, len(articles), hoursSinceLast/24, latestArticle.Published)
-		} else {
-			log.Infof("BAD\t%s\t%s\n", url, err)
-		}
+	/*
+	   <link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="QuestDB Blog RSS Feed">
+	   <link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="QuestDB Blog Atom Feed">
+	*/
+	feedNodes := hq.FindAllNodesRec(doc,
+		hq.All(hq.HasTag("link"),
+			hq.Any(
+				hq.HasAttr("type", hq.StringIs("application/rss+xml")),
+				hq.HasAttr("type", hq.StringIs("application/atom+xml")),
+			)))
+	if len(feedNodes) == 0 {
+		return fmt.Errorf("no feed nodes for %s", url)
 	}
+	log.Debugf("Got %d feed nodes: %s", len(feedNodes), feedNodes)
+	feedUrl := getAttr(feedNodes[0], "href")
+	if feedUrl == "" {
+		return fmt.Errorf("feed url missing for %s", url)
+	}
+
+	feedUrl, err = gourl.JoinPath(url, feedUrl)
+	if err != nil {
+		return fmt.Errorf("error while testing %s and %s: %s", url, feedUrl, err)
+	}
+
+	log.Infof("Testing %s", feedUrl)
+	if articles, err := getArticles(feedUrl); err == nil {
+		sortArticlesByDateAsc(articles)
+		latestArticle := articles[len(articles)-1]
+		hoursSinceLast := time.Since(latestArticle.Published).Hours()
+		fmt.Printf("good\t%s\t%d articles, latest %.0f days ago (%s)\n", feedUrl, len(articles), hoursSinceLast/24, latestArticle.Published)
+	} else {
+		log.Infof("BAD\t%s\t%s\n", feedUrl, err)
+	}
+	fmt.Println(feedUrl)
 	return nil
 }
 
@@ -112,4 +111,13 @@ func fetchOrRead(url string) ([]byte, error) {
 	} else {
 		return fetcher.Get(url)
 	}
+}
+
+func getAttr(n *html.Node, key string) string {
+	for _, attr := range n.Attr {
+		if attr.Key == key {
+			return attr.Val
+		}
+	}
+	return ""
 }

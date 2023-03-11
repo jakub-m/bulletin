@@ -41,10 +41,8 @@ func (p *feedParser) ParseFeed(body []byte, url string) (feed.Feed, error) {
 	if err != nil {
 		return nilFeed, err
 	}
-	_ = doc
 
 	blogTitle := p.Name()
-
 	articles := []feed.Article{}
 
 	if dl := hp.FindFirstNode(doc, hp.HasTag("dl")); dl != nil {
