@@ -73,7 +73,7 @@ func (c *TestCommand) Execute(args []string) error {
 		sortArticlesByDateAsc(articles)
 		latestArticle := articles[len(articles)-1]
 		hoursSinceLast := time.Since(latestArticle.Published).Hours()
-		fmt.Printf("good\t%s\t%d articles, latest %.0f days ago (%s)\n", feedUrl, len(articles), hoursSinceLast/24, latestArticle.Published)
+		log.Infof("good\t%s\t%d articles, latest %.0f days ago (%s)\n", feedUrl, len(articles), hoursSinceLast/24, latestArticle.Published)
 	} else {
 		log.Infof("BAD\t%s\t%s\n", feedUrl, err)
 	}
