@@ -54,11 +54,13 @@ func (c *TestCommand) Execute(args []string) error {
 				hq.HasAttr("type", hq.StringIs("application/rss+xml")),
 				hq.HasAttr("type", hq.StringIs("application/atom+xml")),
 			)))
-	if len(feedNodes) == 0 {
-		return fmt.Errorf("no feed nodes for %s", url)
-	}
 	log.Debugf("Got %d feed nodes: %s", len(feedNodes), feedNodes)
-	feedUrl := getAttr(feedNodes[0], "href")
+	var feedUrl string
+	if len(feedNodes) == 0 {
+		feedUrl = url
+	} else {
+		feedUrl = getAttr(feedNodes[0], "href")
+	}
 	if feedUrl == "" {
 		return fmt.Errorf("feed url missing for %s", url)
 	}
