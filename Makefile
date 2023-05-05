@@ -51,6 +51,9 @@ up: $(bin)
 up-push: up
 	git push
 
+uniq:
+	sort feeds.conf | uniq > tmp && mv -fv tmp feeds.conf
+
 
 .PHONY: clean smoke compose up up-push
 
