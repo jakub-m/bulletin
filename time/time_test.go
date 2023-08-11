@@ -10,6 +10,7 @@ import (
 func TestTime(t *testing.T) {
 	tcs := []string{
 		"Thu, 26 Aug 2021 12:22:53 +0200",
+		"Thu, 3 Aug 2023 17:00:00 -0700",
 		"Fri, 25 Jun 2021 11:03:04 GMT",
 		"Thu, 29 Jul 2021 00:00:00",
 		"2021-06-25T11:03:03.265Z",
