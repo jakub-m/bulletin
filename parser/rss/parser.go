@@ -46,7 +46,25 @@ func Parse(raw []byte) (*Channel, error) {
 	if err != nil {
 		return nil, fmt.Errorf("rss/Parse: %v", err)
 	}
+	if r.Channel == nil {
+		return nil, fmt.Errorf("channel is nil")
+	}
+	if r.Channel.Items == nil {
+		return nil, fmt.Errorf("no items for channel")
+	}
+	for _, item := range r.Channel.Items {
+		if err := validateChannelItem(item); err != nil {
+			return nil, err
+		}
+	}
 	return r.Channel, nil
+}
+
+func validateChannelItem(item Item) error {
+	if item.PubDate == nil {
+		return fmt.Errorf("PubDate of item is nil: \"%s\"", item.Title)
+	}
+	return nil
 }
 
 type rssFeed struct {
