@@ -1,6 +1,7 @@
 Auxiliary feeds that did not enter feeds.conf
 
 Pending custom parser:
+* https://eng.uber.com/category/articles/general-engineering/feed - there was a feed some time ago.
 * https://sarahdrasnerdesign.com/writing
 * https://www.robinlinacre.com/
 * https://www.anyscale.com/blog
@@ -15,3 +16,6 @@ Tried, didn't work out.
 * https://www.notion.so/blog/topic/tech - no date on the main blog page.
 * http://www.paulgraham.com/articles.html - no dates on the main page
 * https://qvault.io/articles/feed - captcha
+
+Other:
+* https://openai.com/blog/feed - stopped working, but replaced with https://jamesg.blog/openai.xml
