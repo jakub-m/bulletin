@@ -10,6 +10,7 @@ import (
 	"bulletin/parser/monzo"
 	"bulletin/parser/rss"
 	"fmt"
+	"strings"
 )
 
 var parsers []feed.FeedParser = []feed.FeedParser{
@@ -24,8 +25,11 @@ var parsers []feed.FeedParser = []feed.FeedParser{
 func GetFeed(feedBody []byte, url string) (feed.Feed, error) {
 	var errs []error
 	for _, p := range parsers {
-		log.Debugf("with %s try %s", url, p.Name())
+		log.Debugf("With %s try %s", url, p.Name())
 		if f, err := p.ParseFeed(feedBody, url); err == nil {
+			for i := range f.Articles {
+				cleanupArticle(&f.Articles[i])
+			}
 			if len(f.Articles) > 0 {
 				return f, nil
 			} else {
@@ -36,4 +40,8 @@ func GetFeed(feedBody []byte, url string) (feed.Feed, error) {
 		}
 	}
 	return feed.Feed{}, fmt.Errorf("could not parse: %v", errs)
+}
+
+func cleanupArticle(article *feed.Article) {
+	article.Title = strings.Trim(article.Title, " \t\n\r")
 }

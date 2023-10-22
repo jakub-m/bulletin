@@ -52,7 +52,7 @@ func (c *ComposeCommand) Execute(args []string) error {
 	feeds = filterArticlesInFeeds(feeds, intervalStart, intervalEnd)
 	log.Debugf("compose: after filtering got %d feeds. start %s, end %s", len(feeds), intervalStart, intervalEnd)
 	sortFeeds(feeds)
-
+	logFeeds(feeds)
 	var pageTemplate *string
 	if opts.templatePath != "" {
 		log.Infof("Use page template: %s", opts.templatePath)
@@ -137,8 +137,19 @@ func sortFeeds(feeds []feed.Feed) {
 			return len(f.Articles) < len(g.Articles)
 		}
 		// shuffles the feeds deterministically
-		return feedSortHash(f) < feedSortHash(f)
+		return feedSortHash(f) < feedSortHash(g)
 	})
+}
+
+func logFeeds(feeds []feed.Feed) {
+	for _, feed := range feeds {
+		log.Debugf("Feed Title: %s", feed.Title)
+		log.Debugf("Feed Id: %s", feed.Id)
+		for _, article := range feed.Articles {
+			log.Debugf("Article Title: %s", article.Title)
+			log.Debugf("Article Id: %s", article.Id)
+		}
+	}
 }
 
 func feedSortHash(f feed.Feed) uint32 {
