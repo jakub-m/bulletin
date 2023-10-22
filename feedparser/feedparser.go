@@ -9,6 +9,8 @@ import (
 	"bulletin/parser/hakibenita"
 	"bulletin/parser/monzo"
 	"bulletin/parser/rss"
+	"crypto/md5"
+	"encoding/hex"
 	"fmt"
 	"strings"
 )
@@ -44,4 +46,10 @@ func GetFeed(feedBody []byte, url string) (feed.Feed, error) {
 
 func cleanupArticle(article *feed.Article) {
 	article.Title = strings.Trim(article.Title, " \t\n\r")
+	article.Id = hash(article.Id)
+}
+
+func hash(s string) string {
+	h := md5.Sum([]byte(s))
+	return hex.EncodeToString(h[:])
 }
