@@ -5,6 +5,7 @@ Pending custom parser:
 * https://sarahdrasnerdesign.com/writing
 * https://www.robinlinacre.com/
 * https://www.anyscale.com/blog
+* https://www.pinecone.io/
 
 Dropped, too much stuff that I didn't read. Still awesome content though.
 * https://hackernoon.com/feed
