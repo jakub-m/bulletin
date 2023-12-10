@@ -9,7 +9,6 @@ import (
 	"fmt"
 	"hash/fnv"
 	"io"
-	"io/ioutil"
 	corelog "log"
 	"os"
 	"path"
@@ -42,12 +41,22 @@ func (c *ComposeCommand) Execute(args []string) error {
 	now := time.Now()
 	opts, err := getComposeOptions(args)
 	if err != nil {
-		return fmt.Errorf("compose: %s", err)
+		return fmt.Errorf("compose: %w", err)
+	}
+	feedPaths := []string{}
+	if opts.feedFile == "" {
+		feedPaths, err = c.Storage.ListFeedFiles()
+		if err != nil {
+			return fmt.Errorf("compose: %w", err)
+		}
+	} else {
+		log.Infof("Use feed file %s", opts.feedFile)
+		feedPaths = append(feedPaths, opts.feedFile)
 	}
 	interval := time.Duration(opts.intervalDays) * 24 * time.Hour
 	intervalStart := getNearestInterval(referenceTime, interval, now)
 	intervalEnd := intervalStart.Add(interval)
-	feeds := c.getFeeds()
+	feeds := c.getFeeds(feedPaths)
 	log.Debugf("compose: got %d feeds", len(feeds))
 	feeds = filterArticlesInFeeds(feeds, intervalStart, intervalEnd)
 	log.Debugf("compose: after filtering got %d feeds. start %s, end %s", len(feeds), intervalStart, intervalEnd)
@@ -56,7 +65,7 @@ func (c *ComposeCommand) Execute(args []string) error {
 	var pageTemplate *string
 	if opts.templatePath != "" {
 		log.Infof("Use page template: %s", opts.templatePath)
-		f, err := ioutil.ReadFile(opts.templatePath)
+		f, err := os.ReadFile(opts.templatePath)
 		if err != nil {
 			return err
 		}
@@ -64,7 +73,7 @@ func (c *ComposeCommand) Execute(args []string) error {
 		pageTemplate = &t
 	}
 
-	formatted, err := feed.FormatFeedsAsHtml(opts.intervalDays, intervalEnd, pageTemplate, feeds)
+	formatted, err := feed.FormatFeedsWithTemplate(opts.intervalDays, intervalEnd, pageTemplate, feeds)
 	if err != nil {
 		return err
 	}
@@ -78,15 +87,11 @@ func (c *ComposeCommand) Execute(args []string) error {
 	return nil
 }
 
-func (c *ComposeCommand) getFeeds() []feed.Feed {
-	feedPaths, err := c.Storage.ListFeedFiles()
-	if err != nil {
-		log.Infof("Failed to list files: %s", err)
-	}
+func (c *ComposeCommand) getFeeds(feedPaths []string) []feed.Feed {
 	feeds := []feed.Feed{}
 	for _, feedPath := range feedPaths {
 		log.Debugf("Parse %s", feedPath)
-		body, err := ioutil.ReadFile(feedPath)
+		body, err := os.ReadFile(feedPath)
 		if err != nil {
 			log.Infof("Failed to open %s: %v", feedPath, err)
 			continue
@@ -143,11 +148,11 @@ func sortFeeds(feeds []feed.Feed) {
 
 func logFeeds(feeds []feed.Feed) {
 	for _, feed := range feeds {
-		log.Debugf("Feed Title: %s", feed.Title)
-		log.Debugf("Feed Id: %s", feed.Id)
+		log.Debugf("Feed Title: %#v", feed.Title)
+		log.Debugf("Feed Id: %#v", feed.Id)
 		for _, article := range feed.Articles {
-			log.Debugf("Article Title: %s", article.Title)
-			log.Debugf("Article Id: %s", article.Id)
+			log.Debugf("Article Title: %#v", article.Title)
+			log.Debugf("Article Id: %#v", article.Id)
 		}
 	}
 }
@@ -179,6 +184,7 @@ func getComposeOptions(args []string) (composeOptions, error) {
 	fs.IntVar(&options.intervalDays, "days", 7, "time range of the articles in DAYS")
 	fs.StringVar(&options.templatePath, "template", "", "template to render the bulletin")
 	fs.StringVar(&options.output, "output", ".", "output. can be directory, concrete file name or `-` for stdout.")
+	fs.StringVar(&options.feedFile, "f", "", "concrete `.feed` file to process. Useful for debugging.")
 	err := fs.Parse(args)
 	return options, err
 }
@@ -187,6 +193,7 @@ type composeOptions struct {
 	intervalDays int
 	templatePath string
 	output       string
+	feedFile     string
 }
 
 func getNearestInterval(reference time.Time, interval time.Duration, now time.Time) time.Time {

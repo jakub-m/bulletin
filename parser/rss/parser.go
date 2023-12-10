@@ -9,6 +9,7 @@ import (
 	"fmt"
 	"io"
 	"net/url"
+	"strings"
 	"time"
 )
 
@@ -29,7 +30,7 @@ func (p *rssFeedParser) ParseFeed(body []byte, url string) (feed.Feed, error) {
 	if err != nil {
 		return feed.Feed{}, fmt.Errorf("rssFeedParser: %v", err)
 	}
-	return ch.AsGenericFeed(), nil
+	return ch.AsGenericFeed(url), nil
 }
 
 func Parse(raw []byte) (*Channel, error) {
@@ -95,15 +96,18 @@ type Link struct {
 	Type  string `xml:"type,attr"`
 }
 
-func (c *Channel) AsGenericFeed() feed.Feed {
+func (c *Channel) AsGenericFeed(fallbackLink string) feed.Feed {
 	var articles []feed.Article
 	feedLink := getBestLink(c.Links)
-	feedTitle := c.Title
+	if feedLink == "" {
+		feedLink = fallbackLink
+	}
+	feedTitle := strings.TrimSpace(c.Title)
 	if feedTitle == "" {
 		if u, err := url.Parse(feedLink); err == nil {
 			feedTitle = u.Host
 		} else {
-			log.Debugf("could not parse url %s: %s", feedLink, err)
+			log.Debugf("Could not parse url %s: %s", feedLink, err)
 		}
 	}
 	gf := feed.Feed{

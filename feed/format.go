@@ -23,7 +23,7 @@ type templateData struct {
 	Feeds           []Feed
 }
 
-func FormatFeedsAsHtml(periodDays int, periodEnd time.Time, pageTemplate *string, feeds []Feed) (string, error) {
+func FormatFeedsWithTemplate(periodDays int, periodEnd time.Time, pageTemplate *string, feeds []Feed) (string, error) {
 	buf := new(bytes.Buffer)
 	templateData := templateData{
 		Feeds:           feeds,

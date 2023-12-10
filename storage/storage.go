@@ -68,6 +68,7 @@ func (st *Storage) storeFeedMeta(filePath string, meta FeedMeta) error {
 // ListFeedFiles returns paths to all the stored feed files.
 func (st *Storage) ListFeedFiles() ([]string, error) {
 	basePath := st.Path
+	log.Debugf("List feed files from %s", basePath)
 	entries, err := os.ReadDir(basePath)
 	if err != nil {
 		return nil, err
@@ -78,6 +79,7 @@ func (st *Storage) ListFeedFiles() ([]string, error) {
 			feedPaths = append(feedPaths, path.Join(basePath, e.Name()))
 		}
 	}
+	log.Debugf("Got %d feed paths", len(feedPaths))
 	return feedPaths, nil
 }
 

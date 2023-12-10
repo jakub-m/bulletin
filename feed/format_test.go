@@ -29,7 +29,7 @@ func TestFormatHtml(t *testing.T) {
 			},
 		},
 	}
-	body, err := FormatFeedsAsHtml(1, time.Time{}, nil, feeds)
+	body, err := FormatFeedsWithTemplate(1, time.Time{}, nil, feeds)
 	assert.NoError(t, err)
 	assert.Contains(t, body, `## [title-1](http://example.com/1)`)
 	assert.Contains(t, body, `## [title-2](http://example.com/2)`)
