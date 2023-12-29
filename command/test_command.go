@@ -26,9 +26,13 @@ type TestCommand struct {
 
 func (c *TestCommand) Execute(args []string) error {
 	fs := flag.NewFlagSet("test", flag.ContinueOnError)
+	fs.Usage = func() {
+		fmt.Println("Pass a single url as positional arg.")
+		fs.PrintDefaults()
+	}
 	err := fs.Parse(args)
 	if err != nil {
-		return err
+		return fmt.Errorf("error parsing input args: %w", err)
 	}
 	if len(fs.Args()) != 1 {
 		return fmt.Errorf("expected exactly one url")
