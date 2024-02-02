@@ -6,6 +6,7 @@ Pending custom parser:
 * https://www.robinlinacre.com/
 * https://www.anyscale.com/blog
 * https://www.pinecone.io/
+* https://www.figma.com/blog/
 
 Dropped, too much stuff that I didn't read. Still awesome content though.
 * https://hackernoon.com/feed

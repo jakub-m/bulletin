@@ -27,7 +27,7 @@ type TestCommand struct {
 func (c *TestCommand) Execute(args []string) error {
 	fs := flag.NewFlagSet("test", flag.ContinueOnError)
 	fs.Usage = func() {
-		fmt.Println("Pass a single url as positional arg.")
+		fmt.Println("Pass a single URL as positional arg.")
 		fs.PrintDefaults()
 	}
 	err := fs.Parse(args)
