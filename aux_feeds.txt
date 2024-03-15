@@ -19,5 +19,16 @@ Tried, didn't work out.
 * http://www.paulgraham.com/articles.html - no dates on the main page
 * https://qvault.io/articles/feed - captcha
 
+Dropped
+* https://signoz.io/blog/rss.xml
+
 Other:
 * https://openai.com/blog/feed - stopped working, but replaced with https://jamesg.blog/openai.xml
+
+Check those:
+* https://aviationweek.com/awn/rss-feed-by-content-source
+* https://www.hillelwayne.com/post/picat/
+* https://www.dabeaz.com/
+* https://zenhorace.dev/blog/
+* https://medium.com/
+* https://adamdrake.com/
