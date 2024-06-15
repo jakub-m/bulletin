@@ -27,9 +27,11 @@ Other:
 * https://openai.com/blog/feed - stopped working, but replaced with https://jamesg.blog/openai.xml
 
 Check those:
-* https://aviationweek.com/awn/rss-feed-by-content-source
-* https://www.hillelwayne.com/post/picat/
-* https://www.dabeaz.com/
-* https://zenhorace.dev/blog/
-* https://medium.com/
 * https://adamdrake.com/
+* https://aviationweek.com/awn/rss-feed-by-content-source
+* https://mathetake.github.io/
+* https://medium.com/
+* https://research.google/blog/
+* https://www.dabeaz.com/
+* https://www.hillelwayne.com/post/picat/
+* https://zenhorace.dev/blog/
