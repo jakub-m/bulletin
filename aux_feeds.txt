@@ -1,6 +1,10 @@
 Auxiliary feeds that did not enter feeds.conf
 
 Pending custom parser:
+* https://dgerrells.com/blog/
+* https://conduition.io/archives/
+* https://www.sandboxaq.com/blog
+* https://computerwebsite.net/writing
 * https://eng.uber.com/category/articles/general-engineering/feed - there was a feed some time ago.
 * https://sarahdrasnerdesign.com/writing
 * https://www.robinlinacre.com/
