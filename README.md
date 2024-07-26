@@ -1,6 +1,6 @@
 &#128073; [**THE MOST RECENT _BULLETIN_ HERE**][ref_current] &#128072;
 
-[ref_current]:bulletins/bulletin-2024-07-19.md
+[ref_current]:bulletins/bulletin-2024-07-26.md
 
 _Bulletin_ is updated weekly at Fridays. Friday is hardcoded.
 
@@ -14,6 +14,7 @@ The [list of feeds][ref_feeds] comes from my [bookmarks][ref_tw].
 
 # Past bulletins:
 
+- [2024-07-26](bulletins/bulletin-2024-07-26.md)
 - [2024-07-19](bulletins/bulletin-2024-07-19.md)
 - [2024-07-12](bulletins/bulletin-2024-07-12.md)
 - [2024-07-05](bulletins/bulletin-2024-07-05.md)
