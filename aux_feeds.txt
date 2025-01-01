@@ -39,3 +39,9 @@ Check those:
 * https://www.dabeaz.com/
 * https://www.hillelwayne.com/post/picat/
 * https://zenhorace.dev/blog/
+
+`test` didn't pick RSS link:
+* https://borretti.me/article/
+* https://ibraheem.ca/posts
+* https://www.barry.ooo/posts/
+* https://www.recall.ai/post/
