@@ -44,7 +44,7 @@ compose: $(bin)
 	$(bin) --cache ./tmp/cache/ compose -days 7 -output bulletin.tmp.html
 
 up: $(bin)
-	zsh -eux -c "./update/update.sh > README.md 2> >(tee up.log)"
+	bash -eux -c "./update/update.sh > README.md"
 	git add README.md bulletins
 	git commit -m "update"
 
