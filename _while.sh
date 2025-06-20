@@ -9,5 +9,5 @@ while true; do
     make up-push
   fi
   echo Zzzzz....
-  sleep 21600 # 6 hours
+  sleep 14400 # 4 hours
 done
