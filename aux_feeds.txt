@@ -17,6 +17,8 @@ Dropped, too much stuff that I didn't read. Still awesome content though.
 * https://blog.coinbase.com/feed
 * https://www.johndcook.com/blog/feed
 * https://cloudblog.withgoogle.com/rss
+* https://feeds.packetpushers.net/packetpushersfullfeed/
+* https://www.slowboring.com/feed
 
 Tried, didn't work out.
 * https://www.notion.so/blog/topic/tech - no date on the main blog page.
