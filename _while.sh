@@ -5,7 +5,7 @@ set -eu
 while true; do
   date
   if [ "$(date +%u)" -eq 5 ]; then
-    git pull
+    git pull --commit
     make up-push
   fi
   echo Zzzzz....
