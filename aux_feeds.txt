@@ -28,6 +28,7 @@ Tried, didn't work out.
 Dropped
 * https://signoz.io/blog/rss.xml
 * https://www.noemamag.com/feed/
+* https://jamesg.blog/openai.xml
 
 Other:
 * https://openai.com/blog/feed - stopped working, but replaced with https://jamesg.blog/openai.xml
