@@ -19,6 +19,7 @@ Dropped, too much stuff that I didn't read. Still awesome content though.
 * https://cloudblog.withgoogle.com/rss
 * https://feeds.packetpushers.net/packetpushersfullfeed/
 * https://www.slowboring.com/feed
+* https://www.microsoft.com/security/blog/feed
 
 Tried, didn't work out.
 * https://www.notion.so/blog/topic/tech - no date on the main blog page.
