@@ -7,6 +7,7 @@ import (
 	"bulletin/parser/aykevl"
 	"bulletin/parser/benoitessiambre"
 	"bulletin/parser/hakibenita"
+	"bulletin/parser/helsing"
 	"bulletin/parser/monzo"
 	"bulletin/parser/rss"
 	"crypto/md5"
@@ -20,6 +21,7 @@ var parsers []feed.FeedParser = []feed.FeedParser{
 	aykevl.FeedParser,
 	benoitessiambre.FeedParser,
 	hakibenita.FeedParser,
+	helsing.FeedParser,
 	monzo.FeedParser,
 	rss.FeedParser,
 }
