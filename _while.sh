@@ -5,7 +5,8 @@ set -eu
 while true; do
   date
   if [ "$(date +%u)" -eq 5 ]; then
-    git pull --commit
+    git fetch
+    git merge -m 'merge'
     make up-push || true
   fi
   echo Zzzzz....
