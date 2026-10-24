@@ -31,7 +31,7 @@ Dropped
 * https://www.noemamag.com/feed/
 * https://jamesg.blog/openai.xml
 * http://changelog.com/master/feed
-
+* https://circleci.com/blog/feed.xml
 
 Other:
 * https://openai.com/blog/feed - stopped working, but replaced with https://jamesg.blog/openai.xml
